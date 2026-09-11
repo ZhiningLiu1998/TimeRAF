@@ -1,0 +1,40 @@
+\section{Retrieval comparisons and controls}
+\label{app:retrieval-baselines}
+
+The matched fixed-forecast comparison spans the same 585
+backbone--dataset--horizon cells for every method. RAFT uses multiscale
+Pearson retrieval and softmax aggregation~\citep{han2025raft}; SARAF adds
+time alignment, stationarity-controlled relevance--diversity selection, and
+Gaussian aggregation~\citep{zhou2026saraf}. These rows evaluate retrieval
+operators on common frozen forecasts, not the original learned forecasting
+or fusion layers.
+
+Analog-kNN transfers a normalized historical future, whereas Residual-kNN
+transfers the corresponding error from the same base model. The full
+\method{} row additionally selects among retrieval and simple corrections.
+All methods select parameters on the same chronological validation suffix;
+retrieval memory ends at least one horizon earlier, and prediction APIs receive
+no test labels. Main Table~\ref{tab:retrieval-win-summary} reports strict-win counts, and
+Tables~\ref{tab:retrieval-long-term-values}--%
+\ref{tab:retrieval-short-values} give the per-backbone absolute errors and
+paired deltas behind main Table~\ref{tab:main-results}, including the PEMS RMSE
+column omitted there.
+The accompanying machine-readable results retain all 585 per-cell records, so
+duplicating them as 90 multi-page tables is unnecessary.
+
+\input{tables/retrieval_long_term_model_values}
+
+\input{tables/retrieval_short_model_values}
+
+\subsection{Native end-to-end retrieval systems}
+
+The native comparison runs RAF~\citep{tire2024raf},
+TS-RAG~\citep{ning2025tsrag}, and RATD~\citep{liu2024ratd} end to end and
+pairs each with its released no-retrieval base. It contains 44, seven, and one
+paired configurations, respectively. Because their backbones, datasets,
+horizons, splits, and metrics differ, Table~\ref{tab:native-retrieval-full}
+supports only within-method comparisons.
+
+\input{tables/native_retrieval_baseline_values}
+
+\input{tables/native_retrieval_baseline_full}

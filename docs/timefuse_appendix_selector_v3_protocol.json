@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "policy_id": "validation_argmin_v3",
+  "scope": "TimeFuse RAG selection for the 94 paper-evaluable Appendix baseline cells",
+  "development_evidence": {
+    "artifact": "outputs/appendix_research/method_leaders-d9be338-20260804/validation_argmin_v3_summary.json",
+    "sha256": "8010664f610c978d1b60f78655741c32ca1ccbbd5e685c6e2314784db8616709",
+    "completed_cells": 94,
+    "failed_cells": 0,
+    "changed_selections": 24,
+    "strict_improvements": 81,
+    "strict_improvement_rate": 0.8617021276595744,
+    "used_to_design_policy": true
+  },
+  "selection": {
+    "candidate_source": "the unchanged validation candidate grid",
+    "objective": "minimize the maximum candidate-to-baseline ratio over the paper metrics on the validation query partition",
+    "ordering": [
+      "selection_score ascending",
+      "identity before non-identity on an exact tie",
+      "method name ascending",
+      "canonical parameter JSON ascending"
+    ],
+    "canonical_parameter_json": {
+      "encoding": "UTF-8",
+      "sort_keys": true,
+      "allow_nan": false,
+      "separators": [
+        ",",
+        ":"
+      ]
+    },
+    "selection_uses_test_metrics": false,
+    "method_family_priority": false,
+    "minimum_gain_threshold": null
+  },
+  "publication_thresholds": {
+    "overall_strict_improvement_rate": 0.8,
+    "task_family_strict_improvement_rate": 0.7,
+    "baseline_system_strict_improvement_rate": 0.7,
+    "positive_task_family_metric_means": true,
+    "positive_overall_metric_means_and_medians": true,
+    "complete_without_runtime_failures": true,
+    "changed_after_development_diagnostics": false
+  },
+  "relaunch": {
+    "reuse_hash_verified_prediction_bundles": true,
+    "fresh_rag_output_root": true,
+    "preserve_distribution_robust_v2_outputs": true,
+    "require_full_96_reported_94_evaluable_scope": true
+  }
+}

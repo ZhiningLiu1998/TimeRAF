@@ -1,0 +1,48 @@
+\section*{Appendix Contents}
+\phantomsection
+\addcontentsline{toc}{section}{Appendix Contents}
+
+\noindent The appendix follows the paper's questions rather than the order in
+which experiments were run. Each entry below states what its evidence is for.
+
+\begin{center}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}p{0.24\textwidth}p{0.68\textwidth}@{}}
+\toprule
+Section & Purpose\\
+\midrule
+Appendix~\ref{app:retrieval-baselines}, p.~\pageref{app:retrieval-baselines}
+& Matched retrieval controls and native retrieval-system comparisons\\
+Appendix~\ref{app:data}, p.~\pageref{app:data}
+& Datasets, models, training scope, and hardware\\
+Appendix~\ref{app:search}, p.~\pageref{app:search}
+& Exact validation search space and selection rule\\
+Appendix~\ref{app:causality}, p.~\pageref{app:causality}
+& Information boundaries and no-lookahead checks\\
+Appendix~\ref{app:aggregate-results}, p.~\pageref{app:aggregate-results}
+& Policy attribution, failures, and hardware sensitivity\\
+Appendix~\ref{app:matrix-results}, p.~\pageref{app:matrix-results}
+& Primary-matrix results by horizon, backbone, and cell\\
+Appendix~\ref{app:strong-systems}, p.~\pageref{app:strong-systems}
+& Ensemble, AutoML, and foundation-model results\\
+Appendix~\ref{app:ett}, p.~\pageref{app:ett}
+& Three-seed forward-transfer study on later observations\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\input{sections/appendix_sections/09_retrieval_baselines}
+\clearpage
+\input{sections/appendix_sections/02_data}
+\clearpage
+\input{sections/appendix_sections/03_search}
+\clearpage
+\input{sections/appendix_sections/04_causality}
+\clearpage
+\input{sections/appendix_sections/07_aggregate}
+\input{sections/appendix_sections/06_matrix}
+\clearpage
+\input{sections/appendix_sections/08_strong_systems}
+\clearpage
+\input{sections/appendix_sections/05_ett}

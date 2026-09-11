@@ -1,0 +1,239 @@
+{
+  "artifacts": {
+    "a100_composed_summary": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/a100_composed_summary.json",
+      "sha256": "924d5e851f7f940d6ef7b7d3503c5281f1d744a41320254b36950f40684952de",
+      "size_bytes": 675932
+    },
+    "a10g_composed_summary": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/a10g_composed_summary.json",
+      "sha256": "ab4f25cf8fb54fcec2091958db62852aae2df700d6919408dcc253cff69a2cdd",
+      "size_bytes": 627167
+    },
+    "checkpoint_catalog": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/checkpoint_catalog.json",
+      "sha256": "5ac8004a170a3d21632a52e08a7096c4027cb3c060cd4793b36764055d9763fe",
+      "size_bytes": 159989
+    },
+    "composition_receipt": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/composition_receipt.json",
+      "sha256": "893dd0c33b8bad81493b478f3f75b8a90a65cedab03084f21333dc3cab67fdc7",
+      "size_bytes": 5759
+    },
+    "confirmation_summary": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/confirmation_summary.json",
+      "sha256": "287e9c1a51c8173c352a08b3dc52b9d9b22e812d4c031882d0318cf7d1501aa7",
+      "size_bytes": 28177
+    },
+    "hardware_comparison": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/hardware_comparison.json",
+      "sha256": "2ab05b90a63ab622f91b0bdc75ec478020b06018d85c2012c343b69924e71621",
+      "size_bytes": 1573382
+    },
+    "hardware_comparison_markdown": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/hardware_comparison.md",
+      "sha256": "55d44566128ef7f8c2b7177b375660e7aed3067fe6f3aaa1fa36c03094f3d708",
+      "size_bytes": 1468
+    }
+  },
+  "checkpoint_path_root": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/checkpoints/replay",
+  "checkpoint_stage_root": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/checkpoints/replay/staging/616c83f74c4a9f2f8fe38f0b625e927f415aaff5",
+  "commands": [
+    [
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/.venv-gpu312/bin/python",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/numerical-recovery-finalizer-616c83f74c4a9f2f8fe38f0b625e927f415aaff5/source/scripts/compose_timefuse_numerical_recovery.py",
+      "--manifest",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/numerical-recovery-finalizer-616c83f74c4a9f2f8fe38f0b625e927f415aaff5/source/docs/timefuse_experiment_manifest.jsonl",
+      "--protocol",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/numerical-recovery-finalizer-616c83f74c4a9f2f8fe38f0b625e927f415aaff5/source/docs/timefuse_numerical_recovery_protocol.json",
+      "--a10g-primary",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/a10g_primary_authoritative.json",
+      "--a100-primary",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/greenland_runs/full-matrix-a100-9974eac-20260731/recomputed_matrix_summary.json",
+      "--a10g-exact",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/a10g/1f7055e7bcd942f1282d1f1a13daab5bfe08712e/exact/matrix_summary.json",
+      "--a100-exact",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/greenland_recovery_runs/numerical-recovery-exact-7269114-20260802/recomputed_matrix_summary.json",
+      "--a10g-fallback",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/a10g/1f7055e7bcd942f1282d1f1a13daab5bfe08712e/fallback-v1/matrix_summary.json",
+      "--a100-fallback",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/greenland_recovery_runs/numerical-recovery-fallback-7269114-20260802/recomputed_matrix_summary.json",
+      "--a10g-exact-metadata",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/a10g/1f7055e7bcd942f1282d1f1a13daab5bfe08712e/exact/recovery_metadata.json",
+      "--a10g-fallback-metadata",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/a10g/1f7055e7bcd942f1282d1f1a13daab5bfe08712e/fallback-v1/recovery_metadata.json",
+      "--a100-exact-receipt",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/greenland_recovery_runs/numerical-recovery-exact-7269114-20260802/fetch_receipt.json",
+      "--a100-fallback-receipt",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/greenland_recovery_runs/numerical-recovery-fallback-7269114-20260802/fetch_receipt.json",
+      "--a10g-output",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/a10g_composed_summary.json",
+      "--a100-output",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/a100_composed_summary.json",
+      "--receipt",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/composition_receipt.json"
+    ],
+    [
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/.venv-gpu312/bin/python",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/numerical-recovery-finalizer-616c83f74c4a9f2f8fe38f0b625e927f415aaff5/source/scripts/summarize_timefuse_confirmation.py",
+      "--manifest",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/numerical-recovery-finalizer-616c83f74c4a9f2f8fe38f0b625e927f415aaff5/source/docs/timefuse_experiment_manifest.jsonl",
+      "--matrix-summary",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/a10g_composed_summary.json",
+      "--protocol",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/numerical-recovery-finalizer-616c83f74c4a9f2f8fe38f0b625e927f415aaff5/source/docs/timefuse_confirmation_protocol.json",
+      "--output",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/confirmation_summary.json"
+    ],
+    [
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/.venv-gpu312/bin/python",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/numerical-recovery-finalizer-616c83f74c4a9f2f8fe38f0b625e927f415aaff5/source/scripts/compare_timefuse_matrix_runs.py",
+      "--manifest",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/numerical-recovery-finalizer-616c83f74c4a9f2f8fe38f0b625e927f415aaff5/source/docs/timefuse_experiment_manifest.jsonl",
+      "--a10g-summary",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/a10g_composed_summary.json",
+      "--a100-summary",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/a100_composed_summary.json",
+      "--a10g-runtime-summary",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/a10g_primary_authoritative.json",
+      "--a100-runtime-summary",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/greenland_runs/full-matrix-a100-9974eac-20260731/recomputed_matrix_summary.json",
+      "--a100-final-status",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/greenland_runs/full-matrix-a100-9974eac-20260731/final_status.json",
+      "--method-revision",
+      "d9be338",
+      "--output",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/hardware_comparison.json",
+      "--markdown",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/hardware_comparison.md"
+    ],
+    [
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/.venv-gpu312/bin/python",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/numerical-recovery-finalizer-616c83f74c4a9f2f8fe38f0b625e927f415aaff5/source/scripts/index_matrix_checkpoints.py",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/a10g_composed_summary.json",
+      "--project-root",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF",
+      "--manifest",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/numerical-recovery-finalizer-616c83f74c4a9f2f8fe38f0b625e927f415aaff5/source/docs/timefuse_checkpoint_replay_manifest.jsonl",
+      "--stage-root",
+      "checkpoints/replay/staging/616c83f74c4a9f2f8fe38f0b625e927f415aaff5",
+      "--checkpoint-path-root",
+      "checkpoints/replay",
+      "--output",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/checkpoint_catalog.json",
+      "--recovery-receipt",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/composition_receipt.json",
+      "--recovery-protocol",
+      "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/numerical-recovery-finalizer-616c83f74c4a9f2f8fe38f0b625e927f415aaff5/source/docs/timefuse_numerical_recovery_protocol.json",
+      "--hash"
+    ]
+  ],
+  "controller_revision": "616c83f74c4a9f2f8fe38f0b625e927f415aaff5",
+  "evidence": {
+    "checkpoint_count": 208,
+    "confirmation_gate_passed": true,
+    "consistency_gates": {
+      "all_baseline_metrics_within_tolerance": false,
+      "all_corrected_metrics_within_tolerance": false,
+      "all_passed": false,
+      "all_selected_methods_agree": false,
+      "all_selected_parameters_agree": false,
+      "all_strict_improvement_classifications_agree": false,
+      "complete_585_cell_scope": true
+    },
+    "primary_gate_passed": true,
+    "recovered_checkpoint_count": 4,
+    "recovery_cohort_checkpoint_count": 6,
+    "selected_profiles": {
+      "epf/BE/Nonstationary_Transformer/24": "exact",
+      "epf/FR/Nonstationary_Transformer/24": "exact",
+      "epf/NP/Nonstationary_Transformer/24": "exact",
+      "long_term/electricity/Nonstationary_Transformer/192": "fallback-v1",
+      "long_term/electricity/Nonstationary_Transformer/336": "fallback-v1",
+      "long_term/electricity/Nonstationary_Transformer/720": "exact",
+      "long_term/electricity/Nonstationary_Transformer/96": "exact"
+    }
+  },
+  "generated_unix": 1785723815.2327259,
+  "inputs": {
+    "a100_exact": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/greenland_recovery_runs/numerical-recovery-exact-7269114-20260802/recomputed_matrix_summary.json",
+      "sha256": "330c4079abc5d8bbafabd674a91676cf30ab9db117d964f0a5b663b2b2acf223",
+      "size_bytes": 33497
+    },
+    "a100_exact_receipt": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/greenland_recovery_runs/numerical-recovery-exact-7269114-20260802/fetch_receipt.json",
+      "sha256": "123a86e0290e8beacc0d761816b72626731fa86cbf5f5fc9d0029c5256f4e424",
+      "size_bytes": 53399
+    },
+    "a100_fallback": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/greenland_recovery_runs/numerical-recovery-fallback-7269114-20260802/recomputed_matrix_summary.json",
+      "sha256": "1eae6a737387aadaf970b1bd371801531363761fc2eadc3bf18e1c2e9f07197c",
+      "size_bytes": 35089
+    },
+    "a100_fallback_receipt": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/greenland_recovery_runs/numerical-recovery-fallback-7269114-20260802/fetch_receipt.json",
+      "sha256": "6e561a6002d093a206a95f08efbb6c25b2ff72c245b4500c9f4ebd32cf38deac",
+      "size_bytes": 56515
+    },
+    "a100_final_status": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/greenland_runs/full-matrix-a100-9974eac-20260731/final_status.json",
+      "sha256": "85436c66222c58b76e187a8b0c9db41b866a973d43a8097193e3e58bd76d71e5",
+      "size_bytes": 697
+    },
+    "a100_primary": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/greenland_runs/full-matrix-a100-9974eac-20260731/recomputed_matrix_summary.json",
+      "sha256": "f1c3c289c841dbab620f21d8276d02661761aa377f909aa212be54ef28ea309a",
+      "size_bytes": 665632
+    },
+    "a10g_exact": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/a10g/1f7055e7bcd942f1282d1f1a13daab5bfe08712e/exact/matrix_summary.json",
+      "sha256": "0fbe13de4fe5155e257984cf028c365a14b7030dcf43b9317d3eeba19b050633",
+      "size_bytes": 33224
+    },
+    "a10g_exact_metadata": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/a10g/1f7055e7bcd942f1282d1f1a13daab5bfe08712e/exact/recovery_metadata.json",
+      "sha256": "640ef4511e012a32b70c290d1fc533fe45b68a203e3b54ee18877fda4eb89706",
+      "size_bytes": 1699
+    },
+    "a10g_fallback": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/a10g/1f7055e7bcd942f1282d1f1a13daab5bfe08712e/fallback-v1/matrix_summary.json",
+      "sha256": "8608b8c998d71644b88e57361463aa561f0ee6dddff8183348250dbc57fc3dfe",
+      "size_bytes": 33404
+    },
+    "a10g_fallback_metadata": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/a10g/1f7055e7bcd942f1282d1f1a13daab5bfe08712e/fallback-v1/recovery_metadata.json",
+      "sha256": "a9c5ddf44f8fd64ef2d5bf992bf6f216b40357afc2158ea899d8423eef8ab1c9",
+      "size_bytes": 1748
+    },
+    "a10g_primary": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/a10g_primary_authoritative.json",
+      "sha256": "933e95aff6988440c743e9d225ec2c95c3b99714ae7c698ff2ce217bba1aa708",
+      "size_bytes": 616799
+    },
+    "confirmation_protocol": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/numerical-recovery-finalizer-616c83f74c4a9f2f8fe38f0b625e927f415aaff5/source/docs/timefuse_confirmation_protocol.json",
+      "sha256": "62f6eaebe3da3993b13c414bebfee67865afd4345cce3251ed5ee3eeb75e6f61",
+      "size_bytes": 1236
+    },
+    "manifest": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/numerical-recovery-finalizer-616c83f74c4a9f2f8fe38f0b625e927f415aaff5/source/docs/timefuse_experiment_manifest.jsonl",
+      "sha256": "45830d23f3b017c15d3680c88f837f84a9441eef9a6ceaaa5370c14872660c2a",
+      "size_bytes": 1228556
+    },
+    "protocol": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/numerical-recovery-finalizer-616c83f74c4a9f2f8fe38f0b625e927f415aaff5/source/docs/timefuse_numerical_recovery_protocol.json",
+      "sha256": "1320f3eca815a93a6500caadbf7e526610379b2af5f6976f1db94f91ed259d14",
+      "size_bytes": 2033
+    },
+    "replay_manifest": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/numerical-recovery-finalizer-616c83f74c4a9f2f8fe38f0b625e927f415aaff5/source/docs/timefuse_checkpoint_replay_manifest.jsonl",
+      "sha256": "447391d99c46bc1dd4170e71a8388bad5edb0a4c48a3048e230e404b96a0a77a",
+      "size_bytes": 394912
+    }
+  },
+  "method_revision": "d9be338",
+  "project_root": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF",
+  "schema_version": 1,
+  "source_root": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/numerical-recovery-finalizer-616c83f74c4a9f2f8fe38f0b625e927f415aaff5/source"
+}

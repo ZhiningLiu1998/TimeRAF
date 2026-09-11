@@ -1,0 +1,29 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+We asked what a retrieval-augmented time-series forecaster should retrieve, and
+answered that it should retrieve its own errors rather than its inputs' futures.
+\method{} realizes that answer as a post-hoc revision layer: it keeps the frozen
+forecast as the query-specific prior, indexes a chronological memory of that
+forecaster's validation residuals by a descriptor built from context and intended
+forecast, shrinks corrections whose neighbours disagree, and applies one only
+when held-out validation prefers it to a simpler correction or to doing nothing.
+With all 585 base forecasts fixed, error retrieval is the most reliable single
+object at 490 strict wins, beating the published RAFT and SARAF operators by 115
+and 106 settings, and the complete policy reaches 533; the margin widens as the
+frozen forecaster becomes more accurate. Applied broadly, \method{} improves
+every reported metric in 562/585 settings across 13 architectures and in 81/94
+settings across static ensembles, AutoML, and a forecasting foundation model.
+
+\paragraph{Scope and limitations.}
+Error memory pays off when a forecaster's mistakes recur in retrievably similar
+states. Figure~\ref{fig:object-strength} locates the crossover: when the frozen
+forecast is poor, copying an endpoint-aligned analogue is the better object, so we
+recommend error retrieval for reasonably accurate forecasters; that post-hoc
+dependence is much weaker on EPF. The primary matrix uses one seed, its held-out
+split follows execution order inside one benchmark suite, and the prequential
+study covers one backbone at one horizon. We do not ablate the descriptor, channel
+pooling, or shrinkage, and a retriever that detects event prefixes explicitly is
+the next step.
+
+\label{sec:main-text-end}

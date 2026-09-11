@@ -1,0 +1,13 @@
+{
+  "artifact_root": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF",
+  "branch_created": false,
+  "bundle": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/source-bundles/full-horizon-cc80cabd363ac136c5d2e9284529e912b601544e.bundle",
+  "bundle_ref": "HEAD",
+  "bundle_sha256": "8435907d7a331294826c38fa4b12fd2e93145bf17ec3d9212aefd549cfe4a1ec",
+  "git_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/full-horizon-retrieval-cc80cabd363ac136c5d2e9284529e912b601544e/repository.git",
+  "git_refs": [],
+  "revision": "cc80cabd363ac136c5d2e9284529e912b601544e",
+  "schema_version": 1,
+  "source": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/full-horizon-retrieval-cc80cabd363ac136c5d2e9284529e912b601544e/source",
+  "workspace": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/full-horizon-retrieval-cc80cabd363ac136c5d2e9284529e912b601544e"
+}

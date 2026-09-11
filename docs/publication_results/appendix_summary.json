@@ -1,0 +1,3658 @@
+{
+  "all_evaluable_completed": true,
+  "cell_states": [
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTh1/forward_selection/pl96/4e7c31bdbe9e",
+      "baseline": "forward_selection",
+      "cell_id": "appendix/long_term/ETTh1/forward_selection/96",
+      "dataset": "ETTh1",
+      "elapsed_seconds": 9.487534046173096,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.02963108661940091,
+        "mse": 0.5579844442998134
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865229.1317673,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3987913429737091,
+        "mse": 0.37731432914733887
+      },
+      "test_corrected": {
+        "mae": 0.3986731767654419,
+        "mse": 0.3752089738845825
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTh1/portfolio_ensemble/pl96/4e7c31bdbe9e",
+      "baseline": "portfolio_ensemble",
+      "cell_id": "appendix/long_term/ETTh1/portfolio_ensemble/96",
+      "dataset": "ETTh1",
+      "elapsed_seconds": 9.307393789291382,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": -0.19892775613243022,
+        "mse": 0.5536611187709277
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865229.1339498,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.39715903997421265,
+        "mse": 0.37766075134277344
+      },
+      "test_corrected": {
+        "mae": 0.39794909954071045,
+        "mse": 0.37556979060173035
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTh1/zeroshot_ensemble/pl96/4e7c31bdbe9e",
+      "baseline": "zeroshot_ensemble",
+      "cell_id": "appendix/long_term/ETTh1/zeroshot_ensemble/96",
+      "dataset": "ETTh1",
+      "elapsed_seconds": 8.05121374130249,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 1.739158784313183,
+        "mse": 0.8890499946759826
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865229.157996,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3921603560447693,
+        "mse": 0.3669300973415375
+      },
+      "test_corrected": {
+        "mae": 0.3853400647640228,
+        "mse": 0.36366790533065796
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTh1/autogluon_high_quality/pl96/4e7c31bdbe9e",
+      "baseline": "autogluon_high_quality",
+      "cell_id": "appendix/long_term/ETTh1/autogluon_high_quality/96",
+      "dataset": "ETTh1",
+      "elapsed_seconds": 7.583749771118164,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 6.692985343424608,
+        "mse": 9.829206660506514
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865229.1408873,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.4462873041629791,
+        "mse": 0.4741162061691284
+      },
+      "test_corrected": {
+        "mae": 0.41641736030578613,
+        "mse": 0.42751434445381165
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTh1/chronos_bolt_finetuned/pl96/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_finetuned",
+      "cell_id": "appendix/long_term/ETTh1/chronos_bolt_finetuned/96",
+      "dataset": "ETTh1",
+      "elapsed_seconds": 6.040494918823242,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 2.253589548832794,
+        "mse": 11.35258009050738
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865240.3928316,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.40660998225212097,
+        "mse": 0.514573335647583
+      },
+      "test_corrected": {
+        "mae": 0.3974466621875763,
+        "mse": 0.4561559855937958
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTh1/chronos_bolt_zeroshot/pl96/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_zeroshot",
+      "cell_id": "appendix/long_term/ETTh1/chronos_bolt_zeroshot/96",
+      "dataset": "ETTh1",
+      "elapsed_seconds": 6.601441383361816,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 1.7425417927875833,
+        "mse": 8.235717665766728
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865240.8739414,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.4035898745059967,
+        "mse": 0.48840537667274475
+      },
+      "test_corrected": {
+        "mae": 0.39655715227127075,
+        "mse": 0.448181688785553
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTh2/forward_selection/pl96/4e7c31bdbe9e",
+      "baseline": "forward_selection",
+      "cell_id": "appendix/long_term/ETTh2/forward_selection/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 6.390908479690552,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.3884110915025866,
+        "mse": -0.1217069713093902
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865242.3061655,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3341846764087677,
+        "mse": 0.2784655690193176
+      },
+      "test_corrected": {
+        "mae": 0.332886666059494,
+        "mse": 0.2788044810295105
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTh2/portfolio_ensemble/pl96/4e7c31bdbe9e",
+      "baseline": "portfolio_ensemble",
+      "cell_id": "appendix/long_term/ETTh2/portfolio_ensemble/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 6.370906114578247,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.31162670243731505,
+        "mse": -0.24199108489825452
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865242.0218697,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.33441537618637085,
+        "mse": 0.27941322326660156
+      },
+      "test_corrected": {
+        "mae": 0.3333732485771179,
+        "mse": 0.2800893783569336
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTh2/zeroshot_ensemble/pl96/4e7c31bdbe9e",
+      "baseline": "zeroshot_ensemble",
+      "cell_id": "appendix/long_term/ETTh2/zeroshot_ensemble/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 4.546952486038208,
+      "method": "causal_bias",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 1.4408334936133784,
+        "mse": -0.35352075251335974
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865250.2035322,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3412019908428192,
+        "mse": 0.28236573934555054
+      },
+      "test_corrected": {
+        "mae": 0.3362858382778802,
+        "mse": 0.28336396083212484
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTh2/autogluon_high_quality/pl96/4e7c31bdbe9e",
+      "baseline": "autogluon_high_quality",
+      "cell_id": "appendix/long_term/ETTh2/autogluon_high_quality/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 5.22387170791626,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 3.094087632841968,
+        "mse": 2.7892054743099695
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865250.781187,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.35986489057540894,
+        "mse": 0.3172586262226105
+      },
+      "test_corrected": {
+        "mae": 0.3487303555011749,
+        "mse": 0.3084096312522888
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTh2/chronos_bolt_finetuned/pl96/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_finetuned",
+      "cell_id": "appendix/long_term/ETTh2/chronos_bolt_finetuned/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 5.022696495056152,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 2.5591325566934353,
+        "mse": 6.505337722379586
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865251.866276,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.36007818579673767,
+        "mse": 0.3504355847835541
+      },
+      "test_corrected": {
+        "mae": 0.3508633077144623,
+        "mse": 0.32763856649398804
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTh2/chronos_bolt_zeroshot/pl96/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_zeroshot",
+      "cell_id": "appendix/long_term/ETTh2/chronos_bolt_zeroshot/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 4.9402971267700195,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 1.4140908946127515,
+        "mse": 4.075811218383595
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865252.2052038,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3518049716949463,
+        "mse": 0.33713939785957336
+      },
+      "test_corrected": {
+        "mae": 0.3468301296234131,
+        "mse": 0.323398232460022
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTm1/forward_selection/pl96/4e7c31bdbe9e",
+      "baseline": "forward_selection",
+      "cell_id": "appendix/long_term/ETTm1/forward_selection/96",
+      "dataset": "ETTm1",
+      "elapsed_seconds": 31.073006629943848,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 1.1521545383063165,
+        "mse": 3.1016535208014004
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865258.5360281,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.34536051750183105,
+        "mse": 0.29956409335136414
+      },
+      "test_corrected": {
+        "mae": 0.3413814306259155,
+        "mse": 0.29027265310287476
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTm1/portfolio_ensemble/pl96/4e7c31bdbe9e",
+      "baseline": "portfolio_ensemble",
+      "cell_id": "appendix/long_term/ETTm1/portfolio_ensemble/96",
+      "dataset": "ETTm1",
+      "elapsed_seconds": 28.696216821670532,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 1.3510731504544808,
+        "mse": 3.1859830888735905
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865259.2863321,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.34743303060531616,
+        "mse": 0.3025606572628021
+      },
+      "test_corrected": {
+        "mae": 0.34273895621299744,
+        "mse": 0.29292112588882446
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTm1/zeroshot_ensemble/pl96/4e7c31bdbe9e",
+      "baseline": "zeroshot_ensemble",
+      "cell_id": "appendix/long_term/ETTm1/zeroshot_ensemble/96",
+      "dataset": "ETTm1",
+      "elapsed_seconds": 29.605042219161987,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 1.8489775702735551,
+        "mse": 3.8820312145599263
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865260.1938276,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3526097536087036,
+        "mse": 0.3100898265838623
+      },
+      "test_corrected": {
+        "mae": 0.34609007835388184,
+        "mse": 0.298052042722702
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTm1/autogluon_high_quality/pl96/4e7c31bdbe9e",
+      "baseline": "autogluon_high_quality",
+      "cell_id": "appendix/long_term/ETTm1/autogluon_high_quality/96",
+      "dataset": "ETTm1",
+      "elapsed_seconds": 31.533260583877563,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 13.446556480285986,
+        "mse": 25.71544038039838
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865260.4723938,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.5264140963554382,
+        "mse": 0.6236515045166016
+      },
+      "test_corrected": {
+        "mae": 0.45562952756881714,
+        "mse": 0.46327677369117737
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTm1/chronos_bolt_finetuned/pl96/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_finetuned",
+      "cell_id": "appendix/long_term/ETTm1/chronos_bolt_finetuned/96",
+      "dataset": "ETTm1",
+      "elapsed_seconds": 20.91964030265808,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 13.864090984127394,
+        "mse": 33.35843404130432
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865292.6398015,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.5170445442199707,
+        "mse": 0.8643617033958435
+      },
+      "test_corrected": {
+        "mae": 0.44536101818084717,
+        "mse": 0.5760241746902466
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTm1/chronos_bolt_zeroshot/pl96/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_zeroshot",
+      "cell_id": "appendix/long_term/ETTm1/chronos_bolt_zeroshot/96",
+      "dataset": "ETTm1",
+      "elapsed_seconds": 28.73694133758545,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 11.51456166664799,
+        "mse": 32.74567921177813
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865293.415061,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.5585351586341858,
+        "mse": 1.0065691471099854
+      },
+      "test_corrected": {
+        "mae": 0.4942222833633423,
+        "mse": 0.6769612431526184
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTm2/forward_selection/pl96/4e7c31bdbe9e",
+      "baseline": "forward_selection",
+      "cell_id": "appendix/long_term/ETTm2/forward_selection/96",
+      "dataset": "ETTm2",
+      "elapsed_seconds": 29.121501445770264,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.7236246931994543,
+        "mse": 1.4689256845279195
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865293.509167,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.25303515791893005,
+        "mse": 0.1666032075881958
+      },
+      "test_corrected": {
+        "mae": 0.25120413303375244,
+        "mse": 0.16415593028068542
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTm2/portfolio_ensemble/pl96/4e7c31bdbe9e",
+      "baseline": "portfolio_ensemble",
+      "cell_id": "appendix/long_term/ETTm2/portfolio_ensemble/96",
+      "dataset": "ETTm2",
+      "elapsed_seconds": 27.27511215209961,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.6360393977483075,
+        "mse": 1.478681599733173
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865295.5965405,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.2516125440597534,
+        "mse": 0.16583958268165588
+      },
+      "test_corrected": {
+        "mae": 0.25001218914985657,
+        "mse": 0.16338734328746796
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTm2/zeroshot_ensemble/pl96/4e7c31bdbe9e",
+      "baseline": "zeroshot_ensemble",
+      "cell_id": "appendix/long_term/ETTm2/zeroshot_ensemble/96",
+      "dataset": "ETTm2",
+      "elapsed_seconds": 26.875109434127808,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.9053373787105442,
+        "mse": 1.6383761000148427
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865320.396624,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.25505560636520386,
+        "mse": 0.16665369272232056
+      },
+      "test_corrected": {
+        "mae": 0.25274649262428284,
+        "mse": 0.16392327845096588
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTm2/autogluon_high_quality/pl96/4e7c31bdbe9e",
+      "baseline": "autogluon_high_quality",
+      "cell_id": "appendix/long_term/ETTm2/autogluon_high_quality/96",
+      "dataset": "ETTm2",
+      "elapsed_seconds": 22.28631591796875,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 7.414364272991105,
+        "mse": 14.209197793270112
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865326.3745627,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.30075955390930176,
+        "mse": 0.23825868964195251
+      },
+      "test_corrected": {
+        "mae": 0.27846014499664307,
+        "mse": 0.2044040411710739
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTm2/chronos_bolt_finetuned/pl96/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_finetuned",
+      "cell_id": "appendix/long_term/ETTm2/chronos_bolt_finetuned/96",
+      "dataset": "ETTm2",
+      "elapsed_seconds": 24.29625368118286,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 5.369257259722878,
+        "mse": 11.023537724333453
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865327.1348145,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.28689730167388916,
+        "mse": 0.22388595342636108
+      },
+      "test_corrected": {
+        "mae": 0.2714930474758148,
+        "mse": 0.19920580089092255
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTm2/chronos_bolt_zeroshot/pl96/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_zeroshot",
+      "cell_id": "appendix/long_term/ETTm2/chronos_bolt_zeroshot/96",
+      "dataset": "ETTm2",
+      "elapsed_seconds": 24.006791591644287,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 7.440671061976473,
+        "mse": 14.588053998592956
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865327.136726,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.30208858847618103,
+        "mse": 0.24247801303863525
+      },
+      "test_corrected": {
+        "mae": 0.27961117029190063,
+        "mse": 0.20710518956184387
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/weather/forward_selection/pl96/4e7c31bdbe9e",
+      "baseline": "forward_selection",
+      "cell_id": "appendix/long_term/weather/forward_selection/96",
+      "dataset": "weather",
+      "elapsed_seconds": 26.310451984405518,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.5542300376942306,
+        "mse": 1.5369960438212595
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865351.063361,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.21985146403312683,
+        "mse": 0.16056066751480103
+      },
+      "test_corrected": {
+        "mae": 0.21863298118114471,
+        "mse": 0.15809285640716553
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/weather/portfolio_ensemble/pl96/4e7c31bdbe9e",
+      "baseline": "portfolio_ensemble",
+      "cell_id": "appendix/long_term/weather/portfolio_ensemble/96",
+      "dataset": "weather",
+      "elapsed_seconds": 26.532236337661743,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": -0.13735745101362332,
+        "mse": 1.1269605702275345
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865351.990422,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.20996099710464478,
+        "mse": 0.15872341394424438
+      },
+      "test_corrected": {
+        "mae": 0.2102493941783905,
+        "mse": 0.15693466365337372
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/weather/zeroshot_ensemble/pl96/4e7c31bdbe9e",
+      "baseline": "zeroshot_ensemble",
+      "cell_id": "appendix/long_term/weather/zeroshot_ensemble/96",
+      "dataset": "weather",
+      "elapsed_seconds": 25.7646541595459,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": -0.027506658998561678,
+        "mse": 1.3780372659145603
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865354.91674,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.2159874439239502,
+        "mse": 0.16507834196090698
+      },
+      "test_corrected": {
+        "mae": 0.21604685485363007,
+        "mse": 0.1628035008907318
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/weather/autogluon_high_quality/pl96/4e7c31bdbe9e",
+      "baseline": "autogluon_high_quality",
+      "cell_id": "appendix/long_term/weather/autogluon_high_quality/96",
+      "dataset": "weather",
+      "elapsed_seconds": 27.638899087905884,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 5.75329342117522,
+        "mse": 14.192165252948152
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865355.3468075,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.24086979031562805,
+        "mse": 0.2360294610261917
+      },
+      "test_corrected": {
+        "mae": 0.22701184451580048,
+        "mse": 0.20253176987171173
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/weather/chronos_bolt_finetuned/pl96/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_finetuned",
+      "cell_id": "appendix/long_term/weather/chronos_bolt_finetuned/96",
+      "dataset": "weather",
+      "elapsed_seconds": 22.75249481201172,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 9.344545268393915,
+        "mse": 22.874743591751887
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865382.485461,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.25906622409820557,
+        "mse": 0.2929866909980774
+      },
+      "test_corrected": {
+        "mae": 0.23485766351222992,
+        "mse": 0.22596673667430878
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/weather/chronos_bolt_zeroshot/pl96/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_zeroshot",
+      "cell_id": "appendix/long_term/weather/chronos_bolt_zeroshot/96",
+      "dataset": "weather",
+      "elapsed_seconds": 24.384124755859375,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 10.750242709324016,
+        "mse": 29.066154241575973
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865382.8613248,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.271182119846344,
+        "mse": 0.3450711965560913
+      },
+      "test_corrected": {
+        "mae": 0.24202938377857208,
+        "mse": 0.244772270321846
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/electricity/forward_selection/pl96/4e7c31bdbe9e",
+      "baseline": "forward_selection",
+      "cell_id": "appendix/long_term/electricity/forward_selection/96",
+      "dataset": "electricity",
+      "elapsed_seconds": 115.55886316299438,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.7165002190685023,
+        "mse": -0.03746086727858417
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865384.2448716,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.23235821723937988,
+        "mse": 0.1314660906791687
+      },
+      "test_corrected": {
+        "mae": 0.23069337010383606,
+        "mse": 0.13151533901691437
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/electricity/portfolio_ensemble/pl96/4e7c31bdbe9e",
+      "baseline": "portfolio_ensemble",
+      "cell_id": "appendix/long_term/electricity/portfolio_ensemble/96",
+      "dataset": "electricity",
+      "elapsed_seconds": 112.20443344116211,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.7141602155317902,
+        "mse": 0.8950150586584169
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865386.8440807,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.23111023008823395,
+        "mse": 0.1338651180267334
+      },
+      "test_corrected": {
+        "mae": 0.2294597327709198,
+        "mse": 0.13266700506210327
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/electricity/zeroshot_ensemble/pl96/4e7c31bdbe9e",
+      "baseline": "zeroshot_ensemble",
+      "cell_id": "appendix/long_term/electricity/zeroshot_ensemble/96",
+      "dataset": "electricity",
+      "elapsed_seconds": 106.53480291366577,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 1.7681049530348911,
+        "mse": 1.4056978031630856
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865408.9824176,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.24722576141357422,
+        "mse": 0.14588892459869385
+      },
+      "test_corrected": {
+        "mae": 0.2428545504808426,
+        "mse": 0.14383816719055176
+      }
+    },
+    {
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/electricity/autogluon_high_quality/pl96/4e7c31bdbe9e",
+      "baseline": "autogluon_high_quality",
+      "cell_id": "appendix/long_term/electricity/autogluon_high_quality/96",
+      "dataset": "electricity",
+      "elapsed_seconds": 0.04852771759033203,
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "paper_evaluable": false,
+      "pred_len": 96,
+      "started_unix": 1785865410.7498078,
+      "state": "paper_oot",
+      "task_family": "long_term"
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/electricity/chronos_bolt_finetuned/pl96/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_finetuned",
+      "cell_id": "appendix/long_term/electricity/chronos_bolt_finetuned/96",
+      "dataset": "electricity",
+      "elapsed_seconds": 108.3857901096344,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 1.9388973078232343,
+        "mse": 8.174277369122782
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865414.3380063,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.2593185305595398,
+        "mse": 0.19869187474250793
+      },
+      "test_corrected": {
+        "mae": 0.2542906105518341,
+        "mse": 0.18245024979114532
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/electricity/chronos_bolt_zeroshot/pl96/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_zeroshot",
+      "cell_id": "appendix/long_term/electricity/chronos_bolt_zeroshot/96",
+      "dataset": "electricity",
+      "elapsed_seconds": 106.13685202598572,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 1.0100654488687588,
+        "mse": 6.1803116971722885
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865503.2743466,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.2573426067829132,
+        "mse": 0.19490627944469452
+      },
+      "test_corrected": {
+        "mae": 0.2547432780265808,
+        "mse": 0.18286046385765076
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/traffic/forward_selection/pl96/4e7c31bdbe9e",
+      "baseline": "forward_selection",
+      "cell_id": "appendix/long_term/traffic/forward_selection/96",
+      "dataset": "traffic",
+      "elapsed_seconds": 190.32912611961365,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 1.7865546876980625,
+        "mse": 2.8709725220250015
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865503.3309753,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.25861918926239014,
+        "mse": 0.39017021656036377
+      },
+      "test_corrected": {
+        "mae": 0.2539988160133362,
+        "mse": 0.3789685368537903
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/traffic/portfolio_ensemble/pl96/4e7c31bdbe9e",
+      "baseline": "portfolio_ensemble",
+      "cell_id": "appendix/long_term/traffic/portfolio_ensemble/96",
+      "dataset": "traffic",
+      "elapsed_seconds": 192.9918622970581,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 2.7059141884586193,
+        "mse": 3.847510841498603
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865518.9598577,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.2559501528739929,
+        "mse": 0.38712236285209656
+      },
+      "test_corrected": {
+        "mae": 0.24902436137199402,
+        "mse": 0.3722277879714966
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/traffic/zeroshot_ensemble/pl96/4e7c31bdbe9e",
+      "baseline": "zeroshot_ensemble",
+      "cell_id": "appendix/long_term/traffic/zeroshot_ensemble/96",
+      "dataset": "traffic",
+      "elapsed_seconds": 191.90020751953125,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 4.793997369181573,
+        "mse": 6.678000729080436
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865526.2986085,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.27966952323913574,
+        "mse": 0.44220295548439026
+      },
+      "test_corrected": {
+        "mae": 0.2662621736526489,
+        "mse": 0.41267263889312744
+      }
+    },
+    {
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/traffic/autogluon_high_quality/pl96/4e7c31bdbe9e",
+      "baseline": "autogluon_high_quality",
+      "cell_id": "appendix/long_term/traffic/autogluon_high_quality/96",
+      "dataset": "traffic",
+      "elapsed_seconds": 0.06367635726928711,
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "paper_evaluable": false,
+      "pred_len": 96,
+      "started_unix": 1785865613.1081693,
+      "state": "paper_oot",
+      "task_family": "long_term"
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/traffic/chronos_bolt_finetuned/pl96/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_finetuned",
+      "cell_id": "appendix/long_term/traffic/chronos_bolt_finetuned/96",
+      "dataset": "traffic",
+      "elapsed_seconds": 191.42969179153442,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 7.355104277731485,
+        "mse": 9.212894317933477
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865616.736473,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.31931591033935547,
+        "mse": 0.5953901410102844
+      },
+      "test_corrected": {
+        "mae": 0.2958298921585083,
+        "mse": 0.5405374765396118
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/traffic/chronos_bolt_zeroshot/pl96/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_zeroshot",
+      "cell_id": "appendix/long_term/traffic/chronos_bolt_zeroshot/96",
+      "dataset": "traffic",
+      "elapsed_seconds": 173.63064908981323,
+      "method": "overlap_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 2.935336171979885,
+        "mse": 21.961394751934947
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865697.3429909,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.33528900146484375,
+        "mse": 0.8397245407104492
+      },
+      "test_corrected": {
+        "mae": 0.325447142124176,
+        "mse": 0.6553093194961548
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/pems/PEMS03/forward_selection/pl24/4e7c31bdbe9e",
+      "baseline": "forward_selection",
+      "cell_id": "appendix/pems/PEMS03/forward_selection/24",
+      "dataset": "PEMS03",
+      "elapsed_seconds": 65.16607213020325,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 3.885578701259484,
+        "mape": 5.5885903244188135,
+        "rmse": 2.5477316816292723
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785865715.4508114,
+      "state": "completed",
+      "task_family": "pems",
+      "test_baseline": {
+        "mae": 16.816061448946527,
+        "mape": 0.16686910410313707,
+        "rmse": 26.56433792890321
+      },
+      "test_corrected": {
+        "mae": 16.162660146895554,
+        "mape": 0.1575434734967848,
+        "rmse": 25.887549875473482
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/pems/PEMS03/portfolio_ensemble/pl24/4e7c31bdbe9e",
+      "baseline": "portfolio_ensemble",
+      "cell_id": "appendix/pems/PEMS03/portfolio_ensemble/24",
+      "dataset": "PEMS03",
+      "elapsed_seconds": 64.591059923172,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 3.735931316703831,
+        "mape": 5.60431345017243,
+        "rmse": 2.509991480122648
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785865721.7145252,
+      "state": "completed",
+      "task_family": "pems",
+      "test_baseline": {
+        "mae": 17.327168692033727,
+        "mape": 0.1765859230806071,
+        "rmse": 27.242413375996044
+      },
+      "test_corrected": {
+        "mae": 16.679837570569937,
+        "mape": 0.1666894944422895,
+        "rmse": 26.55863112127875
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/pems/PEMS03/zeroshot_ensemble/pl24/4e7c31bdbe9e",
+      "baseline": "zeroshot_ensemble",
+      "cell_id": "appendix/pems/PEMS03/zeroshot_ensemble/24",
+      "dataset": "PEMS03",
+      "elapsed_seconds": 63.94591498374939,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 5.716921082175984,
+        "mape": 6.811692634715333,
+        "rmse": 4.515882131036424
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785865784.4983494,
+      "state": "completed",
+      "task_family": "pems",
+      "test_baseline": {
+        "mae": 17.15923578779788,
+        "mape": 0.16649549688397933,
+        "rmse": 27.08222875370578
+      },
+      "test_corrected": {
+        "mae": 16.178255819504976,
+        "mape": 0.1551543353856006,
+        "rmse": 25.859227224730773
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/pems/PEMS03/autogluon_high_quality/pl24/4e7c31bdbe9e",
+      "baseline": "autogluon_high_quality",
+      "cell_id": "appendix/pems/PEMS03/autogluon_high_quality/24",
+      "dataset": "PEMS03",
+      "elapsed_seconds": 65.07516741752625,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 28.208212434584553,
+        "mape": 26.90842043618321,
+        "rmse": 29.062003114396255
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785865789.7561188,
+      "state": "completed",
+      "task_family": "pems",
+      "test_baseline": {
+        "mae": 32.5806626600448,
+        "mape": 0.3059202585542174,
+        "rmse": 51.04767737254914
+      },
+      "test_corrected": {
+        "mae": 23.390240124303997,
+        "mape": 0.22360194918298984,
+        "rmse": 36.212199784711956
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/pems/PEMS03/chronos_bolt_finetuned/pl24/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_finetuned",
+      "cell_id": "appendix/pems/PEMS03/chronos_bolt_finetuned/24",
+      "dataset": "PEMS03",
+      "elapsed_seconds": 65.4202892780304,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 24.215071344949227,
+        "mape": 19.48692238489658,
+        "rmse": 26.93780915743171
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785865811.9834235,
+      "state": "completed",
+      "task_family": "pems",
+      "test_baseline": {
+        "mae": 33.738046379264865,
+        "mape": 0.2970116528590861,
+        "rmse": 55.84454719646362
+      },
+      "test_corrected": {
+        "mae": 25.56835437813382,
+        "mape": 0.23913322259233752,
+        "rmse": 40.80124964784837
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/pems/PEMS03/chronos_bolt_zeroshot/pl24/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_zeroshot",
+      "cell_id": "appendix/pems/PEMS03/chronos_bolt_zeroshot/24",
+      "dataset": "PEMS03",
+      "elapsed_seconds": 64.77608227729797,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 27.740980202144595,
+        "mape": 24.56414956273608,
+        "rmse": 29.690339273689354
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785865852.0624244,
+      "state": "completed",
+      "task_family": "pems",
+      "test_baseline": {
+        "mae": 36.22081514398528,
+        "mape": 0.31641130840832205,
+        "rmse": 58.840703855567746
+      },
+      "test_corrected": {
+        "mae": 26.17280598583693,
+        "mape": 0.2386875613774917,
+        "rmse": 41.37069924982287
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/pems/PEMS04/forward_selection/pl24/4e7c31bdbe9e",
+      "baseline": "forward_selection",
+      "cell_id": "appendix/pems/PEMS04/forward_selection/24",
+      "dataset": "PEMS04",
+      "elapsed_seconds": 35.740925312042236,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 2.879924934811322,
+        "mape": 4.434616949808206,
+        "rmse": 1.7885682763976558
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785865858.3989797,
+      "state": "completed",
+      "task_family": "pems",
+      "test_baseline": {
+        "mae": 20.729786593918934,
+        "mape": 0.13518236862479677,
+        "rmse": 32.63292782676732
+      },
+      "test_corrected": {
+        "mae": 20.13278430086749,
+        "mape": 0.12918754839260932,
+        "rmse": 32.04926563199802
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/pems/PEMS04/portfolio_ensemble/pl24/4e7c31bdbe9e",
+      "baseline": "portfolio_ensemble",
+      "cell_id": "appendix/pems/PEMS04/portfolio_ensemble/24",
+      "dataset": "PEMS04",
+      "elapsed_seconds": 35.39534902572632,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 3.0005590067448358,
+        "mape": 5.385858171037672,
+        "rmse": 1.8210844141474063
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785865874.7439373,
+      "state": "completed",
+      "task_family": "pems",
+      "test_baseline": {
+        "mae": 21.31679038569153,
+        "mape": 0.1418064136495093,
+        "rmse": 33.2812012860333
+      },
+      "test_corrected": {
+        "mae": 20.677167511824745,
+        "mape": 0.13416892133291172,
+        "rmse": 32.67512251657232
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/pems/PEMS04/zeroshot_ensemble/pl24/4e7c31bdbe9e",
+      "baseline": "zeroshot_ensemble",
+      "cell_id": "appendix/pems/PEMS04/zeroshot_ensemble/24",
+      "dataset": "PEMS04",
+      "elapsed_seconds": 35.62774586677551,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 5.987244876812128,
+        "mape": 8.105521839583414,
+        "rmse": 3.981679068804457
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785865880.9986281,
+      "state": "completed",
+      "task_family": "pems",
+      "test_baseline": {
+        "mae": 21.757401069028433,
+        "mape": 0.1412001981992078,
+        "rmse": 33.829999859963245
+      },
+      "test_corrected": {
+        "mae": 20.45473218819556,
+        "mape": 0.12975518529663593,
+        "rmse": 32.48299783656251
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/pems/PEMS04/autogluon_high_quality/pl24/4e7c31bdbe9e",
+      "baseline": "autogluon_high_quality",
+      "cell_id": "appendix/pems/PEMS04/autogluon_high_quality/24",
+      "dataset": "PEMS04",
+      "elapsed_seconds": 34.90760517120361,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 25.14058551020028,
+        "mape": 28.036440558732064,
+        "rmse": 24.80529994679959
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785865897.9064665,
+      "state": "completed",
+      "task_family": "pems",
+      "test_baseline": {
+        "mae": 39.60031200149281,
+        "mape": 0.28583434388294926,
+        "rmse": 59.567561893202175
+      },
+      "test_corrected": {
+        "mae": 29.644561700451405,
+        "mape": 0.2056965679637644,
+        "rmse": 44.791649494597884
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/pems/PEMS04/chronos_bolt_finetuned/pl24/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_finetuned",
+      "cell_id": "appendix/pems/PEMS04/chronos_bolt_finetuned/24",
+      "dataset": "PEMS04",
+      "elapsed_seconds": 35.09695887565613,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 21.02666515100152,
+        "mape": 19.46914066122834,
+        "rmse": 22.371273933413303
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785865914.163738,
+      "state": "completed",
+      "task_family": "pems",
+      "test_baseline": {
+        "mae": 40.80517500334181,
+        "mape": 0.2683342582684258,
+        "rmse": 64.20728015525377
+      },
+      "test_corrected": {
+        "mae": 32.225207491108954,
+        "mape": 0.21609188408388222,
+        "rmse": 49.84329362652783
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/pems/PEMS04/chronos_bolt_zeroshot/pl24/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_zeroshot",
+      "cell_id": "appendix/pems/PEMS04/chronos_bolt_zeroshot/24",
+      "dataset": "PEMS04",
+      "elapsed_seconds": 34.55154490470886,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 25.178249198336157,
+        "mape": 24.935069481365755,
+        "rmse": 25.67496570184965
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785865920.2761707,
+      "state": "completed",
+      "task_family": "pems",
+      "test_baseline": {
+        "mae": 44.79511824956907,
+        "mape": 0.29152113038791194,
+        "rmse": 69.12274510863902
+      },
+      "test_corrected": {
+        "mae": 33.51649174800321,
+        "mape": 0.21883013397282325,
+        "rmse": 51.375504009819
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/pems/PEMS07/forward_selection/pl24/4e7c31bdbe9e",
+      "baseline": "forward_selection",
+      "cell_id": "appendix/pems/PEMS07/forward_selection/24",
+      "dataset": "PEMS07",
+      "elapsed_seconds": 162.22466850280762,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 4.166702914977032,
+        "mape": 4.975431118908793,
+        "rmse": 2.914801048555364
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785865920.795263,
+      "state": "completed",
+      "task_family": "pems",
+      "test_baseline": {
+        "mae": 23.452020817819122,
+        "mape": 0.10077197707725478,
+        "rmse": 37.04668121406604
+      },
+      "test_corrected": {
+        "mae": 22.474844782782032,
+        "mape": 0.09575813677061341,
+        "rmse": 35.96684416158348
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/pems/PEMS07/portfolio_ensemble/pl24/4e7c31bdbe9e",
+      "baseline": "portfolio_ensemble",
+      "cell_id": "appendix/pems/PEMS07/portfolio_ensemble/24",
+      "dataset": "PEMS07",
+      "elapsed_seconds": 162.87185716629028,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 3.6913441553687365,
+        "mape": 4.632405014777301,
+        "rmse": 2.636985364014858
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785865936.450231,
+      "state": "completed",
+      "task_family": "pems",
+      "test_baseline": {
+        "mae": 23.81469860778266,
+        "mape": 0.10421739011810627,
+        "rmse": 37.57024566471502
+      },
+      "test_corrected": {
+        "mae": 22.935616122605595,
+        "mape": 0.09938961851200509,
+        "rmse": 36.579523785312055
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/pems/PEMS07/zeroshot_ensemble/pl24/4e7c31bdbe9e",
+      "baseline": "zeroshot_ensemble",
+      "cell_id": "appendix/pems/PEMS07/zeroshot_ensemble/24",
+      "dataset": "PEMS07",
+      "elapsed_seconds": 163.69139695167542,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 7.307687196533899,
+        "mape": 8.757212214544186,
+        "rmse": 5.126732853731648
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785865952.818113,
+      "state": "completed",
+      "task_family": "pems",
+      "test_baseline": {
+        "mae": 24.61223215039726,
+        "mape": 0.10645505650067705,
+        "rmse": 38.317349294232244
+      },
+      "test_corrected": {
+        "mae": 22.81364721276148,
+        "mape": 0.09713256128979984,
+        "rmse": 36.35292115928573
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/pems/PEMS07/autogluon_high_quality/pl24/4e7c31bdbe9e",
+      "baseline": "autogluon_high_quality",
+      "cell_id": "appendix/pems/PEMS07/autogluon_high_quality/24",
+      "dataset": "PEMS07",
+      "elapsed_seconds": 161.23304271697998,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 27.19453868468838,
+        "mape": 29.81037037430046,
+        "rmse": 27.026051504908864
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785865958.546162,
+      "state": "completed",
+      "task_family": "pems",
+      "test_baseline": {
+        "mae": 47.451483320909766,
+        "mape": 0.22505175184778595,
+        "rmse": 72.1847981191243
+      },
+      "test_corrected": {
+        "mae": 34.547271332746504,
+        "mape": 0.15796299108810938,
+        "rmse": 52.67609740073528
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/pems/PEMS07/chronos_bolt_finetuned/pl24/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_finetuned",
+      "cell_id": "appendix/pems/PEMS07/chronos_bolt_finetuned/24",
+      "dataset": "PEMS07",
+      "elapsed_seconds": 170.6358518600464,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 23.64204905080114,
+        "mape": 24.41501147732776,
+        "rmse": 23.547959028412585
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866087.5306308,
+      "state": "completed",
+      "task_family": "pems",
+      "test_baseline": {
+        "mae": 48.3033511587334,
+        "mape": 0.22205008210602023,
+        "rmse": 74.22006982615754
+      },
+      "test_corrected": {
+        "mae": 36.88344918460493,
+        "mape": 0.16783652907441968,
+        "rmse": 56.74275819263475
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/pems/PEMS07/chronos_bolt_zeroshot/pl24/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_zeroshot",
+      "cell_id": "appendix/pems/PEMS07/chronos_bolt_zeroshot/24",
+      "dataset": "PEMS07",
+      "elapsed_seconds": 174.50952863693237,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 26.119825120106196,
+        "mape": 27.37538463133773,
+        "rmse": 26.117472653961112
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866102.9516072,
+      "state": "completed",
+      "task_family": "pems",
+      "test_baseline": {
+        "mae": 52.303485228110645,
+        "mape": 0.23655485977000773,
+        "rmse": 80.26095064813806
+      },
+      "test_corrected": {
+        "mae": 38.64190635480757,
+        "mape": 0.1717970570438465,
+        "rmse": 59.29881881080138
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/pems/PEMS08/forward_selection/pl24/4e7c31bdbe9e",
+      "baseline": "forward_selection",
+      "cell_id": "appendix/pems/PEMS08/forward_selection/24",
+      "dataset": "PEMS08",
+      "elapsed_seconds": 22.381804704666138,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 6.632416866347392,
+        "mape": 6.382227382201414,
+        "rmse": 5.240393675904273
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866120.215364,
+      "state": "completed",
+      "task_family": "pems",
+      "test_baseline": {
+        "mae": 17.94181554355053,
+        "mape": 0.11627269168902593,
+        "rmse": 27.86615323434825
+      },
+      "test_corrected": {
+        "mae": 16.751839543311146,
+        "mape": 0.10885190412202629,
+        "rmse": 26.40585710253767
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/pems/PEMS08/portfolio_ensemble/pl24/4e7c31bdbe9e",
+      "baseline": "portfolio_ensemble",
+      "cell_id": "appendix/pems/PEMS08/portfolio_ensemble/24",
+      "dataset": "PEMS08",
+      "elapsed_seconds": 22.673598289489746,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 6.642099341117989,
+        "mape": 6.867027218025198,
+        "rmse": 5.283066403004605
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866123.7689233,
+      "state": "completed",
+      "task_family": "pems",
+      "test_baseline": {
+        "mae": 18.334147201253046,
+        "mape": 0.11933992187479509,
+        "rmse": 28.446611342813863
+      },
+      "test_corrected": {
+        "mae": 17.116374930799015,
+        "mape": 0.1111448169576829,
+        "rmse": 26.943757976168367
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/pems/PEMS08/zeroshot_ensemble/pl24/4e7c31bdbe9e",
+      "baseline": "zeroshot_ensemble",
+      "cell_id": "appendix/pems/PEMS08/zeroshot_ensemble/24",
+      "dataset": "PEMS08",
+      "elapsed_seconds": 21.468261241912842,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 9.444156448229926,
+        "mape": 8.385255821855703,
+        "rmse": 8.128877787535329
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866146.4392843,
+      "state": "completed",
+      "task_family": "pems",
+      "test_baseline": {
+        "mae": 18.909341267187376,
+        "mape": 0.12092050276432122,
+        "rmse": 29.12632829537223
+      },
+      "test_corrected": {
+        "mae": 17.123513494584497,
+        "mape": 0.11078100926645879,
+        "rmse": 26.7586846642451
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/pems/PEMS08/autogluon_high_quality/pl24/4e7c31bdbe9e",
+      "baseline": "autogluon_high_quality",
+      "cell_id": "appendix/pems/PEMS08/autogluon_high_quality/24",
+      "dataset": "PEMS08",
+      "elapsed_seconds": 21.605589628219604,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 29.257121838089954,
+        "mape": 30.77775254120297,
+        "rmse": 28.38843168674116
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866150.4162612,
+      "state": "completed",
+      "task_family": "pems",
+      "test_baseline": {
+        "mae": 32.12986758421265,
+        "mape": 0.21771235832901514,
+        "rmse": 47.62569107617743
+      },
+      "test_corrected": {
+        "mae": 22.729593078682583,
+        "mape": 0.15070538743089376,
+        "rmse": 34.10550429967842
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/pems/PEMS08/chronos_bolt_finetuned/pl24/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_finetuned",
+      "cell_id": "appendix/pems/PEMS08/chronos_bolt_finetuned/24",
+      "dataset": "PEMS08",
+      "elapsed_seconds": 22.3626492023468,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 24.987880022245314,
+        "mape": 23.097425235788364,
+        "rmse": 24.80665817354336
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866172.651405,
+      "state": "completed",
+      "task_family": "pems",
+      "test_baseline": {
+        "mae": 34.81152164198309,
+        "mape": 0.209301473332695,
+        "rmse": 54.089117498895206
+      },
+      "test_corrected": {
+        "mae": 26.112860380166396,
+        "mape": 0.16095822201227225,
+        "rmse": 40.671415011858045
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/pems/PEMS08/chronos_bolt_zeroshot/pl24/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_zeroshot",
+      "cell_id": "appendix/pems/PEMS08/chronos_bolt_zeroshot/24",
+      "dataset": "PEMS08",
+      "elapsed_seconds": 21.70663022994995,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 26.708496397198175,
+        "mape": 25.13307633414507,
+        "rmse": 26.39350752109305
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866176.8462918,
+      "state": "completed",
+      "task_family": "pems",
+      "test_baseline": {
+        "mae": 37.166736897028926,
+        "mape": 0.22076844367138546,
+        "rmse": 57.232820220144674
+      },
+      "test_corrected": {
+        "mae": 27.24006031192983,
+        "mape": 0.1652825422017521,
+        "rmse": 42.12707151080713
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/NP/forward_selection/pl24/4e7c31bdbe9e",
+      "baseline": "forward_selection",
+      "cell_id": "appendix/epf/NP/forward_selection/24",
+      "dataset": "NP",
+      "elapsed_seconds": 1.5556838512420654,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.24029237490122163,
+        "mse": -0.7790472209651718
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866198.8666096,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.2615816593170166,
+        "mse": 0.2212430089712143
+      },
+      "test_corrected": {
+        "mae": 0.2609530985355377,
+        "mse": 0.22296659648418427
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/NP/portfolio_ensemble/pl24/4e7c31bdbe9e",
+      "baseline": "portfolio_ensemble",
+      "cell_id": "appendix/epf/NP/portfolio_ensemble/24",
+      "dataset": "NP",
+      "elapsed_seconds": 1.251110315322876,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.2139488499700164,
+        "mse": -0.685618642562922
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866202.625922,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.25778207182884216,
+        "mse": 0.21884942054748535
+      },
+      "test_corrected": {
+        "mae": 0.2572305500507355,
+        "mse": 0.22034989297389984
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/NP/zeroshot_ensemble/pl24/4e7c31bdbe9e",
+      "baseline": "zeroshot_ensemble",
+      "cell_id": "appendix/epf/NP/zeroshot_ensemble/24",
+      "dataset": "NP",
+      "elapsed_seconds": 1.679626703262329,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": -0.3501196676281625,
+        "mse": -1.0080354750322245
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866204.4105809,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.2563145160675049,
+        "mse": 0.22510457038879395
+      },
+      "test_corrected": {
+        "mae": 0.25721192359924316,
+        "mse": 0.22737370431423187
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/NP/autogluon_high_quality/pl24/4e7c31bdbe9e",
+      "baseline": "autogluon_high_quality",
+      "cell_id": "appendix/epf/NP/autogluon_high_quality/24",
+      "dataset": "NP",
+      "elapsed_seconds": 3.1419262886047363,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 17.43910762388357,
+        "mse": 20.903868910331656
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866208.2279112,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.44643497467041016,
+        "mse": 0.5273230671882629
+      },
+      "test_corrected": {
+        "mae": 0.36858069896698,
+        "mse": 0.41709214448928833
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/NP/chronos_bolt_finetuned/pl24/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_finetuned",
+      "cell_id": "appendix/epf/NP/chronos_bolt_finetuned/24",
+      "dataset": "NP",
+      "elapsed_seconds": 3.26666259765625,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.8527343576573284,
+        "mse": 1.1792210207468363
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866210.2165663,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.26179343461990356,
+        "mse": 0.24421951174736023
+      },
+      "test_corrected": {
+        "mae": 0.25956103205680847,
+        "mse": 0.24133962392807007
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/NP/chronos_bolt_zeroshot/pl24/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_zeroshot",
+      "cell_id": "appendix/epf/NP/chronos_bolt_zeroshot/24",
+      "dataset": "NP",
+      "elapsed_seconds": 3.7568068504333496,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.4766872197953367,
+        "mse": 1.470717846704875
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866215.9549458,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.2646082043647766,
+        "mse": 0.24633578956127167
+      },
+      "test_corrected": {
+        "mae": 0.2633468508720398,
+        "mse": 0.24271288514137268
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/PJM/forward_selection/pl24/4e7c31bdbe9e",
+      "baseline": "forward_selection",
+      "cell_id": "appendix/epf/PJM/forward_selection/24",
+      "dataset": "PJM",
+      "elapsed_seconds": 3.9582221508026123,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.3600397402986549,
+        "mse": 0.6169757048522226
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866217.801107,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.17803266644477844,
+        "mse": 0.0807785838842392
+      },
+      "test_corrected": {
+        "mae": 0.1773916780948639,
+        "mse": 0.08028019964694977
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/PJM/portfolio_ensemble/pl24/4e7c31bdbe9e",
+      "baseline": "portfolio_ensemble",
+      "cell_id": "appendix/epf/PJM/portfolio_ensemble/24",
+      "dataset": "PJM",
+      "elapsed_seconds": 3.0302164554595947,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.4252614142250751,
+        "mse": 0.7192364501970854
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866224.129006,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.17991289496421814,
+        "mse": 0.08207964897155762
+      },
+      "test_corrected": {
+        "mae": 0.17914779484272003,
+        "mse": 0.08148930221796036
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/PJM/zeroshot_ensemble/pl24/4e7c31bdbe9e",
+      "baseline": "zeroshot_ensemble",
+      "cell_id": "appendix/epf/PJM/zeroshot_ensemble/24",
+      "dataset": "PJM",
+      "elapsed_seconds": 2.896529197692871,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.4173024930433114,
+        "mse": 0.6590181927947165
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866226.4613345,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.18094465136528015,
+        "mse": 0.08345211297273636
+      },
+      "test_corrected": {
+        "mae": 0.1801895648241043,
+        "mse": 0.08290214836597443
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/PJM/autogluon_high_quality/pl24/4e7c31bdbe9e",
+      "baseline": "autogluon_high_quality",
+      "cell_id": "appendix/epf/PJM/autogluon_high_quality/24",
+      "dataset": "PJM",
+      "elapsed_seconds": 3.1656835079193115,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 20.1275990373889,
+        "mse": 33.59070305688309
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866231.4895022,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.2605831027030945,
+        "mse": 0.1499863862991333
+      },
+      "test_corrected": {
+        "mae": 0.2081339806318283,
+        "mse": 0.09960490465164185
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/PJM/chronos_bolt_finetuned/pl24/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_finetuned",
+      "cell_id": "appendix/epf/PJM/chronos_bolt_finetuned/24",
+      "dataset": "PJM",
+      "elapsed_seconds": 1.9410433769226074,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.7725529967852075,
+        "mse": 2.9560933595560783
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866233.8954506,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.17266994714736938,
+        "mse": 0.07877127081155777
+      },
+      "test_corrected": {
+        "mae": 0.17133598029613495,
+        "mse": 0.07644271850585938
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/PJM/chronos_bolt_zeroshot/pl24/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_zeroshot",
+      "cell_id": "appendix/epf/PJM/chronos_bolt_zeroshot/24",
+      "dataset": "PJM",
+      "elapsed_seconds": 1.6043446063995361,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.6054711764296821,
+        "mse": 1.9797776586947826
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866238.8481436,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.17763866484165192,
+        "mse": 0.08146130293607712
+      },
+      "test_corrected": {
+        "mae": 0.1765631139278412,
+        "mse": 0.07984855026006699
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/BE/forward_selection/pl24/4e7c31bdbe9e",
+      "baseline": "forward_selection",
+      "cell_id": "appendix/epf/BE/forward_selection/24",
+      "dataset": "BE",
+      "elapsed_seconds": 2.6702215671539307,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.3849210372264755,
+        "mse": 1.0812824211984704
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866240.1763277,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.23693448305130005,
+        "mse": 0.3709295988082886
+      },
+      "test_corrected": {
+        "mae": 0.2360224723815918,
+        "mse": 0.36691880226135254
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/BE/portfolio_ensemble/pl24/4e7c31bdbe9e",
+      "baseline": "portfolio_ensemble",
+      "cell_id": "appendix/epf/BE/portfolio_ensemble/24",
+      "dataset": "BE",
+      "elapsed_seconds": 3.328758716583252,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.897889638055732,
+        "mse": 2.404056091116807
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866244.8794863,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.24464640021324158,
+        "mse": 0.3804207444190979
+      },
+      "test_corrected": {
+        "mae": 0.24244974553585052,
+        "mse": 0.3712752163410187
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/BE/zeroshot_ensemble/pl24/4e7c31bdbe9e",
+      "baseline": "zeroshot_ensemble",
+      "cell_id": "appendix/epf/BE/zeroshot_ensemble/24",
+      "dataset": "BE",
+      "elapsed_seconds": 3.3029754161834717,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.4718539420149508,
+        "mse": 1.0534879903265975
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866247.016506,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.24118299782276154,
+        "mse": 0.3721669316291809
+      },
+      "test_corrected": {
+        "mae": 0.240044966340065,
+        "mse": 0.3682461977005005
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/BE/autogluon_high_quality/pl24/4e7c31bdbe9e",
+      "baseline": "autogluon_high_quality",
+      "cell_id": "appendix/epf/BE/autogluon_high_quality/24",
+      "dataset": "BE",
+      "elapsed_seconds": 4.84430193901062,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 1.543153223621959,
+        "mse": -6.005935967092112
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866252.5615487,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.3310548961162567,
+        "mse": 0.46192851662635803
+      },
+      "test_corrected": {
+        "mae": 0.32594621181488037,
+        "mse": 0.48967164754867554
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/BE/chronos_bolt_finetuned/pl24/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_finetuned",
+      "cell_id": "appendix/epf/BE/chronos_bolt_finetuned/24",
+      "dataset": "BE",
+      "elapsed_seconds": 3.8581643104553223,
+      "method": "overlap_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.30993764763744736,
+        "mse": -0.21773963376014951
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866254.3510776,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.23607707023620605,
+        "mse": 0.35032227635383606
+      },
+      "test_corrected": {
+        "mae": 0.23534537851810455,
+        "mse": 0.3510850667953491
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/BE/chronos_bolt_zeroshot/pl24/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_zeroshot",
+      "cell_id": "appendix/epf/BE/chronos_bolt_zeroshot/24",
+      "dataset": "BE",
+      "elapsed_seconds": 1.4922327995300293,
+      "method": "overlap_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.3304330199686706,
+        "mse": 0.33219355928519273
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866261.6577072,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.23935529589653015,
+        "mse": 0.35620835423469543
+      },
+      "test_corrected": {
+        "mae": 0.2385643869638443,
+        "mse": 0.355025053024292
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/FR/forward_selection/pl24/4e7c31bdbe9e",
+      "baseline": "forward_selection",
+      "cell_id": "appendix/epf/FR/forward_selection/24",
+      "dataset": "FR",
+      "elapsed_seconds": 6.196833372116089,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.4662093108607888,
+        "mse": 0.043425683125632095
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866263.4625237,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.1979302614927292,
+        "mse": 0.35865166783332825
+      },
+      "test_corrected": {
+        "mae": 0.19700749218463898,
+        "mse": 0.35849592089653015
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/FR/portfolio_ensemble/pl24/4e7c31bdbe9e",
+      "baseline": "portfolio_ensemble",
+      "cell_id": "appendix/epf/FR/portfolio_ensemble/24",
+      "dataset": "FR",
+      "elapsed_seconds": 6.5739991664886475,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.4865400417948051,
+        "mse": 0.2130396284823078
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866263.6044686,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.21526654064655304,
+        "mse": 0.38888293504714966
+      },
+      "test_corrected": {
+        "mae": 0.21421918272972107,
+        "mse": 0.3880544602870941
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/FR/zeroshot_ensemble/pl24/4e7c31bdbe9e",
+      "baseline": "zeroshot_ensemble",
+      "cell_id": "appendix/epf/FR/zeroshot_ensemble/24",
+      "dataset": "FR",
+      "elapsed_seconds": 3.15129017829895,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.9265992118202224,
+        "mse": 0.332286882695988
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866269.996339,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.19513043761253357,
+        "mse": 0.3686378002166748
+      },
+      "test_corrected": {
+        "mae": 0.19332236051559448,
+        "mse": 0.36741286516189575
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/FR/autogluon_high_quality/pl24/4e7c31bdbe9e",
+      "baseline": "autogluon_high_quality",
+      "cell_id": "appendix/epf/FR/autogluon_high_quality/24",
+      "dataset": "FR",
+      "elapsed_seconds": 5.732271432876587,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 13.822001340100126,
+        "mse": 4.707049152898814
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866274.4528794,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.2565476894378662,
+        "mse": 0.43265023827552795
+      },
+      "test_corrected": {
+        "mae": 0.22108766436576843,
+        "mse": 0.412285178899765
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/FR/chronos_bolt_finetuned/pl24/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_finetuned",
+      "cell_id": "appendix/epf/FR/chronos_bolt_finetuned/24",
+      "dataset": "FR",
+      "elapsed_seconds": 3.938936233520508,
+      "method": "overlap_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.2751442388824788,
+        "mse": 0.028374790108291276
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866274.9928272,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.18657846748828888,
+        "mse": 0.35731542110443115
+      },
+      "test_corrected": {
+        "mae": 0.18606510758399963,
+        "mse": 0.3572140336036682
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/FR/chronos_bolt_zeroshot/pl24/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_zeroshot",
+      "cell_id": "appendix/epf/FR/chronos_bolt_zeroshot/24",
+      "dataset": "FR",
+      "elapsed_seconds": 3.501099109649658,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 1.6876036698392156,
+        "mse": 0.657528545399674
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866278.7907436,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.19112490117549896,
+        "mse": 0.35718175768852234
+      },
+      "test_corrected": {
+        "mae": 0.18789947032928467,
+        "mse": 0.35483318567276
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/DE/forward_selection/pl24/4e7c31bdbe9e",
+      "baseline": "forward_selection",
+      "cell_id": "appendix/epf/DE/forward_selection/24",
+      "dataset": "DE",
+      "elapsed_seconds": 4.079121112823486,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.5191476650374077,
+        "mse": 0.10835058004959025
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866283.0332093,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.406654417514801,
+        "mse": 0.4231439530849457
+      },
+      "test_corrected": {
+        "mae": 0.40454328060150146,
+        "mse": 0.4226854741573334
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/DE/portfolio_ensemble/pl24/4e7c31bdbe9e",
+      "baseline": "portfolio_ensemble",
+      "cell_id": "appendix/epf/DE/portfolio_ensemble/24",
+      "dataset": "DE",
+      "elapsed_seconds": 9.425025939941406,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.6363028246495156,
+        "mse": 0.5457669504932582
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866284.606172,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.4068516492843628,
+        "mse": 0.426300585269928
+      },
+      "test_corrected": {
+        "mae": 0.40426284074783325,
+        "mse": 0.4239739775657654
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/DE/zeroshot_ensemble/pl24/4e7c31bdbe9e",
+      "baseline": "zeroshot_ensemble",
+      "cell_id": "appendix/epf/DE/zeroshot_ensemble/24",
+      "dataset": "DE",
+      "elapsed_seconds": 8.215247631072998,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.47668775587797724,
+        "mse": 0.1953177106852451
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866286.0965328,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.40524572134017944,
+        "mse": 0.42337432503700256
+      },
+      "test_corrected": {
+        "mae": 0.4033139646053314,
+        "mse": 0.4225473999977112
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/DE/autogluon_high_quality/pl24/4e7c31bdbe9e",
+      "baseline": "autogluon_high_quality",
+      "cell_id": "appendix/epf/DE/autogluon_high_quality/24",
+      "dataset": "DE",
+      "elapsed_seconds": 7.1091368198394775,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 9.113889373883216,
+        "mse": 11.019893464144008
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866288.1173117,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.5045629739761353,
+        "mse": 0.6027050614356995
+      },
+      "test_corrected": {
+        "mae": 0.4585776627063751,
+        "mse": 0.5362876057624817
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/DE/chronos_bolt_finetuned/pl24/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_finetuned",
+      "cell_id": "appendix/epf/DE/chronos_bolt_finetuned/24",
+      "dataset": "DE",
+      "elapsed_seconds": 1.061392068862915,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": -1.0352300016182407,
+        "mse": -0.28285239895596487
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866295.2183745,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.42284274101257324,
+        "mse": 0.45187249779701233
+      },
+      "test_corrected": {
+        "mae": 0.4272201359272003,
+        "mse": 0.4531506299972534
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/DE/chronos_bolt_zeroshot/pl24/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_zeroshot",
+      "cell_id": "appendix/epf/DE/chronos_bolt_zeroshot/24",
+      "dataset": "DE",
+      "elapsed_seconds": 0.9708707332611084,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 4.051345957774136,
+        "mse": 7.616690744017576
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866298.4590383,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.44163843989372253,
+        "mse": 0.4943051040172577
+      },
+      "test_corrected": {
+        "mae": 0.42374613881111145,
+        "mse": 0.4566554129123688
+      }
+    }
+  ],
+  "counts": {
+    "completed": 94,
+    "evaluable": 94,
+    "failed": 0,
+    "improved": 81,
+    "incomplete": 0,
+    "not_improved": 13,
+    "paper_oot": 2,
+    "pending": 0,
+    "reported": 96,
+    "running": 0
+  },
+  "execution_topology": {
+    "active_gpu_workers": 0,
+    "cpu_workers": 4,
+    "gpu_inactivity_reason": "Appendix RAG replays numerical corrections over existing prediction bundles and performs no model inference.",
+    "inactive_reserved_gpus": 4,
+    "instance_count": 1,
+    "instance_type": "ml.g5.12xlarge",
+    "reserved_gpus_per_host": 4
+  },
+  "failed_cells": [],
+  "generated_unix": 1785866301.5647438,
+  "groups": {
+    "baseline": {
+      "autogluon_high_quality": {
+        "completed": 14,
+        "evaluable": 14,
+        "failed": 0,
+        "improved": 13,
+        "improvement_rate": 0.9285714285714286,
+        "incomplete": 0,
+        "not_improved": 1,
+        "paper_oot": 2,
+        "pending": 0,
+        "reported": 16,
+        "running": 0
+      },
+      "chronos_bolt_finetuned": {
+        "completed": 16,
+        "evaluable": 16,
+        "failed": 0,
+        "improved": 14,
+        "improvement_rate": 0.875,
+        "incomplete": 0,
+        "not_improved": 2,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 16,
+        "running": 0
+      },
+      "chronos_bolt_zeroshot": {
+        "completed": 16,
+        "evaluable": 16,
+        "failed": 0,
+        "improved": 16,
+        "improvement_rate": 1.0,
+        "incomplete": 0,
+        "not_improved": 0,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 16,
+        "running": 0
+      },
+      "forward_selection": {
+        "completed": 16,
+        "evaluable": 16,
+        "failed": 0,
+        "improved": 13,
+        "improvement_rate": 0.8125,
+        "incomplete": 0,
+        "not_improved": 3,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 16,
+        "running": 0
+      },
+      "portfolio_ensemble": {
+        "completed": 16,
+        "evaluable": 16,
+        "failed": 0,
+        "improved": 12,
+        "improvement_rate": 0.75,
+        "incomplete": 0,
+        "not_improved": 4,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 16,
+        "running": 0
+      },
+      "zeroshot_ensemble": {
+        "completed": 16,
+        "evaluable": 16,
+        "failed": 0,
+        "improved": 13,
+        "improvement_rate": 0.8125,
+        "incomplete": 0,
+        "not_improved": 3,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 16,
+        "running": 0
+      }
+    },
+    "dataset": {
+      "BE": {
+        "completed": 6,
+        "evaluable": 6,
+        "failed": 0,
+        "improved": 4,
+        "improvement_rate": 0.6666666666666666,
+        "incomplete": 0,
+        "not_improved": 2,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 6,
+        "running": 0
+      },
+      "DE": {
+        "completed": 6,
+        "evaluable": 6,
+        "failed": 0,
+        "improved": 5,
+        "improvement_rate": 0.8333333333333334,
+        "incomplete": 0,
+        "not_improved": 1,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 6,
+        "running": 0
+      },
+      "ETTh1": {
+        "completed": 6,
+        "evaluable": 6,
+        "failed": 0,
+        "improved": 5,
+        "improvement_rate": 0.8333333333333334,
+        "incomplete": 0,
+        "not_improved": 1,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 6,
+        "running": 0
+      },
+      "ETTh2": {
+        "completed": 6,
+        "evaluable": 6,
+        "failed": 0,
+        "improved": 3,
+        "improvement_rate": 0.5,
+        "incomplete": 0,
+        "not_improved": 3,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 6,
+        "running": 0
+      },
+      "ETTm1": {
+        "completed": 6,
+        "evaluable": 6,
+        "failed": 0,
+        "improved": 6,
+        "improvement_rate": 1.0,
+        "incomplete": 0,
+        "not_improved": 0,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 6,
+        "running": 0
+      },
+      "ETTm2": {
+        "completed": 6,
+        "evaluable": 6,
+        "failed": 0,
+        "improved": 6,
+        "improvement_rate": 1.0,
+        "incomplete": 0,
+        "not_improved": 0,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 6,
+        "running": 0
+      },
+      "FR": {
+        "completed": 6,
+        "evaluable": 6,
+        "failed": 0,
+        "improved": 6,
+        "improvement_rate": 1.0,
+        "incomplete": 0,
+        "not_improved": 0,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 6,
+        "running": 0
+      },
+      "NP": {
+        "completed": 6,
+        "evaluable": 6,
+        "failed": 0,
+        "improved": 3,
+        "improvement_rate": 0.5,
+        "incomplete": 0,
+        "not_improved": 3,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 6,
+        "running": 0
+      },
+      "PEMS03": {
+        "completed": 6,
+        "evaluable": 6,
+        "failed": 0,
+        "improved": 6,
+        "improvement_rate": 1.0,
+        "incomplete": 0,
+        "not_improved": 0,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 6,
+        "running": 0
+      },
+      "PEMS04": {
+        "completed": 6,
+        "evaluable": 6,
+        "failed": 0,
+        "improved": 6,
+        "improvement_rate": 1.0,
+        "incomplete": 0,
+        "not_improved": 0,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 6,
+        "running": 0
+      },
+      "PEMS07": {
+        "completed": 6,
+        "evaluable": 6,
+        "failed": 0,
+        "improved": 6,
+        "improvement_rate": 1.0,
+        "incomplete": 0,
+        "not_improved": 0,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 6,
+        "running": 0
+      },
+      "PEMS08": {
+        "completed": 6,
+        "evaluable": 6,
+        "failed": 0,
+        "improved": 6,
+        "improvement_rate": 1.0,
+        "incomplete": 0,
+        "not_improved": 0,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 6,
+        "running": 0
+      },
+      "PJM": {
+        "completed": 6,
+        "evaluable": 6,
+        "failed": 0,
+        "improved": 6,
+        "improvement_rate": 1.0,
+        "incomplete": 0,
+        "not_improved": 0,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 6,
+        "running": 0
+      },
+      "electricity": {
+        "completed": 5,
+        "evaluable": 5,
+        "failed": 0,
+        "improved": 4,
+        "improvement_rate": 0.8,
+        "incomplete": 0,
+        "not_improved": 1,
+        "paper_oot": 1,
+        "pending": 0,
+        "reported": 6,
+        "running": 0
+      },
+      "traffic": {
+        "completed": 5,
+        "evaluable": 5,
+        "failed": 0,
+        "improved": 5,
+        "improvement_rate": 1.0,
+        "incomplete": 0,
+        "not_improved": 0,
+        "paper_oot": 1,
+        "pending": 0,
+        "reported": 6,
+        "running": 0
+      },
+      "weather": {
+        "completed": 6,
+        "evaluable": 6,
+        "failed": 0,
+        "improved": 4,
+        "improvement_rate": 0.6666666666666666,
+        "incomplete": 0,
+        "not_improved": 2,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 6,
+        "running": 0
+      }
+    },
+    "task_family": {
+      "epf": {
+        "completed": 30,
+        "evaluable": 30,
+        "failed": 0,
+        "improved": 24,
+        "improvement_rate": 0.8,
+        "incomplete": 0,
+        "not_improved": 6,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 30,
+        "running": 0
+      },
+      "long_term": {
+        "completed": 40,
+        "evaluable": 40,
+        "failed": 0,
+        "improved": 33,
+        "improvement_rate": 0.825,
+        "incomplete": 0,
+        "not_improved": 7,
+        "paper_oot": 2,
+        "pending": 0,
+        "reported": 42,
+        "running": 0
+      },
+      "pems": {
+        "completed": 24,
+        "evaluable": 24,
+        "failed": 0,
+        "improved": 24,
+        "improvement_rate": 1.0,
+        "incomplete": 0,
+        "not_improved": 0,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 24,
+        "running": 0
+      }
+    }
+  },
+  "launcher_revision": "43fc3625b57ab9844b4b939636b8c0bace984fee",
+  "method_counts": {
+    "causal_bias": 1,
+    "historical_residual": 70,
+    "overlap_blend": 4,
+    "seasonal_blend": 19
+  },
+  "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+  "metric_gain_percent": {
+    "mae": {
+      "count": 94,
+      "maximum": 29.257121838089954,
+      "mean": 6.261186181931364,
+      "median": 1.8939374390483947,
+      "minimum": -1.0352300016182407
+    },
+    "mape": {
+      "count": 24,
+      "maximum": 30.77775254120297,
+      "mean": 15.830804825803868,
+      "median": 14.113176437886263,
+      "minimum": 4.434616949808206
+    },
+    "mse": {
+      "count": 70,
+      "maximum": 33.59070305688309,
+      "mean": 5.818087545500539,
+      "median": 1.5078388217772163,
+      "minimum": -6.005935967092112
+    },
+    "rmse": {
+      "count": 24,
+      "maximum": 29.690339273689354,
+      "mean": 15.054898578380163,
+      "median": 15.250075860474315,
+      "minimum": 1.7885682763976558
+    }
+  },
+  "not_improved_cells": [
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTh1/portfolio_ensemble/pl96/4e7c31bdbe9e",
+      "baseline": "portfolio_ensemble",
+      "cell_id": "appendix/long_term/ETTh1/portfolio_ensemble/96",
+      "dataset": "ETTh1",
+      "elapsed_seconds": 9.307393789291382,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": -0.19892775613243022,
+        "mse": 0.5536611187709277
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865229.1339498,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.39715903997421265,
+        "mse": 0.37766075134277344
+      },
+      "test_corrected": {
+        "mae": 0.39794909954071045,
+        "mse": 0.37556979060173035
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTh2/forward_selection/pl96/4e7c31bdbe9e",
+      "baseline": "forward_selection",
+      "cell_id": "appendix/long_term/ETTh2/forward_selection/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 6.390908479690552,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.3884110915025866,
+        "mse": -0.1217069713093902
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865242.3061655,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3341846764087677,
+        "mse": 0.2784655690193176
+      },
+      "test_corrected": {
+        "mae": 0.332886666059494,
+        "mse": 0.2788044810295105
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTh2/portfolio_ensemble/pl96/4e7c31bdbe9e",
+      "baseline": "portfolio_ensemble",
+      "cell_id": "appendix/long_term/ETTh2/portfolio_ensemble/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 6.370906114578247,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.31162670243731505,
+        "mse": -0.24199108489825452
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865242.0218697,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.33441537618637085,
+        "mse": 0.27941322326660156
+      },
+      "test_corrected": {
+        "mae": 0.3333732485771179,
+        "mse": 0.2800893783569336
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/ETTh2/zeroshot_ensemble/pl96/4e7c31bdbe9e",
+      "baseline": "zeroshot_ensemble",
+      "cell_id": "appendix/long_term/ETTh2/zeroshot_ensemble/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 4.546952486038208,
+      "method": "causal_bias",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 1.4408334936133784,
+        "mse": -0.35352075251335974
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865250.2035322,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3412019908428192,
+        "mse": 0.28236573934555054
+      },
+      "test_corrected": {
+        "mae": 0.3362858382778802,
+        "mse": 0.28336396083212484
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/weather/portfolio_ensemble/pl96/4e7c31bdbe9e",
+      "baseline": "portfolio_ensemble",
+      "cell_id": "appendix/long_term/weather/portfolio_ensemble/96",
+      "dataset": "weather",
+      "elapsed_seconds": 26.532236337661743,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": -0.13735745101362332,
+        "mse": 1.1269605702275345
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865351.990422,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.20996099710464478,
+        "mse": 0.15872341394424438
+      },
+      "test_corrected": {
+        "mae": 0.2102493941783905,
+        "mse": 0.15693466365337372
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/weather/zeroshot_ensemble/pl96/4e7c31bdbe9e",
+      "baseline": "zeroshot_ensemble",
+      "cell_id": "appendix/long_term/weather/zeroshot_ensemble/96",
+      "dataset": "weather",
+      "elapsed_seconds": 25.7646541595459,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": -0.027506658998561678,
+        "mse": 1.3780372659145603
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865354.91674,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.2159874439239502,
+        "mse": 0.16507834196090698
+      },
+      "test_corrected": {
+        "mae": 0.21604685485363007,
+        "mse": 0.1628035008907318
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/electricity/forward_selection/pl96/4e7c31bdbe9e",
+      "baseline": "forward_selection",
+      "cell_id": "appendix/long_term/electricity/forward_selection/96",
+      "dataset": "electricity",
+      "elapsed_seconds": 115.55886316299438,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.7165002190685023,
+        "mse": -0.03746086727858417
+      },
+      "paper_evaluable": true,
+      "pred_len": 96,
+      "started_unix": 1785865384.2448716,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.23235821723937988,
+        "mse": 0.1314660906791687
+      },
+      "test_corrected": {
+        "mae": 0.23069337010383606,
+        "mse": 0.13151533901691437
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/NP/forward_selection/pl24/4e7c31bdbe9e",
+      "baseline": "forward_selection",
+      "cell_id": "appendix/epf/NP/forward_selection/24",
+      "dataset": "NP",
+      "elapsed_seconds": 1.5556838512420654,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.24029237490122163,
+        "mse": -0.7790472209651718
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866198.8666096,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.2615816593170166,
+        "mse": 0.2212430089712143
+      },
+      "test_corrected": {
+        "mae": 0.2609530985355377,
+        "mse": 0.22296659648418427
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/NP/portfolio_ensemble/pl24/4e7c31bdbe9e",
+      "baseline": "portfolio_ensemble",
+      "cell_id": "appendix/epf/NP/portfolio_ensemble/24",
+      "dataset": "NP",
+      "elapsed_seconds": 1.251110315322876,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.2139488499700164,
+        "mse": -0.685618642562922
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866202.625922,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.25778207182884216,
+        "mse": 0.21884942054748535
+      },
+      "test_corrected": {
+        "mae": 0.2572305500507355,
+        "mse": 0.22034989297389984
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/NP/zeroshot_ensemble/pl24/4e7c31bdbe9e",
+      "baseline": "zeroshot_ensemble",
+      "cell_id": "appendix/epf/NP/zeroshot_ensemble/24",
+      "dataset": "NP",
+      "elapsed_seconds": 1.679626703262329,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": -0.3501196676281625,
+        "mse": -1.0080354750322245
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866204.4105809,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.2563145160675049,
+        "mse": 0.22510457038879395
+      },
+      "test_corrected": {
+        "mae": 0.25721192359924316,
+        "mse": 0.22737370431423187
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/BE/autogluon_high_quality/pl24/4e7c31bdbe9e",
+      "baseline": "autogluon_high_quality",
+      "cell_id": "appendix/epf/BE/autogluon_high_quality/24",
+      "dataset": "BE",
+      "elapsed_seconds": 4.84430193901062,
+      "method": "historical_residual",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 1.543153223621959,
+        "mse": -6.005935967092112
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866252.5615487,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.3310548961162567,
+        "mse": 0.46192851662635803
+      },
+      "test_corrected": {
+        "mae": 0.32594621181488037,
+        "mse": 0.48967164754867554
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/BE/chronos_bolt_finetuned/pl24/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_finetuned",
+      "cell_id": "appendix/epf/BE/chronos_bolt_finetuned/24",
+      "dataset": "BE",
+      "elapsed_seconds": 3.8581643104553223,
+      "method": "overlap_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": 0.30993764763744736,
+        "mse": -0.21773963376014951
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866254.3510776,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.23607707023620605,
+        "mse": 0.35032227635383606
+      },
+      "test_corrected": {
+        "mae": 0.23534537851810455,
+        "mse": 0.3510850667953491
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/epf/DE/chronos_bolt_finetuned/pl24/4e7c31bdbe9e",
+      "baseline": "chronos_bolt_finetuned",
+      "cell_id": "appendix/epf/DE/chronos_bolt_finetuned/24",
+      "dataset": "DE",
+      "elapsed_seconds": 1.061392068862915,
+      "method": "seasonal_blend",
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "metric_gain_percent": {
+        "mae": -1.0352300016182407,
+        "mse": -0.28285239895596487
+      },
+      "paper_evaluable": true,
+      "pred_len": 24,
+      "started_unix": 1785866295.2183745,
+      "state": "completed",
+      "task_family": "epf",
+      "test_baseline": {
+        "mae": 0.42284274101257324,
+        "mse": 0.45187249779701233
+      },
+      "test_corrected": {
+        "mae": 0.4272201359272003,
+        "mse": 0.4531506299972534
+      }
+    }
+  ],
+  "output_root": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15",
+  "paper_oot_cells": [
+    {
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/electricity/autogluon_high_quality/pl96/4e7c31bdbe9e",
+      "baseline": "autogluon_high_quality",
+      "cell_id": "appendix/long_term/electricity/autogluon_high_quality/96",
+      "dataset": "electricity",
+      "elapsed_seconds": 0.04852771759033203,
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "paper_evaluable": false,
+      "pred_len": 96,
+      "started_unix": 1785865410.7498078,
+      "state": "paper_oot",
+      "task_family": "long_term"
+    },
+    {
+      "artifact_dir": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/long_term/traffic/autogluon_high_quality/pl96/4e7c31bdbe9e",
+      "baseline": "autogluon_high_quality",
+      "cell_id": "appendix/long_term/traffic/autogluon_high_quality/96",
+      "dataset": "traffic",
+      "elapsed_seconds": 0.06367635726928711,
+      "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+      "paper_evaluable": false,
+      "pred_len": 96,
+      "started_unix": 1785865613.1081693,
+      "state": "paper_oot",
+      "task_family": "long_term"
+    }
+  ],
+  "publication_gate": {
+    "baselines": {
+      "autogluon_high_quality": {
+        "completed": 14,
+        "evaluable": 14,
+        "failed": 0,
+        "improved": 13,
+        "improvement_rate": 0.9285714285714286,
+        "incomplete": 0,
+        "not_improved": 1,
+        "paper_oot": 2,
+        "pending": 0,
+        "reported": 16,
+        "running": 0
+      },
+      "chronos_bolt_finetuned": {
+        "completed": 16,
+        "evaluable": 16,
+        "failed": 0,
+        "improved": 14,
+        "improvement_rate": 0.875,
+        "incomplete": 0,
+        "not_improved": 2,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 16,
+        "running": 0
+      },
+      "chronos_bolt_zeroshot": {
+        "completed": 16,
+        "evaluable": 16,
+        "failed": 0,
+        "improved": 16,
+        "improvement_rate": 1.0,
+        "incomplete": 0,
+        "not_improved": 0,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 16,
+        "running": 0
+      },
+      "forward_selection": {
+        "completed": 16,
+        "evaluable": 16,
+        "failed": 0,
+        "improved": 13,
+        "improvement_rate": 0.8125,
+        "incomplete": 0,
+        "not_improved": 3,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 16,
+        "running": 0
+      },
+      "portfolio_ensemble": {
+        "completed": 16,
+        "evaluable": 16,
+        "failed": 0,
+        "improved": 12,
+        "improvement_rate": 0.75,
+        "incomplete": 0,
+        "not_improved": 4,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 16,
+        "running": 0
+      },
+      "zeroshot_ensemble": {
+        "completed": 16,
+        "evaluable": 16,
+        "failed": 0,
+        "improved": 13,
+        "improvement_rate": 0.8125,
+        "incomplete": 0,
+        "not_improved": 3,
+        "paper_oot": 0,
+        "pending": 0,
+        "reported": 16,
+        "running": 0
+      }
+    },
+    "confirmatory_evidence_required": true,
+    "criteria": {
+      "baseline_improvement_rates": true,
+      "complete_without_runtime_failures": true,
+      "full_appendix_scope": true,
+      "overall_improvement_rate": true,
+      "positive_overall_metric_means_and_medians": true,
+      "positive_task_family_metric_means": true,
+      "task_family_improvement_rates": true
+    },
+    "development_gate_passed": true,
+    "overall": {
+      "evaluable": 94,
+      "improved": 81,
+      "improvement_rate": 0.8617021276595744,
+      "metric_gain_percent": {
+        "mae": {
+          "count": 94,
+          "maximum": 29.257121838089954,
+          "mean": 6.261186181931364,
+          "median": 1.8939374390483947,
+          "minimum": -1.0352300016182407
+        },
+        "mape": {
+          "count": 24,
+          "maximum": 30.77775254120297,
+          "mean": 15.830804825803868,
+          "median": 14.113176437886263,
+          "minimum": 4.434616949808206
+        },
+        "mse": {
+          "count": 70,
+          "maximum": 33.59070305688309,
+          "mean": 5.818087545500539,
+          "median": 1.5078388217772163,
+          "minimum": -6.005935967092112
+        },
+        "rmse": {
+          "count": 24,
+          "maximum": 29.690339273689354,
+          "mean": 15.054898578380163,
+          "median": 15.250075860474315,
+          "minimum": 1.7885682763976558
+        }
+      }
+    },
+    "scope": {
+      "evaluable": 94,
+      "reported": 96,
+      "required_evaluable": 94,
+      "required_reported": 96
+    },
+    "task_families": {
+      "epf": {
+        "completed": 30,
+        "evaluable": 30,
+        "failed": 0,
+        "improved": 24,
+        "improvement_rate": 0.8,
+        "incomplete": 0,
+        "metric_gain_percent": {
+          "mae": {
+            "count": 30,
+            "maximum": 20.1275990373889,
+            "mean": 2.564843583805901,
+            "median": 0.48161389883639116,
+            "minimum": -1.0352300016182407
+          },
+          "mse": {
+            "count": 30,
+            "maximum": 33.59070305688309,
+            "mean": 2.847837568547342,
+            "median": 0.6372521251259483,
+            "minimum": -6.005935967092112
+          }
+        },
+        "not_improved": 6,
+        "paper_oot": 0,
+        "pending": 0,
+        "positive_metric_means": true,
+        "reported": 30,
+        "running": 0
+      },
+      "long_term": {
+        "completed": 40,
+        "evaluable": 40,
+        "failed": 0,
+        "improved": 33,
+        "improvement_rate": 0.825,
+        "incomplete": 0,
+        "metric_gain_percent": {
+          "mae": {
+            "count": 40,
+            "maximum": 13.864090984127394,
+            "mean": 3.4773987947985767,
+            "median": 1.777329820366477,
+            "minimum": -0.19892775613243022
+          },
+          "mse": {
+            "count": 40,
+            "maximum": 33.35843404130432,
+            "mean": 8.045775028215438,
+            "median": 3.8647710280292644,
+            "minimum": -0.35352075251335974
+          }
+        },
+        "not_improved": 7,
+        "paper_oot": 2,
+        "pending": 0,
+        "positive_metric_means": true,
+        "reported": 42,
+        "running": 0
+      },
+      "pems": {
+        "completed": 24,
+        "evaluable": 24,
+        "failed": 0,
+        "improved": 24,
+        "improvement_rate": 1.0,
+        "incomplete": 0,
+        "metric_gain_percent": {
+          "mae": {
+            "count": 24,
+            "maximum": 29.257121838089954,
+            "mean": 15.521260074809502,
+            "median": 15.235410799615723,
+            "minimum": 2.879924934811322
+          },
+          "mape": {
+            "count": 24,
+            "maximum": 30.77775254120297,
+            "mean": 15.830804825803868,
+            "median": 14.113176437886263,
+            "minimum": 4.434616949808206
+          },
+          "rmse": {
+            "count": 24,
+            "maximum": 29.690339273689354,
+            "mean": 15.054898578380163,
+            "median": 15.250075860474315,
+            "minimum": 1.7885682763976558
+          }
+        },
+        "not_improved": 0,
+        "paper_oot": 0,
+        "pending": 0,
+        "positive_metric_means": true,
+        "reported": 24,
+        "running": 0
+      }
+    },
+    "thresholds": {
+      "baseline_improvement_rate": 0.7,
+      "overall_improvement_rate": 0.8,
+      "task_family_improvement_rate": 0.7
+    }
+  },
+  "selector_policy": "validation_argmin_v3",
+  "selector_protocol_sha256": "6c7de88b2d10e19b04ad56259088ec51d0b14dc3cd5f092f5cc14d66878f53f1",
+  "source_revision": "4e7c31bdbe9ed3c8cd5ac852b9048ffb5df7d366"
+}

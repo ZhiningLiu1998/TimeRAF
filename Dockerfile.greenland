@@ -1,0 +1,44 @@
+# syntax=docker/dockerfile:1.7
+
+FROM pytorch/pytorch:2.8.0-cuda12.9-cudnn9-runtime
+
+ARG SOURCE_REVISION=unknown
+
+LABEL org.opencontainers.image.revision="${SOURCE_REVISION}" \
+      com.timeraf.replay-manifest-sha256="447391d99c46bc1dd4170e71a8388bad5edb0a4c48a3048e230e404b96a0a77a" \
+      com.timeraf.full-matrix-manifest-sha256="45830d23f3b017c15d3680c88f837f84a9441eef9a6ceaaa5370c14872660c2a" \
+      com.timeraf.numerical-recovery-protocol-sha256="1320f3eca815a93a6500caadbf7e526610379b2af5f6976f1db94f91ed259d14"
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PYTHONPATH=/opt/timeraf-runtime
+
+RUN apt-get update \
+    && apt-get dist-upgrade -y --no-install-recommends \
+    && apt-get install -y --no-install-recommends ca-certificates procps \
+    && apt-get purge -y --auto-remove \
+        libc-dev-bin \
+        libc6-dev \
+        libjpeg-dev \
+        libjpeg-turbo8-dev \
+        libjpeg8-dev \
+        libpng-dev \
+        linux-libc-dev \
+        zlib1g-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY requirements-greenland.txt /opt/timeraf-runtime/requirements.txt
+RUN --mount=type=cache,target=/root/.cache/pip \
+    python -m pip install --no-cache-dir \
+        -r /opt/timeraf-runtime/requirements.txt \
+    && python -m pip check \
+    && python -c "import torch; assert torch.__version__ == '2.8.0+cu129'; assert torch.version.cuda == '12.9'"
+
+COPY scripts/greenland_common.py \
+     scripts/greenland_credential_proxy.py \
+     scripts/run_greenland_job.py \
+     /opt/timeraf-runtime/
+
+WORKDIR /workspace
+ENTRYPOINT ["python", "/opt/timeraf-runtime/run_greenland_job.py"]

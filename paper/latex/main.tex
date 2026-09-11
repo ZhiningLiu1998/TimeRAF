@@ -1,0 +1,93 @@
+\documentclass{article}
+
+\usepackage{iclr2027_conference,times}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{url}
+
+\definecolor{timerafblue}{HTML}{1F5A7A}
+\definecolor{timerafgreen}{HTML}{287A57}
+\definecolor{timerafgold}{HTML}{A56617}
+
+\newcommand{\method}{\textsc{TimeRaf}}
+\newcommand{\xctx}{\mathbf{x}}
+\newcommand{\ytrue}{\mathbf{y}}
+\newcommand{\ybase}{\widehat{\mathbf{y}}}
+\newcommand{\ycorr}{\widetilde{\mathbf{y}}}
+\newcommand{\resid}{\mathbf{r}}
+\newcommand{\feat}{\boldsymbol{\phi}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\argmin}{\mathop{\mathrm{arg\,min}}}
+
+% Table emphasis: first best is bold, second best is underlined.
+\newcommand{\bs}[1]{\textbf{#1}}
+\newcommand{\sbs}[1]{\underline{#1}}
+
+\newtheorem{problem}{Problem}
+
+\title{Retrieve the Error, Not the Input: Model-Adaptive\\
+Residual Retrieval for Time-Series Forecasting}
+
+\author{Anonymous authors\\Paper under double-blind review}
+
+% Keep commented for anonymous submission.
+% \iclrfinalcopy
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Retrieval augmentation is an attractive way to expose a trained time-series
+forecaster to rare historical conditions without touching its weights, and
+existing methods retrieve on the \emph{input}: they find past windows whose
+context resembles the query and reuse the futures that followed. We argue that
+this is the wrong retrieval object. A modern forecaster already predicts the
+routine level, phase, and rhythm of a series; what it repeatedly misses is a
+small, recurring, and \emph{model-specific} residual, which whole-window
+similarity does not isolate and a borrowed historical future does not preserve.
+We introduce \method{}, which retrieves a frozen forecaster's own past errors.
+It stores chronologically observed validation residuals, queries them with a
+descriptor built from both the observed context and the forecaster's intended
+future, shrinks the retrieved correction where neighbouring errors disagree, and
+applies it only when validation prefers it to a simpler correction or to leaving
+the forecast untouched. In a 585-setting comparison where every system revises
+identical frozen forecasts, error retrieval improves all reported metrics in 490
+settings and \method{} in 533, against 375 and 384 for the published RAFT and
+SARAF retrieval operators and 478 for a strong endpoint-aligned analog-future
+control; the error object's margin grows with how accurate the frozen forecaster
+is, and reverses only where that forecaster is poor. \method{} improves every reported metric in 562/585 settings
+spanning 13 architectures, 16 datasets, and horizons from 6 to 720 steps,
+and in 81/94 settings
+spanning static ensembles, AutoML, and a forecasting foundation model, where
+error retrieval is the selected correction in 70 settings.
+\end{abstract}
+
+\input{sections/01_introduction}
+\input{sections/02_preliminaries}
+\input{sections/03_method}
+\input{sections/04_experiments}
+\input{sections/05_related_work}
+\input{sections/06_limitations_conclusion}
+
+\subsection*{AI use statement}
+Generative AI tools assisted with literature discovery, code, plotting, and
+manuscript editing. The authors verified all citations, analyses,
+experimental measurements, and final text.
+
+\bibliography{references}
+\bibliographystyle{iclr2027_conference}
+
+\appendix
+\input{sections/appendix}
+
+\end{document}

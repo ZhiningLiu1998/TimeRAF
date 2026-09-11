@@ -1,0 +1,91 @@
+{
+  "backbone_order": [
+    "TimeXer",
+    "PatchTST",
+    "TimeMixer",
+    "iTransformer",
+    "PAttn",
+    "TimesNet",
+    "FreTS",
+    "DLinear",
+    "FEDformer",
+    "Autoformer",
+    "LightTS",
+    "Nonstationary_Transformer",
+    "Informer"
+  ],
+  "long_term_base_mse": {
+    "Autoformer": 0.44695967010089327,
+    "DLinear": 0.42093500920704435,
+    "FEDformer": 0.42244286249790874,
+    "FreTS": 0.40497448295354843,
+    "Informer": 1.0527503926839148,
+    "LightTS": 0.45199665267552647,
+    "Nonstationary_Transformer": 0.5210228354803154,
+    "PAttn": 0.3602248451539448,
+    "PatchTST": 0.35029679590037893,
+    "TimeMixer": 0.35181012962545666,
+    "TimeXer": 0.33476544224790167,
+    "TimesNet": 0.37983082979917526,
+    "iTransformer": 0.3562729513006551
+  },
+  "schema_version": 1,
+  "series": {
+    "epf": {
+      "advantage_percentage_points": {
+        "Autoformer": -7.709807491916273,
+        "DLinear": 5.407873467986274,
+        "FEDformer": -3.8431939061525533,
+        "FreTS": -0.6192060312594686,
+        "Informer": -1.0287347347961726,
+        "LightTS": -0.41611440353163054,
+        "Nonstationary_Transformer": 4.684569652290229,
+        "PAttn": -0.7129532784926665,
+        "PatchTST": 1.2788682046715556,
+        "TimeMixer": -0.1350144474797661,
+        "TimeXer": 0.8353997277209179,
+        "TimesNet": -0.5653568058682152,
+        "iTransformer": -0.7675448487285114
+      },
+      "spearman_rho_vs_base_mse": -0.27472527472527475
+    },
+    "long_term": {
+      "advantage_percentage_points": {
+        "Autoformer": -2.499382894740181,
+        "DLinear": -1.4457490693489197,
+        "FEDformer": -0.8703722647480383,
+        "FreTS": -0.14839962863907297,
+        "Informer": -9.903060548961449,
+        "LightTS": -1.9427352812553047,
+        "Nonstationary_Transformer": -1.67390897536306,
+        "PAttn": 0.024053040681638826,
+        "PatchTST": 0.20955423199045273,
+        "TimeMixer": 0.14855527081396713,
+        "TimeXer": 0.2686795332062073,
+        "TimesNet": -0.03033365007524569,
+        "iTransformer": 0.4584441781437134
+      },
+      "spearman_rho_vs_base_mse": -0.9395604395604396
+    },
+    "pems": {
+      "advantage_percentage_points": {
+        "Autoformer": -23.51406759718919,
+        "DLinear": -1.658954703094338,
+        "FEDformer": -14.290198427054866,
+        "FreTS": 3.027632431361112,
+        "Informer": -13.071363861171093,
+        "LightTS": -4.83792998558887,
+        "Nonstationary_Transformer": -6.139822956375603,
+        "PAttn": 1.8637981711902434,
+        "PatchTST": 2.72401376185263,
+        "TimeMixer": 1.0566244547970718,
+        "TimeXer": 2.8825123864958577,
+        "TimesNet": -7.329605940831214,
+        "iTransformer": 3.202869039619954
+      },
+      "spearman_rho_vs_base_mse": -0.7032967032967034
+    }
+  },
+  "source_sha256": "a9cdf53dc50ad7b3200da49c8e9bc16db8dd48af41b3fed33513033449c44c2a",
+  "statistic": "median over cells of the smallest paired relative gain across the metrics reported for that cell"
+}

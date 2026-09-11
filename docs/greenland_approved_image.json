@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "image_uri": "<ECR_REGISTRY>/timeraf-greenland@sha256:2417e94636d74e455f8bfdc97d7f7e4ff9022107e6ea7b2ebc4a4295e994d25d",
+  "image_digest": "sha256:2417e94636d74e455f8bfdc97d7f7e4ff9022107e6ea7b2ebc4a4295e994d25d",
+  "image_source_revision": "b41a2ad3b6856c441c244ee082c139304a8ad13e",
+  "image_source_label": "b41a2ad",
+  "approved_for": [
+    "checkpoint_replay",
+    "full_matrix_replication",
+    "supplemental_numerical_recovery"
+  ],
+  "runtime": {
+    "pytorch": "2.8.0+cu129",
+    "cuda": "12.9"
+  },
+  "black_box_verification": {
+    "paper_model_imports_passed": 13,
+    "pip_check_passed": true,
+    "png_jpeg_codecs_passed": true,
+    "matplotlib_render_passed": true,
+    "checkpoint_preflight_present": true,
+    "numerical_recovery_preflight_present": true,
+    "removed_development_packages_absent": true
+  },
+  "ecr_scan": {
+    "status": "COMPLETE",
+    "completed_at": "2026-08-01T01:58:55Z",
+    "finding_severity_counts": {}
+  },
+  "supersedes": [
+    "sha256:2c0f32cac07cb7422c7a28f8edfb9d64bfea32a0dbff28ea1c7f1138e3029004",
+    "sha256:a7f3b01e3441cadc5fd1db285ba6b4d5ba0a48c4f0c56dd545540c03818e167a",
+    "sha256:4ff0032945a1018f48504c60c3f724a5d3f21c19ab3e04a1deb25d5f938acd48"
+  ]
+}

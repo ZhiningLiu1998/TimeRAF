@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "run_id": "full-matrix-a100-9974eac-20260731",
+  "job_kind": "full_matrix_replication",
+  "job_uuid": "2f07bf09-2949-47c4-9e8c-84faae543c82",
+  "job_name": "timeraf-full-matrix-a1-b0a00f9b",
+  "console_url": "https://greenland.harmony.a2z.com/job/details/us-east-1/feedml-sp-os/2f07bf09-2949-47c4-9e8c-84faae543c82",
+  "submitted_at": "2026-07-31T06:05:27Z",
+  "status_at_record": "RUNNING",
+  "initiative_id": "feedml-sp-os",
+  "region": "us-east-1",
+  "runtime": "EKS",
+  "source_revision": "9974eac53df168b7e2fd6c71075a7f2a8dc06764",
+  "launcher_revision": "9974eac53df168b7e2fd6c71075a7f2a8dc06764",
+  "method_revision": "d9be338",
+  "manifest": {
+    "path": "docs/timefuse_experiment_manifest.jsonl",
+    "cells": 585,
+    "sha256": "45830d23f3b017c15d3680c88f837f84a9441eef9a6ceaaa5370c14872660c2a"
+  },
+  "image_uri": "<ECR_REGISTRY>/timeraf-greenland@sha256:2c0f32cac07cb7422c7a28f8edfb9d64bfea32a0dbff28ea1c7f1138e3029004",
+  "job_spec": {
+    "s3_uri": "s3://<DEV_BUCKET>/timeraf/greenland/specs/1126d7421b7cef6183dc97cbcedd0848d1d231be6dd96395e13cd0e99fbb8279.json",
+    "sha256": "1126d7421b7cef6183dc97cbcedd0848d1d231be6dd96395e13cd0e99fbb8279"
+  },
+  "inputs": {
+    "source": {
+      "s3_uri": "s3://<DEV_BUCKET>/timeraf/greenland/inputs/source/a53c3eb98c8579824607a2fd6ec831b66c84ff6770236219febd7b3e0d762b4d.tar.gz",
+      "sha256": "a53c3eb98c8579824607a2fd6ec831b66c84ff6770236219febd7b3e0d762b4d"
+    },
+    "dataset": {
+      "s3_uri": "s3://<DEV_BUCKET>/timeraf/greenland/inputs/dataset/f11b2d802365902a52a8f8b0359ed9f25e4e681684166c579df8569d0cf684d3.tar.gz",
+      "sha256": "f11b2d802365902a52a8f8b0359ed9f25e4e681684166c579df8569d0cf684d3"
+    }
+  },
+  "topology": {
+    "instance_type": "p4de.24xlarge",
+    "instance_count": 1,
+    "gpus_per_host": 8,
+    "processes_per_host": 8,
+    "total_gpus": 8,
+    "world_size": 8,
+    "inactive_reserved_gpus": 0,
+    "launcher_mode": "independent_cell_workers"
+  },
+  "capacity_preflight": {
+    "recorded_at": "2026-07-31T06:04:27Z",
+    "allocated_p4de_nodes": 2,
+    "used_p4de_nodes": 2,
+    "free_p4de_nodes": 0,
+    "decision": "Submit as non-production; borrow pool capacity or remain queued."
+  },
+  "control_records": {
+    "submission_plan_sha256": "f6fb8b68c403906fbc780e4d60d886feeb154da2cf9d3e085e65894c8f01531b",
+    "scheduler_manifest_sha256": "a8fb4f24109821cbeb0b7631dc0b79bac7c0be9bd4815f75cf274e451a0d4cc5",
+    "submission_receipt_sha256": "c1dfadc1b3cb8cdea0d4f0b9bfcf80fb6b4283282dd9920648f59221a07fa4e5"
+  },
+  "runtime_startup": {
+    "scheduler_running_observed_at": "2026-07-31T06:09:36Z",
+    "first_worker_headers_at": "2026-07-31T06:08:27Z",
+    "log_group": "/aws/eks/greenland-eks-us-east-1/greenland-feedml-sp-os",
+    "log_stream": "timeraf-full-matrix-a1-b0a00f9b-qnr77wsm6gvc5c-timeraf-0-0",
+    "worker_gpu_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "local_gpu_ids": [
+      0
+    ],
+    "cuda_visible_devices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "startup_topology_gate_passed": true,
+    "evidence": {
+      "path": "docs/greenland_full_matrix_startup.json",
+      "sha256": "16a49bd87b0cb5b0c0e22357de9b449babb1076f1e4ec3b6e477a48f31b794fd"
+    },
+    "progress_at_record": {
+      "recorded_at": "2026-07-31T06:31:54Z",
+      "scheduled_cells": 83,
+      "completed_result_lines": 75,
+      "runtime_failure_lines": 0
+    },
+    "final_topology_acceptance": "pending uploaded PID and utilization sampler evidence"
+  },
+  "durable_efs_operations": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF/operations/greenland-full-matrix-9974eac53df168b7e2fd6c71075a7f2a8dc06764"
+}

@@ -1,0 +1,120 @@
+{
+  "appendix": {
+    "catalog": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_bundles/4e7c31bdbe9e/appendix_bundle_catalog.json",
+      "sha256": "46a668223d984750481614a705c42f298abeb3d8ca3fc72a2018286efb2d8838",
+      "size_bytes": 69601
+    },
+    "gate_passed": true,
+    "source_revision": "4e7c31bdbe9ed3c8cd5ac852b9048ffb5df7d366",
+    "verified_bundles": 94
+  },
+  "appendix_launcher_revision": "43fc3625b57ab9844b4b939636b8c0bace984fee",
+  "appendix_method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+  "criteria": {
+    "appendix_94_gate_passed": true,
+    "frozen_confirmation_462_gate_passed": true,
+    "greenland_eight_a100_topology_passed": true,
+    "greenland_replay_208_complete": true,
+    "numerical_recovery_composition_verified": true,
+    "primary_585_gate_passed": true
+  },
+  "evidence": {
+    "appendix_catalog": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_bundles/4e7c31bdbe9e/appendix_bundle_catalog.json",
+      "sha256": "46a668223d984750481614a705c42f298abeb3d8ca3fc72a2018286efb2d8838",
+      "size_bytes": 69601
+    },
+    "appendix_manifest": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/post-review-checkpoint-replay-4e7c31b-20260803/materialized/source/docs/timefuse_appendix_experiment_manifest.jsonl",
+      "sha256": "877a672feb3555cabfff6e1157e0b245c7f18397b740cd29bb99da7869e58d06",
+      "size_bytes": 111762
+    },
+    "appendix_summary": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/timefuse_appendix_rag/052fcb407f15/appendix_summary.json",
+      "sha256": "e070233b7719277674f2cfc6a890da9396207cc699b7234420fda7a8f3c78098",
+      "size_bytes": 130097
+    },
+    "confirmation_protocol": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/post-review-checkpoint-replay-4e7c31b-20260803/materialized/source/docs/timefuse_confirmation_protocol.json",
+      "sha256": "62f6eaebe3da3993b13c414bebfee67865afd4345cce3251ed5ee3eeb75e6f61",
+      "size_bytes": 1236
+    },
+    "confirmation_summary": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/confirmation_summary.json",
+      "sha256": "287e9c1a51c8173c352a08b3dc52b9d9b22e812d4c031882d0318cf7d1501aa7",
+      "size_bytes": 28177
+    },
+    "primary_manifest": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/post-review-checkpoint-replay-4e7c31b-20260803/materialized/source/docs/timefuse_experiment_manifest.jsonl",
+      "sha256": "45830d23f3b017c15d3680c88f837f84a9441eef9a6ceaaa5370c14872660c2a",
+      "size_bytes": 1228556
+    },
+    "primary_summary": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/a10g_composed_summary.json",
+      "sha256": "ab4f25cf8fb54fcec2091958db62852aae2df700d6919408dcc253cff69a2cdd",
+      "size_bytes": 627167
+    },
+    "recovery_receipt": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/composition_receipt.json",
+      "sha256": "893dd0c33b8bad81493b478f3f75b8a90a65cedab03084f21333dc3cab67fdc7",
+      "size_bytes": 5759
+    },
+    "replay_manifest": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/post-review-checkpoint-replay-4e7c31b-20260803/materialized/source/docs/timefuse_checkpoint_replay_manifest.jsonl",
+      "sha256": "447391d99c46bc1dd4170e71a8388bad5edb0a4c48a3048e230e404b96a0a77a",
+      "size_bytes": 394912
+    },
+    "replay_receipt": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/greenland_runs/checkpoint-replay-4e7c31b-20260803/fetch_receipt.json",
+      "sha256": "b96fc8e2336c01fc29948d6fd0ef90b4b29bd4b57a2333c1e90e6f531e1f1e2a",
+      "size_bytes": 596679
+    }
+  },
+  "generated_unix": 1785866662.7085557,
+  "method_revision": "d9be338",
+  "numerical_recovery": {
+    "a100_recovery_revision": "726911409c38f8868ee27de25ae36129cba39577",
+    "a10g_recovery_revision": "1f7055e7bcd942f1282d1f1a13daab5bfe08712e",
+    "affected_cells": 7,
+    "exact_selected": 5,
+    "fallback_selected": 2,
+    "protocol": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/post-review-checkpoint-replay-4e7c31b-20260803/materialized/source/docs/timefuse_numerical_recovery_protocol.json",
+      "sha256": "1320f3eca815a93a6500caadbf7e526610379b2af5f6976f1db94f91ed259d14",
+      "size_bytes": 2033
+    },
+    "receipt": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/composition_receipt.json",
+      "sha256": "893dd0c33b8bad81493b478f3f75b8a90a65cedab03084f21333dc3cab67fdc7",
+      "size_bytes": 5759
+    },
+    "required": true,
+    "verified": true
+  },
+  "project_root": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF",
+  "publication_ready": true,
+  "replay": {
+    "catalog": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/greenland_runs/checkpoint-replay-4e7c31b-20260803/replay_bundle_catalog.json",
+      "sha256": "2e072fc9a7a13cb6f0b0fabc323dba61bc91bf77ff60c17990c2fcc466347dac",
+      "size_bytes": 181706
+    },
+    "launcher_revision": "4e7c31bdbe9ed3c8cd5ac852b9048ffb5df7d366",
+    "method_revision": "d9be338",
+    "object_count": 848,
+    "run_id": "checkpoint-replay-4e7c31b-20260803",
+    "source_revision": "4e7c31bdbe9ed3c8cd5ac852b9048ffb5df7d366",
+    "topology_gate_passed": true,
+    "verified_bundles": 208
+  },
+  "schema_version": 1,
+  "scope": {
+    "appendix_evaluable_cells": 94,
+    "appendix_reported_cells": 96,
+    "confirmatory_cells": 462,
+    "development_cells": 123,
+    "primary_cells": 585,
+    "replay_cells": 208
+  }
+}

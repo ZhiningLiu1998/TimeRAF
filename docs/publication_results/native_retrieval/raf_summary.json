@@ -1,0 +1,2371 @@
+{
+  "all_completed": true,
+  "completed_pairs": 44,
+  "composite_attempts": [
+    {
+      "accepted_cell_ids": [
+        "raf/benchmark_1/ETTh/c100/h20",
+        "raf/benchmark_1/ETTh/c150/h20",
+        "raf/benchmark_1/ETTh/c50/h20",
+        "raf/benchmark_1/ETTh/c75/h20",
+        "raf/benchmark_1/monash_covid_deaths/c100/h20",
+        "raf/benchmark_1/monash_covid_deaths/c150/h20",
+        "raf/benchmark_1/monash_covid_deaths/c50/h20",
+        "raf/benchmark_1/monash_covid_deaths/c75/h20",
+        "raf/benchmark_1/monash_fred_md/c100/h20",
+        "raf/benchmark_1/monash_fred_md/c150/h20",
+        "raf/benchmark_1/monash_fred_md/c50/h20",
+        "raf/benchmark_1/monash_fred_md/c75/h20",
+        "raf/benchmark_1/monash_traffic/c100/h20",
+        "raf/benchmark_1/monash_traffic/c150/h20",
+        "raf/benchmark_1/monash_traffic/c50/h20",
+        "raf/benchmark_1/monash_traffic/c75/h20",
+        "raf/benchmark_1/nn5/c50/h20",
+        "raf/benchmark_1/nn5/c75/h20",
+        "raf/benchmark_2/monash_cif_2016/c18/h5",
+        "raf/benchmark_2/monash_cif_2016/c21/h5",
+        "raf/benchmark_2/monash_tourism_monthly/c10/h5",
+        "raf/benchmark_2/monash_tourism_monthly/c15/h5",
+        "raf/benchmark_2/monash_tourism_quarterly/c18/h5",
+        "raf/benchmark_2/monash_tourism_quarterly/c21/h5"
+      ],
+      "accepted_result_count": 24,
+      "attempt_id": "raf-full-p5-attempt-a",
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "reported_completed_pairs": 24,
+      "reported_expected_pairs": 44,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "status": "interrupted",
+      "summary_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/summary.json",
+      "summary_sha256": "d69fdd4a4ab01edcf835528f5e1db067abbc08ff225d1c456decc692e7479f7e",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "topology_valid": true,
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390",
+      "worker_pids": {
+        "0": 11172,
+        "1": 11173,
+        "2": 11174,
+        "3": 11175,
+        "4": 11176,
+        "5": 11177
+      },
+      "worker_returncodes": {
+        "0": -15,
+        "1": -15,
+        "2": 0,
+        "3": 0,
+        "4": -15,
+        "5": -15
+      }
+    },
+    {
+      "accepted_cell_ids": [
+        "raf/benchmark_1/monash_weather/c100/h20",
+        "raf/benchmark_1/monash_weather/c150/h20",
+        "raf/benchmark_1/monash_weather/c50/h20",
+        "raf/benchmark_1/monash_weather/c75/h20",
+        "raf/benchmark_1/nn5/c100/h20",
+        "raf/benchmark_1/nn5/c150/h20",
+        "raf/benchmark_2/monash_cif_2016/c10/h5",
+        "raf/benchmark_2/monash_cif_2016/c15/h5",
+        "raf/benchmark_2/monash_m1_monthly/c10/h5",
+        "raf/benchmark_2/monash_m1_monthly/c15/h5",
+        "raf/benchmark_2/monash_m1_monthly/c18/h5",
+        "raf/benchmark_2/monash_m1_monthly/c21/h5",
+        "raf/benchmark_2/monash_tourism_monthly/c18/h5",
+        "raf/benchmark_2/monash_tourism_monthly/c21/h5",
+        "raf/benchmark_2/monash_tourism_quarterly/c10/h5",
+        "raf/benchmark_2/monash_tourism_quarterly/c15/h5",
+        "raf/benchmark_2/uber_tlc_daily/c10/h5",
+        "raf/benchmark_2/uber_tlc_daily/c15/h5",
+        "raf/benchmark_2/uber_tlc_daily/c18/h5",
+        "raf/benchmark_2/uber_tlc_daily/c21/h5"
+      ],
+      "accepted_result_count": 20,
+      "attempt_id": "raf-full-p5-attempt-b",
+      "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+      "reported_completed_pairs": 20,
+      "reported_expected_pairs": 20,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "status": "completed",
+      "summary_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/summary.json",
+      "summary_sha256": "83fdc3f6ec26b50c46e7093d885aee243ef957bf5f9371c5e8f908df7bb53dc0",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/startup_topology.json",
+      "topology_sha256": "45fd972b3a9720b75383f2bd0b1d57ded4562fd67e2e60772141c024890e1791",
+      "topology_valid": true,
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390",
+      "worker_pids": {
+        "0": 70931,
+        "1": 70932,
+        "2": 70933,
+        "3": 70934,
+        "4": 70935,
+        "5": 70936
+      },
+      "worker_returncodes": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      }
+    }
+  ],
+  "expected_pairs": 44,
+  "failed_or_missing_pairs": 0,
+  "failures": [],
+  "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+  "method": "RAF",
+  "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+  "receipt": {
+    "attempts": [
+      {
+        "accepted_result_count": 24,
+        "attempt_id": "raf-full-p5-attempt-a",
+        "status": "interrupted",
+        "summary_sha256": "d69fdd4a4ab01edcf835528f5e1db067abbc08ff225d1c456decc692e7479f7e",
+        "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3"
+      },
+      {
+        "accepted_result_count": 20,
+        "attempt_id": "raf-full-p5-attempt-b",
+        "status": "completed",
+        "summary_sha256": "83fdc3f6ec26b50c46e7093d885aee243ef957bf5f9371c5e8f908df7bb53dc0",
+        "topology_sha256": "45fd972b3a9720b75383f2bd0b1d57ded4562fd67e2e60772141c024890e1791"
+      }
+    ],
+    "final_attempt_id": "raf-full-p5-attempt-b",
+    "protocol_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/native-retrieval-baselines-bc61224/source/docs/native_retrieval_baseline_protocol.json",
+    "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+    "receipt_sha256": "72c9df7b3458e35cdfd6316356901a7c12424acd02077dab63f47f867cfde24b",
+    "result_count": 44,
+    "result_inventory_sha256": "95c99da69a2eadea88da11d12440a5fc17e4be57b523d10d73bce064d81bc0e2",
+    "schema_version": 1,
+    "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+    "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+  },
+  "results": [
+    {
+      "attempt_id": "raf-full-p5-attempt-a",
+      "attempt_status": "interrupted",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.3605765363811089,
+          "wql": 0.1371407025397461
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/ETTh/c100/h20",
+      "context_length": 100,
+      "cuda_visible_devices": "4",
+      "dataset": "ETTh",
+      "delta": {
+        "mase": -0.47601199272888484,
+        "wql": -0.0876525669574007
+      },
+      "elapsed_seconds": 32.04920959472656,
+      "finished_unix": 1787993114.6430693,
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 11174,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/ETTh/c100/h20/result.json",
+      "result_sha256": "8fd093247dcc56f2d187913892762107628469c47692d4f090f80bb756e0c234",
+      "retrieval": {
+        "metrics": {
+          "mase": 0.884564543652224,
+          "wql": 0.049488135582345404
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1787993082.5938597,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/ETTh/c100/h20/status.json",
+      "status_sha256": "e465a9254909816370176adec41bb0f8959787410927069f8971be1d7c9c0559",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-a",
+      "attempt_status": "interrupted",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.1574403576949788,
+          "wql": 0.14223397357308357
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/ETTh/c150/h20",
+      "context_length": 150,
+      "cuda_visible_devices": "5",
+      "dataset": "ETTh",
+      "delta": {
+        "mase": -0.4714483141825353,
+        "wql": -0.08938106064493342
+      },
+      "elapsed_seconds": 43.69218993186951,
+      "finished_unix": 1787993126.6628828,
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 11175,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/ETTh/c150/h20/result.json",
+      "result_sha256": "920330c5aa25f1e99e88f6a0214529c1d80ef172eadee96e6ca96b5b8f1edb72",
+      "retrieval": {
+        "metrics": {
+          "mase": 0.6859920435124435,
+          "wql": 0.05285291292815014
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1787993082.9706929,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/ETTh/c150/h20/status.json",
+      "status_sha256": "f7e128f62d9e5e89773be8ea36c6c6d0c2f080727707de347d26f70d6b48b3d0",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-a",
+      "attempt_status": "interrupted",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.292305393712995,
+          "wql": 0.13035446221090347
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/ETTh/c50/h20",
+      "context_length": 50,
+      "cuda_visible_devices": "2",
+      "dataset": "ETTh",
+      "delta": {
+        "mase": -0.46499239480555277,
+        "wql": -0.06799153223083124
+      },
+      "elapsed_seconds": 23.052829027175903,
+      "finished_unix": 1787993105.9190602,
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 11172,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": {
+        "basis": "The paper and every other Benchmark I configuration use C in {50,75,100,150}; the first ETTh entry is a duplicate typo.",
+        "corrected_values": [
+          50,
+          75,
+          100,
+          150
+        ],
+        "file": "configs/benchmark-1/etth.yaml",
+        "released_values": [
+          75,
+          75,
+          100,
+          150
+        ]
+      },
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/ETTh/c50/h20/result.json",
+      "result_sha256": "b524a3a97dd5c79e74ce2556470fce4d0d808a6e79cb9361740d4bdf3f96df26",
+      "retrieval": {
+        "metrics": {
+          "mase": 0.8273129989074421,
+          "wql": 0.062362929980072236
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1787993082.8662312,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/ETTh/c50/h20/status.json",
+      "status_sha256": "bcbe6550d107590063afe63a8d5a5115436190d19e26c84c8e0e209cd5afbaad",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-a",
+      "attempt_status": "interrupted",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.2607447343829137,
+          "wql": 0.11988674044827793
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/ETTh/c75/h20",
+      "context_length": 75,
+      "cuda_visible_devices": "3",
+      "dataset": "ETTh",
+      "delta": {
+        "mase": -0.37626763728542945,
+        "wql": -0.0696894038638034
+      },
+      "elapsed_seconds": 27.59815502166748,
+      "finished_unix": 1787993110.8502088,
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 11173,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/ETTh/c75/h20/result.json",
+      "result_sha256": "67d85f671b5c31601ce33ab1ce5c267f18b2213d5ff3669584e1128195378c86",
+      "retrieval": {
+        "metrics": {
+          "mase": 0.8844770970974842,
+          "wql": 0.05019733658447453
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1787993083.2520537,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/ETTh/c75/h20/status.json",
+      "status_sha256": "139510240c404463ac6da294cd69de1bf75e52f76c367a1329f6828d82422977",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-a",
+      "attempt_status": "interrupted",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 18.491942559498185,
+          "wql": 0.011511794650532899
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/monash_covid_deaths/c100/h20",
+      "context_length": 100,
+      "cuda_visible_devices": "2",
+      "dataset": "monash_covid_deaths",
+      "delta": {
+        "mase": -1.1344320392052651,
+        "wql": -0.0018277229407479504
+      },
+      "elapsed_seconds": 8.590335845947266,
+      "finished_unix": 1787993114.617906,
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 11172,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/monash_covid_deaths/c100/h20/result.json",
+      "result_sha256": "f81a2c0eda99001a60fa041b947c093a6510d20f18abe6ba3a6563719bc775e8",
+      "retrieval": {
+        "metrics": {
+          "mase": 17.35751052029292,
+          "wql": 0.009684071709784949
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1787993106.0275702,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/monash_covid_deaths/c100/h20/status.json",
+      "status_sha256": "4454282cfc48ef0bf93137c4423d5663cdb51a4b9e6856e0b92113d188d526a4",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-a",
+      "attempt_status": "interrupted",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 17.383929848348412,
+          "wql": 0.011724684173660432
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/monash_covid_deaths/c150/h20",
+      "context_length": 150,
+      "cuda_visible_devices": "3",
+      "dataset": "monash_covid_deaths",
+      "delta": {
+        "mase": -1.3756113158490813,
+        "wql": -0.001757231404178737
+      },
+      "elapsed_seconds": 7.233736753463745,
+      "finished_unix": 1787993118.1575372,
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 11173,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/monash_covid_deaths/c150/h20/result.json",
+      "result_sha256": "04ee193f112f57902ccf34eacbde36899f206f637982f39fc9a69cee7c64ec4b",
+      "retrieval": {
+        "metrics": {
+          "mase": 16.00831853249933,
+          "wql": 0.009967452769481695
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1787993110.9238005,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/monash_covid_deaths/c150/h20/status.json",
+      "status_sha256": "63ebd320e948f9861e84b63216bea653f8c369cfe414d4c590cefbff39726058",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-a",
+      "attempt_status": "interrupted",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 19.440941297337112,
+          "wql": 0.008509698575558078
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/monash_covid_deaths/c50/h20",
+      "context_length": 50,
+      "cuda_visible_devices": "6",
+      "dataset": "monash_covid_deaths",
+      "delta": {
+        "mase": -2.6957950162950617,
+        "wql": 0.004277819641535183
+      },
+      "elapsed_seconds": 13.099608659744263,
+      "finished_unix": 1787993095.8504872,
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 11176,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/monash_covid_deaths/c50/h20/result.json",
+      "result_sha256": "10792b8704fc0ad2eff210e84a70675251d796bed1e28c6db7b1facda20dd7f4",
+      "retrieval": {
+        "metrics": {
+          "mase": 16.74514628104205,
+          "wql": 0.012787518217093261
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1787993082.7508786,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/monash_covid_deaths/c50/h20/status.json",
+      "status_sha256": "68b1576e13c134245973cd83712b97614fa3660e20386e8539f8828fcb58fad6",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-a",
+      "attempt_status": "interrupted",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 24.47320744748136,
+          "wql": 0.011766344735924195
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/monash_covid_deaths/c75/h20",
+      "context_length": 75,
+      "cuda_visible_devices": "7",
+      "dataset": "monash_covid_deaths",
+      "delta": {
+        "mase": -2.268299685091179,
+        "wql": 0.0007489815155305377
+      },
+      "elapsed_seconds": 13.974215269088745,
+      "finished_unix": 1787993096.7999158,
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 11177,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/monash_covid_deaths/c75/h20/result.json",
+      "result_sha256": "088850ef8b4a0efb11f3b8a9c3e8feabcb624bd8a426e9f8f3cb76a3b44d4abc",
+      "retrieval": {
+        "metrics": {
+          "mase": 22.20490776239018,
+          "wql": 0.012515326251454732
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1787993082.8257005,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/monash_covid_deaths/c75/h20/status.json",
+      "status_sha256": "7bc945f8969ecb25dbcd98be2ca0309ade5227ba6e8ffb2fef4dac02687e413f",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-a",
+      "attempt_status": "interrupted",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 0.7407752630803063,
+          "wql": 0.1104325191362437
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/monash_fred_md/c100/h20",
+      "context_length": 100,
+      "cuda_visible_devices": "6",
+      "dataset": "monash_fred_md",
+      "delta": {
+        "mase": -0.10550148691582839,
+        "wql": 0.02174069716396078
+      },
+      "elapsed_seconds": 10.686115741729736,
+      "finished_unix": 1787993106.6442256,
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 11176,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/monash_fred_md/c100/h20/result.json",
+      "result_sha256": "b48fad3ded32760226e4535f32758d5bdc87edf4004838af8fdc56bc6ad78e16",
+      "retrieval": {
+        "metrics": {
+          "mase": 0.6352737761644779,
+          "wql": 0.13217321630020448
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1787993095.9581099,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/monash_fred_md/c100/h20/status.json",
+      "status_sha256": "4fbb1fc25907d3f7fdde733a424b37a35d0f676e67ddb41c3b6f6057dc705aa4",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-a",
+      "attempt_status": "interrupted",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 0.49405480923010864,
+          "wql": 0.0436875565417317
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/monash_fred_md/c150/h20",
+      "context_length": 150,
+      "cuda_visible_devices": "7",
+      "dataset": "monash_fred_md",
+      "delta": {
+        "mase": -0.018553115702596656,
+        "wql": 0.04226433908044958
+      },
+      "elapsed_seconds": 13.203439235687256,
+      "finished_unix": 1787993110.1002731,
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 11177,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/monash_fred_md/c150/h20/result.json",
+      "result_sha256": "2a869a54486971522f394ede4eb1989a7c518546f062e0fef280fa9c03304640",
+      "retrieval": {
+        "metrics": {
+          "mase": 0.475501693527512,
+          "wql": 0.08595189562218128
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1787993096.896834,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/monash_fred_md/c150/h20/status.json",
+      "status_sha256": "722fd89cefbeb2343fb0445f514eb9703db368b1c48e9675b6068b4ee8a564c0",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-a",
+      "attempt_status": "interrupted",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.118828525835685,
+          "wql": 0.26657488703761817
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/monash_fred_md/c50/h20",
+      "context_length": 50,
+      "cuda_visible_devices": "4",
+      "dataset": "monash_fred_md",
+      "delta": {
+        "mase": -0.34241705655661436,
+        "wql": -0.1719177419760021
+      },
+      "elapsed_seconds": 6.875827789306641,
+      "finished_unix": 1787993121.5851395,
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 11174,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/monash_fred_md/c50/h20/result.json",
+      "result_sha256": "bf4d5c9815b1e70e3ee0d015b9cc809782c08172baf8164d6dfd3f235b1092c5",
+      "retrieval": {
+        "metrics": {
+          "mase": 0.7764114692790706,
+          "wql": 0.09465714506161607
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1787993114.7093117,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/monash_fred_md/c50/h20/status.json",
+      "status_sha256": "7a762ba92cbe6d1f135f72095f690d60609e9f99b76d3070dbff17e4d571146b",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-a",
+      "attempt_status": "interrupted",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 0.8879015042387867,
+          "wql": 0.19304312210933586
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/monash_fred_md/c75/h20",
+      "context_length": 75,
+      "cuda_visible_devices": "5",
+      "dataset": "monash_fred_md",
+      "delta": {
+        "mase": -0.257270433562236,
+        "wql": -0.11671831880278803
+      },
+      "elapsed_seconds": 10.934554815292358,
+      "finished_unix": 1787993137.701247,
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 11175,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/monash_fred_md/c75/h20/result.json",
+      "result_sha256": "340709ebbec187bffd901bf35a9449c00e305d9829d2acd7e096aae80ef3f8ba",
+      "retrieval": {
+        "metrics": {
+          "mase": 0.6306310706765507,
+          "wql": 0.07632480330654783
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1787993126.7666922,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/monash_fred_md/c75/h20/status.json",
+      "status_sha256": "bf3076a29736e8c1bd198fcf4105496d44d3867ac1894c717d17e9acaa33e0fb",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-a",
+      "attempt_status": "interrupted",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 3.8985342027280203,
+          "wql": 0.29015919705773535
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/monash_traffic/c100/h20",
+      "context_length": 100,
+      "cuda_visible_devices": "4",
+      "dataset": "monash_traffic",
+      "delta": {
+        "mase": -0.09099970780069988,
+        "wql": -0.001375992661009573
+      },
+      "elapsed_seconds": 14352.838638782501,
+      "finished_unix": 1788007474.5142436,
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 11174,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/monash_traffic/c100/h20/result.json",
+      "result_sha256": "59a2bf922fe78a62b48df62eabe1fdb3b3c01866fba02ebfb9cb5e6b8afd9476",
+      "retrieval": {
+        "metrics": {
+          "mase": 3.8075344949273204,
+          "wql": 0.2887832043967258
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1787993121.6756048,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/monash_traffic/c100/h20/status.json",
+      "status_sha256": "c0cd8b378c6b45823fbe95f89d799eee06e2f6e7b41c06ebc35bf5fbcf8819a7",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-a",
+      "attempt_status": "interrupted",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 2.31143791318775,
+          "wql": 0.2680542486147349
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/monash_traffic/c150/h20",
+      "context_length": 150,
+      "cuda_visible_devices": "5",
+      "dataset": "monash_traffic",
+      "delta": {
+        "mase": -0.24326300061120953,
+        "wql": -0.03727676232767485
+      },
+      "elapsed_seconds": 19169.700659513474,
+      "finished_unix": 1788012307.5255373,
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 11175,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/monash_traffic/c150/h20/result.json",
+      "result_sha256": "f262318ea82ec87a9585401631b8323f2dc0998b2cd87ace8be917e1e77a69bc",
+      "retrieval": {
+        "metrics": {
+          "mase": 2.0681749125765405,
+          "wql": 0.23077748628706007
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1787993137.8248777,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/monash_traffic/c150/h20/status.json",
+      "status_sha256": "c399f73b4e06446f2ffdc1d3542e1afb1d4e9c84b1ffb0ce1ddaca52bde84084",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-a",
+      "attempt_status": "interrupted",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 2.8050401639021127,
+          "wql": 0.2991876130889311
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/monash_traffic/c50/h20",
+      "context_length": 50,
+      "cuda_visible_devices": "2",
+      "dataset": "monash_traffic",
+      "delta": {
+        "mase": -0.03504722387482628,
+        "wql": -0.009094175542240679
+      },
+      "elapsed_seconds": 9081.600160598755,
+      "finished_unix": 1788002196.302012,
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 11172,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/monash_traffic/c50/h20/result.json",
+      "result_sha256": "57ee72864c614772661db4efb860a1d7971011c86b9e7d6d0696dd9ee01ffe8e",
+      "retrieval": {
+        "metrics": {
+          "mase": 2.7699929400272865,
+          "wql": 0.2900934375466904
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1787993114.7018514,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/monash_traffic/c50/h20/status.json",
+      "status_sha256": "129128673d479b20cb42c43937e04dd95f7f226bd91fbe2b6864221264c9ed22",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-a",
+      "attempt_status": "interrupted",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 2.9665831114556247,
+          "wql": 0.29629628655986245
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/monash_traffic/c75/h20",
+      "context_length": 75,
+      "cuda_visible_devices": "3",
+      "dataset": "monash_traffic",
+      "delta": {
+        "mase": -0.13064562575647987,
+        "wql": -0.00922913658453356
+      },
+      "elapsed_seconds": 12001.4546957016,
+      "finished_unix": 1788005119.7959282,
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 11173,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/monash_traffic/c75/h20/result.json",
+      "result_sha256": "a1c73b030b6c4757cd7c14e0eb7ddbcaa16174f810db22f161c3d4242da73890",
+      "retrieval": {
+        "metrics": {
+          "mase": 2.835937485699145,
+          "wql": 0.2870671499753289
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1787993118.3412325,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/monash_traffic/c75/h20/status.json",
+      "status_sha256": "bd9162811e6133f6d260a137162ec5dea65fe8ad16f21efdcb2c184d75c47de9",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-b",
+      "attempt_status": "completed",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.8087442038988208,
+          "wql": 0.1696188452312881
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/monash_weather/c100/h20",
+      "context_length": 100,
+      "cuda_visible_devices": "4",
+      "dataset": "monash_weather",
+      "delta": {
+        "mase": -0.050383641323749284,
+        "wql": -0.009384133614373125
+      },
+      "elapsed_seconds": 8729.475004673004,
+      "finished_unix": 1788036173.0286975,
+      "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70933,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_1/monash_weather/c100/h20/result.json",
+      "result_sha256": "a39137e8545f2ff7e5906645e1b3f505cf950269976be6fcea222ff0817cdbf4",
+      "retrieval": {
+        "metrics": {
+          "mase": 1.7583605625750716,
+          "wql": 0.16023471161691497
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788027443.5536928,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_1/monash_weather/c100/h20/status.json",
+      "status_sha256": "81a11830bf3e56c57f9ab1375a4a3eae19f66bef738982ebcbec87b5869769b3",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/startup_topology.json",
+      "topology_sha256": "45fd972b3a9720b75383f2bd0b1d57ded4562fd67e2e60772141c024890e1791",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-b",
+      "attempt_status": "completed",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.1492175393754067,
+          "wql": 0.17567823107507646
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/monash_weather/c150/h20",
+      "context_length": 150,
+      "cuda_visible_devices": "5",
+      "dataset": "monash_weather",
+      "delta": {
+        "mase": 0.05036958167273187,
+        "wql": 0.0008024431507550056
+      },
+      "elapsed_seconds": 13512.650625944138,
+      "finished_unix": 1788040956.6831143,
+      "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70934,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_1/monash_weather/c150/h20/result.json",
+      "result_sha256": "0c79622a94c4e15fc2d9d04dd1d972c0ef9acebfa03850e0b9b3b58698d49812",
+      "retrieval": {
+        "metrics": {
+          "mase": 1.1995871210481386,
+          "wql": 0.17648067422583147
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788027444.0324883,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_1/monash_weather/c150/h20/status.json",
+      "status_sha256": "4950050ef234b3a6c39e717f4c34c2c431eb49654c601285b5afdbf896b3449a",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/startup_topology.json",
+      "topology_sha256": "45fd972b3a9720b75383f2bd0b1d57ded4562fd67e2e60772141c024890e1791",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-b",
+      "attempt_status": "completed",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.9001620856982775,
+          "wql": 0.1642048835958798
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/monash_weather/c50/h20",
+      "context_length": 50,
+      "cuda_visible_devices": "2",
+      "dataset": "monash_weather",
+      "delta": {
+        "mase": -0.04736656595113753,
+        "wql": -0.009934151146833964
+      },
+      "elapsed_seconds": 4223.877891778946,
+      "finished_unix": 1788031667.1568089,
+      "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70931,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_1/monash_weather/c50/h20/result.json",
+      "result_sha256": "d2c90ca396a36c0f87d9341b05dbbfecd3c0393be9e5dad259d9e843d82fdf51",
+      "retrieval": {
+        "metrics": {
+          "mase": 1.85279551974714,
+          "wql": 0.15427073244904585
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788027443.278917,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_1/monash_weather/c50/h20/status.json",
+      "status_sha256": "8b6a0695049bcbf1ba84100d23ce9bfd3371f1e12875ad5a453d59bbe60fdff9",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/startup_topology.json",
+      "topology_sha256": "45fd972b3a9720b75383f2bd0b1d57ded4562fd67e2e60772141c024890e1791",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-b",
+      "attempt_status": "completed",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.9269001788325124,
+          "wql": 0.16445712179409827
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/monash_weather/c75/h20",
+      "context_length": 75,
+      "cuda_visible_devices": "3",
+      "dataset": "monash_weather",
+      "delta": {
+        "mase": -0.04838990562663947,
+        "wql": -0.0048326985413160994
+      },
+      "elapsed_seconds": 6306.202288866043,
+      "finished_unix": 1788033749.6145208,
+      "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70932,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_1/monash_weather/c75/h20/result.json",
+      "result_sha256": "2f1127cfc90d448e17b91c472604663abe4a4a1a8c7ec496c177fa476bd300bb",
+      "retrieval": {
+        "metrics": {
+          "mase": 1.878510273205873,
+          "wql": 0.15962442325278217
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788027443.412232,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_1/monash_weather/c75/h20/status.json",
+      "status_sha256": "8f075f078cc9b74876884cd790a1ce19fbf1644f30866ef1dbd6ea2adf342d75",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/startup_topology.json",
+      "topology_sha256": "45fd972b3a9720b75383f2bd0b1d57ded4562fd67e2e60772141c024890e1791",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-b",
+      "attempt_status": "completed",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 0.706143006261373,
+          "wql": 0.22084180449476207
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/nn5/c100/h20",
+      "context_length": 100,
+      "cuda_visible_devices": "6",
+      "dataset": "nn5",
+      "delta": {
+        "mase": -0.0546011730631627,
+        "wql": -0.04073528944470858
+      },
+      "elapsed_seconds": 11.88347053527832,
+      "finished_unix": 1788027455.480011,
+      "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70935,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_1/nn5/c100/h20/result.json",
+      "result_sha256": "13662a3f2be33bc8f86798f9c0a3d05a9fa4e545ae1df2d501e68499691eb682",
+      "retrieval": {
+        "metrics": {
+          "mase": 0.6515418331982104,
+          "wql": 0.18010651505005348
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788027443.5965405,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_1/nn5/c100/h20/status.json",
+      "status_sha256": "bd269a55266fdaaaecdc8b2b344a774ebc6409eca2de44ecd920af706aaf5ea0",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/startup_topology.json",
+      "topology_sha256": "45fd972b3a9720b75383f2bd0b1d57ded4562fd67e2e60772141c024890e1791",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-b",
+      "attempt_status": "completed",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 0.6474041901761799,
+          "wql": 0.20295077194338765
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/nn5/c150/h20",
+      "context_length": 150,
+      "cuda_visible_devices": "7",
+      "dataset": "nn5",
+      "delta": {
+        "mase": -0.07724503390492954,
+        "wql": -0.025083345921277422
+      },
+      "elapsed_seconds": 14.201028108596802,
+      "finished_unix": 1788027458.5110018,
+      "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70936,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_1/nn5/c150/h20/result.json",
+      "result_sha256": "4e3da009ce7a9df65de2bec05064d48fa182a9e09d46cee2c4b04c31bf8d824d",
+      "retrieval": {
+        "metrics": {
+          "mase": 0.5701591562712504,
+          "wql": 0.17786742602211023
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788027444.3099737,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_1/nn5/c150/h20/status.json",
+      "status_sha256": "7fa3a0a28551d6993037be4e835b8ef33acc153008ca4ac2933b131b6a3ba8f1",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/startup_topology.json",
+      "topology_sha256": "45fd972b3a9720b75383f2bd0b1d57ded4562fd67e2e60772141c024890e1791",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-a",
+      "attempt_status": "interrupted",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 0.8024718730609367,
+          "wql": 0.24140159609470332
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/nn5/c50/h20",
+      "context_length": 50,
+      "cuda_visible_devices": "4",
+      "dataset": "nn5",
+      "delta": {
+        "mase": -0.15533330877607354,
+        "wql": -0.05562928132204947
+      },
+      "elapsed_seconds": 10.61600112915039,
+      "finished_unix": 1788007485.2629933,
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 11174,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/nn5/c50/h20/result.json",
+      "result_sha256": "9868c843b0474de0b6e2c5d7d6144e168e484729aa166fb4ae7dc3862142df3e",
+      "retrieval": {
+        "metrics": {
+          "mase": 0.6471385642848632,
+          "wql": 0.18577231477265385
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788007474.6469922,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/nn5/c50/h20/status.json",
+      "status_sha256": "c2ebee345d4cb50820b168f50a334426566dc9bd0ed87813f515572c05845eb0",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-a",
+      "attempt_status": "interrupted",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 0.7374260031426924,
+          "wql": 0.2257828334953561
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/nn5/c75/h20",
+      "context_length": 75,
+      "cuda_visible_devices": "5",
+      "dataset": "nn5",
+      "delta": {
+        "mase": -0.07592661444365167,
+        "wql": -0.03154415248084813
+      },
+      "elapsed_seconds": 10.063647270202637,
+      "finished_unix": 1788012317.7315514,
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 11175,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/nn5/c75/h20/result.json",
+      "result_sha256": "e0383a5f23ec9cd06d0f7c3ee4b538ea18b33afe7a959a95d43624430962fd13",
+      "retrieval": {
+        "metrics": {
+          "mase": 0.6614993886990407,
+          "wql": 0.19423868101450797
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788012307.6679041,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_1/nn5/c75/h20/status.json",
+      "status_sha256": "14b132a961b8867fd6fdb379a8e5746e764d5f67d568423dda45932d168f5176",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-b",
+      "attempt_status": "completed",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.4801292745283303,
+          "wql": 0.07237157769023234
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_cif_2016/c10/h5",
+      "context_length": 10,
+      "cuda_visible_devices": "2",
+      "dataset": "monash_cif_2016",
+      "delta": {
+        "mase": -0.09618262904039931,
+        "wql": -0.005720265845957251
+      },
+      "elapsed_seconds": 0.9619100093841553,
+      "finished_unix": 1788031668.2268705,
+      "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70931,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/monash_cif_2016/c10/h5/result.json",
+      "result_sha256": "a4fcd07bb74340fec3f79ab0ec48594f55ca58f5a785a5bf1c7468f215ebc6bb",
+      "retrieval": {
+        "metrics": {
+          "mase": 1.383946645487931,
+          "wql": 0.06665131184427509
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788031667.2649605,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/monash_cif_2016/c10/h5/status.json",
+      "status_sha256": "316bc2b11b68a199da7026547da20dc82ceb89f9eaca4a5469dcd3390ebe2634",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/startup_topology.json",
+      "topology_sha256": "45fd972b3a9720b75383f2bd0b1d57ded4562fd67e2e60772141c024890e1791",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-b",
+      "attempt_status": "completed",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.2174898390525515,
+          "wql": 0.07632711185818385
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_cif_2016/c15/h5",
+      "context_length": 15,
+      "cuda_visible_devices": "3",
+      "dataset": "monash_cif_2016",
+      "delta": {
+        "mase": 0.15127329659290245,
+        "wql": -0.015432256223811794
+      },
+      "elapsed_seconds": 1.2348811626434326,
+      "finished_unix": 1788033750.974331,
+      "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70932,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/monash_cif_2016/c15/h5/result.json",
+      "result_sha256": "636fdf523e644cc2f6a29825da401fc600e638470d057095fcbe72d5ab822ffd",
+      "retrieval": {
+        "metrics": {
+          "mase": 1.368763135645454,
+          "wql": 0.06089485563437205
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788033749.7394497,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/monash_cif_2016/c15/h5/status.json",
+      "status_sha256": "0adf51f0d71bd51f804476d5ef4908cd98e89d72060389dade59fd792b4de73b",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/startup_topology.json",
+      "topology_sha256": "45fd972b3a9720b75383f2bd0b1d57ded4562fd67e2e60772141c024890e1791",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-a",
+      "attempt_status": "interrupted",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.1258897411770152,
+          "wql": 0.07544329444080977
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_cif_2016/c18/h5",
+      "context_length": 18,
+      "cuda_visible_devices": "4",
+      "dataset": "monash_cif_2016",
+      "delta": {
+        "mase": 0.23053385762083223,
+        "wql": 0.025017513135516173
+      },
+      "elapsed_seconds": 1.8184876441955566,
+      "finished_unix": 1788007487.1805599,
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 11174,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_2/monash_cif_2016/c18/h5/result.json",
+      "result_sha256": "052228e49a7b6517bb414ba86fad352f860d9cf7a1c044fc34fa04f909b9f52b",
+      "retrieval": {
+        "metrics": {
+          "mase": 1.3564235987978475,
+          "wql": 0.10046080757632594
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788007485.3620722,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_2/monash_cif_2016/c18/h5/status.json",
+      "status_sha256": "f1a607eac2965d464c84d3d5bb75e8a8d8ed165ec6e28ab921eb15f063e347e8",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-a",
+      "attempt_status": "interrupted",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.0435993688354317,
+          "wql": 0.07848578681997194
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_cif_2016/c21/h5",
+      "context_length": 21,
+      "cuda_visible_devices": "5",
+      "dataset": "monash_cif_2016",
+      "delta": {
+        "mase": -0.21458787234047016,
+        "wql": -0.0033073729003930963
+      },
+      "elapsed_seconds": 1.3026175498962402,
+      "finished_unix": 1788012319.137255,
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 11175,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_2/monash_cif_2016/c21/h5/result.json",
+      "result_sha256": "3794e702224c713d6440e417e0e94d2de2ff4d8cdd5379f052c17d5e796bf2a2",
+      "retrieval": {
+        "metrics": {
+          "mase": 0.8290114964949615,
+          "wql": 0.07517841391957884
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788012317.8346374,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_2/monash_cif_2016/c21/h5/status.json",
+      "status_sha256": "7d275c2aee137ee652dc24d1fd56213005d7ef2f589672fe012ee82952412bae",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-b",
+      "attempt_status": "completed",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.4057459948967086,
+          "wql": 0.18864973036126076
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_m1_monthly/c10/h5",
+      "context_length": 10,
+      "cuda_visible_devices": "4",
+      "dataset": "monash_m1_monthly",
+      "delta": {
+        "mase": 0.001996795685439201,
+        "wql": 0.0027586945396674
+      },
+      "elapsed_seconds": 4.049168586730957,
+      "finished_unix": 1788036177.170627,
+      "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70933,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/monash_m1_monthly/c10/h5/result.json",
+      "result_sha256": "0a508a53a1016ee1811b771e2db05c4015bd7c73f12b5490720e9c870b4d62fd",
+      "retrieval": {
+        "metrics": {
+          "mase": 1.4077427905821478,
+          "wql": 0.19140842490092816
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788036173.1214585,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/monash_m1_monthly/c10/h5/status.json",
+      "status_sha256": "4d440e8d0d95640b2479d5543c01010bb3ac86e9035aed67827b952001c7e566",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/startup_topology.json",
+      "topology_sha256": "45fd972b3a9720b75383f2bd0b1d57ded4562fd67e2e60772141c024890e1791",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-b",
+      "attempt_status": "completed",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.4170499241770154,
+          "wql": 0.18751423002027454
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_m1_monthly/c15/h5",
+      "context_length": 15,
+      "cuda_visible_devices": "5",
+      "dataset": "monash_m1_monthly",
+      "delta": {
+        "mase": -0.0074622230862217975,
+        "wql": -0.0045962962016635744
+      },
+      "elapsed_seconds": 2.8995378017425537,
+      "finished_unix": 1788040959.6908221,
+      "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70934,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/monash_m1_monthly/c15/h5/result.json",
+      "result_sha256": "200fbde5b7a5404d4835490a224c62117b804dd765d61aea3f8b5233c599d8d3",
+      "retrieval": {
+        "metrics": {
+          "mase": 1.4095877010907936,
+          "wql": 0.18291793381861096
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788040956.7912843,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/monash_m1_monthly/c15/h5/status.json",
+      "status_sha256": "25acf86c87b882d909cc4aaba8c5a63953b15f7ff6833c1c1337763bd4e8e021",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/startup_topology.json",
+      "topology_sha256": "45fd972b3a9720b75383f2bd0b1d57ded4562fd67e2e60772141c024890e1791",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-b",
+      "attempt_status": "completed",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.1770028311656977,
+          "wql": 0.17409327920977338
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_m1_monthly/c18/h5",
+      "context_length": 18,
+      "cuda_visible_devices": "6",
+      "dataset": "monash_m1_monthly",
+      "delta": {
+        "mase": -0.058466543353168365,
+        "wql": -0.013255555056710555
+      },
+      "elapsed_seconds": 3.4981954097747803,
+      "finished_unix": 1788027459.0715122,
+      "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70935,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/monash_m1_monthly/c18/h5/result.json",
+      "result_sha256": "446d204bb92b261b71fd9e4051695030fdcc0602c72dd7ccf094ebec7a74dc3c",
+      "retrieval": {
+        "metrics": {
+          "mase": 1.1185362878125293,
+          "wql": 0.16083772415306283
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788027455.5733168,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/monash_m1_monthly/c18/h5/status.json",
+      "status_sha256": "87cc9c87bf03ea7a01b656cf02fcfede91c6e4526ea15ab8bab510c4a8bea12e",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/startup_topology.json",
+      "topology_sha256": "45fd972b3a9720b75383f2bd0b1d57ded4562fd67e2e60772141c024890e1791",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-b",
+      "attempt_status": "completed",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.1478622253083304,
+          "wql": 0.17717031718738227
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_m1_monthly/c21/h5",
+      "context_length": 21,
+      "cuda_visible_devices": "7",
+      "dataset": "monash_m1_monthly",
+      "delta": {
+        "mase": -0.11805805561955496,
+        "wql": -0.018554955562970016
+      },
+      "elapsed_seconds": 2.995591640472412,
+      "finished_unix": 1788027461.5799098,
+      "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70936,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/monash_m1_monthly/c21/h5/result.json",
+      "result_sha256": "6b1d8760854bd740e99d0564d1703cad6a4e8a12f5ae28c0c5c483d4c28f3981",
+      "retrieval": {
+        "metrics": {
+          "mase": 1.0298041696887754,
+          "wql": 0.15861536162441225
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788027458.5843182,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/monash_m1_monthly/c21/h5/status.json",
+      "status_sha256": "9f4b402a5de55ff48196c3a5b53ab6aa160663da87a828318199bcae9671075a",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/startup_topology.json",
+      "topology_sha256": "45fd972b3a9720b75383f2bd0b1d57ded4562fd67e2e60772141c024890e1791",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-a",
+      "attempt_status": "interrupted",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 0.9186009254642896,
+          "wql": 0.4845549471870218
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_tourism_monthly/c10/h5",
+      "context_length": 10,
+      "cuda_visible_devices": "4",
+      "dataset": "monash_tourism_monthly",
+      "delta": {
+        "mase": -0.0047181031585254996,
+        "wql": -0.06558977783634878
+      },
+      "elapsed_seconds": 20.137016773223877,
+      "finished_unix": 1788007507.396457,
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 11174,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_2/monash_tourism_monthly/c10/h5/result.json",
+      "result_sha256": "5160e0ca62c215cd8e8cad5fb3e69f748353bfc4fa6d12b5a3a5bc84dcb71f61",
+      "retrieval": {
+        "metrics": {
+          "mase": 0.9138828223057641,
+          "wql": 0.418965169350673
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788007487.2594402,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_2/monash_tourism_monthly/c10/h5/status.json",
+      "status_sha256": "3df86a5b1ddd65bd2358254592dbb4827f0588d5fa3b203acd29f0ed8771cfda",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-a",
+      "attempt_status": "interrupted",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 2.6294128639908636,
+          "wql": 0.44766180751887563
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_tourism_monthly/c15/h5",
+      "context_length": 15,
+      "cuda_visible_devices": "5",
+      "dataset": "monash_tourism_monthly",
+      "delta": {
+        "mase": -0.01980749985059127,
+        "wql": 0.05703462297702222
+      },
+      "elapsed_seconds": 19.14583468437195,
+      "finished_unix": 1788012338.3863358,
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 11175,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_2/monash_tourism_monthly/c15/h5/result.json",
+      "result_sha256": "59fbcac440779bd6c3b781660a085df2b17a6b3d08189732908a1123e2e0b045",
+      "retrieval": {
+        "metrics": {
+          "mase": 2.6096053641402723,
+          "wql": 0.5046964304958979
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788012319.2405012,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_2/monash_tourism_monthly/c15/h5/status.json",
+      "status_sha256": "766930d850204ac71d75b60a8b9a825d09c996d3bac0bf0cbbf8984affe60e4b",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-b",
+      "attempt_status": "completed",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.5146942739285265,
+          "wql": 0.10410259599517634
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_tourism_monthly/c18/h5",
+      "context_length": 18,
+      "cuda_visible_devices": "2",
+      "dataset": "monash_tourism_monthly",
+      "delta": {
+        "mase": 0.11724425227903268,
+        "wql": 0.002381399177035934
+      },
+      "elapsed_seconds": 3.111077308654785,
+      "finished_unix": 1788031671.3988197,
+      "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70931,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/monash_tourism_monthly/c18/h5/result.json",
+      "result_sha256": "a3ed0ff76d7658db8378c49b7e393711099ebd72343fa2353a649005042873e8",
+      "retrieval": {
+        "metrics": {
+          "mase": 1.6319385262075592,
+          "wql": 0.10648399517221227
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788031668.2877424,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/monash_tourism_monthly/c18/h5/status.json",
+      "status_sha256": "bcb162faf5829681916a81c91da7c42eca9d0e40c9e765d77f55f52117076b18",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/startup_topology.json",
+      "topology_sha256": "45fd972b3a9720b75383f2bd0b1d57ded4562fd67e2e60772141c024890e1791",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-b",
+      "attempt_status": "completed",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.3469370683827362,
+          "wql": 0.2335506951903974
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_tourism_monthly/c21/h5",
+      "context_length": 21,
+      "cuda_visible_devices": "3",
+      "dataset": "monash_tourism_monthly",
+      "delta": {
+        "mase": -0.0069427639122960905,
+        "wql": -0.15210818622931752
+      },
+      "elapsed_seconds": 3.219651460647583,
+      "finished_unix": 1788033754.2602825,
+      "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70932,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/monash_tourism_monthly/c21/h5/result.json",
+      "result_sha256": "8317333830d298c965b3c9fc23c22f8e05138e8e2d2ea7964c07e92d1063b9af",
+      "retrieval": {
+        "metrics": {
+          "mase": 1.33999430447044,
+          "wql": 0.08144250896107988
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788033751.040631,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/monash_tourism_monthly/c21/h5/status.json",
+      "status_sha256": "a157ce50379886fea20152ae0188f492598ea6f68bfcab27c4ce3dc4a06fdace",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/startup_topology.json",
+      "topology_sha256": "45fd972b3a9720b75383f2bd0b1d57ded4562fd67e2e60772141c024890e1791",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-b",
+      "attempt_status": "completed",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.3172344148245043,
+          "wql": 0.08921737088969658
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_tourism_quarterly/c10/h5",
+      "context_length": 10,
+      "cuda_visible_devices": "4",
+      "dataset": "monash_tourism_quarterly",
+      "delta": {
+        "mase": 0.5363929862011874,
+        "wql": 0.03826877085811589
+      },
+      "elapsed_seconds": 3.0715067386627197,
+      "finished_unix": 1788036180.3321927,
+      "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70933,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/monash_tourism_quarterly/c10/h5/result.json",
+      "result_sha256": "fa42ad5b30fd04bc9de42b67e6bb52a1708b6e825f6381a41fd39b838e795727",
+      "retrieval": {
+        "metrics": {
+          "mase": 1.8536274010256917,
+          "wql": 0.12748614174781248
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788036177.260686,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/monash_tourism_quarterly/c10/h5/status.json",
+      "status_sha256": "fc27ddbac4201436fd45c216982806902d404aa9202556863f17c5b86c5d835d",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/startup_topology.json",
+      "topology_sha256": "45fd972b3a9720b75383f2bd0b1d57ded4562fd67e2e60772141c024890e1791",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-b",
+      "attempt_status": "completed",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.2358429973636125,
+          "wql": 0.09430921657143734
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_tourism_quarterly/c15/h5",
+      "context_length": 15,
+      "cuda_visible_devices": "5",
+      "dataset": "monash_tourism_quarterly",
+      "delta": {
+        "mase": -0.07005146310114774,
+        "wql": -0.010651113140317678
+      },
+      "elapsed_seconds": 2.00882887840271,
+      "finished_unix": 1788040961.7741735,
+      "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70934,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/monash_tourism_quarterly/c15/h5/result.json",
+      "result_sha256": "deaef2137e0b0e9b67825e5272cbc8b257e078070b8f15e686c6d2ecf8f3ec94",
+      "retrieval": {
+        "metrics": {
+          "mase": 1.1657915342624647,
+          "wql": 0.08365810343111967
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788040959.7653446,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/monash_tourism_quarterly/c15/h5/status.json",
+      "status_sha256": "78e6062566d2ed6f593f258b22b3fd92a1df55e9fb428b7cfb7d17972831da0d",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/startup_topology.json",
+      "topology_sha256": "45fd972b3a9720b75383f2bd0b1d57ded4562fd67e2e60772141c024890e1791",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-a",
+      "attempt_status": "interrupted",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.2140065572805334,
+          "wql": 0.09490520272544756
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_tourism_quarterly/c18/h5",
+      "context_length": 18,
+      "cuda_visible_devices": "4",
+      "dataset": "monash_tourism_quarterly",
+      "delta": {
+        "mase": -0.039152706766578005,
+        "wql": -0.0029788729333685704
+      },
+      "elapsed_seconds": 9.772966861724854,
+      "finished_unix": 1788007517.2428975,
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 11174,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_2/monash_tourism_quarterly/c18/h5/result.json",
+      "result_sha256": "5c43068f883da9c519024a1063bc87cf285720760bd93c96f232dde16f12406b",
+      "retrieval": {
+        "metrics": {
+          "mase": 1.1748538505139554,
+          "wql": 0.09192632979207899
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788007507.4699306,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_2/monash_tourism_quarterly/c18/h5/status.json",
+      "status_sha256": "d3a62fcb3c30e738e8a207fcb7e5cddf8e4e015ff277b43a416d51de656450d9",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-a",
+      "attempt_status": "interrupted",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.2586876945194794,
+          "wql": 0.09471985559129399
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_tourism_quarterly/c21/h5",
+      "context_length": 21,
+      "cuda_visible_devices": "5",
+      "dataset": "monash_tourism_quarterly",
+      "delta": {
+        "mase": -0.1404579539425983,
+        "wql": -0.01118049589625933
+      },
+      "elapsed_seconds": 7.9474101066589355,
+      "finished_unix": 1788012346.428622,
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 11175,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_2/monash_tourism_quarterly/c21/h5/result.json",
+      "result_sha256": "d0e10a3435367a8d8096354f8653599acaec5392350d8c13428d0398fdfc754a",
+      "retrieval": {
+        "metrics": {
+          "mase": 1.118229740576881,
+          "wql": 0.08353935969503466
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788012338.481212,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/cells/raf/benchmark_2/monash_tourism_quarterly/c21/h5/status.json",
+      "status_sha256": "02072ad2a31f4de104ea81417eef654fd87271c753e406a8b608e6d6f273db8c",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/161c835/raf-full-p5/startup_topology.json",
+      "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-b",
+      "attempt_status": "completed",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.4839888086358495,
+          "wql": 0.26565750629774976
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/uber_tlc_daily/c10/h5",
+      "context_length": 10,
+      "cuda_visible_devices": "6",
+      "dataset": "uber_tlc_daily",
+      "delta": {
+        "mase": -0.23334207315166422,
+        "wql": -0.07052510668837433
+      },
+      "elapsed_seconds": 2.298574209213257,
+      "finished_unix": 1788027461.4735045,
+      "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70935,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/uber_tlc_daily/c10/h5/result.json",
+      "result_sha256": "f8e6fe27059daec3e6692cc107136498d77aaf875b40b04ccbbe2d95fec27e78",
+      "retrieval": {
+        "metrics": {
+          "mase": 1.2506467354841853,
+          "wql": 0.19513239960937542
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788027459.1749303,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/uber_tlc_daily/c10/h5/status.json",
+      "status_sha256": "5a6f26e1a5c93908e34138861894e15849280940b95a362978243a0375dc988a",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/startup_topology.json",
+      "topology_sha256": "45fd972b3a9720b75383f2bd0b1d57ded4562fd67e2e60772141c024890e1791",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-b",
+      "attempt_status": "completed",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.0744194369738012,
+          "wql": 0.17735524030351785
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/uber_tlc_daily/c15/h5",
+      "context_length": 15,
+      "cuda_visible_devices": "7",
+      "dataset": "uber_tlc_daily",
+      "delta": {
+        "mase": -0.10900578455006138,
+        "wql": -0.006476001737339088
+      },
+      "elapsed_seconds": 1.9446337223052979,
+      "finished_unix": 1788027463.5900736,
+      "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70936,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/uber_tlc_daily/c15/h5/result.json",
+      "result_sha256": "5c7f3b070d1dd862686c116133daae8ed827061ad76e52b8c06f48157a745f41",
+      "retrieval": {
+        "metrics": {
+          "mase": 0.9654136524237398,
+          "wql": 0.17087923856617876
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788027461.6454399,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/uber_tlc_daily/c15/h5/status.json",
+      "status_sha256": "3baebd6a21d43f1eb97160775b487f06df14af82c9a8a414f6173d84dcffe541",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/startup_topology.json",
+      "topology_sha256": "45fd972b3a9720b75383f2bd0b1d57ded4562fd67e2e60772141c024890e1791",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-b",
+      "attempt_status": "completed",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.051895680524343,
+          "wql": 0.15992814687730267
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/uber_tlc_daily/c18/h5",
+      "context_length": 18,
+      "cuda_visible_devices": "2",
+      "dataset": "uber_tlc_daily",
+      "delta": {
+        "mase": -0.09472585258389576,
+        "wql": -0.032663291552937485
+      },
+      "elapsed_seconds": 1.82578706741333,
+      "finished_unix": 1788031673.3032959,
+      "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70931,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/uber_tlc_daily/c18/h5/result.json",
+      "result_sha256": "93e0f8a885baeb935bc84905156b60ea5fe812d8ef8e26abe7c874fceed90eb6",
+      "retrieval": {
+        "metrics": {
+          "mase": 0.9571698279404471,
+          "wql": 0.12726485532436518
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788031671.4775088,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/uber_tlc_daily/c18/h5/status.json",
+      "status_sha256": "82b8e4522884c9ee6be765b33e9cf07400dc9de1f4116f48a8aa47f68ec3d814",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/startup_topology.json",
+      "topology_sha256": "45fd972b3a9720b75383f2bd0b1d57ded4562fd67e2e60772141c024890e1791",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "attempt_id": "raf-full-p5-attempt-b",
+      "attempt_status": "completed",
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 0.9243319105396116,
+          "wql": 0.15006901281596263
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/uber_tlc_daily/c21/h5",
+      "context_length": 21,
+      "cuda_visible_devices": "3",
+      "dataset": "uber_tlc_daily",
+      "delta": {
+        "mase": -0.011169003064998573,
+        "wql": -0.004122649058110439
+      },
+      "elapsed_seconds": 1.8489625453948975,
+      "finished_unix": 1788033756.1786642,
+      "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70932,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "result_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/uber_tlc_daily/c21/h5/result.json",
+      "result_sha256": "8ca3ca17caba7b0801bccff2d29a978c8bed2c921d44b2638a71d56eb75236d1",
+      "retrieval": {
+        "metrics": {
+          "mase": 0.913162907474613,
+          "wql": 0.1459463637578522
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788033754.3297017,
+      "status": "completed",
+      "status_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/cells/raf/benchmark_2/uber_tlc_daily/c21/h5/status.json",
+      "status_sha256": "4dec9270b6d38e90299f9e11f5da1634790d8c83bcfcb3f3755e47342302dd1e",
+      "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/startup_topology.json",
+      "topology_sha256": "45fd972b3a9720b75383f2bd0b1d57ded4562fd67e2e60772141c024890e1791",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    }
+  ],
+  "schema_version": 2,
+  "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+  "topology_path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/startup_topology.json",
+  "topology_valid": true,
+  "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+}

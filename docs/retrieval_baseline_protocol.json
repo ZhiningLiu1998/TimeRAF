@@ -1,0 +1,233 @@
+{
+  "schema_version": 2,
+  "frozen_date": "2026-08-31",
+  "status": "frozen_pre_execution",
+  "supersedes_protocol_sha256": "7f561754a6f7b79e7fb89396e46f235a6220544cbbb16ebab7ad619907125647",
+  "amendments": [
+    {
+      "date": "2026-08-31",
+      "scope": "evaluation horizon coverage only",
+      "reason": "The earlier 208-cell protocol inherited the single-horizon Appendix replay scope and therefore did not support the paper's cross-horizon averages. This protocol applies the already frozen systems, descriptors, search grids, and selection rules to every horizon in the accepted 585-cell primary matrix before observing the additional outcomes."
+    }
+  ],
+  "objective": "Compare retrieval and revision layers while holding every base forecast fixed.",
+  "scope": {
+    "manifest": "docs/timefuse_experiment_manifest.jsonl",
+    "expected_cells": 585,
+    "models": 13,
+    "datasets": 16,
+    "seed": 2021,
+    "horizons": {
+      "long_term": [
+        96,
+        192,
+        336,
+        720
+      ],
+      "pems": [
+        6,
+        12,
+        24
+      ],
+      "epf": [
+        24
+      ]
+    },
+    "input_lengths": {
+      "long_term": 96,
+      "pems": 96,
+      "epf": 168
+    },
+    "bundle_catalog": {
+      "usable_bundles": 585,
+      "exact_manifest_coverage_required": true,
+      "hash_verified_before_each_cell": true,
+      "path_and_sha256_recorded_in_run_metadata": true
+    },
+    "result_identity": "Accepted composed A10G checkpoints replayed on P5 H100 hardware. This fixed-forecast comparison covers the same 585 cells as the primary matrix but remains a separate hardware replay."
+  },
+  "information_set": {
+    "validation_selection": "Use the chronological suffix of validation as queries. Retrieval memory ends at least one prediction horizon before the first query.",
+    "test_evaluation": "Fit retrieval memory on the complete validation split, then evaluate once on test.",
+    "unrealized_test_labels_forbidden": true,
+    "elapsed_test_labels": "Retrieval baselines never use test labels. TimeRAF's existing causal-bias candidate may use only labels whose complete forecast target precedes the current test origin.",
+    "test_predictions_available_to_descriptor": false,
+    "memory_labels_allowed": "Only completed validation futures.",
+    "no_lookahead_check": "For every retrieval baseline, changing validation-query and test labels while holding the selected parameters and legal memory fixed must leave predictions unchanged. For a selected TimeRAF causal-bias correction, changing every target that is not yet realized at a sampled query origin must leave that origin's prediction unchanged."
+  },
+  "common_processing": {
+    "channel_pooling": "Partition channels into at most 16 fixed contiguous groups and average within each group.",
+    "context_descriptor": "Use 12 contiguous temporal bins (or one bin per available step when shorter), concatenate their means, and flatten in time-major order.",
+    "similarity": "L2-normalized dot product. RAFT and SARAF additionally center every flattened multiscale context before L2 normalization.",
+    "future_alignment": "Unless a system says otherwise, align each memory future to the query endpoint as y_memory - x_memory_last + x_query_last. Pooling is used only for retrieval descriptors; reported predictions retain every original output channel.",
+    "descriptor_dtype": "float32",
+    "prediction_dtype": "float32",
+    "selection_score": "Maximum candidate-to-base error ratio over every metric reported by the task family.",
+    "alpha_grid": [
+      0.0,
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "tie_breaking": [
+      "lower validation selection score",
+      "smaller alpha",
+      "smaller k",
+      "lexicographic serialized parameters"
+    ]
+  },
+  "systems": [
+    {
+      "id": "base",
+      "paper_label": "Base",
+      "published_method": false,
+      "definition": "Unchanged frozen forecast."
+    },
+    {
+      "id": "analog_future",
+      "paper_label": "Analog-kNN",
+      "published_method": false,
+      "definition": "Retrieve endpoint-aligned historical futures with a normalized pooled-context descriptor and blend their mean with the frozen forecast.",
+      "descriptor": "Normalize each pooled channel over the context time axis before temporal pooling.",
+      "k_grid": [
+        1,
+        4,
+        8,
+        16
+      ],
+      "weighting": [
+        "uniform",
+        "softmax_cosine_temperature_0.1"
+      ]
+    },
+    {
+      "id": "raft_adapted",
+      "paper_label": "RAFT",
+      "published_method": "Han et al., ICML 2025",
+      "definition": "Apply RAFT's endpoint-offset normalization, multiscale periods, Pearson retrieval, top-k softmax aggregation, and validation blending to the fixed base forecast. No RAFT forecaster or learned fusion layer is used.",
+      "multiscale_operator": "For period g, replace each complete non-overlapping block by its mean, repeat the block mean, and subtract the final context value. The corresponding memory future is block-averaged in the same way, shifted by its final value, and then anchored at the query endpoint. Average retrieval predictions uniformly across periods in a period set.",
+      "period_sets": [
+        [
+          1
+        ],
+        [
+          4,
+          2,
+          1
+        ]
+      ],
+      "k_grid": [
+        1,
+        5,
+        10,
+        20
+      ],
+      "temperature_grid": [
+        0.1
+      ]
+    },
+    {
+      "id": "saraf_adapted",
+      "paper_label": "SARAF",
+      "published_method": "Zhou et al., KDD 2026",
+      "definition": "Apply SARAF's time-aligned similarity bonus, stationarity-controlled relevance-diversity selection, and stationarity-controlled Gaussian future aggregation to the fixed base forecast. No SARAF forecaster or learned projection is used.",
+      "context_operator": "Use the period-1 endpoint-offset context from the RAFT operator.",
+      "time_alignment": "Concatenate the final context mark with four evenly spaced future marks, L2 normalize, and map cosine similarity from [-1,1] to [0,1]. All-zero marks receive the neutral bonus 0.5.",
+      "stationarity": "Split each legal-memory context into six contiguous windows. For each sample, average across channels the cross-window standard deviations of window means and window standard deviations, divide each by the sample's mean channel standard deviation, clip each ratio to [0,1], subtract from one, average the two scores, then average over legal-memory samples. Set sigma=0.05+(1-s)*0.25 and lambda=0.3+s*0.6.",
+      "mmr": "Take the 100 most relevant candidates. Select the first by relevance, then repeatedly maximize lambda*relevance-(1-lambda)*redundancy, where redundancy is max(1-abs(candidate_similarity-selected_similarity)). Break ties by smaller memory index.",
+      "aggregation": "Weight selected endpoint-aligned futures by exp(-(1-similarity)^2/(2*sigma^2)) and normalize; fall back to uniform weights only if every Gaussian weight underflows to zero.",
+      "candidate_pool": 100,
+      "k_grid": [
+        5,
+        10,
+        20
+      ],
+      "time_alignment_weight_grid": [
+        0.0,
+        0.1,
+        0.3,
+        0.5
+      ],
+      "sigma_range": [
+        0.05,
+        0.3
+      ],
+      "mmr_lambda_range": [
+        0.3,
+        0.9
+      ],
+      "selection": "Deterministic MMR. Random sampling in the released code is replaced by argmax so repeated evaluation is deterministic."
+    },
+    {
+      "id": "residual_retrieval",
+      "paper_label": "Residual-kNN",
+      "published_method": false,
+      "definition": "Use only TimeRAF's historical residual-retrieval family and its frozen search grid; exclude seasonal, overlap, and bias candidates. Identity remains available as a separate candidate.",
+      "alpha_grid": [
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "id": "timeraf",
+      "paper_label": "TimeRAF",
+      "published_method": false,
+      "definition": "Use the accepted full validation-selected portfolio result."
+    }
+  ],
+  "metrics": {
+    "long_term": [
+      "mse",
+      "mae"
+    ],
+    "pems": [
+      "mae",
+      "rmse",
+      "mape"
+    ],
+    "epf": [
+      "mse",
+      "mae"
+    ],
+    "strict_win": "Every metric reported for the cell is lower than Base.",
+    "finite_required": true
+  },
+  "execution": {
+    "platform": "SageMaker Studio <P5_SPACE>",
+    "instance_type": "ml.p5.48xlarge",
+    "reserved_gpus_per_host": 8,
+    "processes_per_host": 8,
+    "worker_gpu_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "child_device": "cuda:0",
+    "max_failures": 0,
+    "resume_completed_cells": true
+  },
+  "acceptance": {
+    "expected_results_per_system": 585,
+    "expected_systems": 6,
+    "all_predictions_finite": true,
+    "all_metrics_finite": true,
+    "exact_cell_id_coverage": true,
+    "baseline_metrics_match_bundle_recomputation": true,
+    "a10g_checkpoint_metric_reference": "Record absolute and relative differences for every cell. Do not require numerical equality because the accepted bundles replay A10G checkpoints on P5 H100 hardware.",
+    "timeraf_recomputed_on_exact_replay_bundles": true,
+    "gpu_bindings_distinct": true,
+    "inactive_reserved_gpus_while_eight_or_more_cells_queued": 0
+  }
+}

@@ -1,0 +1,149 @@
+\section{Method}
+\label{sec:method}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\textwidth]{figures/method_overview.pdf}
+  \caption{\textbf{\method{} separates validation-time calibration from
+  forecast-time revision.} On a held-out validation split, frozen forecasts are
+  differenced against realized targets to build an error memory, and one
+  correction policy is locked. At forecast time the backbone stays frozen: the
+  locked policy either retrieves agreeing past errors and adds them to the
+  current forecast, or falls back to a simpler correction, or leaves the
+  forecast unchanged. The actual continuation is never available at forecast
+  time.}
+  \label{fig:method}
+\end{figure}
+
+\method{} has three components, sketched in Figure~\ref{fig:method}: a
+chronological memory of a frozen forecaster's own errors
+(Section~\ref{sec:memory}), a model-conditioned retriever that aggregates them
+into a reliability-shrunk correction (Section~\ref{sec:retrieval}), and a
+validation gate that decides whether to apply it (Section~\ref{sec:selection}).
+
+\subsection{Retrieving errors instead of inputs}
+\label{sec:memory}
+
+\paragraph{Why not retrieve inputs and their futures?}
+The dominant design scores past windows by context similarity and reuses the
+futures that followed
+\citep{tire2024raf,han2025raft,lee2026crossrag,kang2026craft,zhou2026saraf}.
+Three properties make that object a poor match for Problem~\ref{prob:main}.
+\textbf{(i) Signal dilution:} a distance over the raw window is dominated by
+periodic and trend components, which carry most of its energy and which the base
+forecast already predicts, so the short prefix that distinguishes an unusual
+continuation rarely determines the neighbourhood.
+\textbf{(ii) Object mismatch:} a retrieved future is an absolute trajectory
+carrying the old level, phase, trend, and covariate response, so injecting it
+overwrites parts of $\ybase_t$ that were already correct, even after endpoint
+alignment.
+\textbf{(iii) Model blindness:} the neighbourhood depends only on the data, so
+two forecasters with different weaknesses receive the same evidence.
+
+\paragraph{Benefits of retrieving errors.}
+Storing $\resid_i$ instead of $\ytrue_i$ addresses these three properties in
+turn.
+\textbf{(i) Contrast amplification:} the residual subtracts exactly the
+component the forecaster explains, so what survives into memory is what we want
+to transfer, and neighbour agreement is measured on that part rather than on
+shared seasonality.
+\textbf{(ii) Additive compatibility:} because $\resid_i$ is a difference, level,
+phase, and trend come from the query's own base forecast; the correction can
+only move the forecast, never replace it.
+\textbf{(iii) Model adaptivity:} memory is indexed to one forecaster, so the
+same historical data yields different corrections for different backbones, and a
+backbone without recurring error yields disagreeing neighbours whose correction
+is therefore suppressed.
+Appendix Figure~\ref{fig:residual-example} shows all three effects on measured
+ETTh1 forecasts: neighbours with matching contexts have futures at visibly
+different levels, but their residuals share one error shape.
+
+\paragraph{Chronological error memory.}
+\method{} builds memory from frozen forecasts on a held-out validation split
+rather than from training data, whose residuals are optimistically biased by the
+fit that produced them. Each item stores the context, base forecast, calendar
+marks, and residual, and is admitted only after its complete target has elapsed.
+During calibration an earlier validation prefix supplies memory and a later
+suffix supplies queries, so parameters are never chosen on the origins that
+memory explains. That split also drove early stopping, so it serves as a
+calibration set and never as a test set.
+
+\subsection{Model-conditioned retrieval with reliability shrinkage}
+\label{sec:retrieval}
+
+\paragraph{Context--forecast descriptor.}
+Retrieval needs a representation of the \emph{state the forecaster is in}, not
+only the state the series is in. \method{} therefore concatenates normalized
+shapes, first differences, summary statistics, slopes, and calendar marks over
+the last $\ell\in\{48,L\}$ context steps \emph{and} over the base forecast
+$\ybase$ itself. Including $\ybase$ is what makes the index model-conditioned:
+two backbones seeing one context but intending different futures land in
+different neighbourhoods. High-dimensional series are pooled into at most 16
+contiguous channel groups so descriptor size does not grow with the variable
+count; features are standardized with memory statistics and $\ell_2$-normalized.
+The construction needs no learned encoder, which lets one implementation apply
+unchanged to every forecaster we study.
+
+\paragraph{Retrieval, aggregation, and shrinkage.}
+Cosine similarity selects the top-$k$ eligible items and a temperature-scaled
+softmax turns similarities into weights:
+\begin{equation}
+  s_{ti}=\feat_t^\top\feat_i,\qquad
+  w_{ti}=
+  \frac{\exp((s_{ti}-s_{t,\max})/\tau)}
+       {\sum_{j\in\mathcal{N}_k(t)}\exp((s_{tj}-s_{t,\max})/\tau)},\qquad
+  \boldsymbol{\mu}_t=\sum_{i\in\mathcal{N}_k(t)}w_{ti}\,\resid_i ,
+  \label{eq:weights}
+\end{equation}
+so the weighted mean $\boldsymbol{\mu}_t$ estimates the recurring error at origin
+$t$. That mean is trustworthy only where the retrieved errors agree, and agreement
+varies across the horizon and across channels: a backbone may carry a stable bias
+at short lead times and none at long ones. \method{} therefore computes a
+weighted variance $\boldsymbol{\sigma}_t^2$ and effective neighbour count
+$k_{\mathrm{eff}}=(\sum_i w_{ti}^2)^{-1}$ per horizon step and channel group, and
+shrinks each component by its own signal-to-noise ratio:
+\begin{equation}
+  \boldsymbol{\rho}_t =
+  \frac{\boldsymbol{\mu}_t^2}
+       {\boldsymbol{\mu}_t^2+\lambda\boldsymbol{\sigma}_t^2/k_{\mathrm{eff}}+\epsilon},
+  \qquad
+  c_t^{\mathrm{ret}} = \alpha\,\boldsymbol{\rho}_t\odot\boldsymbol{\mu}_t ,
+  \qquad \epsilon=10^{-8}.
+  \label{eq:shrinkage}
+\end{equation}
+Components on which neighbours agree keep $\boldsymbol{\rho}_t$ near one; a
+small mean with large disagreement is attenuated toward zero, returning that
+component to the frozen prediction. Scale $\alpha$ and shrinkage strength
+$\lambda$ come from validation (Appendix~\ref{app:search}).
+
+\subsection{Validation-gated revision}
+\label{sec:selection}
+
+\paragraph{Why a gate is necessary.}
+Error retrieval rests on a testable assumption: that this forecaster's errors
+recur in retrievably similar states. Where they do not, the right correction is a
+simpler one or none at all, and Section~\ref{sec:experiments} shows which case
+holds varies sharply across backbones and datasets. Besides $c_t^{\mathrm{ret}}$, the candidate set
+therefore contains \textbf{identity} ($c_t=0$, the untouched forecast); a
+\textbf{seasonal blend} repeating a recent period; an \textbf{overlap blend}
+combining earlier forecasts of the same target with age decay; a \textbf{static
+bias} equal to a shrunken mean validation residual; and a \textbf{causal rolling
+bias} averaging recent residuals whose targets have already elapsed. The last
+two share error memory with retrieval but discard its state-conditioning, which
+is what makes the comparison informative.
+
+\paragraph{Selection rule.}
+For the metric set $\mathcal{Q}$ a task reports, candidate $c$ is scored by its
+worst relative validation error,
+$S(c)=\max_{q\in\mathcal{Q}}
+\mathcal{L}_q(\ycorr^{(c)},\ytrue)/\mathcal{L}_q(\ybase,\ytrue)$,
+so a candidate must not degrade any reported metric on validation to be
+preferred. The minimizing family and its parameters are frozen and applied once
+to test; ties go to identity. Because the identity candidate scores exactly one,
+the gate can always refuse to act. Predictions, residuals, corrections, and
+metrics must all be finite, and a non-finite value is a failed attempt rather
+than a result. Online statistics are indexed by target timestamp, so no
+correction can read a label that has not elapsed; as a check, perturbing every
+not-yet-realized target must leave the retrieval set, the online statistics, and
+the emitted correction identical. Appendix~\ref{app:causality} reports these
+checks per setting.

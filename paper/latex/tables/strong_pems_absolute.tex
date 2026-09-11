@@ -1,0 +1,57 @@
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\caption{Absolute PEMS errors for static ensembles at horizon 24. Each entry is base$\rightarrow$\method{}; bold marks a lower corrected error for that metric. OOT denotes an AutoGluon run that exceeded the fixed evaluation-time budget.}
+\label{tab:strong-pems-absolute-ensembles}
+\begin{tabular}{llrrr}
+\toprule
+Dataset & Metric & \shortstack{Forward\\Selection} & \shortstack{Portfolio\\Ensemble} & \shortstack{ZeroShot\\Ensemble}\\
+\midrule
+\multirow{3}{*}{PEMS03} & MAE & 16.8161$\rightarrow$\textbf{16.1627} & 17.3272$\rightarrow$\textbf{16.6798} & 17.1592$\rightarrow$\textbf{16.1783}\\
+ & RMSE & 26.5643$\rightarrow$\textbf{25.8875} & 27.2424$\rightarrow$\textbf{26.5586} & 27.0822$\rightarrow$\textbf{25.8592}\\
+ & MAPE & 0.1669$\rightarrow$\textbf{0.1575} & 0.1766$\rightarrow$\textbf{0.1667} & 0.1665$\rightarrow$\textbf{0.1552}\\
+\addlinespace[1pt]
+\multirow{3}{*}{PEMS04} & MAE & 20.7298$\rightarrow$\textbf{20.1328} & 21.3168$\rightarrow$\textbf{20.6772} & 21.7574$\rightarrow$\textbf{20.4547}\\
+ & RMSE & 32.6329$\rightarrow$\textbf{32.0493} & 33.2812$\rightarrow$\textbf{32.6751} & 33.8300$\rightarrow$\textbf{32.4830}\\
+ & MAPE & 0.1352$\rightarrow$\textbf{0.1292} & 0.1418$\rightarrow$\textbf{0.1342} & 0.1412$\rightarrow$\textbf{0.1298}\\
+\addlinespace[1pt]
+\multirow{3}{*}{PEMS07} & MAE & 23.4520$\rightarrow$\textbf{22.4748} & 23.8147$\rightarrow$\textbf{22.9356} & 24.6122$\rightarrow$\textbf{22.8136}\\
+ & RMSE & 37.0467$\rightarrow$\textbf{35.9668} & 37.5702$\rightarrow$\textbf{36.5795} & 38.3173$\rightarrow$\textbf{36.3529}\\
+ & MAPE & 0.1008$\rightarrow$\textbf{0.0958} & 0.1042$\rightarrow$\textbf{0.0994} & 0.1065$\rightarrow$\textbf{0.0971}\\
+\addlinespace[1pt]
+\multirow{3}{*}{PEMS08} & MAE & 17.9418$\rightarrow$\textbf{16.7518} & 18.3341$\rightarrow$\textbf{17.1164} & 18.9093$\rightarrow$\textbf{17.1235}\\
+ & RMSE & 27.8662$\rightarrow$\textbf{26.4059} & 28.4466$\rightarrow$\textbf{26.9438} & 29.1263$\rightarrow$\textbf{26.7587}\\
+ & MAPE & 0.1163$\rightarrow$\textbf{0.1089} & 0.1193$\rightarrow$\textbf{0.1111} & 0.1209$\rightarrow$\textbf{0.1108}\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\caption{Absolute PEMS errors for AutoML and foundation models at horizon 24. Each entry is base$\rightarrow$\method{}; bold marks a lower corrected error for that metric. OOT denotes an AutoGluon run that exceeded the fixed evaluation-time budget.}
+\label{tab:strong-pems-absolute-external}
+\begin{tabular}{llrrr}
+\toprule
+Dataset & Metric & \shortstack{AutoGluon\\HQ} & \shortstack{Chronos-Bolt\\FT} & \shortstack{Chronos-Bolt\\ZS}\\
+\midrule
+\multirow{3}{*}{PEMS03} & MAE & 32.5807$\rightarrow$\textbf{23.3902} & 33.7380$\rightarrow$\textbf{25.5684} & 36.2208$\rightarrow$\textbf{26.1728}\\
+ & RMSE & 51.0477$\rightarrow$\textbf{36.2122} & 55.8445$\rightarrow$\textbf{40.8012} & 58.8407$\rightarrow$\textbf{41.3707}\\
+ & MAPE & 0.3059$\rightarrow$\textbf{0.2236} & 0.2970$\rightarrow$\textbf{0.2391} & 0.3164$\rightarrow$\textbf{0.2387}\\
+\addlinespace[1pt]
+\multirow{3}{*}{PEMS04} & MAE & 39.6003$\rightarrow$\textbf{29.6446} & 40.8052$\rightarrow$\textbf{32.2252} & 44.7951$\rightarrow$\textbf{33.5165}\\
+ & RMSE & 59.5676$\rightarrow$\textbf{44.7916} & 64.2073$\rightarrow$\textbf{49.8433} & 69.1227$\rightarrow$\textbf{51.3755}\\
+ & MAPE & 0.2858$\rightarrow$\textbf{0.2057} & 0.2683$\rightarrow$\textbf{0.2161} & 0.2915$\rightarrow$\textbf{0.2188}\\
+\addlinespace[1pt]
+\multirow{3}{*}{PEMS07} & MAE & 47.4515$\rightarrow$\textbf{34.5473} & 48.3034$\rightarrow$\textbf{36.8834} & 52.3035$\rightarrow$\textbf{38.6419}\\
+ & RMSE & 72.1848$\rightarrow$\textbf{52.6761} & 74.2201$\rightarrow$\textbf{56.7428} & 80.2610$\rightarrow$\textbf{59.2988}\\
+ & MAPE & 0.2251$\rightarrow$\textbf{0.1580} & 0.2221$\rightarrow$\textbf{0.1678} & 0.2366$\rightarrow$\textbf{0.1718}\\
+\addlinespace[1pt]
+\multirow{3}{*}{PEMS08} & MAE & 32.1299$\rightarrow$\textbf{22.7296} & 34.8115$\rightarrow$\textbf{26.1129} & 37.1667$\rightarrow$\textbf{27.2401}\\
+ & RMSE & 47.6257$\rightarrow$\textbf{34.1055} & 54.0891$\rightarrow$\textbf{40.6714} & 57.2328$\rightarrow$\textbf{42.1271}\\
+ & MAPE & 0.2177$\rightarrow$\textbf{0.1507} & 0.2093$\rightarrow$\textbf{0.1610} & 0.2208$\rightarrow$\textbf{0.1653}\\
+\bottomrule
+\end{tabular}
+\end{table*}

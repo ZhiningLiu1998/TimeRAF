@@ -1,0 +1,868 @@
+{
+  "all_files_present": true,
+  "all_input_variates_match": true,
+  "dataset_count": 16,
+  "dataset_root": "dataset/timefuse",
+  "datasets": [
+    {
+      "bytes": 2589657,
+      "container": "csv",
+      "dataset": "ETTh1",
+      "input_variates_match": true,
+      "loader_windows_by_horizon": {
+        "192": {
+          "test": 2689,
+          "train": 8353,
+          "val": 2689
+        },
+        "336": {
+          "test": 2545,
+          "train": 8209,
+          "val": 2545
+        },
+        "720": {
+          "test": 2161,
+          "train": 7825,
+          "val": 2161
+        },
+        "96": {
+          "test": 2785,
+          "train": 8449,
+          "val": 2785
+        }
+      },
+      "observed_input_variates": 7,
+      "paper_size_interpretation": {
+        "derived": [
+          8545,
+          2881,
+          2881
+        ],
+        "matches_derived": true,
+        "reported": [
+          8545,
+          2881,
+          2881
+        ],
+        "semantics": "input windows before requiring a future horizon"
+      },
+      "protocol_input_variates": 7,
+      "raw_shape": [
+        17420,
+        8
+      ],
+      "relative_path": "long_term_forecast/ETTh1.csv",
+      "sha256": "f18de3ad269cef59bb07b5438d79bb3042d3be49bdeecf01c1cd6d29695ee066",
+      "split_points": {
+        "test": 2880,
+        "train": 8640,
+        "val": 2880
+      },
+      "task_family": "long_term",
+      "time_column": "date",
+      "value_columns": 7
+    },
+    {
+      "bytes": 2417960,
+      "container": "csv",
+      "dataset": "ETTh2",
+      "input_variates_match": true,
+      "loader_windows_by_horizon": {
+        "192": {
+          "test": 2689,
+          "train": 8353,
+          "val": 2689
+        },
+        "336": {
+          "test": 2545,
+          "train": 8209,
+          "val": 2545
+        },
+        "720": {
+          "test": 2161,
+          "train": 7825,
+          "val": 2161
+        },
+        "96": {
+          "test": 2785,
+          "train": 8449,
+          "val": 2785
+        }
+      },
+      "observed_input_variates": 7,
+      "paper_size_interpretation": {
+        "derived": [
+          8545,
+          2881,
+          2881
+        ],
+        "matches_derived": true,
+        "reported": [
+          8545,
+          2881,
+          2881
+        ],
+        "semantics": "input windows before requiring a future horizon"
+      },
+      "protocol_input_variates": 7,
+      "raw_shape": [
+        17420,
+        8
+      ],
+      "relative_path": "long_term_forecast/ETTh2.csv",
+      "sha256": "a3dc2c597b9218c7ce1cd55eb77b283fd459a1d09d753063f944967dd6b9218b",
+      "split_points": {
+        "test": 2880,
+        "train": 8640,
+        "val": 2880
+      },
+      "task_family": "long_term",
+      "time_column": "date",
+      "value_columns": 7
+    },
+    {
+      "bytes": 10360719,
+      "container": "csv",
+      "dataset": "ETTm1",
+      "input_variates_match": true,
+      "loader_windows_by_horizon": {
+        "192": {
+          "test": 11329,
+          "train": 34273,
+          "val": 11329
+        },
+        "336": {
+          "test": 11185,
+          "train": 34129,
+          "val": 11185
+        },
+        "720": {
+          "test": 10801,
+          "train": 33745,
+          "val": 10801
+        },
+        "96": {
+          "test": 11425,
+          "train": 34369,
+          "val": 11425
+        }
+      },
+      "observed_input_variates": 7,
+      "paper_size_interpretation": {
+        "derived": [
+          34465,
+          11521,
+          11521
+        ],
+        "matches_derived": true,
+        "reported": [
+          34465,
+          11521,
+          11521
+        ],
+        "semantics": "input windows before requiring a future horizon"
+      },
+      "protocol_input_variates": 7,
+      "raw_shape": [
+        69680,
+        8
+      ],
+      "relative_path": "long_term_forecast/ETTm1.csv",
+      "sha256": "6ce1759b1a18e3328421d5d75fadcb316c449fcd7cec32820c8dafda71986c9e",
+      "split_points": {
+        "test": 11520,
+        "train": 34560,
+        "val": 11520
+      },
+      "task_family": "long_term",
+      "time_column": "date",
+      "value_columns": 7
+    },
+    {
+      "bytes": 9677236,
+      "container": "csv",
+      "dataset": "ETTm2",
+      "input_variates_match": true,
+      "loader_windows_by_horizon": {
+        "192": {
+          "test": 11329,
+          "train": 34273,
+          "val": 11329
+        },
+        "336": {
+          "test": 11185,
+          "train": 34129,
+          "val": 11185
+        },
+        "720": {
+          "test": 10801,
+          "train": 33745,
+          "val": 10801
+        },
+        "96": {
+          "test": 11425,
+          "train": 34369,
+          "val": 11425
+        }
+      },
+      "observed_input_variates": 7,
+      "paper_size_interpretation": {
+        "derived": [
+          34465,
+          11521,
+          11521
+        ],
+        "matches_derived": true,
+        "reported": [
+          34465,
+          11521,
+          11521
+        ],
+        "semantics": "input windows before requiring a future horizon"
+      },
+      "protocol_input_variates": 7,
+      "raw_shape": [
+        69680,
+        8
+      ],
+      "relative_path": "long_term_forecast/ETTm2.csv",
+      "sha256": "db973ca252c6410a30d0469b13d696cf919648d0f3fd588c60f03fdbdbadd1fd",
+      "split_points": {
+        "test": 11520,
+        "train": 34560,
+        "val": 11520
+      },
+      "task_family": "long_term",
+      "time_column": "date",
+      "value_columns": 7
+    },
+    {
+      "bytes": 7235425,
+      "container": "csv",
+      "dataset": "weather",
+      "input_variates_match": true,
+      "loader_windows_by_horizon": {
+        "192": {
+          "test": 10348,
+          "train": 36600,
+          "val": 5079
+        },
+        "336": {
+          "test": 10204,
+          "train": 36456,
+          "val": 4935
+        },
+        "720": {
+          "test": 9820,
+          "train": 36072,
+          "val": 4551
+        },
+        "96": {
+          "test": 10444,
+          "train": 36696,
+          "val": 5175
+        }
+      },
+      "observed_input_variates": 21,
+      "paper_size_interpretation": {
+        "derived": [
+          36792,
+          5271,
+          10540
+        ],
+        "matches_derived": true,
+        "reported": [
+          36792,
+          5271,
+          10540
+        ],
+        "semantics": "input windows before requiring a future horizon"
+      },
+      "protocol_input_variates": 21,
+      "raw_shape": [
+        52696,
+        22
+      ],
+      "relative_path": "long_term_forecast/weather.csv",
+      "sha256": "34ee981d07313e51da2a50bb600072c8ae4a69cb4b0651f4cb93a069d7a2ba63",
+      "split_points": {
+        "test": 10539,
+        "train": 36887,
+        "val": 5270
+      },
+      "task_family": "long_term",
+      "time_column": "date",
+      "value_columns": 21
+    },
+    {
+      "bytes": 95581762,
+      "container": "csv",
+      "dataset": "electricity",
+      "input_variates_match": true,
+      "loader_windows_by_horizon": {
+        "192": {
+          "test": 5069,
+          "train": 18125,
+          "val": 2441
+        },
+        "336": {
+          "test": 4925,
+          "train": 17981,
+          "val": 2297
+        },
+        "720": {
+          "test": 4541,
+          "train": 17597,
+          "val": 1913
+        },
+        "96": {
+          "test": 5165,
+          "train": 18221,
+          "val": 2537
+        }
+      },
+      "observed_input_variates": 321,
+      "paper_size_interpretation": {
+        "derived": [
+          18317,
+          2633,
+          5261
+        ],
+        "matches_derived": true,
+        "reported": [
+          18317,
+          2633,
+          5261
+        ],
+        "semantics": "input windows before requiring a future horizon"
+      },
+      "protocol_input_variates": 321,
+      "raw_shape": [
+        26304,
+        322
+      ],
+      "relative_path": "long_term_forecast/electricity.csv",
+      "sha256": "7e45845d54c5219bad0ae6bc1b5316cf8ff9cead5d33fa998a5a51c2e4a497ad",
+      "split_points": {
+        "test": 5260,
+        "train": 18412,
+        "val": 2632
+      },
+      "task_family": "long_term",
+      "time_column": "date",
+      "value_columns": 321
+    },
+    {
+      "bytes": 136478119,
+      "container": "csv",
+      "dataset": "traffic",
+      "input_variates_match": true,
+      "loader_windows_by_horizon": {
+        "192": {
+          "test": 3317,
+          "train": 11993,
+          "val": 1565
+        },
+        "336": {
+          "test": 3173,
+          "train": 11849,
+          "val": 1421
+        },
+        "720": {
+          "test": 2789,
+          "train": 11465,
+          "val": 1037
+        },
+        "96": {
+          "test": 3413,
+          "train": 12089,
+          "val": 1661
+        }
+      },
+      "observed_input_variates": 862,
+      "paper_size_interpretation": {
+        "derived": [
+          12185,
+          1757,
+          3509
+        ],
+        "matches_derived": true,
+        "reported": [
+          12185,
+          1757,
+          3509
+        ],
+        "semantics": "input windows before requiring a future horizon"
+      },
+      "protocol_input_variates": 862,
+      "raw_shape": [
+        17544,
+        863
+      ],
+      "relative_path": "long_term_forecast/traffic.csv",
+      "sha256": "cb06463d56fa17d87f47027cd9389ceae82a69eddee51cdb61480e120dab0b16",
+      "split_points": {
+        "test": 3508,
+        "train": 12280,
+        "val": 1756
+      },
+      "task_family": "long_term",
+      "time_column": "date",
+      "value_columns": 862
+    },
+    {
+      "archive_keys": [
+        "data"
+      ],
+      "bytes": 15800415,
+      "container": "npz",
+      "dataset": "PEMS03",
+      "dtype": "float64",
+      "input_variates_match": true,
+      "loader_windows_by_horizon": {
+        "12": {
+          "test": 427,
+          "train": 15617,
+          "val": 5135
+        },
+        "24": {
+          "test": 426,
+          "train": 15605,
+          "val": 5123
+        },
+        "6": {
+          "test": 428,
+          "train": 15623,
+          "val": 5141
+        }
+      },
+      "nonfinite_values": 0,
+      "observed_input_variates": 358,
+      "paper_size_interpretation": {
+        "derived": null,
+        "matches_derived": null,
+        "reported": [
+          15617,
+          5135,
+          5135
+        ],
+        "semantics": "not consistently derivable from the released files and loader; retain as a paper claim only"
+      },
+      "protocol_input_variates": 358,
+      "raw_shape": [
+        26208,
+        358,
+        1
+      ],
+      "relative_path": "short_term_forecast/PEMS/PEMS03.npz",
+      "selected_signal_index": 0,
+      "selected_signal_shape": [
+        26208,
+        358
+      ],
+      "sha256": "34859517425eded66a0014db63de54b95d0428c38890741a1710ed4d3b043de8",
+      "split_points": {
+        "test": 5242,
+        "train": 15724,
+        "val": 5242
+      },
+      "task_family": "pems"
+    },
+    {
+      "archive_keys": [
+        "data"
+      ],
+      "bytes": 32956284,
+      "container": "npz",
+      "dataset": "PEMS04",
+      "dtype": "float64",
+      "input_variates_match": true,
+      "loader_windows_by_horizon": {
+        "12": {
+          "test": 274,
+          "train": 10088,
+          "val": 3291
+        },
+        "24": {
+          "test": 273,
+          "train": 10076,
+          "val": 3279
+        },
+        "6": {
+          "test": 274,
+          "train": 10094,
+          "val": 3297
+        }
+      },
+      "nonfinite_values": 0,
+      "observed_input_variates": 307,
+      "paper_size_interpretation": {
+        "derived": null,
+        "matches_derived": null,
+        "reported": [
+          10172,
+          3375,
+          3375
+        ],
+        "semantics": "not consistently derivable from the released files and loader; retain as a paper claim only"
+      },
+      "protocol_input_variates": 307,
+      "raw_shape": [
+        16992,
+        307,
+        3
+      ],
+      "relative_path": "short_term_forecast/PEMS/PEMS04.npz",
+      "selected_signal_index": 0,
+      "selected_signal_shape": [
+        16992,
+        307
+      ],
+      "sha256": "95a3c9b720fffdb85f0330d09bfab41b0b3cad0ca86c0d7d5f3accacb4ac999a",
+      "split_points": {
+        "test": 3399,
+        "train": 10195,
+        "val": 3398
+      },
+      "task_family": "pems"
+    },
+    {
+      "archive_keys": [
+        "data"
+      ],
+      "bytes": 43705518,
+      "container": "npz",
+      "dataset": "PEMS07",
+      "dtype": "float64",
+      "input_variates_match": true,
+      "loader_windows_by_horizon": {
+        "12": {
+          "test": 461,
+          "train": 16827,
+          "val": 5538
+        },
+        "24": {
+          "test": 460,
+          "train": 16815,
+          "val": 5526
+        },
+        "6": {
+          "test": 462,
+          "train": 16833,
+          "val": 5544
+        }
+      },
+      "nonfinite_values": 0,
+      "observed_input_variates": 883,
+      "paper_size_interpretation": {
+        "derived": null,
+        "matches_derived": null,
+        "reported": [
+          16911,
+          5622,
+          5622
+        ],
+        "semantics": "not consistently derivable from the released files and loader; retain as a paper claim only"
+      },
+      "protocol_input_variates": 883,
+      "raw_shape": [
+        28224,
+        883,
+        1
+      ],
+      "relative_path": "short_term_forecast/PEMS/PEMS07.npz",
+      "selected_signal_index": 0,
+      "selected_signal_shape": [
+        28224,
+        883
+      ],
+      "sha256": "a07887e610aa986276209bc9384d14ed7858fdcad1ded67f53dca19eb828600b",
+      "split_points": {
+        "test": 5645,
+        "train": 16934,
+        "val": 5645
+      },
+      "task_family": "pems"
+    },
+    {
+      "archive_keys": [
+        "data"
+      ],
+      "bytes": 18525419,
+      "container": "npz",
+      "dataset": "PEMS08",
+      "dtype": "float64",
+      "input_variates_match": true,
+      "loader_windows_by_horizon": {
+        "12": {
+          "test": 288,
+          "train": 10606,
+          "val": 3464
+        },
+        "24": {
+          "test": 287,
+          "train": 10594,
+          "val": 3452
+        },
+        "6": {
+          "test": 289,
+          "train": 10612,
+          "val": 3470
+        }
+      },
+      "nonfinite_values": 0,
+      "observed_input_variates": 170,
+      "paper_size_interpretation": {
+        "derived": null,
+        "matches_derived": null,
+        "reported": [
+          10690,
+          3548,
+          265
+        ],
+        "semantics": "not consistently derivable from the released files and loader; retain as a paper claim only"
+      },
+      "protocol_input_variates": 170,
+      "raw_shape": [
+        17856,
+        170,
+        3
+      ],
+      "relative_path": "short_term_forecast/PEMS/PEMS08.npz",
+      "selected_signal_index": 0,
+      "selected_signal_shape": [
+        17856,
+        170
+      ],
+      "sha256": "e1d03ce74e9fb79149e6e7c37c680214822c4a285baa2f42278cacabcd25c075",
+      "split_points": {
+        "test": 3572,
+        "train": 10713,
+        "val": 3571
+      },
+      "task_family": "pems"
+    },
+    {
+      "bytes": 1674177,
+      "container": "csv",
+      "dataset": "NP",
+      "input_variates_match": true,
+      "loader_windows_by_horizon": {
+        "24": {
+          "test": 10460,
+          "train": 36500,
+          "val": 5219
+        }
+      },
+      "observed_input_variates": 3,
+      "paper_size_interpretation": {
+        "derived": [
+          36500,
+          5219,
+          10460
+        ],
+        "matches_derived": true,
+        "reported": [
+          36500,
+          5219,
+          10460
+        ],
+        "semantics": "forecast windows at the single published horizon"
+      },
+      "protocol_input_variates": 3,
+      "raw_shape": [
+        52416,
+        4
+      ],
+      "relative_path": "short_term_forecast/EPF/NP.csv",
+      "sha256": "cbba6af8cf505d6d1fcadf87e86b6651abdae4a1adf616ee4956f6c1cd039fb8",
+      "split_points": {
+        "test": 10483,
+        "train": 36691,
+        "val": 5242
+      },
+      "task_family": "epf",
+      "time_column": "date",
+      "value_columns": 3
+    },
+    {
+      "bytes": 1960359,
+      "container": "csv",
+      "dataset": "PJM",
+      "input_variates_match": true,
+      "loader_windows_by_horizon": {
+        "24": {
+          "test": 10460,
+          "train": 36500,
+          "val": 5219
+        }
+      },
+      "observed_input_variates": 3,
+      "paper_size_interpretation": {
+        "derived": [
+          36500,
+          5219,
+          10460
+        ],
+        "matches_derived": true,
+        "reported": [
+          36500,
+          5219,
+          10460
+        ],
+        "semantics": "forecast windows at the single published horizon"
+      },
+      "protocol_input_variates": 3,
+      "raw_shape": [
+        52416,
+        4
+      ],
+      "relative_path": "short_term_forecast/EPF/PJM.csv",
+      "sha256": "58cc0ad32e22e61d9e183b0dc8201747f8c2ef822e469832c5beea8d88251cc0",
+      "split_points": {
+        "test": 10483,
+        "train": 36691,
+        "val": 5242
+      },
+      "task_family": "epf",
+      "time_column": "date",
+      "value_columns": 3
+    },
+    {
+      "bytes": 1793351,
+      "container": "csv",
+      "dataset": "BE",
+      "input_variates_match": true,
+      "loader_windows_by_horizon": {
+        "24": {
+          "test": 10460,
+          "train": 36500,
+          "val": 5219
+        }
+      },
+      "observed_input_variates": 3,
+      "paper_size_interpretation": {
+        "derived": [
+          36500,
+          5219,
+          10460
+        ],
+        "matches_derived": true,
+        "reported": [
+          36500,
+          5219,
+          10460
+        ],
+        "semantics": "forecast windows at the single published horizon"
+      },
+      "protocol_input_variates": 3,
+      "raw_shape": [
+        52416,
+        4
+      ],
+      "relative_path": "short_term_forecast/EPF/BE.csv",
+      "sha256": "93ca5ab6614adef1e93e561d5fd6868588c035ea68a676c9423462113303e8ab",
+      "split_points": {
+        "test": 10483,
+        "train": 36691,
+        "val": 5242
+      },
+      "task_family": "epf",
+      "time_column": "date",
+      "value_columns": 3
+    },
+    {
+      "bytes": 1763250,
+      "container": "csv",
+      "dataset": "FR",
+      "input_variates_match": true,
+      "loader_windows_by_horizon": {
+        "24": {
+          "test": 10460,
+          "train": 36500,
+          "val": 5219
+        }
+      },
+      "observed_input_variates": 3,
+      "paper_size_interpretation": {
+        "derived": [
+          36500,
+          5219,
+          10460
+        ],
+        "matches_derived": true,
+        "reported": [
+          36500,
+          5219,
+          10460
+        ],
+        "semantics": "forecast windows at the single published horizon"
+      },
+      "protocol_input_variates": 3,
+      "raw_shape": [
+        52416,
+        4
+      ],
+      "relative_path": "short_term_forecast/EPF/FR.csv",
+      "sha256": "ac400691243cc3aac32a4680d5f428f720da61385277813083b9fe61e642bd0c",
+      "split_points": {
+        "test": 10483,
+        "train": 36691,
+        "val": 5242
+      },
+      "task_family": "epf",
+      "time_column": "date",
+      "value_columns": 3
+    },
+    {
+      "bytes": 1862211,
+      "container": "csv",
+      "dataset": "DE",
+      "input_variates_match": true,
+      "loader_windows_by_horizon": {
+        "24": {
+          "test": 10460,
+          "train": 36500,
+          "val": 5219
+        }
+      },
+      "observed_input_variates": 3,
+      "paper_size_interpretation": {
+        "derived": [
+          36500,
+          5219,
+          10460
+        ],
+        "matches_derived": true,
+        "reported": [
+          36500,
+          5219,
+          10460
+        ],
+        "semantics": "forecast windows at the single published horizon"
+      },
+      "protocol_input_variates": 3,
+      "raw_shape": [
+        52416,
+        4
+      ],
+      "relative_path": "short_term_forecast/EPF/DE.csv",
+      "sha256": "8cdf1e3f52a9c3530bb36432d5f956a287f951cff696f20478e5be069505388c",
+      "split_points": {
+        "test": 10483,
+        "train": 36691,
+        "val": 5242
+      },
+      "task_family": "epf",
+      "time_column": "date",
+      "value_columns": 3
+    }
+  ],
+  "release_archive": {
+    "bytes": 2797428149,
+    "path": "/tmp/timefuse-data-probe",
+    "sha256": "7dea15ddde92d89b055911c34b91eebb8ee4ba23bec8b0cdb4524062c33b8d08"
+  },
+  "schema_version": 1,
+  "timefuse_commit": "978e6c6b9e4f246632c269aa0f9beeb099eabcfc"
+}

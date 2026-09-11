@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "cohort_id": "nonstationary-transformer-numerical-recovery-v1",
+  "method_revision": "d9be338",
+  "base_manifest": "docs/timefuse_experiment_manifest.jsonl",
+  "base_manifest_sha256": "45830d23f3b017c15d3680c88f837f84a9441eef9a6ceaaa5370c14872660c2a",
+  "seed": 2021,
+  "cell_ids": [
+    "epf/BE/Nonstationary_Transformer/24",
+    "epf/DE/Nonstationary_Transformer/24",
+    "epf/FR/Nonstationary_Transformer/24",
+    "epf/NP/Nonstationary_Transformer/24",
+    "epf/PJM/Nonstationary_Transformer/24",
+    "long_term/electricity/Nonstationary_Transformer/192",
+    "long_term/electricity/Nonstationary_Transformer/336",
+    "long_term/electricity/Nonstationary_Transformer/720",
+    "long_term/electricity/Nonstationary_Transformer/96"
+  ],
+  "cell_ids_sha256": "1bc266570503ab1de56c9819129b723332ae1b597071aeea473fdd2d90451f3a",
+  "profiles": {
+    "exact": {
+      "overrides": {},
+      "purpose": "Repeat the frozen paper configuration with only fail-closed numerical handling."
+    },
+    "fallback-v1": {
+      "overrides": {
+        "learning_rate": 0.0001
+      },
+      "purpose": "Use a pre-registered tenfold learning-rate reduction when exact recovery is non-finite on either hardware."
+    }
+  },
+  "execution": {
+    "run_every_profile_for_all_cells_on_both_hardware": true,
+    "a10g_processes_per_host": 4,
+    "a100_processes_per_host": 8,
+    "max_failures": 0,
+    "num_workers": 4,
+    "fresh_output_and_checkpoint_roots": true
+  },
+  "selection": {
+    "originally_affected_rule": "union of cells with non-finite first-pass paper metrics on A10G or A100",
+    "unaffected_cells": "retain original first-pass result",
+    "affected_exact_rule": "select exact only when exact is finite on both A10G and A100",
+    "affected_fallback_rule": "otherwise select fallback-v1 only when fallback-v1 is finite on both A10G and A100",
+    "metric_quality_used_for_selection": false,
+    "failure_rule": "block publication if the required cross-hardware profile is not finite on both systems"
+  }
+}

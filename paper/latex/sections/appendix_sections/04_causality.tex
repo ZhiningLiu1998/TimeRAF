@@ -1,0 +1,33 @@
+\section{No-lookahead protocol}
+\label{app:causality}
+
+Every forecast and residual is associated with both an origin and its target
+timestamps. Static validation memory is legal for test because all validation
+targets precede test. Within online evaluation, a contribution for target
+timestamp $u$ becomes visible only for query origin $t>u$. Prefix arrays are
+queried at $t$, never $t+H$. Rolling-bias statistics write each residual
+component at its own target timestamp and query the strict prefix $u<t$;
+horizon blocks group forecast leads but cannot expose a partially realized
+future.
+
+The evaluation enforces four conditions:
+\begin{enumerate}
+  \item each retrieved residual's final target is earlier than the query
+  origin;
+  \item online statistics and weights contain only target-time evidence
+  $u<t$, including when forecast windows overlap;
+  \item the PEMS timeline includes the fresh-context gap and 12-step test
+  stride; and
+  \item post-test ETT memory may contain completed validation and
+  official-test residuals but no current or future post-test target.
+\end{enumerate}
+
+Table~\ref{tab:candidate-availability} states the corresponding information
+set for every candidate. Historical retrieval and static bias use validation
+labels; seasonal and overlap corrections use no labels; causal rolling bias
+may incorporate test-period labels only after their target timestamps have
+passed. Thus the broad selector contains both static and delayed-label
+prequential candidates.
+
+As a direct no-lookahead check, we replace every label at timestamps
+$\ge t$ and require the correction at $t$ to remain unchanged.

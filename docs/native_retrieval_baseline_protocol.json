@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "status": "frozen_with_execution_amendment",
+  "frozen_date": "2026-08-29",
+  "objective": "Run three published retrieval-augmented forecasting systems in their native released settings and pair every retrieval result with the corresponding native no-retrieval base.",
+  "reporting_boundary": {
+    "paired_configurations": 52,
+    "no_cross_protocol_ranking": true,
+    "reason": "The systems use different backbones, datasets, horizons, splits, and metrics. Each row is compared only with its native base.",
+    "main_text_fields": [
+      "method",
+      "backbone",
+      "dataset",
+      "context_length",
+      "prediction_length",
+      "metric",
+      "base",
+      "retrieval",
+      "delta"
+    ]
+  },
+  "sources": {
+    "ts_rag": {
+      "paper": "Ning et al., NeurIPS 2025",
+      "bibtex_key": "ning2025tsrag",
+      "repository": "https://github.com/UConn-DSIS/TS-RAG",
+      "commit": "73ac807789d2e61b8a3dfc8514e3fc947fe185cc",
+      "archive_sha256": "1d5e29975ab356ad148760aab090c5fd8c3a73c9d655f939b185b32e0ed20e4b",
+      "license": "MIT"
+    },
+    "raf": {
+      "paper": "Tire et al., arXiv 2024, revised 2026",
+      "bibtex_key": "tire2024raf",
+      "repository": "https://github.com/kutaytire/Retrieval-Augmented-Time-Series-Forecasting",
+      "commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390",
+      "archive_sha256": "227d8f5061d00c2cda4391defc3122c09b70780c3bae692aeb7aa62fc249a2b3",
+      "license": "Apache-2.0"
+    },
+    "ratd": {
+      "paper": "Liu et al., NeurIPS 2024",
+      "bibtex_key": "liu2024ratd",
+      "repository": "https://github.com/stanliu96/RATD",
+      "commit": "719e4008f72e89544a621d97b5d1a69164fc14d3",
+      "archive_sha256": "e881aa57c40aa4a387b5cdf25972140e501f487c008adea6ff51b1e7e0427663",
+      "license": "MIT"
+    }
+  },
+  "systems": {
+    "ts_rag": {
+      "expected_pairs": 7,
+      "backbone": "Chronos-Bolt",
+      "retrieval_system": "TS-RAG",
+      "base_system": "Chronos-Bolt",
+      "datasets": [
+        "ETTh1",
+        "ETTh2",
+        "ETTm1",
+        "ETTm2",
+        "weather",
+        "electricity",
+        "exchange_rate"
+      ],
+      "context_lengths": [
+        512
+      ],
+      "prediction_lengths": [
+        64
+      ],
+      "metrics": [
+        "mse",
+        "mae"
+      ],
+      "metric_space": "train-split standardized",
+      "seed": 2021,
+      "retrieval_top_k": 10,
+      "checkpoint_gate": "Record the downloaded TS-RAG checkpoint SHA-256 before the first inference cell. The same released Chronos-Bolt weights and test split must be used for the paired base."
+    },
+    "raf": {
+      "expected_pairs": 44,
+      "backbone": "amazon/chronos-t5-base",
+      "retrieval_system": "RAF",
+      "base_system": "Chronos",
+      "seed": 42,
+      "num_samples": 20,
+      "retrieval_top_n": 1,
+      "metrics": [
+        "wql",
+        "mase"
+      ],
+      "benchmark_1": {
+        "datasets": [
+          "ETTh",
+          "monash_covid_deaths",
+          "monash_fred_md",
+          "monash_traffic",
+          "monash_weather",
+          "nn5"
+        ],
+        "context_lengths": [
+          50,
+          75,
+          100,
+          150
+        ],
+        "prediction_length": 20
+      },
+      "benchmark_2": {
+        "datasets": [
+          "monash_cif_2016",
+          "monash_m1_monthly",
+          "monash_tourism_monthly",
+          "monash_tourism_quarterly",
+          "uber_tlc_daily"
+        ],
+        "context_lengths": [
+          10,
+          15,
+          18,
+          21
+        ],
+        "prediction_length": 5
+      },
+      "released_config_correction": {
+        "file": "configs/benchmark-1/etth.yaml",
+        "released_values": [
+          75,
+          75,
+          100,
+          150
+        ],
+        "corrected_values": [
+          50,
+          75,
+          100,
+          150
+        ],
+        "basis": "The paper and every other Benchmark I configuration use C in {50,75,100,150}; the first ETTh entry is a duplicate typo."
+      },
+      "memory_safe_execution": "Embed candidate windows in bounded chunks and retain the exact running top-1 under the released L2 distance. This is algebraically equivalent to materializing the full query-by-candidate matrix and is required because the released implementation requests more than 22 GiB for one ETTh candidate batch on an A10G."
+    },
+    "ratd": {
+      "expected_pairs": 1,
+      "backbone": "CSDI",
+      "retrieval_system": "RATD",
+      "base_system": "CSDI",
+      "datasets": [
+        "electricity"
+      ],
+      "context_lengths": [
+        96
+      ],
+      "prediction_lengths": [
+        168
+      ],
+      "metrics": [
+        "rmse",
+        "mae"
+      ],
+      "seed": 1,
+      "diffusion_steps": 50,
+      "epochs": 100,
+      "samples": 100,
+      "released_code_boundary": "The released Electricity command uses history 96 and horizon 168, although the paper states history 168 and horizons 96, 192, and 336. Report this as the released-code setting, not as a reproduction of the paper aggregate.",
+      "required_repairs": [
+        "Replace hard-coded author filesystem paths with paths below the canonical EFS project root.",
+        "Build every split's query-to-reference mapping against training windows only; a reference future must end inside the training boundary.",
+        "Pass the selected reference tensor through every reverse-diffusion sampling step.",
+        "Fix the released process_data tuple mismatch and derive feature IDs from the actual target dimension.",
+        "Train and evaluate use_reference=true and use_reference=false with identical seeds, splits, architecture settings, and sampling counts."
+      ]
+    }
+  },
+  "execution": {
+    "platform": "SageMaker Studio <DEV_SPACE>",
+    "instance_type": "ml.g5.12xlarge",
+    "project_root": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF",
+    "reserved_gpus_per_host": 4,
+    "processes_per_host": 4,
+    "worker_gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "child_device": "cuda:0",
+    "inactive_reserved_gpus_while_four_or_more_cells_ready": 0,
+    "all_sources_environments_datasets_models_outputs_logs_and_caches_below_project_root": true
+  },
+  "acceptance": {
+    "exact_pair_count": 52,
+    "finite_metrics": true,
+    "retrieval_and_base_share_native_backbone_and_test_examples": true,
+    "delta_definition": "retrieval - base; negative is better for every reported metric",
+    "source_archive_hashes_match": true,
+    "all_configuration_ids_unique": true,
+    "no_test_target_in_retrieval_index": true,
+    "raw_per_configuration_results_retained": true,
+    "runtime_gpu_bindings_recorded": true,
+    "failed_or_unreproducible_cells_remain_visible": true
+  },
+  "amendments": [
+    {
+      "date": "2026-08-29",
+      "method": "raf",
+      "scope": "candidate embedding and nearest-neighbor memory use only",
+      "trigger": "The first ETTh C=50 smoke attempt failed before producing a retrieval result when the released implementation tried to allocate 22.79 GiB for one candidate embedding batch.",
+      "change": "Stream candidate windows in batches of at most 512 and merge exact per-query top-1 distances after each batch.",
+      "unchanged": [
+        "dataset and split",
+        "candidate windows",
+        "Chronos encoder and weights",
+        "embedding values",
+        "L2 distance",
+        "top_n",
+        "retrieved future",
+        "forecasting model",
+        "sampling seed",
+        "metrics"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "combined_topology": {
+    "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/d614258/ratd-full-p5/sharded_startup_topology.json",
+    "sha256": "6bc33f6e44e2c57737512a540fa6e0788adf2aba86fd402a4e0ebb7efa60abea",
+    "size_bytes": 20878
+  },
+  "created_unix": 1788171498.3700182,
+  "csdi_receipt": {
+    "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/csdi/receipt.json",
+    "sha256": "bd74595df3660547a59b97e085d7c570f15f489fdda5b97c674e4b301f728c0c",
+    "size_bytes": 10734
+  },
+  "csdi_result": {
+    "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/csdi/result.json",
+    "sha256": "5b53c92d9d7482bc9db5d04dfd6adddb54b91c98caa33a35d8cdf6166308df70",
+    "size_bytes": 8312
+  },
+  "job_kind": "native_ratd_sharded_pair_finalizer_receipt",
+  "ratd_receipt": {
+    "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/ratd/receipt.json",
+    "sha256": "e212d00fcfb6ae9740ed7f860014ffaf665e0a3d80b8e0921214ce3b8f1476fe",
+    "size_bytes": 11634
+  },
+  "ratd_result": {
+    "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/ratd/result.json",
+    "sha256": "2739484ed0127b3942729d4ba9ca26734db1431b277f1ecd552ae605f805b4fc",
+    "size_bytes": 9211
+  },
+  "receipt_sha256": "7614f2b18ad301cca8c5c91f9316a1d104a2125063a9f5e228ebc6458b1fd01c",
+  "reference_map": {
+    "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/d614258/ratd-full-p5/reference_map.npz",
+    "sha256": "598dc4d16077d0ac2d32a032b92aaf3c07360aa52345562774d8d5a9a33b322a",
+    "size_bytes": 150330
+  },
+  "reference_metadata": {
+    "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/d614258/ratd-full-p5/reference_map.json",
+    "sha256": "09f6a3da46161340e0f7f0c1935f2b3692b5c78ecd98208b9a3df004b690320d",
+    "size_bytes": 1668
+  },
+  "schema_version": 1,
+  "summary": {
+    "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/d614258/ratd-full-p5/summary.json",
+    "sha256": "82fd74eab75aa0535ad46d54f3324f2dac87667d3b31d4539760b74d14bbb133",
+    "size_bytes": 40211
+  },
+  "training_termination": {
+    "accepted": true,
+    "checkpoint_evidence": {
+      "csdi": {
+        "checkpoint": {
+          "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/d614258/ratd-full-p5/csdi/training_checkpoint.pt",
+          "sha256": "2e0e3c96e1e05d98b4bc2e6749c5eaaefb4b84fecb9a6e55c96a91209c7016ff",
+          "size_bytes": 32789633
+        },
+        "epoch": 100,
+        "identity": {
+          "diffusion_steps": 50,
+          "epochs": 100,
+          "method": "CSDI",
+          "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+          "reference_map_sha256": "598dc4d16077d0ac2d32a032b92aaf3c07360aa52345562774d8d5a9a33b322a",
+          "samples": 100,
+          "seed": 1,
+          "source_revision": "d614258b6e5fd4ca71c4d814ab2fe10e2503399d",
+          "upstream_commit": "719e4008f72e89544a621d97b5d1a69164fc14d3"
+        },
+        "method": "CSDI"
+      },
+      "ratd": {
+        "checkpoint": {
+          "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/d614258/ratd-full-p5/ratd/training_checkpoint.pt",
+          "sha256": "4b912def9fba5cb9df654023b6909aa18997d7014ef18807fbbc17580d393a3b",
+          "size_bytes": 66628641
+        },
+        "epoch": 100,
+        "identity": {
+          "diffusion_steps": 50,
+          "epochs": 100,
+          "method": "RATD",
+          "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+          "reference_map_sha256": "598dc4d16077d0ac2d32a032b92aaf3c07360aa52345562774d8d5a9a33b322a",
+          "samples": 100,
+          "seed": 1,
+          "source_revision": "d614258b6e5fd4ca71c4d814ab2fe10e2503399d",
+          "upstream_commit": "719e4008f72e89544a621d97b5d1a69164fc14d3"
+        },
+        "method": "RATD"
+      }
+    },
+    "classification": "original-serial-evaluation-terminated-after-epoch100",
+    "exit_policy": "intentional-post-epoch100-termination",
+    "nonzero_returncodes": {
+      "csdi": -15,
+      "ratd": -15
+    },
+    "worker_returncodes": {
+      "csdi": -15,
+      "ratd": -15
+    }
+  },
+  "training_topology": {
+    "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/d614258/ratd-full-p5/startup_topology.json",
+    "sha256": "63952be968a740b651f381a0f401abcf9215b6d75a7fa2b66ae06736fcec8d3a",
+    "size_bytes": 4830696
+  }
+}

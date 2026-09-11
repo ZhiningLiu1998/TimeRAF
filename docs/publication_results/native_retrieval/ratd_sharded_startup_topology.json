@@ -1,0 +1,456 @@
+{
+  "evaluation": {
+    "csdi": {
+      "checkpoint": {
+        "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/d614258/ratd-full-p5/csdi/training_checkpoint.pt",
+        "sha256": "2e0e3c96e1e05d98b4bc2e6749c5eaaefb4b84fecb9a6e55c96a91209c7016ff",
+        "size_bytes": 32789633
+      },
+      "plan": {
+        "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/csdi/eval_plan.json",
+        "sha256": "0fe4e67ada9ce110145720fe5ba6671798aa64f75c2efda90f0c893035783307",
+        "size_bytes": 10391
+      },
+      "receipt": {
+        "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/csdi/receipt.json",
+        "sha256": "bd74595df3660547a59b97e085d7c570f15f489fdda5b97c674e4b301f728c0c",
+        "size_bytes": 10734
+      },
+      "topology": {
+        "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/csdi/startup_topology.json",
+        "sha256": "5ca2b79c7b021f5571cf4df60a3eb0c4d1fc4234a0d0ae3bb2a40d29f3962588",
+        "size_bytes": 2486810
+      },
+      "worker_results": [
+        {
+          "boundary_sample_sha256": {
+            "first": {
+              "origin_index": 0,
+              "sha256": "9a7033eea920debe6453cdfed1e84af959dadc2aae5b9ce2511b6a24af01a3c1"
+            },
+            "last": {
+              "origin_index": 727,
+              "sha256": "44f1770b55b71eda2017806e7451a08ed67f3aec8ba6e8ccf3ae57d12423b301"
+            }
+          },
+          "end_rng_sha256": "798130ab4aad68515dfec1ae54834b43989a57945d794b45754f50251f306565",
+          "finished_unix": 1788090354.1229732,
+          "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/csdi/shards/0000.json",
+          "physical_gpu": 1,
+          "pid": 109053,
+          "sha256": "44536eda63c8c3e7d274d927fbe68824a88a4ba104aa60cc54c49ae6a48defe5",
+          "shard_id": "0000",
+          "size_bytes": 91024,
+          "started_unix": 1788049189.2390044
+        },
+        {
+          "boundary_sample_sha256": {
+            "first": {
+              "origin_index": 728,
+              "sha256": "330a58178c17588b0dfaa06cc77e3a8b383d30ac097d18488bde9ab4def1dae7"
+            },
+            "last": {
+              "origin_index": 1455,
+              "sha256": "5aa673a56c742b6b4b3d97eeecb20d986a1ddb443a65cefb720d7d0b8505a4e5"
+            }
+          },
+          "end_rng_sha256": "5a9a16d9e46b9b31d71f93b16f3798d1fc5339e1d1f50612d5c85d75c94cf439",
+          "finished_unix": 1788090371.4110067,
+          "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/csdi/shards/0001.json",
+          "physical_gpu": 2,
+          "pid": 109054,
+          "sha256": "f1dc828c8d5bd86a7de0b834fa0616594bce591ac0ef497a573bd3dee4c70e69",
+          "shard_id": "0001",
+          "size_bytes": 91686,
+          "started_unix": 1788049188.8184876
+        },
+        {
+          "boundary_sample_sha256": {
+            "first": {
+              "origin_index": 1456,
+              "sha256": "06546a6a8f39976888e06fd685a815b295cf7d76cb009e02d9d7cf1975cd0cd2"
+            },
+            "last": {
+              "origin_index": 2183,
+              "sha256": "098d28d62b19d4ace9b65faeeaa0b6aef10ce4fa6dfa47ff7a885797c0aba35a"
+            }
+          },
+          "end_rng_sha256": "fea56ebd80ec2d849c703858edec39bcad00a013424cfdac586391236128ee6a",
+          "finished_unix": 1788090348.6544635,
+          "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/csdi/shards/0002.json",
+          "physical_gpu": 3,
+          "pid": 109055,
+          "sha256": "b337a9d8524da5457b6c6a3f5f8773e4435156fc012992231cf7173156cd572d",
+          "shard_id": "0002",
+          "size_bytes": 91805,
+          "started_unix": 1788049187.913837
+        },
+        {
+          "boundary_sample_sha256": {
+            "first": {
+              "origin_index": 2184,
+              "sha256": "a442845d6f64d2948b053cea0df9f11e2f01a745ffd590bab7477bde8e8dbec9"
+            },
+            "last": {
+              "origin_index": 2911,
+              "sha256": "1a256d9fd8e2a9f0c825fbab2376438f69826a62de18956942e0b0fcd21430dd"
+            }
+          },
+          "end_rng_sha256": "ad2eebd96e327696475e61c71dd7e26460770a7527151c73fde9d0e77362cb38",
+          "finished_unix": 1788090198.9105597,
+          "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/csdi/shards/0003.json",
+          "physical_gpu": 4,
+          "pid": 109056,
+          "sha256": "889c58c0d743e823042260eab17a7813725266ceae59e07ed9e055089546ffb9",
+          "shard_id": "0003",
+          "size_bytes": 92114,
+          "started_unix": 1788049188.9839709
+        },
+        {
+          "boundary_sample_sha256": {
+            "first": {
+              "origin_index": 2912,
+              "sha256": "40a3a617f0ab21b8b63d7d69a3c5dc7f98d656690aa4a7c43c9605aa7f5a7710"
+            },
+            "last": {
+              "origin_index": 3638,
+              "sha256": "e93eeddea2b388dbe0a09d23b282353b25bafa907514f552fa99cda67e6e6fec"
+            }
+          },
+          "end_rng_sha256": "43b583d3dd3efd98959dbc5ce44c5b50dcabb7c8a72944fe68eded2db554a563",
+          "finished_unix": 1788090107.6859398,
+          "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/csdi/shards/0004.json",
+          "physical_gpu": 5,
+          "pid": 109057,
+          "sha256": "04c55b4066a528bf2601c63e598b6195c7dfd73cb6cc68a297cda0cf35574332",
+          "shard_id": "0004",
+          "size_bytes": 91977,
+          "started_unix": 1788049188.783063
+        },
+        {
+          "boundary_sample_sha256": {
+            "first": {
+              "origin_index": 3639,
+              "sha256": "7925903bf9ad173aa767d375e9279d7036a7bc93ffc4c62890244980e9668c6b"
+            },
+            "last": {
+              "origin_index": 4365,
+              "sha256": "92e8d8d34753f17f792c5cff0e38c0b1c0d390ddc1a6815b0913eb1f9217133e"
+            }
+          },
+          "end_rng_sha256": "e199b609d8f449c645b5a04ea7ab2de366600df6c2ce711df403195483cf6341",
+          "finished_unix": 1788090176.9402938,
+          "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/csdi/shards/0005.json",
+          "physical_gpu": 6,
+          "pid": 109058,
+          "sha256": "1c18e08cfe0f882ed753e081e36240fed7c7bf06e1af591aa680a45685541993",
+          "shard_id": "0005",
+          "size_bytes": 91812,
+          "started_unix": 1788049188.9335523
+        },
+        {
+          "boundary_sample_sha256": {
+            "first": {
+              "origin_index": 4366,
+              "sha256": "d834d532e3be3d818e8327e9e9481692f4f9d7d626d681fb82d0c88b317347b9"
+            },
+            "last": {
+              "origin_index": 5092,
+              "sha256": "cb9cf52b4cc4df4e773c53c8b77586a37acecdd4997082de4c6b1626d96008ff"
+            }
+          },
+          "end_rng_sha256": "fe077517e3d23a97666e00b305bb35611e0293f75bc2a0017e9e7c29b26a0c3e",
+          "finished_unix": 1788090377.8558233,
+          "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/csdi/shards/0006.json",
+          "physical_gpu": 7,
+          "pid": 109059,
+          "sha256": "7668e722b82e4779c73eb91be91e9a6469acd53bd712aa1e8233cef3a15afb74",
+          "shard_id": "0006",
+          "size_bytes": 91599,
+          "started_unix": 1788049189.028192
+        }
+      ]
+    },
+    "ratd": {
+      "checkpoint": {
+        "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/d614258/ratd-full-p5/ratd/training_checkpoint.pt",
+        "sha256": "4b912def9fba5cb9df654023b6909aa18997d7014ef18807fbbc17580d393a3b",
+        "size_bytes": 66628641
+      },
+      "plan": {
+        "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/ratd/eval_plan.json",
+        "sha256": "44e842409ade88965504a90312befde9f7d0e1f93e3c2609ab1b37a2c3731d3b",
+        "size_bytes": 11080
+      },
+      "receipt": {
+        "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/ratd/receipt.json",
+        "sha256": "e212d00fcfb6ae9740ed7f860014ffaf665e0a3d80b8e0921214ce3b8f1476fe",
+        "size_bytes": 11634
+      },
+      "topology": {
+        "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/ratd/startup_topology.json",
+        "sha256": "9055347c847eade4355bb6f70ed013d9f12fa1bb380e51eed76839318025eb7a",
+        "size_bytes": 4396737
+      },
+      "worker_results": [
+        {
+          "boundary_sample_sha256": {
+            "first": {
+              "origin_index": 0,
+              "sha256": "21eaeb2e097af3b05a54afd950e4ee00047083f9a612e8054e28843677d68278"
+            },
+            "last": {
+              "origin_index": 636,
+              "sha256": "fa2a18a6766d9f1b6c518d99d463ac5642a266ace57be5bc697d8a9cc2b78c1e"
+            }
+          },
+          "end_rng_sha256": "fd37c9376eec9c1a60d0396f03462a57a23ba169893c97e6f747fe94e8807e5b",
+          "finished_unix": 1788171285.1940804,
+          "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/ratd/shards/0000.json",
+          "physical_gpu": 0,
+          "pid": 176575,
+          "sha256": "42bf049bce40e0dd88c64ae9acee7dee761a782413be65836bb40d51a5e8a5a8",
+          "shard_id": "0000",
+          "size_bytes": 78993,
+          "started_unix": 1788091117.592443
+        },
+        {
+          "boundary_sample_sha256": {
+            "first": {
+              "origin_index": 637,
+              "sha256": "a609d19d4b9a8e6bfa6321ccb56bddf03278ae5abd9fec3607408aeb98a24ccf"
+            },
+            "last": {
+              "origin_index": 1273,
+              "sha256": "0eb6a48361e6770bd551dc57af5adb31f95912cc024a9436c8afaf27e7b1675e"
+            }
+          },
+          "end_rng_sha256": "b0ab16171c5dc62336d5df576fee398b05d3df879eeb31310eebf67f07b34106",
+          "finished_unix": 1788171447.4654438,
+          "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/ratd/shards/0001.json",
+          "physical_gpu": 1,
+          "pid": 176576,
+          "sha256": "a5885555290b68eb9008cf9d3922b91dac2ee3031d920ca16db20e13f86bda20",
+          "shard_id": "0001",
+          "size_bytes": 79295,
+          "started_unix": 1788091117.61517
+        },
+        {
+          "boundary_sample_sha256": {
+            "first": {
+              "origin_index": 1274,
+              "sha256": "04c34b7a65a5d891b091fb935279e6accbe08742e915d05576124440a4eddbc8"
+            },
+            "last": {
+              "origin_index": 1910,
+              "sha256": "6c85438365dfac279c6a1dfc47fa946efce7bd5a664370dc492814e573e33c45"
+            }
+          },
+          "end_rng_sha256": "2ddc8a4646bb177fbcdd0ca729efe8157535788ef005c46b2cff2d3b6f63f840",
+          "finished_unix": 1788171476.8718274,
+          "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/ratd/shards/0002.json",
+          "physical_gpu": 2,
+          "pid": 176577,
+          "sha256": "3124c603033603a2c1efdbfbd0e4861f877ff079fc1cefa669cd4acf018f79b2",
+          "shard_id": "0002",
+          "size_bytes": 79766,
+          "started_unix": 1788091117.3296683
+        },
+        {
+          "boundary_sample_sha256": {
+            "first": {
+              "origin_index": 1911,
+              "sha256": "c324fca0fe85b5180aa7eebf57a7cd3e9689925262d56b2a663ea44f8bc40b7b"
+            },
+            "last": {
+              "origin_index": 2547,
+              "sha256": "fb71eb69526e4f5971f4590784617d6caee516a764fa7ba138e71d913e5b5f61"
+            }
+          },
+          "end_rng_sha256": "76170119db272fa5434918db4f1152690f22f9dc5a80bc53b8ba6db2f9229a22",
+          "finished_unix": 1788171384.3794882,
+          "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/ratd/shards/0003.json",
+          "physical_gpu": 3,
+          "pid": 176578,
+          "sha256": "efd17e6342860609e59ad564b44be9033de3199cc595e9f53033140d3ec2a542",
+          "shard_id": "0003",
+          "size_bytes": 79985,
+          "started_unix": 1788091117.6251009
+        },
+        {
+          "boundary_sample_sha256": {
+            "first": {
+              "origin_index": 2548,
+              "sha256": "a8e2db4c49cfa1fd6398ac7529535340f837e6243eaacb9f1f05fc4739a11b22"
+            },
+            "last": {
+              "origin_index": 3184,
+              "sha256": "d51c60fc7531d5aea69620dba1551ed13c94df8dffed3501cd952e9c0ff5a567"
+            }
+          },
+          "end_rng_sha256": "0303828023619e33673024e30ab5aaee91c368d7d0c735ef2b170d795f5dc031",
+          "finished_unix": 1788171304.848517,
+          "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/ratd/shards/0004.json",
+          "physical_gpu": 4,
+          "pid": 176579,
+          "sha256": "bbc38462ed3203fb678d82be126e62c2e07eae95adb2c93d069bbbfabac24041",
+          "shard_id": "0004",
+          "size_bytes": 79829,
+          "started_unix": 1788091117.3599212
+        },
+        {
+          "boundary_sample_sha256": {
+            "first": {
+              "origin_index": 3185,
+              "sha256": "12bda326f492e08c732a180a2293890c9dd979b2e0e956ffad12b7552b11abb5"
+            },
+            "last": {
+              "origin_index": 3820,
+              "sha256": "2a178a3f49f1a5348a023dcbf8a7a7d910db38e74cd8aa7f0f2a542827131e6e"
+            }
+          },
+          "end_rng_sha256": "7f1464ef879d9170d4d0d5c72ac852b37a8e168fcd541d982700fa0f0f09ea07",
+          "finished_unix": 1788170997.998632,
+          "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/ratd/shards/0005.json",
+          "physical_gpu": 5,
+          "pid": 176580,
+          "sha256": "fa11d044c1233390b4763e2d87e602709a5b764150de0470735d4db566bc66e9",
+          "shard_id": "0005",
+          "size_bytes": 79518,
+          "started_unix": 1788091117.3644178
+        },
+        {
+          "boundary_sample_sha256": {
+            "first": {
+              "origin_index": 3821,
+              "sha256": "4edbdf3187a811944a865762c497d94e798960d5723727231482c8eccb8f5ee1"
+            },
+            "last": {
+              "origin_index": 4456,
+              "sha256": "41cd6645da77538f327a8976df72ab9c8fe24ba41417dff818276f52d45c3ede"
+            }
+          },
+          "end_rng_sha256": "bfcd904a95245f7f2fbb23aa87802ab66840466a76256f71ec09a0c16efd2708",
+          "finished_unix": 1788171328.414503,
+          "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/ratd/shards/0006.json",
+          "physical_gpu": 6,
+          "pid": 176581,
+          "sha256": "0f16729bf181916a850e0a9f6db4a23235185a87f1437f38f47d27955dd44b3d",
+          "shard_id": "0006",
+          "size_bytes": 79701,
+          "started_unix": 1788091117.648171
+        },
+        {
+          "boundary_sample_sha256": {
+            "first": {
+              "origin_index": 4457,
+              "sha256": "b3632997eaf8b8f755293a5ebaf662f6636dbd4b4819089ab6c08b4359aff9b6"
+            },
+            "last": {
+              "origin_index": 5092,
+              "sha256": "3b2bc34b9a109a0baf788da714af4668226f2358b6e8ae06e32c65210b098e1f"
+            }
+          },
+          "end_rng_sha256": "fe077517e3d23a97666e00b305bb35611e0293f75bc2a0017e9e7c29b26a0c3e",
+          "finished_unix": 1788171213.8780792,
+          "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5/ratd/shards/0007.json",
+          "physical_gpu": 7,
+          "pid": 176582,
+          "sha256": "2e67553eff9763dc4a405471bd17ac860667233ba50817af8785a572a1db380c",
+          "shard_id": "0007",
+          "size_bytes": 79077,
+          "started_unix": 1788091117.393586
+        }
+      ]
+    }
+  },
+  "instance_count": 1,
+  "instance_type": "ml.p5.48xlarge",
+  "job_kind": "native_ratd_sharded_training_eval_topology",
+  "reserved_gpus_per_host": 8,
+  "schema_version": 2,
+  "topology_valid": true,
+  "training": {
+    "expected_bindings": {
+      "7070": 0,
+      "7071": 1
+    },
+    "observed_bindings": {
+      "7070": [
+        0
+      ],
+      "7071": [
+        1
+      ]
+    },
+    "termination": {
+      "accepted": true,
+      "checkpoint_evidence": {
+        "csdi": {
+          "checkpoint": {
+            "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/d614258/ratd-full-p5/csdi/training_checkpoint.pt",
+            "sha256": "2e0e3c96e1e05d98b4bc2e6749c5eaaefb4b84fecb9a6e55c96a91209c7016ff",
+            "size_bytes": 32789633
+          },
+          "epoch": 100,
+          "identity": {
+            "diffusion_steps": 50,
+            "epochs": 100,
+            "method": "CSDI",
+            "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+            "reference_map_sha256": "598dc4d16077d0ac2d32a032b92aaf3c07360aa52345562774d8d5a9a33b322a",
+            "samples": 100,
+            "seed": 1,
+            "source_revision": "d614258b6e5fd4ca71c4d814ab2fe10e2503399d",
+            "upstream_commit": "719e4008f72e89544a621d97b5d1a69164fc14d3"
+          },
+          "method": "CSDI"
+        },
+        "ratd": {
+          "checkpoint": {
+            "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/d614258/ratd-full-p5/ratd/training_checkpoint.pt",
+            "sha256": "4b912def9fba5cb9df654023b6909aa18997d7014ef18807fbbc17580d393a3b",
+            "size_bytes": 66628641
+          },
+          "epoch": 100,
+          "identity": {
+            "diffusion_steps": 50,
+            "epochs": 100,
+            "method": "RATD",
+            "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+            "reference_map_sha256": "598dc4d16077d0ac2d32a032b92aaf3c07360aa52345562774d8d5a9a33b322a",
+            "samples": 100,
+            "seed": 1,
+            "source_revision": "d614258b6e5fd4ca71c4d814ab2fe10e2503399d",
+            "upstream_commit": "719e4008f72e89544a621d97b5d1a69164fc14d3"
+          },
+          "method": "RATD"
+        }
+      },
+      "classification": "original-serial-evaluation-terminated-after-epoch100",
+      "exit_policy": "intentional-post-epoch100-termination",
+      "nonzero_returncodes": {
+        "csdi": -15,
+        "ratd": -15
+      },
+      "worker_returncodes": {
+        "csdi": -15,
+        "ratd": -15
+      }
+    },
+    "topology": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/d614258/ratd-full-p5/startup_topology.json",
+      "sha256": "63952be968a740b651f381a0f401abcf9215b6d75a7fa2b66ae06736fcec8d3a",
+      "size_bytes": 4830696
+    },
+    "topology_valid": true,
+    "worker_pids": {
+      "csdi": 7071,
+      "ratd": 7070
+    },
+    "worker_returncodes": {
+      "csdi": -15,
+      "ratd": -15
+    }
+  }
+}

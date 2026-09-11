@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "method_source_revision": "d9be338",
+  "full_matrix_cell_count": 585,
+  "development_cell_count": 123,
+  "confirmatory_cell_count": 462,
+  "development_selection": {
+    "rule": "first_completed_cells_by_started_unix",
+    "tie_breaker": "cell_id",
+    "cell_ids_sha256": "d7f9de51cbe7489d74c9c254797c78bc2342f4475630b3ea04e5a19440b73328",
+    "hash_serialization": "sorted UTF-8 cell IDs, one per line, with a final newline",
+    "last_started_unix": 1785438133.5985556,
+    "last_started_utc": "2026-07-30T19:02:13Z"
+  },
+  "confirmatory_selection": {
+    "rule": "full matrix complement of frozen development cells",
+    "first_started_unix": 1785443023.313841,
+    "first_started_utc": "2026-07-30T20:23:43Z",
+    "minimum_boundary_gap_seconds": 4800
+  },
+  "thresholds": {
+    "overall_strict_improvement_rate": 0.8,
+    "task_family_strict_improvement_rate": 0.7,
+    "positive_task_family_metric_means": true,
+    "positive_overall_metric_means_and_medians": true,
+    "complete_without_runtime_failures": true
+  },
+  "independence": {
+    "selection_uses_outcomes": false,
+    "method_changes_after_boundary_allowed": false,
+    "development_cells_excluded_from_confirmatory_denominators": true
+  }
+}

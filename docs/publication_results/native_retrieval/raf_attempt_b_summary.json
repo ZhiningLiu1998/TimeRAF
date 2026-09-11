@@ -1,0 +1,836 @@
+{
+  "all_completed": true,
+  "completed_pairs": 20,
+  "expected_pairs": 20,
+  "failed_or_missing_pairs": 0,
+  "failures": [],
+  "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+  "method": "RAF",
+  "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+  "results": [
+    {
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.9001620856982775,
+          "wql": 0.1642048835958798
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/monash_weather/c50/h20",
+      "context_length": 50,
+      "cuda_visible_devices": "2",
+      "dataset": "monash_weather",
+      "delta": {
+        "mase": -0.04736656595113753,
+        "wql": -0.009934151146833964
+      },
+      "elapsed_seconds": 4223.877891778946,
+      "finished_unix": 1788031667.1568089,
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70931,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "retrieval": {
+        "metrics": {
+          "mase": 1.85279551974714,
+          "wql": 0.15427073244904585
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788027443.278917,
+      "status": "completed",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.9269001788325124,
+          "wql": 0.16445712179409827
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/monash_weather/c75/h20",
+      "context_length": 75,
+      "cuda_visible_devices": "3",
+      "dataset": "monash_weather",
+      "delta": {
+        "mase": -0.04838990562663947,
+        "wql": -0.0048326985413160994
+      },
+      "elapsed_seconds": 6306.202288866043,
+      "finished_unix": 1788033749.6145208,
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70932,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "retrieval": {
+        "metrics": {
+          "mase": 1.878510273205873,
+          "wql": 0.15962442325278217
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788027443.412232,
+      "status": "completed",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.8087442038988208,
+          "wql": 0.1696188452312881
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/monash_weather/c100/h20",
+      "context_length": 100,
+      "cuda_visible_devices": "4",
+      "dataset": "monash_weather",
+      "delta": {
+        "mase": -0.050383641323749284,
+        "wql": -0.009384133614373125
+      },
+      "elapsed_seconds": 8729.475004673004,
+      "finished_unix": 1788036173.0286975,
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70933,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "retrieval": {
+        "metrics": {
+          "mase": 1.7583605625750716,
+          "wql": 0.16023471161691497
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788027443.5536928,
+      "status": "completed",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.1492175393754067,
+          "wql": 0.17567823107507646
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/monash_weather/c150/h20",
+      "context_length": 150,
+      "cuda_visible_devices": "5",
+      "dataset": "monash_weather",
+      "delta": {
+        "mase": 0.05036958167273187,
+        "wql": 0.0008024431507550056
+      },
+      "elapsed_seconds": 13512.650625944138,
+      "finished_unix": 1788040956.6831143,
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70934,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "retrieval": {
+        "metrics": {
+          "mase": 1.1995871210481386,
+          "wql": 0.17648067422583147
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788027444.0324883,
+      "status": "completed",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 0.706143006261373,
+          "wql": 0.22084180449476207
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/nn5/c100/h20",
+      "context_length": 100,
+      "cuda_visible_devices": "6",
+      "dataset": "nn5",
+      "delta": {
+        "mase": -0.0546011730631627,
+        "wql": -0.04073528944470858
+      },
+      "elapsed_seconds": 11.88347053527832,
+      "finished_unix": 1788027455.480011,
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70935,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "retrieval": {
+        "metrics": {
+          "mase": 0.6515418331982104,
+          "wql": 0.18010651505005348
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788027443.5965405,
+      "status": "completed",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 0.6474041901761799,
+          "wql": 0.20295077194338765
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_1",
+      "cell_id": "raf/benchmark_1/nn5/c150/h20",
+      "context_length": 150,
+      "cuda_visible_devices": "7",
+      "dataset": "nn5",
+      "delta": {
+        "mase": -0.07724503390492954,
+        "wql": -0.025083345921277422
+      },
+      "elapsed_seconds": 14.201028108596802,
+      "finished_unix": 1788027458.5110018,
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70936,
+      "prediction_length": 20,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "retrieval": {
+        "metrics": {
+          "mase": 0.5701591562712504,
+          "wql": 0.17786742602211023
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788027444.3099737,
+      "status": "completed",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.4801292745283303,
+          "wql": 0.07237157769023234
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_cif_2016/c10/h5",
+      "context_length": 10,
+      "cuda_visible_devices": "2",
+      "dataset": "monash_cif_2016",
+      "delta": {
+        "mase": -0.09618262904039931,
+        "wql": -0.005720265845957251
+      },
+      "elapsed_seconds": 0.9619100093841553,
+      "finished_unix": 1788031668.2268705,
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70931,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "retrieval": {
+        "metrics": {
+          "mase": 1.383946645487931,
+          "wql": 0.06665131184427509
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788031667.2649605,
+      "status": "completed",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.2174898390525515,
+          "wql": 0.07632711185818385
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_cif_2016/c15/h5",
+      "context_length": 15,
+      "cuda_visible_devices": "3",
+      "dataset": "monash_cif_2016",
+      "delta": {
+        "mase": 0.15127329659290245,
+        "wql": -0.015432256223811794
+      },
+      "elapsed_seconds": 1.2348811626434326,
+      "finished_unix": 1788033750.974331,
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70932,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "retrieval": {
+        "metrics": {
+          "mase": 1.368763135645454,
+          "wql": 0.06089485563437205
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788033749.7394497,
+      "status": "completed",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.4057459948967086,
+          "wql": 0.18864973036126076
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_m1_monthly/c10/h5",
+      "context_length": 10,
+      "cuda_visible_devices": "4",
+      "dataset": "monash_m1_monthly",
+      "delta": {
+        "mase": 0.001996795685439201,
+        "wql": 0.0027586945396674
+      },
+      "elapsed_seconds": 4.049168586730957,
+      "finished_unix": 1788036177.170627,
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70933,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "retrieval": {
+        "metrics": {
+          "mase": 1.4077427905821478,
+          "wql": 0.19140842490092816
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788036173.1214585,
+      "status": "completed",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.4170499241770154,
+          "wql": 0.18751423002027454
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_m1_monthly/c15/h5",
+      "context_length": 15,
+      "cuda_visible_devices": "5",
+      "dataset": "monash_m1_monthly",
+      "delta": {
+        "mase": -0.0074622230862217975,
+        "wql": -0.0045962962016635744
+      },
+      "elapsed_seconds": 2.8995378017425537,
+      "finished_unix": 1788040959.6908221,
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70934,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "retrieval": {
+        "metrics": {
+          "mase": 1.4095877010907936,
+          "wql": 0.18291793381861096
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788040956.7912843,
+      "status": "completed",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.1770028311656977,
+          "wql": 0.17409327920977338
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_m1_monthly/c18/h5",
+      "context_length": 18,
+      "cuda_visible_devices": "6",
+      "dataset": "monash_m1_monthly",
+      "delta": {
+        "mase": -0.058466543353168365,
+        "wql": -0.013255555056710555
+      },
+      "elapsed_seconds": 3.4981954097747803,
+      "finished_unix": 1788027459.0715122,
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70935,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "retrieval": {
+        "metrics": {
+          "mase": 1.1185362878125293,
+          "wql": 0.16083772415306283
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788027455.5733168,
+      "status": "completed",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.1478622253083304,
+          "wql": 0.17717031718738227
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_m1_monthly/c21/h5",
+      "context_length": 21,
+      "cuda_visible_devices": "7",
+      "dataset": "monash_m1_monthly",
+      "delta": {
+        "mase": -0.11805805561955496,
+        "wql": -0.018554955562970016
+      },
+      "elapsed_seconds": 2.995591640472412,
+      "finished_unix": 1788027461.5799098,
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70936,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "retrieval": {
+        "metrics": {
+          "mase": 1.0298041696887754,
+          "wql": 0.15861536162441225
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788027458.5843182,
+      "status": "completed",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.5146942739285265,
+          "wql": 0.10410259599517634
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_tourism_monthly/c18/h5",
+      "context_length": 18,
+      "cuda_visible_devices": "2",
+      "dataset": "monash_tourism_monthly",
+      "delta": {
+        "mase": 0.11724425227903268,
+        "wql": 0.002381399177035934
+      },
+      "elapsed_seconds": 3.111077308654785,
+      "finished_unix": 1788031671.3988197,
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70931,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "retrieval": {
+        "metrics": {
+          "mase": 1.6319385262075592,
+          "wql": 0.10648399517221227
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788031668.2877424,
+      "status": "completed",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.3469370683827362,
+          "wql": 0.2335506951903974
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_tourism_monthly/c21/h5",
+      "context_length": 21,
+      "cuda_visible_devices": "3",
+      "dataset": "monash_tourism_monthly",
+      "delta": {
+        "mase": -0.0069427639122960905,
+        "wql": -0.15210818622931752
+      },
+      "elapsed_seconds": 3.219651460647583,
+      "finished_unix": 1788033754.2602825,
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70932,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "retrieval": {
+        "metrics": {
+          "mase": 1.33999430447044,
+          "wql": 0.08144250896107988
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788033751.040631,
+      "status": "completed",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.3172344148245043,
+          "wql": 0.08921737088969658
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_tourism_quarterly/c10/h5",
+      "context_length": 10,
+      "cuda_visible_devices": "4",
+      "dataset": "monash_tourism_quarterly",
+      "delta": {
+        "mase": 0.5363929862011874,
+        "wql": 0.03826877085811589
+      },
+      "elapsed_seconds": 3.0715067386627197,
+      "finished_unix": 1788036180.3321927,
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70933,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "retrieval": {
+        "metrics": {
+          "mase": 1.8536274010256917,
+          "wql": 0.12748614174781248
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788036177.260686,
+      "status": "completed",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.2358429973636125,
+          "wql": 0.09430921657143734
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/monash_tourism_quarterly/c15/h5",
+      "context_length": 15,
+      "cuda_visible_devices": "5",
+      "dataset": "monash_tourism_quarterly",
+      "delta": {
+        "mase": -0.07005146310114774,
+        "wql": -0.010651113140317678
+      },
+      "elapsed_seconds": 2.00882887840271,
+      "finished_unix": 1788040961.7741735,
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70934,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "retrieval": {
+        "metrics": {
+          "mase": 1.1657915342624647,
+          "wql": 0.08365810343111967
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788040959.7653446,
+      "status": "completed",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.4839888086358495,
+          "wql": 0.26565750629774976
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/uber_tlc_daily/c10/h5",
+      "context_length": 10,
+      "cuda_visible_devices": "6",
+      "dataset": "uber_tlc_daily",
+      "delta": {
+        "mase": -0.23334207315166422,
+        "wql": -0.07052510668837433
+      },
+      "elapsed_seconds": 2.298574209213257,
+      "finished_unix": 1788027461.4735045,
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70935,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "retrieval": {
+        "metrics": {
+          "mase": 1.2506467354841853,
+          "wql": 0.19513239960937542
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788027459.1749303,
+      "status": "completed",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.0744194369738012,
+          "wql": 0.17735524030351785
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/uber_tlc_daily/c15/h5",
+      "context_length": 15,
+      "cuda_visible_devices": "7",
+      "dataset": "uber_tlc_daily",
+      "delta": {
+        "mase": -0.10900578455006138,
+        "wql": -0.006476001737339088
+      },
+      "elapsed_seconds": 1.9446337223052979,
+      "finished_unix": 1788027463.5900736,
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70936,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "retrieval": {
+        "metrics": {
+          "mase": 0.9654136524237398,
+          "wql": 0.17087923856617876
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788027461.6454399,
+      "status": "completed",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 1.051895680524343,
+          "wql": 0.15992814687730267
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/uber_tlc_daily/c18/h5",
+      "context_length": 18,
+      "cuda_visible_devices": "2",
+      "dataset": "uber_tlc_daily",
+      "delta": {
+        "mase": -0.09472585258389576,
+        "wql": -0.032663291552937485
+      },
+      "elapsed_seconds": 1.82578706741333,
+      "finished_unix": 1788031673.3032959,
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70931,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "retrieval": {
+        "metrics": {
+          "mase": 0.9571698279404471,
+          "wql": 0.12726485532436518
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788031671.4775088,
+      "status": "completed",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    },
+    {
+      "backbone": "amazon/chronos-t5-base",
+      "base": {
+        "metrics": {
+          "mase": 0.9243319105396116,
+          "wql": 0.15006901281596263
+        }
+      },
+      "base_method": "Chronos",
+      "benchmark": "benchmark_2",
+      "cell_id": "raf/benchmark_2/uber_tlc_daily/c21/h5",
+      "context_length": 21,
+      "cuda_visible_devices": "3",
+      "dataset": "uber_tlc_daily",
+      "delta": {
+        "mase": -0.011169003064998573,
+        "wql": -0.004122649058110439
+      },
+      "elapsed_seconds": 1.8489625453948975,
+      "finished_unix": 1788033756.1786642,
+      "method": "RAF",
+      "num_samples": 20,
+      "pid": 70932,
+      "prediction_length": 5,
+      "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "released_config_correction": null,
+      "retrieval": {
+        "metrics": {
+          "mase": 0.913162907474613,
+          "wql": 0.1459463637578522
+        }
+      },
+      "retrieval_top_n": 1,
+      "schema_version": 1,
+      "seed": 42,
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "started_unix": 1788033754.3297017,
+      "status": "completed",
+      "torch_device": "cuda:0",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390"
+    }
+  ],
+  "schema_version": 1,
+  "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+  "topology_path": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF/outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b/startup_topology.json",
+  "topology_valid": true
+}

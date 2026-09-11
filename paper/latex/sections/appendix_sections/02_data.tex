@@ -1,0 +1,59 @@
+\section{Dataset and model scope}
+\label{app:data}
+
+\begin{table*}[h]
+\centering
+\small
+\setlength{\tabcolsep}{3.5pt}
+\caption{Full benchmark scope. ``Cells'' includes all 13 base models.}
+\label{tab:dataset-scope}
+\begin{tabular}{llrrrrl}
+\toprule
+Family & Dataset & Variates & Input & Horizons & Cells & Frequency\\
+\midrule
+\multirow{7}{*}{Long-term}
+& ETTh1 & 7 & 96 & 96,192,336,720 & 52 & 1 hour\\
+& ETTh2 & 7 & 96 & 96,192,336,720 & 52 & 1 hour\\
+& ETTm1 & 7 & 96 & 96,192,336,720 & 52 & 15 min\\
+& ETTm2 & 7 & 96 & 96,192,336,720 & 52 & 15 min\\
+& Weather & 21 & 96 & 96,192,336,720 & 52 & 10 min\\
+& Electricity & 321 & 96 & 96,192,336,720 & 52 & 1 hour\\
+& Traffic & 862 & 96 & 96,192,336,720 & 52 & 1 hour\\
+\midrule
+\multirow{4}{*}{PEMS}
+& PEMS03 & 358 & 96 & 6,12,24 & 39 & 5 min\\
+& PEMS04 & 307 & 96 & 6,12,24 & 39 & 5 min\\
+& PEMS07 & 883 & 96 & 6,12,24 & 39 & 5 min\\
+& PEMS08 & 170 & 96 & 6,12,24 & 39 & 5 min\\
+\midrule
+\multirow{5}{*}{EPF}
+& NP & 1 & 168 & 24 & 13 & 1 hour\\
+& PJM & 1 & 168 & 24 & 13 & 1 hour\\
+& BE & 1 & 168 & 24 & 13 & 1 hour\\
+& FR & 1 & 168 & 24 & 13 & 1 hour\\
+& DE & 1 & 168 & 24 & 13 & 1 hour\\
+\midrule
+\multicolumn{5}{r}{Total} & 585 & \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+The model list is TimeXer, TimeMixer, PAttn, iTransformer, TimesNet,
+PatchTST, DLinear, FreTS, FEDformer, Non-stationary Transformer, LightTS,
+Informer, and Autoformer. Baseline training follows each paper configuration
+in TSLib. Shared defaults are Adam optimization, MSE training loss, at most 10
+epochs, and validation-loss early stopping unless the referenced configuration
+overrides them. Non-stationary Transformer uses a learning rate of $10^{-4}$
+on Electricity horizons 192 and 336; all other values follow the reference
+configuration.
+
+The primary matrix trains all 585 model--dataset--horizon cells under these
+configurations with seed 2021, PyTorch 2.8.0, and CUDA 12.9 on one
+\texttt{ml.p4de.24xlarge} host with eight NVIDIA A100 GPUs. Independent cells
+use one GPU each. A secondary execution on an
+\texttt{ml.g5.12xlarge} host uses 55 compatible released checkpoints and
+trains the remaining 530 cells on four NVIDIA A10G GPUs. It is retained only
+as a cross-hardware sensitivity check and is not averaged into the primary
+tables because the two executions are not numerically identical.
+The additional-system study uses AutoGluon-TimeSeries 1.4.0, Python 3.12,
+PyTorch 2.7.1, and a three-hour fit budget for each AutoGluon cell.

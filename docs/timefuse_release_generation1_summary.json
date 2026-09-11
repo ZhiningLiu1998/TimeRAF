@@ -1,0 +1,2877 @@
+{
+  "all_completed": true,
+  "all_improved": false,
+  "best_cells": [
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/weather/FEDformer/pl96/seed2021_c90a65efe735",
+      "cell_id": "long_term/weather/FEDformer/96",
+      "dataset": "weather",
+      "elapsed_seconds": 39.12269616127014,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 19.38017922310222,
+        "mse": 26.11833546187329
+      },
+      "minimum_metric_gain_percent": 19.38017922310222,
+      "model": "FEDformer",
+      "pred_len": 96,
+      "started_unix": 1785385055.3037622,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3487553000450134,
+        "mse": 0.27983927726745605
+      },
+      "test_corrected": {
+        "mae": 0.2811658978462219,
+        "mse": 0.20674991607666016
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm1/FEDformer/pl96/seed2021_97ea09a4323e",
+      "cell_id": "long_term/ETTm1/FEDformer/96",
+      "dataset": "ETTm1",
+      "elapsed_seconds": 51.79183864593506,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 9.82986056031119,
+        "mse": 20.980615476988863
+      },
+      "minimum_metric_gain_percent": 9.82986056031119,
+      "model": "FEDformer",
+      "pred_len": 96,
+      "started_unix": 1785384668.8193808,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.4901599586009979,
+        "mse": 0.5390378832817078
+      },
+      "test_corrected": {
+        "mae": 0.44197791814804077,
+        "mse": 0.42594441771507263
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh1/iTransformer/pl96/seed2021_49e518a314c1",
+      "cell_id": "long_term/ETTh1/iTransformer/96",
+      "dataset": "ETTh1",
+      "elapsed_seconds": 4.387059211730957,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 6.749517798062437,
+        "mse": 9.278479978525494
+      },
+      "minimum_metric_gain_percent": 6.749517798062437,
+      "model": "iTransformer",
+      "pred_len": 96,
+      "started_unix": 1785384350.3829122,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.4438501000404358,
+        "mse": 0.44687166810035706
+      },
+      "test_corrected": {
+        "mae": 0.41389235854148865,
+        "mse": 0.4054087698459625
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh2/FEDformer/pl96/seed2021_476bc6fbb369",
+      "cell_id": "long_term/ETTh2/FEDformer/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 12.853989362716675,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 6.493039980522429,
+        "mse": 8.333486782936072
+      },
+      "minimum_metric_gain_percent": 6.493039980522429,
+      "model": "FEDformer",
+      "pred_len": 96,
+      "started_unix": 1785384466.2806947,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3905998766422272,
+        "mse": 0.34796980023384094
+      },
+      "test_corrected": {
+        "mae": 0.3652380704879761,
+        "mse": 0.31897178292274475
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh2/FreTS/pl96/seed2021_ee283636ade0",
+      "cell_id": "long_term/ETTh2/FreTS/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 3.2882096767425537,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 6.440232240821969,
+        "mse": 7.427692234128537
+      },
+      "minimum_metric_gain_percent": 6.440232240821969,
+      "model": "FreTS",
+      "pred_len": 96,
+      "started_unix": 1785384459.331105,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.39675548672676086,
+        "mse": 0.34154924750328064
+      },
+      "test_corrected": {
+        "mae": 0.3712035119533539,
+        "mse": 0.316180020570755
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh2/DLinear/pl96/seed2021_4ffa050bd7a4",
+      "cell_id": "long_term/ETTh2/DLinear/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 3.109678268432617,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 6.230179663670525,
+        "mse": 7.075759482744023
+      },
+      "minimum_metric_gain_percent": 6.230179663670525,
+      "model": "DLinear",
+      "pred_len": 96,
+      "started_unix": 1785384452.5875669,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3952932059764862,
+        "mse": 0.3414474129676819
+      },
+      "test_corrected": {
+        "mae": 0.3706657290458679,
+        "mse": 0.317287415266037
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm2/DLinear/pl96/seed2021_e10520ab11a0",
+      "cell_id": "long_term/ETTm2/DLinear/96",
+      "dataset": "ETTm2",
+      "elapsed_seconds": 12.774526596069336,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 5.714036794553008,
+        "mse": 6.55028471359621
+      },
+      "minimum_metric_gain_percent": 5.714036794553008,
+      "model": "DLinear",
+      "pred_len": 96,
+      "started_unix": 1785384835.3833003,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.2928171455860138,
+        "mse": 0.19342845678329468
+      },
+      "test_corrected": {
+        "mae": 0.2760854661464691,
+        "mse": 0.18075834214687347
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/electricity/DLinear/pl96/seed2021_af041ee683f8",
+      "cell_id": "long_term/electricity/DLinear/96",
+      "dataset": "electricity",
+      "elapsed_seconds": 77.82961630821228,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 5.569591654927274,
+        "mse": 9.83490819469314
+      },
+      "minimum_metric_gain_percent": 5.569591654927274,
+      "model": "DLinear",
+      "pred_len": 96,
+      "started_unix": 1785385705.8395314,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3015504479408264,
+        "mse": 0.21036772429943085
+      },
+      "test_corrected": {
+        "mae": 0.28475531935691833,
+        "mse": 0.18967825174331665
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/traffic/PatchTST/pl96/seed2021_b80be72cc898",
+      "cell_id": "long_term/traffic/PatchTST/96",
+      "dataset": "traffic",
+      "elapsed_seconds": 192.94864892959595,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 5.190937217287863,
+        "mse": 6.002023933991937
+      },
+      "minimum_metric_gain_percent": 5.190937217287863,
+      "model": "PatchTST",
+      "pred_len": 96,
+      "started_unix": 1785386611.6897767,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.29812902212142944,
+        "mse": 0.45815202593803406
+      },
+      "test_corrected": {
+        "mae": 0.2826533317565918,
+        "mse": 0.4306536316871643
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/electricity/FEDformer/pl96/seed2021_c879eecb1b62",
+      "cell_id": "long_term/electricity/FEDformer/96",
+      "dataset": "electricity",
+      "elapsed_seconds": 81.01026630401611,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 4.675615359281223,
+        "mse": 6.034848202294341
+      },
+      "minimum_metric_gain_percent": 4.675615359281223,
+      "model": "FEDformer",
+      "pred_len": 96,
+      "started_unix": 1785385787.4732957,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3089326024055481,
+        "mse": 0.19480863213539124
+      },
+      "test_corrected": {
+        "mae": 0.2944881021976471,
+        "mse": 0.18305222690105438
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh2/TimesNet/pl96/seed2021_0d3a06b19120",
+      "cell_id": "long_term/ETTh2/TimesNet/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 5.60219931602478,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 4.653641989945955,
+        "mse": 6.823451028756436
+      },
+      "minimum_metric_gain_percent": 4.653641989945955,
+      "model": "TimesNet",
+      "pred_len": 96,
+      "started_unix": 1785384433.854674,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3708881437778473,
+        "mse": 0.3370038568973541
+      },
+      "test_corrected": {
+        "mae": 0.35362833738327026,
+        "mse": 0.31400856375694275
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm1/TimesNet/pl96/seed2021_5662ee7dbbdf",
+      "cell_id": "long_term/ETTm1/TimesNet/96",
+      "dataset": "ETTm1",
+      "elapsed_seconds": 28.354471921920776,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 4.043254476023111,
+        "mse": 4.734267803036863
+      },
+      "minimum_metric_gain_percent": 4.043254476023111,
+      "model": "TimesNet",
+      "pred_len": 96,
+      "started_unix": 1785384583.4897199,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3754001259803772,
+        "mse": 0.3338521122932434
+      },
+      "test_corrected": {
+        "mae": 0.3602217435836792,
+        "mse": 0.3180466592311859
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/electricity/PatchTST/pl96/seed2021_1925f6b11ef8",
+      "cell_id": "long_term/electricity/PatchTST/96",
+      "dataset": "electricity",
+      "elapsed_seconds": 138.42148566246033,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 3.928726975590247,
+        "mse": 5.762218343573479
+      },
+      "minimum_metric_gain_percent": 3.928726975590247,
+      "model": "PatchTST",
+      "pred_len": 96,
+      "started_unix": 1785385563.2789934,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.27295711636543274,
+        "mse": 0.18004585802555084
+      },
+      "test_corrected": {
+        "mae": 0.2622333765029907,
+        "mse": 0.1696712225675583
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh1/TimesNet/pl96/seed2021_0e9da6a4b232",
+      "cell_id": "long_term/ETTh1/TimesNet/96",
+      "dataset": "ETTh1",
+      "elapsed_seconds": 5.260496616363525,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 4.5455673195973905,
+        "mse": 3.6175045737868015
+      },
+      "minimum_metric_gain_percent": 3.6175045737868015,
+      "model": "TimesNet",
+      "pred_len": 96,
+      "started_unix": 1785384358.6326911,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.41201403737068176,
+        "mse": 0.3890641927719116
+      },
+      "test_corrected": {
+        "mae": 0.3932856619358063,
+        "mse": 0.374989777803421
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh1/FEDformer/pl96/seed2021_1221efaac7b1",
+      "cell_id": "long_term/ETTh1/FEDformer/96",
+      "dataset": "ETTh1",
+      "elapsed_seconds": 13.440479040145874,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 5.715665766922277,
+        "mse": 3.370227932625796
+      },
+      "minimum_metric_gain_percent": 3.370227932625796,
+      "model": "FEDformer",
+      "pred_len": 96,
+      "started_unix": 1785384383.236759,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.41838890314102173,
+        "mse": 0.37701013684272766
+      },
+      "test_corrected": {
+        "mae": 0.39447519183158875,
+        "mse": 0.3643040359020233
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/traffic/TimeXer/pl96/seed2021_a4df064e781f",
+      "cell_id": "long_term/traffic/TimeXer/96",
+      "dataset": "traffic",
+      "elapsed_seconds": 170.90264296531677,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 3.3031741653779516,
+        "mse": 4.162510406848775
+      },
+      "minimum_metric_gain_percent": 3.3031741653779516,
+      "model": "TimeXer",
+      "pred_len": 96,
+      "started_unix": 1785385872.5664601,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.27132126688957214,
+        "mse": 0.429271936416626
+      },
+      "test_corrected": {
+        "mae": 0.26235905289649963,
+        "mse": 0.41140344738960266
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/traffic/TimesNet/pl96/seed2021_525773518085",
+      "cell_id": "long_term/traffic/TimesNet/96",
+      "dataset": "traffic",
+      "elapsed_seconds": 226.21145629882812,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 3.299101718747867,
+        "mse": 10.136363108143135
+      },
+      "minimum_metric_gain_percent": 3.299101718747867,
+      "model": "TimesNet",
+      "pred_len": 96,
+      "started_unix": 1785386381.2867794,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.314359188079834,
+        "mse": 0.5898478627204895
+      },
+      "test_corrected": {
+        "mae": 0.30398815870285034,
+        "mse": 0.530058741569519
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/traffic/iTransformer/pl96/seed2021_e82c11fb6152",
+      "cell_id": "long_term/traffic/iTransformer/96",
+      "dataset": "traffic",
+      "elapsed_seconds": 151.09880542755127,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 3.252613851192431,
+        "mse": 3.8191321640292637
+      },
+      "minimum_metric_gain_percent": 3.252613851192431,
+      "model": "iTransformer",
+      "pred_len": 96,
+      "started_unix": 1785386225.8985496,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.26862382888793945,
+        "mse": 0.3936010003089905
+      },
+      "test_corrected": {
+        "mae": 0.2598865330219269,
+        "mse": 0.3785688579082489
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm1/DLinear/pl96/seed2021_9b2c76e39b95",
+      "cell_id": "long_term/ETTm1/DLinear/96",
+      "dataset": "ETTm1",
+      "elapsed_seconds": 12.763328075408936,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 3.135198450284136,
+        "mse": 7.3486811987758145
+      },
+      "minimum_metric_gain_percent": 3.135198450284136,
+      "model": "DLinear",
+      "pred_len": 96,
+      "started_unix": 1785384635.3655238,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3737088739871979,
+        "mse": 0.34594660997390747
+      },
+      "test_corrected": {
+        "mae": 0.36199235916137695,
+        "mse": 0.32052409648895264
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm2/FEDformer/pl96/seed2021_b174e8715334",
+      "cell_id": "long_term/ETTm2/FEDformer/96",
+      "dataset": "ETTm2",
+      "elapsed_seconds": 49.275131702423096,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 3.1336015674299964,
+        "mse": 7.51011887472524
+      },
+      "minimum_metric_gain_percent": 3.1336015674299964,
+      "model": "FEDformer",
+      "pred_len": 96,
+      "started_unix": 1785384869.0330749,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.29365962743759155,
+        "mse": 0.21115761995315552
+      },
+      "test_corrected": {
+        "mae": 0.2844575047492981,
+        "mse": 0.195299431681633
+      }
+    }
+  ],
+  "cell_states": [
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh1/TimeXer/pl96/seed2021_f151f5c5a098",
+      "cell_id": "long_term/ETTh1/TimeXer/96",
+      "dataset": "ETTh1",
+      "elapsed_seconds": 9.169800519943237,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 2.397696452556763,
+        "mse": 2.077658879693374
+      },
+      "minimum_metric_gain_percent": 2.077658879693374,
+      "model": "TimeXer",
+      "pred_len": 96,
+      "started_unix": 1785384321.8438764,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.40286579728126526,
+        "mse": 0.38181063532829285
+      },
+      "test_corrected": {
+        "mae": 0.39320629835128784,
+        "mse": 0.3738779127597809
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh1/TimeMixer/pl96/seed2021_a480f99227ee",
+      "cell_id": "long_term/ETTh1/TimeMixer/96",
+      "dataset": "ETTh1",
+      "elapsed_seconds": 3.1577446460723877,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 2.1597620423896426,
+        "mse": 0.05237261576207
+      },
+      "minimum_metric_gain_percent": 0.05237261576207,
+      "model": "TimeMixer",
+      "pred_len": 96,
+      "started_unix": 1785384334.9200454,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.39812976121902466,
+        "mse": 0.3783573508262634
+      },
+      "test_corrected": {
+        "mae": 0.38953110575675964,
+        "mse": 0.37815919518470764
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh1/PAttn/pl96/seed2021_a12462cad06e",
+      "cell_id": "long_term/ETTh1/PAttn/96",
+      "dataset": "ETTh1",
+      "elapsed_seconds": 4.6830034255981445,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 2.125212665583894,
+        "mse": 1.8616201163587065
+      },
+      "minimum_metric_gain_percent": 1.8616201163587065,
+      "model": "PAttn",
+      "pred_len": 96,
+      "started_unix": 1785384341.7890475,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.4047507643699646,
+        "mse": 0.390067458152771
+      },
+      "test_corrected": {
+        "mae": 0.3961489498615265,
+        "mse": 0.38280588388442993
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh1/iTransformer/pl96/seed2021_49e518a314c1",
+      "cell_id": "long_term/ETTh1/iTransformer/96",
+      "dataset": "ETTh1",
+      "elapsed_seconds": 4.387059211730957,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 6.749517798062437,
+        "mse": 9.278479978525494
+      },
+      "minimum_metric_gain_percent": 6.749517798062437,
+      "model": "iTransformer",
+      "pred_len": 96,
+      "started_unix": 1785384350.3829122,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.4438501000404358,
+        "mse": 0.44687166810035706
+      },
+      "test_corrected": {
+        "mae": 0.41389235854148865,
+        "mse": 0.4054087698459625
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh1/TimesNet/pl96/seed2021_0e9da6a4b232",
+      "cell_id": "long_term/ETTh1/TimesNet/96",
+      "dataset": "ETTh1",
+      "elapsed_seconds": 5.260496616363525,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 4.5455673195973905,
+        "mse": 3.6175045737868015
+      },
+      "minimum_metric_gain_percent": 3.6175045737868015,
+      "model": "TimesNet",
+      "pred_len": 96,
+      "started_unix": 1785384358.6326911,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.41201403737068176,
+        "mse": 0.3890641927719116
+      },
+      "test_corrected": {
+        "mae": 0.3932856619358063,
+        "mse": 0.374989777803421
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh1/PatchTST/pl96/seed2021_7739335c7407",
+      "cell_id": "long_term/ETTh1/PatchTST/96",
+      "dataset": "ETTh1",
+      "elapsed_seconds": 4.516058921813965,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 2.001587314845585,
+        "mse": 1.7353463954977735
+      },
+      "minimum_metric_gain_percent": 1.7353463954977735,
+      "model": "PatchTST",
+      "pred_len": 96,
+      "started_unix": 1785384367.6074743,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.399613618850708,
+        "mse": 0.37928465008735657
+      },
+      "test_corrected": {
+        "mae": 0.39161500334739685,
+        "mse": 0.3727027475833893
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh1/DLinear/pl96/seed2021_bbe636559350",
+      "cell_id": "long_term/ETTh1/DLinear/96",
+      "dataset": "ETTh1",
+      "elapsed_seconds": 3.037327289581299,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 2.890491453185202,
+        "mse": 2.5283646613020325
+      },
+      "minimum_metric_gain_percent": 2.5283646613020325,
+      "model": "DLinear",
+      "pred_len": 96,
+      "started_unix": 1785384252.8615687,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.4108412563800812,
+        "mse": 0.3961581289768219
+      },
+      "test_corrected": {
+        "mae": 0.3989659249782562,
+        "mse": 0.3861418068408966
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh1/FreTS/pl96/seed2021_4e8db1c96c69",
+      "cell_id": "long_term/ETTh1/FreTS/96",
+      "dataset": "ETTh1",
+      "elapsed_seconds": 3.519094228744507,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 0.1218102406597756,
+        "mse": 0.7357285846517485
+      },
+      "minimum_metric_gain_percent": 0.1218102406597756,
+      "model": "FreTS",
+      "pred_len": 96,
+      "started_unix": 1785384376.0690284,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.41240206360816956,
+        "mse": 0.399919718503952
+      },
+      "test_corrected": {
+        "mae": 0.41189971566200256,
+        "mse": 0.39697739481925964
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh1/FEDformer/pl96/seed2021_1221efaac7b1",
+      "cell_id": "long_term/ETTh1/FEDformer/96",
+      "dataset": "ETTh1",
+      "elapsed_seconds": 13.440479040145874,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 5.715665766922277,
+        "mse": 3.370227932625796
+      },
+      "minimum_metric_gain_percent": 3.370227932625796,
+      "model": "FEDformer",
+      "pred_len": 96,
+      "started_unix": 1785384383.236759,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.41838890314102173,
+        "mse": 0.37701013684272766
+      },
+      "test_corrected": {
+        "mae": 0.39447519183158875,
+        "mse": 0.3643040359020233
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh2/TimeXer/pl96/seed2021_c50c2aa22d27",
+      "cell_id": "long_term/ETTh2/TimeXer/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 5.146772146224976,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 0.7065401024745811,
+        "mse": 0.6156718210409923
+      },
+      "minimum_metric_gain_percent": 0.6156718210409923,
+      "model": "TimeXer",
+      "pred_len": 96,
+      "started_unix": 1785384400.4557352,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.33755066990852356,
+        "mse": 0.2853738069534302
+      },
+      "test_corrected": {
+        "mae": 0.33516573905944824,
+        "mse": 0.283616840839386
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh2/TimeMixer/pl96/seed2021_16aa737b2132",
+      "cell_id": "long_term/ETTh2/TimeMixer/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 4.081667184829712,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 0.566691185458044,
+        "mse": 0.24787513217010285
+      },
+      "minimum_metric_gain_percent": 0.24787513217010285,
+      "model": "TimeMixer",
+      "pred_len": 96,
+      "started_unix": 1785384409.483877,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3406205475330353,
+        "mse": 0.2900577485561371
+      },
+      "test_corrected": {
+        "mae": 0.33869028091430664,
+        "mse": 0.28933876752853394
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh2/PAttn/pl96/seed2021_6ee6f40fd3a2",
+      "cell_id": "long_term/ETTh2/PAttn/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 4.3271636962890625,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 1.0929014094036416,
+        "mse": -0.3679604215869449
+      },
+      "minimum_metric_gain_percent": -0.3679604215869449,
+      "model": "PAttn",
+      "pred_len": 96,
+      "started_unix": 1785384417.2738025,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.34533727169036865,
+        "mse": 0.29877611994743347
+      },
+      "test_corrected": {
+        "mae": 0.34156307578086853,
+        "mse": 0.29987549781799316
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh2/iTransformer/pl96/seed2021_9d86fd22972d",
+      "cell_id": "long_term/ETTh2/iTransformer/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 4.45556378364563,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 1.75774362336849,
+        "mse": 0.2467995034049145
+      },
+      "minimum_metric_gain_percent": 0.2467995034049145,
+      "model": "iTransformer",
+      "pred_len": 96,
+      "started_unix": 1785384425.4921103,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.34961798787117004,
+        "mse": 0.3004027009010315
+      },
+      "test_corrected": {
+        "mae": 0.34347259998321533,
+        "mse": 0.2996613085269928
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh2/TimesNet/pl96/seed2021_0d3a06b19120",
+      "cell_id": "long_term/ETTh2/TimesNet/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 5.60219931602478,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 4.653641989945955,
+        "mse": 6.823451028756436
+      },
+      "minimum_metric_gain_percent": 4.653641989945955,
+      "model": "TimesNet",
+      "pred_len": 96,
+      "started_unix": 1785384433.854674,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3708881437778473,
+        "mse": 0.3370038568973541
+      },
+      "test_corrected": {
+        "mae": 0.35362833738327026,
+        "mse": 0.31400856375694275
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh2/PatchTST/pl96/seed2021_af3622771bca",
+      "cell_id": "long_term/ETTh2/PatchTST/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 5.476694345474243,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 0.8752835923674089,
+        "mse": -1.2869333445954665
+      },
+      "minimum_metric_gain_percent": -1.2869333445954665,
+      "model": "PatchTST",
+      "pred_len": 96,
+      "started_unix": 1785384443.2213378,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.34518975019454956,
+        "mse": 0.2921450436115265
+      },
+      "test_corrected": {
+        "mae": 0.3421683609485626,
+        "mse": 0.2959047555923462
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh2/DLinear/pl96/seed2021_4ffa050bd7a4",
+      "cell_id": "long_term/ETTh2/DLinear/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 3.109678268432617,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 6.230179663670525,
+        "mse": 7.075759482744023
+      },
+      "minimum_metric_gain_percent": 6.230179663670525,
+      "model": "DLinear",
+      "pred_len": 96,
+      "started_unix": 1785384452.5875669,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3952932059764862,
+        "mse": 0.3414474129676819
+      },
+      "test_corrected": {
+        "mae": 0.3706657290458679,
+        "mse": 0.317287415266037
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh2/FreTS/pl96/seed2021_ee283636ade0",
+      "cell_id": "long_term/ETTh2/FreTS/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 3.2882096767425537,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 6.440232240821969,
+        "mse": 7.427692234128537
+      },
+      "minimum_metric_gain_percent": 6.440232240821969,
+      "model": "FreTS",
+      "pred_len": 96,
+      "started_unix": 1785384459.331105,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.39675548672676086,
+        "mse": 0.34154924750328064
+      },
+      "test_corrected": {
+        "mae": 0.3712035119533539,
+        "mse": 0.316180020570755
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh2/FEDformer/pl96/seed2021_476bc6fbb369",
+      "cell_id": "long_term/ETTh2/FEDformer/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 12.853989362716675,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 6.493039980522429,
+        "mse": 8.333486782936072
+      },
+      "minimum_metric_gain_percent": 6.493039980522429,
+      "model": "FEDformer",
+      "pred_len": 96,
+      "started_unix": 1785384466.2806947,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3905998766422272,
+        "mse": 0.34796980023384094
+      },
+      "test_corrected": {
+        "mae": 0.3652380704879761,
+        "mse": 0.31897178292274475
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm1/TimeXer/pl96/seed2021_c2419c610eac",
+      "cell_id": "long_term/ETTm1/TimeXer/96",
+      "dataset": "ETTm1",
+      "elapsed_seconds": 34.5941264629364,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 1.3770782425535217,
+        "mse": 3.359307041068626
+      },
+      "minimum_metric_gain_percent": 1.3770782425535217,
+      "model": "TimeXer",
+      "pred_len": 96,
+      "started_unix": 1785384482.9139369,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3563241958618164,
+        "mse": 0.3178345859050751
+      },
+      "test_corrected": {
+        "mae": 0.35141733288764954,
+        "mse": 0.3071575462818146
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm1/TimeMixer/pl96/seed2021_f2a6bcde310e",
+      "cell_id": "long_term/ETTm1/TimeMixer/96",
+      "dataset": "ETTm1",
+      "elapsed_seconds": 21.02691650390625,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 2.1102293524445304,
+        "mse": 4.9530995639841215
+      },
+      "minimum_metric_gain_percent": 2.1102293524445304,
+      "model": "TimeMixer",
+      "pred_len": 96,
+      "started_unix": 1785384521.4260237,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3725633919239044,
+        "mse": 0.33584490418434143
+      },
+      "test_corrected": {
+        "mae": 0.36470144987106323,
+        "mse": 0.3192101716995239
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm1/PAttn/pl96/seed2021_2268f0c9f712",
+      "cell_id": "long_term/ETTm1/PAttn/96",
+      "dataset": "ETTm1",
+      "elapsed_seconds": 14.479312658309937,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 1.7799400600836885,
+        "mse": 4.853439049293385
+      },
+      "minimum_metric_gain_percent": 1.7799400600836885,
+      "model": "PAttn",
+      "pred_len": 96,
+      "started_unix": 1785384546.1686268,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.36482787132263184,
+        "mse": 0.33642691373825073
+      },
+      "test_corrected": {
+        "mae": 0.35833415389060974,
+        "mse": 0.3200986385345459
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm1/iTransformer/pl96/seed2021_cbfd899645e4",
+      "cell_id": "long_term/ETTm1/iTransformer/96",
+      "dataset": "ETTm1",
+      "elapsed_seconds": 14.963288068771362,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 2.096944718411308,
+        "mse": 5.010143865694632
+      },
+      "minimum_metric_gain_percent": 2.096944718411308,
+      "model": "iTransformer",
+      "pred_len": 96,
+      "started_unix": 1785384564.59158,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.38127654790878296,
+        "mse": 0.3557141125202179
+      },
+      "test_corrected": {
+        "mae": 0.3732813894748688,
+        "mse": 0.3378923237323761
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm1/TimesNet/pl96/seed2021_5662ee7dbbdf",
+      "cell_id": "long_term/ETTm1/TimesNet/96",
+      "dataset": "ETTm1",
+      "elapsed_seconds": 28.354471921920776,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 4.043254476023111,
+        "mse": 4.734267803036863
+      },
+      "minimum_metric_gain_percent": 4.043254476023111,
+      "model": "TimesNet",
+      "pred_len": 96,
+      "started_unix": 1785384583.4897199,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3754001259803772,
+        "mse": 0.3338521122932434
+      },
+      "test_corrected": {
+        "mae": 0.3602217435836792,
+        "mse": 0.3180466592311859
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm1/PatchTST/pl96/seed2021_b5ee797a43f0",
+      "cell_id": "long_term/ETTm1/PatchTST/96",
+      "dataset": "ETTm1",
+      "elapsed_seconds": 15.816500663757324,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 1.6845926616245221,
+        "mse": 4.194140188036768
+      },
+      "minimum_metric_gain_percent": 1.6845926616245221,
+      "model": "PatchTST",
+      "pred_len": 96,
+      "started_unix": 1785384615.607483,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3664166033267975,
+        "mse": 0.32676294445991516
+      },
+      "test_corrected": {
+        "mae": 0.3602439761161804,
+        "mse": 0.3130580484867096
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm1/DLinear/pl96/seed2021_9b2c76e39b95",
+      "cell_id": "long_term/ETTm1/DLinear/96",
+      "dataset": "ETTm1",
+      "elapsed_seconds": 12.763328075408936,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 3.135198450284136,
+        "mse": 7.3486811987758145
+      },
+      "minimum_metric_gain_percent": 3.135198450284136,
+      "model": "DLinear",
+      "pred_len": 96,
+      "started_unix": 1785384635.3655238,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3737088739871979,
+        "mse": 0.34594660997390747
+      },
+      "test_corrected": {
+        "mae": 0.36199235916137695,
+        "mse": 0.32052409648895264
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm1/FreTS/pl96/seed2021_ccffd900ecc5",
+      "cell_id": "long_term/ETTm1/FreTS/96",
+      "dataset": "ETTm1",
+      "elapsed_seconds": 13.265645742416382,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 2.465997715120761,
+        "mse": 4.200112215834712
+      },
+      "minimum_metric_gain_percent": 2.465997715120761,
+      "model": "FreTS",
+      "pred_len": 96,
+      "started_unix": 1785384651.809213,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.375411719083786,
+        "mse": 0.33978351950645447
+      },
+      "test_corrected": {
+        "mae": 0.3661540746688843,
+        "mse": 0.32551223039627075
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm1/FEDformer/pl96/seed2021_97ea09a4323e",
+      "cell_id": "long_term/ETTm1/FEDformer/96",
+      "dataset": "ETTm1",
+      "elapsed_seconds": 51.79183864593506,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 9.82986056031119,
+        "mse": 20.980615476988863
+      },
+      "minimum_metric_gain_percent": 9.82986056031119,
+      "model": "FEDformer",
+      "pred_len": 96,
+      "started_unix": 1785384668.8193808,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.4901599586009979,
+        "mse": 0.5390378832817078
+      },
+      "test_corrected": {
+        "mae": 0.44197791814804077,
+        "mse": 0.42594441771507263
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm2/TimeXer/pl96/seed2021_c4aef0a1404e",
+      "cell_id": "long_term/ETTm2/TimeXer/96",
+      "dataset": "ETTm2",
+      "elapsed_seconds": 13.507924795150757,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": -0.2612344734514835,
+        "mse": 0.08500535189865308
+      },
+      "minimum_metric_gain_percent": -0.2612344734514835,
+      "model": "TimeXer",
+      "pred_len": 96,
+      "started_unix": 1785384724.4144113,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.256012886762619,
+        "mse": 0.17117726802825928
+      },
+      "test_corrected": {
+        "mae": 0.2566816806793213,
+        "mse": 0.17103175818920135
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm2/TimeMixer/pl96/seed2021_17a30da856ea",
+      "cell_id": "long_term/ETTm2/TimeMixer/96",
+      "dataset": "ETTm2",
+      "elapsed_seconds": 10.856023073196411,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": -0.42387003864789313,
+        "mse": -0.16621323276907926
+      },
+      "minimum_metric_gain_percent": -0.42387003864789313,
+      "model": "TimeMixer",
+      "pred_len": 96,
+      "started_unix": 1785384741.8473969,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.25752460956573486,
+        "mse": 0.17508815228939056
+      },
+      "test_corrected": {
+        "mae": 0.258616179227829,
+        "mse": 0.1753791719675064
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm2/PAttn/pl96/seed2021_9d42fe6a9dcf",
+      "cell_id": "long_term/ETTm2/PAttn/96",
+      "dataset": "ETTm2",
+      "elapsed_seconds": 14.514663457870483,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 1.2269810509385175,
+        "mse": 2.9510931131861886
+      },
+      "minimum_metric_gain_percent": 1.2269810509385175,
+      "model": "PAttn",
+      "pred_len": 96,
+      "started_unix": 1785384756.4112473,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.26681870222091675,
+        "mse": 0.1800120621919632
+      },
+      "test_corrected": {
+        "mae": 0.26354488730430603,
+        "mse": 0.17469973862171173
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm2/iTransformer/pl96/seed2021_a13034aebd0e",
+      "cell_id": "long_term/ETTm2/iTransformer/96",
+      "dataset": "ETTm2",
+      "elapsed_seconds": 13.201849222183228,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 2.4098388210117907,
+        "mse": 1.711225212181136
+      },
+      "minimum_metric_gain_percent": 1.711225212181136,
+      "model": "iTransformer",
+      "pred_len": 96,
+      "started_unix": 1785384774.8550878,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.2723459005355835,
+        "mse": 0.18615466356277466
+      },
+      "test_corrected": {
+        "mae": 0.26578280329704285,
+        "mse": 0.1829691380262375
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm2/TimesNet/pl96/seed2021_16e9fe7338a5",
+      "cell_id": "long_term/ETTm2/TimesNet/96",
+      "dataset": "ETTm2",
+      "elapsed_seconds": 18.275816440582275,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 1.49477846148786,
+        "mse": 4.614960096529243
+      },
+      "minimum_metric_gain_percent": 1.49477846148786,
+      "model": "TimesNet",
+      "pred_len": 96,
+      "started_unix": 1785384791.9751408,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.2663924992084503,
+        "mse": 0.18933098018169403
+      },
+      "test_corrected": {
+        "mae": 0.2624105215072632,
+        "mse": 0.18059343099594116
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm2/PatchTST/pl96/seed2021_d3700075c9f0",
+      "cell_id": "long_term/ETTm2/PatchTST/96",
+      "dataset": "ETTm2",
+      "elapsed_seconds": 17.42469549179077,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": -0.012010159442622239,
+        "mse": 1.1405656856084145
+      },
+      "minimum_metric_gain_percent": -0.012010159442622239,
+      "model": "PatchTST",
+      "pred_len": 96,
+      "started_unix": 1785384814.0046334,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.2689865827560425,
+        "mse": 0.1861172616481781
+      },
+      "test_corrected": {
+        "mae": 0.26901888847351074,
+        "mse": 0.18399447202682495
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm2/DLinear/pl96/seed2021_e10520ab11a0",
+      "cell_id": "long_term/ETTm2/DLinear/96",
+      "dataset": "ETTm2",
+      "elapsed_seconds": 12.774526596069336,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 5.714036794553008,
+        "mse": 6.55028471359621
+      },
+      "minimum_metric_gain_percent": 5.714036794553008,
+      "model": "DLinear",
+      "pred_len": 96,
+      "started_unix": 1785384835.3833003,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.2928171455860138,
+        "mse": 0.19342845678329468
+      },
+      "test_corrected": {
+        "mae": 0.2760854661464691,
+        "mse": 0.18075834214687347
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm2/FreTS/pl96/seed2021_623b40db2657",
+      "cell_id": "long_term/ETTm2/FreTS/96",
+      "dataset": "ETTm2",
+      "elapsed_seconds": 13.466272115707397,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 2.6418947760796523,
+        "mse": 3.748493854712844
+      },
+      "minimum_metric_gain_percent": 2.6418947760796523,
+      "model": "FreTS",
+      "pred_len": 96,
+      "started_unix": 1785384851.8416576,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.2847859561443329,
+        "mse": 0.19461898505687714
+      },
+      "test_corrected": {
+        "mae": 0.27726221084594727,
+        "mse": 0.1873237043619156
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm2/FEDformer/pl96/seed2021_b174e8715334",
+      "cell_id": "long_term/ETTm2/FEDformer/96",
+      "dataset": "ETTm2",
+      "elapsed_seconds": 49.275131702423096,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 3.1336015674299964,
+        "mse": 7.51011887472524
+      },
+      "minimum_metric_gain_percent": 3.1336015674299964,
+      "model": "FEDformer",
+      "pred_len": 96,
+      "started_unix": 1785384869.0330749,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.29365962743759155,
+        "mse": 0.21115761995315552
+      },
+      "test_corrected": {
+        "mae": 0.2844575047492981,
+        "mse": 0.195299431681633
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/weather/TimeMixer/pl96/seed2021_a11f31028af1",
+      "cell_id": "long_term/weather/TimeMixer/96",
+      "dataset": "weather",
+      "elapsed_seconds": 15.232388257980347,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": -0.08001785565048339,
+        "mse": 1.8807077683714968
+      },
+      "minimum_metric_gain_percent": -0.08001785565048339,
+      "model": "TimeMixer",
+      "pred_len": 96,
+      "started_unix": 1785384922.1196096,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.2078993022441864,
+        "mse": 0.16090604662895203
+      },
+      "test_corrected": {
+        "mae": 0.20806565880775452,
+        "mse": 0.15787987411022186
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/weather/PAttn/pl96/seed2021_e1aae96ad803",
+      "cell_id": "long_term/weather/PAttn/96",
+      "dataset": "weather",
+      "elapsed_seconds": 17.383463144302368,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 0.27782583883665374,
+        "mse": 2.980942721148709
+      },
+      "minimum_metric_gain_percent": 0.27782583883665374,
+      "model": "PAttn",
+      "pred_len": 96,
+      "started_unix": 1785384941.0928407,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.22633391618728638,
+        "mse": 0.18937185406684875
+      },
+      "test_corrected": {
+        "mae": 0.2257051020860672,
+        "mse": 0.18372678756713867
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/weather/TimesNet/pl96/seed2021_23ee10124e1e",
+      "cell_id": "long_term/weather/TimesNet/96",
+      "dataset": "weather",
+      "elapsed_seconds": 21.852370023727417,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 0.12003928978292511,
+        "mse": 0.9707255359197365
+      },
+      "minimum_metric_gain_percent": 0.12003928978292511,
+      "model": "TimesNet",
+      "pred_len": 96,
+      "started_unix": 1785384962.4132593,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.21947191655635834,
+        "mse": 0.16901865601539612
+      },
+      "test_corrected": {
+        "mae": 0.2192084640264511,
+        "mse": 0.16737794876098633
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/weather/PatchTST/pl96/seed2021_388c8633430e",
+      "cell_id": "long_term/weather/PatchTST/96",
+      "dataset": "weather",
+      "elapsed_seconds": 23.055729389190674,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 0.2881791263977232,
+        "mse": 2.673417504107959
+      },
+      "minimum_metric_gain_percent": 0.2881791263977232,
+      "model": "PatchTST",
+      "pred_len": 96,
+      "started_unix": 1785384988.0217285,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.21343503892421722,
+        "mse": 0.17212863266468048
+      },
+      "test_corrected": {
+        "mae": 0.21281996369361877,
+        "mse": 0.16752691566944122
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/weather/DLinear/pl96/seed2021_ef37717135b2",
+      "cell_id": "long_term/weather/DLinear/96",
+      "dataset": "weather",
+      "elapsed_seconds": 15.887008666992188,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 2.142517688687479,
+        "mse": 3.1311353144952765
+      },
+      "minimum_metric_gain_percent": 2.142517688687479,
+      "model": "DLinear",
+      "pred_len": 96,
+      "started_unix": 1785385015.10818,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.2561100721359253,
+        "mse": 0.19622044265270233
+      },
+      "test_corrected": {
+        "mae": 0.25062286853790283,
+        "mse": 0.19007651507854462
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/weather/FreTS/pl96/seed2021_b476fd973a22",
+      "cell_id": "long_term/weather/FreTS/96",
+      "dataset": "weather",
+      "elapsed_seconds": 16.909988164901733,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 1.3035565825745274,
+        "mse": 2.4892239793923006
+      },
+      "minimum_metric_gain_percent": 1.3035565825745274,
+      "model": "FreTS",
+      "pred_len": 96,
+      "started_unix": 1785385034.680372,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.2386334240436554,
+        "mse": 0.1843351423740387
+      },
+      "test_corrected": {
+        "mae": 0.23552270233631134,
+        "mse": 0.1797466278076172
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/weather/FEDformer/pl96/seed2021_c90a65efe735",
+      "cell_id": "long_term/weather/FEDformer/96",
+      "dataset": "weather",
+      "elapsed_seconds": 39.12269616127014,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 19.38017922310222,
+        "mse": 26.11833546187329
+      },
+      "minimum_metric_gain_percent": 19.38017922310222,
+      "model": "FEDformer",
+      "pred_len": 96,
+      "started_unix": 1785385055.3037622,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3487553000450134,
+        "mse": 0.27983927726745605
+      },
+      "test_corrected": {
+        "mae": 0.2811658978462219,
+        "mse": 0.20674991607666016
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/electricity/TimeXer/pl96/seed2021_2bad5f17e440",
+      "cell_id": "long_term/electricity/TimeXer/96",
+      "dataset": "electricity",
+      "elapsed_seconds": 113.25859546661377,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 1.8657656915137337,
+        "mse": 0.3322812754738636
+      },
+      "minimum_metric_gain_percent": 0.3322812754738636,
+      "model": "TimeXer",
+      "pred_len": 96,
+      "started_unix": 1785385098.2893496,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.24244742095470428,
+        "mse": 0.14048151671886444
+      },
+      "test_corrected": {
+        "mae": 0.23792392015457153,
+        "mse": 0.14001472294330597
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/electricity/TimeMixer/pl96/seed2021_263481ea932f",
+      "cell_id": "long_term/electricity/TimeMixer/96",
+      "dataset": "electricity",
+      "elapsed_seconds": 83.55666208267212,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": -0.7606746921823742,
+        "mse": -0.5643519288400608
+      },
+      "minimum_metric_gain_percent": -0.7606746921823742,
+      "model": "TimeMixer",
+      "pred_len": 96,
+      "started_unix": 1785385215.7265549,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.2476002275943756,
+        "mse": 0.1561850756406784
+      },
+      "test_corrected": {
+        "mae": 0.24948365986347198,
+        "mse": 0.15706650912761688
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/electricity/iTransformer/pl96/seed2021_93f56fda4b30",
+      "cell_id": "long_term/electricity/iTransformer/96",
+      "dataset": "electricity",
+      "elapsed_seconds": 81.33006620407104,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 0.316615225158447,
+        "mse": 1.5461770090549676
+      },
+      "minimum_metric_gain_percent": 0.316615225158447,
+      "model": "iTransformer",
+      "pred_len": 96,
+      "started_unix": 1785385303.2088814,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.24055323004722595,
+        "mse": 0.1487603634595871
+      },
+      "test_corrected": {
+        "mae": 0.239791601896286,
+        "mse": 0.14646026492118835
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/electricity/TimesNet/pl96/seed2021_21fb0f15b1aa",
+      "cell_id": "long_term/electricity/TimesNet/96",
+      "dataset": "electricity",
+      "elapsed_seconds": 170.61164498329163,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 1.514078413421119,
+        "mse": 1.8334406249686752
+      },
+      "minimum_metric_gain_percent": 1.514078413421119,
+      "model": "TimesNet",
+      "pred_len": 96,
+      "started_unix": 1785385388.6454978,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.27174609899520874,
+        "mse": 0.16798098385334015
+      },
+      "test_corrected": {
+        "mae": 0.2676316499710083,
+        "mse": 0.16490115225315094
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/electricity/PatchTST/pl96/seed2021_1925f6b11ef8",
+      "cell_id": "long_term/electricity/PatchTST/96",
+      "dataset": "electricity",
+      "elapsed_seconds": 138.42148566246033,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 3.928726975590247,
+        "mse": 5.762218343573479
+      },
+      "minimum_metric_gain_percent": 3.928726975590247,
+      "model": "PatchTST",
+      "pred_len": 96,
+      "started_unix": 1785385563.2789934,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.27295711636543274,
+        "mse": 0.18004585802555084
+      },
+      "test_corrected": {
+        "mae": 0.2622333765029907,
+        "mse": 0.1696712225675583
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/electricity/DLinear/pl96/seed2021_af041ee683f8",
+      "cell_id": "long_term/electricity/DLinear/96",
+      "dataset": "electricity",
+      "elapsed_seconds": 77.82961630821228,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 5.569591654927274,
+        "mse": 9.83490819469314
+      },
+      "minimum_metric_gain_percent": 5.569591654927274,
+      "model": "DLinear",
+      "pred_len": 96,
+      "started_unix": 1785385705.8395314,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3015504479408264,
+        "mse": 0.21036772429943085
+      },
+      "test_corrected": {
+        "mae": 0.28475531935691833,
+        "mse": 0.18967825174331665
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/electricity/FEDformer/pl96/seed2021_c879eecb1b62",
+      "cell_id": "long_term/electricity/FEDformer/96",
+      "dataset": "electricity",
+      "elapsed_seconds": 81.01026630401611,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 4.675615359281223,
+        "mse": 6.034848202294341
+      },
+      "minimum_metric_gain_percent": 4.675615359281223,
+      "model": "FEDformer",
+      "pred_len": 96,
+      "started_unix": 1785385787.4732957,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3089326024055481,
+        "mse": 0.19480863213539124
+      },
+      "test_corrected": {
+        "mae": 0.2944881021976471,
+        "mse": 0.18305222690105438
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/traffic/TimeXer/pl96/seed2021_a4df064e781f",
+      "cell_id": "long_term/traffic/TimeXer/96",
+      "dataset": "traffic",
+      "elapsed_seconds": 170.90264296531677,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 3.3031741653779516,
+        "mse": 4.162510406848775
+      },
+      "minimum_metric_gain_percent": 3.3031741653779516,
+      "model": "TimeXer",
+      "pred_len": 96,
+      "started_unix": 1785385872.5664601,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.27132126688957214,
+        "mse": 0.429271936416626
+      },
+      "test_corrected": {
+        "mae": 0.26235905289649963,
+        "mse": 0.41140344738960266
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/traffic/TimeMixer/pl96/seed2021_7fc3e4084e62",
+      "cell_id": "long_term/traffic/TimeMixer/96",
+      "dataset": "traffic",
+      "elapsed_seconds": 174.03119802474976,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 2.371038066472886,
+        "mse": 4.3878042746587544
+      },
+      "minimum_metric_gain_percent": 2.371038066472886,
+      "model": "TimeMixer",
+      "pred_len": 96,
+      "started_unix": 1785386047.8015652,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.29269030690193176,
+        "mse": 0.47403767704963684
+      },
+      "test_corrected": {
+        "mae": 0.28575050830841064,
+        "mse": 0.4532378315925598
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/traffic/iTransformer/pl96/seed2021_e82c11fb6152",
+      "cell_id": "long_term/traffic/iTransformer/96",
+      "dataset": "traffic",
+      "elapsed_seconds": 151.09880542755127,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 3.252613851192431,
+        "mse": 3.8191321640292637
+      },
+      "minimum_metric_gain_percent": 3.252613851192431,
+      "model": "iTransformer",
+      "pred_len": 96,
+      "started_unix": 1785386225.8985496,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.26862382888793945,
+        "mse": 0.3936010003089905
+      },
+      "test_corrected": {
+        "mae": 0.2598865330219269,
+        "mse": 0.3785688579082489
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/traffic/TimesNet/pl96/seed2021_525773518085",
+      "cell_id": "long_term/traffic/TimesNet/96",
+      "dataset": "traffic",
+      "elapsed_seconds": 226.21145629882812,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 3.299101718747867,
+        "mse": 10.136363108143135
+      },
+      "minimum_metric_gain_percent": 3.299101718747867,
+      "model": "TimesNet",
+      "pred_len": 96,
+      "started_unix": 1785386381.2867794,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.314359188079834,
+        "mse": 0.5898478627204895
+      },
+      "test_corrected": {
+        "mae": 0.30398815870285034,
+        "mse": 0.530058741569519
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/traffic/PatchTST/pl96/seed2021_b80be72cc898",
+      "cell_id": "long_term/traffic/PatchTST/96",
+      "dataset": "traffic",
+      "elapsed_seconds": 192.94864892959595,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 5.190937217287863,
+        "mse": 6.002023933991937
+      },
+      "minimum_metric_gain_percent": 5.190937217287863,
+      "model": "PatchTST",
+      "pred_len": 96,
+      "started_unix": 1785386611.6897767,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.29812902212142944,
+        "mse": 0.45815202593803406
+      },
+      "test_corrected": {
+        "mae": 0.2826533317565918,
+        "mse": 0.4306536316871643
+      }
+    }
+  ],
+  "counts": {
+    "completed": 55,
+    "expected": 55,
+    "failed": 0,
+    "improved": 48,
+    "incomplete": 0,
+    "not_improved": 7,
+    "pending": 0,
+    "running": 0
+  },
+  "failed_cells": [],
+  "generated_unix": 1785386806.0743754,
+  "groups": {
+    "dataset": {
+      "ETTh1": {
+        "completed": 9,
+        "expected": 9,
+        "failed": 0,
+        "improved": 9,
+        "incomplete": 0,
+        "not_improved": 0,
+        "pending": 0,
+        "running": 0
+      },
+      "ETTh2": {
+        "completed": 9,
+        "expected": 9,
+        "failed": 0,
+        "improved": 7,
+        "incomplete": 0,
+        "not_improved": 2,
+        "pending": 0,
+        "running": 0
+      },
+      "ETTm1": {
+        "completed": 9,
+        "expected": 9,
+        "failed": 0,
+        "improved": 9,
+        "incomplete": 0,
+        "not_improved": 0,
+        "pending": 0,
+        "running": 0
+      },
+      "ETTm2": {
+        "completed": 9,
+        "expected": 9,
+        "failed": 0,
+        "improved": 6,
+        "incomplete": 0,
+        "not_improved": 3,
+        "pending": 0,
+        "running": 0
+      },
+      "electricity": {
+        "completed": 7,
+        "expected": 7,
+        "failed": 0,
+        "improved": 6,
+        "incomplete": 0,
+        "not_improved": 1,
+        "pending": 0,
+        "running": 0
+      },
+      "traffic": {
+        "completed": 5,
+        "expected": 5,
+        "failed": 0,
+        "improved": 5,
+        "incomplete": 0,
+        "not_improved": 0,
+        "pending": 0,
+        "running": 0
+      },
+      "weather": {
+        "completed": 7,
+        "expected": 7,
+        "failed": 0,
+        "improved": 6,
+        "incomplete": 0,
+        "not_improved": 1,
+        "pending": 0,
+        "running": 0
+      }
+    },
+    "model": {
+      "DLinear": {
+        "completed": 6,
+        "expected": 6,
+        "failed": 0,
+        "improved": 6,
+        "incomplete": 0,
+        "not_improved": 0,
+        "pending": 0,
+        "running": 0
+      },
+      "FEDformer": {
+        "completed": 6,
+        "expected": 6,
+        "failed": 0,
+        "improved": 6,
+        "incomplete": 0,
+        "not_improved": 0,
+        "pending": 0,
+        "running": 0
+      },
+      "FreTS": {
+        "completed": 5,
+        "expected": 5,
+        "failed": 0,
+        "improved": 5,
+        "incomplete": 0,
+        "not_improved": 0,
+        "pending": 0,
+        "running": 0
+      },
+      "PAttn": {
+        "completed": 5,
+        "expected": 5,
+        "failed": 0,
+        "improved": 4,
+        "incomplete": 0,
+        "not_improved": 1,
+        "pending": 0,
+        "running": 0
+      },
+      "PatchTST": {
+        "completed": 7,
+        "expected": 7,
+        "failed": 0,
+        "improved": 5,
+        "incomplete": 0,
+        "not_improved": 2,
+        "pending": 0,
+        "running": 0
+      },
+      "TimeMixer": {
+        "completed": 7,
+        "expected": 7,
+        "failed": 0,
+        "improved": 4,
+        "incomplete": 0,
+        "not_improved": 3,
+        "pending": 0,
+        "running": 0
+      },
+      "TimeXer": {
+        "completed": 6,
+        "expected": 6,
+        "failed": 0,
+        "improved": 5,
+        "incomplete": 0,
+        "not_improved": 1,
+        "pending": 0,
+        "running": 0
+      },
+      "TimesNet": {
+        "completed": 7,
+        "expected": 7,
+        "failed": 0,
+        "improved": 7,
+        "incomplete": 0,
+        "not_improved": 0,
+        "pending": 0,
+        "running": 0
+      },
+      "iTransformer": {
+        "completed": 6,
+        "expected": 6,
+        "failed": 0,
+        "improved": 6,
+        "incomplete": 0,
+        "not_improved": 0,
+        "pending": 0,
+        "running": 0
+      }
+    },
+    "task_family": {
+      "long_term": {
+        "completed": 55,
+        "expected": 55,
+        "failed": 0,
+        "improved": 48,
+        "incomplete": 0,
+        "not_improved": 7,
+        "pending": 0,
+        "running": 0
+      }
+    }
+  },
+  "method_counts": {
+    "historical_residual": 30,
+    "seasonal_blend": 25
+  },
+  "metric_gain_percent": {
+    "mae": {
+      "count": 55,
+      "maximum": 19.38017922310222,
+      "mean": 2.9078098439849334,
+      "median": 2.142517688687479,
+      "minimum": -0.7606746921823742
+    },
+    "mse": {
+      "count": 55,
+      "maximum": 26.11833546187329,
+      "mean": 4.285169634977893,
+      "median": 3.370227932625796,
+      "minimum": -1.2869333445954665
+    }
+  },
+  "not_improved_cells": [
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh2/PAttn/pl96/seed2021_6ee6f40fd3a2",
+      "cell_id": "long_term/ETTh2/PAttn/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 4.3271636962890625,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 1.0929014094036416,
+        "mse": -0.3679604215869449
+      },
+      "minimum_metric_gain_percent": -0.3679604215869449,
+      "model": "PAttn",
+      "pred_len": 96,
+      "started_unix": 1785384417.2738025,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.34533727169036865,
+        "mse": 0.29877611994743347
+      },
+      "test_corrected": {
+        "mae": 0.34156307578086853,
+        "mse": 0.29987549781799316
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh2/PatchTST/pl96/seed2021_af3622771bca",
+      "cell_id": "long_term/ETTh2/PatchTST/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 5.476694345474243,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 0.8752835923674089,
+        "mse": -1.2869333445954665
+      },
+      "minimum_metric_gain_percent": -1.2869333445954665,
+      "model": "PatchTST",
+      "pred_len": 96,
+      "started_unix": 1785384443.2213378,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.34518975019454956,
+        "mse": 0.2921450436115265
+      },
+      "test_corrected": {
+        "mae": 0.3421683609485626,
+        "mse": 0.2959047555923462
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm2/TimeXer/pl96/seed2021_c4aef0a1404e",
+      "cell_id": "long_term/ETTm2/TimeXer/96",
+      "dataset": "ETTm2",
+      "elapsed_seconds": 13.507924795150757,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": -0.2612344734514835,
+        "mse": 0.08500535189865308
+      },
+      "minimum_metric_gain_percent": -0.2612344734514835,
+      "model": "TimeXer",
+      "pred_len": 96,
+      "started_unix": 1785384724.4144113,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.256012886762619,
+        "mse": 0.17117726802825928
+      },
+      "test_corrected": {
+        "mae": 0.2566816806793213,
+        "mse": 0.17103175818920135
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm2/TimeMixer/pl96/seed2021_17a30da856ea",
+      "cell_id": "long_term/ETTm2/TimeMixer/96",
+      "dataset": "ETTm2",
+      "elapsed_seconds": 10.856023073196411,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": -0.42387003864789313,
+        "mse": -0.16621323276907926
+      },
+      "minimum_metric_gain_percent": -0.42387003864789313,
+      "model": "TimeMixer",
+      "pred_len": 96,
+      "started_unix": 1785384741.8473969,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.25752460956573486,
+        "mse": 0.17508815228939056
+      },
+      "test_corrected": {
+        "mae": 0.258616179227829,
+        "mse": 0.1753791719675064
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm2/PatchTST/pl96/seed2021_d3700075c9f0",
+      "cell_id": "long_term/ETTm2/PatchTST/96",
+      "dataset": "ETTm2",
+      "elapsed_seconds": 17.42469549179077,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": -0.012010159442622239,
+        "mse": 1.1405656856084145
+      },
+      "minimum_metric_gain_percent": -0.012010159442622239,
+      "model": "PatchTST",
+      "pred_len": 96,
+      "started_unix": 1785384814.0046334,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.2689865827560425,
+        "mse": 0.1861172616481781
+      },
+      "test_corrected": {
+        "mae": 0.26901888847351074,
+        "mse": 0.18399447202682495
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/weather/TimeMixer/pl96/seed2021_a11f31028af1",
+      "cell_id": "long_term/weather/TimeMixer/96",
+      "dataset": "weather",
+      "elapsed_seconds": 15.232388257980347,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": -0.08001785565048339,
+        "mse": 1.8807077683714968
+      },
+      "minimum_metric_gain_percent": -0.08001785565048339,
+      "model": "TimeMixer",
+      "pred_len": 96,
+      "started_unix": 1785384922.1196096,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.2078993022441864,
+        "mse": 0.16090604662895203
+      },
+      "test_corrected": {
+        "mae": 0.20806565880775452,
+        "mse": 0.15787987411022186
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/electricity/TimeMixer/pl96/seed2021_263481ea932f",
+      "cell_id": "long_term/electricity/TimeMixer/96",
+      "dataset": "electricity",
+      "elapsed_seconds": 83.55666208267212,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": -0.7606746921823742,
+        "mse": -0.5643519288400608
+      },
+      "minimum_metric_gain_percent": -0.7606746921823742,
+      "model": "TimeMixer",
+      "pred_len": 96,
+      "started_unix": 1785385215.7265549,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.2476002275943756,
+        "mse": 0.1561850756406784
+      },
+      "test_corrected": {
+        "mae": 0.24948365986347198,
+        "mse": 0.15706650912761688
+      }
+    }
+  ],
+  "output_root": "./ts_rag_outputs/timefuse_matrix_full",
+  "seed": 2021,
+  "smoke": false,
+  "weakest_cells": [
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh2/PatchTST/pl96/seed2021_af3622771bca",
+      "cell_id": "long_term/ETTh2/PatchTST/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 5.476694345474243,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 0.8752835923674089,
+        "mse": -1.2869333445954665
+      },
+      "minimum_metric_gain_percent": -1.2869333445954665,
+      "model": "PatchTST",
+      "pred_len": 96,
+      "started_unix": 1785384443.2213378,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.34518975019454956,
+        "mse": 0.2921450436115265
+      },
+      "test_corrected": {
+        "mae": 0.3421683609485626,
+        "mse": 0.2959047555923462
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/electricity/TimeMixer/pl96/seed2021_263481ea932f",
+      "cell_id": "long_term/electricity/TimeMixer/96",
+      "dataset": "electricity",
+      "elapsed_seconds": 83.55666208267212,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": -0.7606746921823742,
+        "mse": -0.5643519288400608
+      },
+      "minimum_metric_gain_percent": -0.7606746921823742,
+      "model": "TimeMixer",
+      "pred_len": 96,
+      "started_unix": 1785385215.7265549,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.2476002275943756,
+        "mse": 0.1561850756406784
+      },
+      "test_corrected": {
+        "mae": 0.24948365986347198,
+        "mse": 0.15706650912761688
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm2/TimeMixer/pl96/seed2021_17a30da856ea",
+      "cell_id": "long_term/ETTm2/TimeMixer/96",
+      "dataset": "ETTm2",
+      "elapsed_seconds": 10.856023073196411,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": -0.42387003864789313,
+        "mse": -0.16621323276907926
+      },
+      "minimum_metric_gain_percent": -0.42387003864789313,
+      "model": "TimeMixer",
+      "pred_len": 96,
+      "started_unix": 1785384741.8473969,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.25752460956573486,
+        "mse": 0.17508815228939056
+      },
+      "test_corrected": {
+        "mae": 0.258616179227829,
+        "mse": 0.1753791719675064
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh2/PAttn/pl96/seed2021_6ee6f40fd3a2",
+      "cell_id": "long_term/ETTh2/PAttn/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 4.3271636962890625,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 1.0929014094036416,
+        "mse": -0.3679604215869449
+      },
+      "minimum_metric_gain_percent": -0.3679604215869449,
+      "model": "PAttn",
+      "pred_len": 96,
+      "started_unix": 1785384417.2738025,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.34533727169036865,
+        "mse": 0.29877611994743347
+      },
+      "test_corrected": {
+        "mae": 0.34156307578086853,
+        "mse": 0.29987549781799316
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm2/TimeXer/pl96/seed2021_c4aef0a1404e",
+      "cell_id": "long_term/ETTm2/TimeXer/96",
+      "dataset": "ETTm2",
+      "elapsed_seconds": 13.507924795150757,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": -0.2612344734514835,
+        "mse": 0.08500535189865308
+      },
+      "minimum_metric_gain_percent": -0.2612344734514835,
+      "model": "TimeXer",
+      "pred_len": 96,
+      "started_unix": 1785384724.4144113,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.256012886762619,
+        "mse": 0.17117726802825928
+      },
+      "test_corrected": {
+        "mae": 0.2566816806793213,
+        "mse": 0.17103175818920135
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/weather/TimeMixer/pl96/seed2021_a11f31028af1",
+      "cell_id": "long_term/weather/TimeMixer/96",
+      "dataset": "weather",
+      "elapsed_seconds": 15.232388257980347,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": -0.08001785565048339,
+        "mse": 1.8807077683714968
+      },
+      "minimum_metric_gain_percent": -0.08001785565048339,
+      "model": "TimeMixer",
+      "pred_len": 96,
+      "started_unix": 1785384922.1196096,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.2078993022441864,
+        "mse": 0.16090604662895203
+      },
+      "test_corrected": {
+        "mae": 0.20806565880775452,
+        "mse": 0.15787987411022186
+      }
+    },
+    {
+      "all_test_metrics_improve": false,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm2/PatchTST/pl96/seed2021_d3700075c9f0",
+      "cell_id": "long_term/ETTm2/PatchTST/96",
+      "dataset": "ETTm2",
+      "elapsed_seconds": 17.42469549179077,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": -0.012010159442622239,
+        "mse": 1.1405656856084145
+      },
+      "minimum_metric_gain_percent": -0.012010159442622239,
+      "model": "PatchTST",
+      "pred_len": 96,
+      "started_unix": 1785384814.0046334,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.2689865827560425,
+        "mse": 0.1861172616481781
+      },
+      "test_corrected": {
+        "mae": 0.26901888847351074,
+        "mse": 0.18399447202682495
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh1/TimeMixer/pl96/seed2021_a480f99227ee",
+      "cell_id": "long_term/ETTh1/TimeMixer/96",
+      "dataset": "ETTh1",
+      "elapsed_seconds": 3.1577446460723877,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 2.1597620423896426,
+        "mse": 0.05237261576207
+      },
+      "minimum_metric_gain_percent": 0.05237261576207,
+      "model": "TimeMixer",
+      "pred_len": 96,
+      "started_unix": 1785384334.9200454,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.39812976121902466,
+        "mse": 0.3783573508262634
+      },
+      "test_corrected": {
+        "mae": 0.38953110575675964,
+        "mse": 0.37815919518470764
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/weather/TimesNet/pl96/seed2021_23ee10124e1e",
+      "cell_id": "long_term/weather/TimesNet/96",
+      "dataset": "weather",
+      "elapsed_seconds": 21.852370023727417,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 0.12003928978292511,
+        "mse": 0.9707255359197365
+      },
+      "minimum_metric_gain_percent": 0.12003928978292511,
+      "model": "TimesNet",
+      "pred_len": 96,
+      "started_unix": 1785384962.4132593,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.21947191655635834,
+        "mse": 0.16901865601539612
+      },
+      "test_corrected": {
+        "mae": 0.2192084640264511,
+        "mse": 0.16737794876098633
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh1/FreTS/pl96/seed2021_4e8db1c96c69",
+      "cell_id": "long_term/ETTh1/FreTS/96",
+      "dataset": "ETTh1",
+      "elapsed_seconds": 3.519094228744507,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 0.1218102406597756,
+        "mse": 0.7357285846517485
+      },
+      "minimum_metric_gain_percent": 0.1218102406597756,
+      "model": "FreTS",
+      "pred_len": 96,
+      "started_unix": 1785384376.0690284,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.41240206360816956,
+        "mse": 0.399919718503952
+      },
+      "test_corrected": {
+        "mae": 0.41189971566200256,
+        "mse": 0.39697739481925964
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh2/iTransformer/pl96/seed2021_9d86fd22972d",
+      "cell_id": "long_term/ETTh2/iTransformer/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 4.45556378364563,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 1.75774362336849,
+        "mse": 0.2467995034049145
+      },
+      "minimum_metric_gain_percent": 0.2467995034049145,
+      "model": "iTransformer",
+      "pred_len": 96,
+      "started_unix": 1785384425.4921103,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.34961798787117004,
+        "mse": 0.3004027009010315
+      },
+      "test_corrected": {
+        "mae": 0.34347259998321533,
+        "mse": 0.2996613085269928
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh2/TimeMixer/pl96/seed2021_16aa737b2132",
+      "cell_id": "long_term/ETTh2/TimeMixer/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 4.081667184829712,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 0.566691185458044,
+        "mse": 0.24787513217010285
+      },
+      "minimum_metric_gain_percent": 0.24787513217010285,
+      "model": "TimeMixer",
+      "pred_len": 96,
+      "started_unix": 1785384409.483877,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3406205475330353,
+        "mse": 0.2900577485561371
+      },
+      "test_corrected": {
+        "mae": 0.33869028091430664,
+        "mse": 0.28933876752853394
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/weather/PAttn/pl96/seed2021_e1aae96ad803",
+      "cell_id": "long_term/weather/PAttn/96",
+      "dataset": "weather",
+      "elapsed_seconds": 17.383463144302368,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 0.27782583883665374,
+        "mse": 2.980942721148709
+      },
+      "minimum_metric_gain_percent": 0.27782583883665374,
+      "model": "PAttn",
+      "pred_len": 96,
+      "started_unix": 1785384941.0928407,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.22633391618728638,
+        "mse": 0.18937185406684875
+      },
+      "test_corrected": {
+        "mae": 0.2257051020860672,
+        "mse": 0.18372678756713867
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/weather/PatchTST/pl96/seed2021_388c8633430e",
+      "cell_id": "long_term/weather/PatchTST/96",
+      "dataset": "weather",
+      "elapsed_seconds": 23.055729389190674,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 0.2881791263977232,
+        "mse": 2.673417504107959
+      },
+      "minimum_metric_gain_percent": 0.2881791263977232,
+      "model": "PatchTST",
+      "pred_len": 96,
+      "started_unix": 1785384988.0217285,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.21343503892421722,
+        "mse": 0.17212863266468048
+      },
+      "test_corrected": {
+        "mae": 0.21281996369361877,
+        "mse": 0.16752691566944122
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/electricity/iTransformer/pl96/seed2021_93f56fda4b30",
+      "cell_id": "long_term/electricity/iTransformer/96",
+      "dataset": "electricity",
+      "elapsed_seconds": 81.33006620407104,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 0.316615225158447,
+        "mse": 1.5461770090549676
+      },
+      "minimum_metric_gain_percent": 0.316615225158447,
+      "model": "iTransformer",
+      "pred_len": 96,
+      "started_unix": 1785385303.2088814,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.24055323004722595,
+        "mse": 0.1487603634595871
+      },
+      "test_corrected": {
+        "mae": 0.239791601896286,
+        "mse": 0.14646026492118835
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/electricity/TimeXer/pl96/seed2021_2bad5f17e440",
+      "cell_id": "long_term/electricity/TimeXer/96",
+      "dataset": "electricity",
+      "elapsed_seconds": 113.25859546661377,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 1.8657656915137337,
+        "mse": 0.3322812754738636
+      },
+      "minimum_metric_gain_percent": 0.3322812754738636,
+      "model": "TimeXer",
+      "pred_len": 96,
+      "started_unix": 1785385098.2893496,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.24244742095470428,
+        "mse": 0.14048151671886444
+      },
+      "test_corrected": {
+        "mae": 0.23792392015457153,
+        "mse": 0.14001472294330597
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTh2/TimeXer/pl96/seed2021_c50c2aa22d27",
+      "cell_id": "long_term/ETTh2/TimeXer/96",
+      "dataset": "ETTh2",
+      "elapsed_seconds": 5.146772146224976,
+      "method": "seasonal_blend",
+      "metric_gain_percent": {
+        "mae": 0.7065401024745811,
+        "mse": 0.6156718210409923
+      },
+      "minimum_metric_gain_percent": 0.6156718210409923,
+      "model": "TimeXer",
+      "pred_len": 96,
+      "started_unix": 1785384400.4557352,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.33755066990852356,
+        "mse": 0.2853738069534302
+      },
+      "test_corrected": {
+        "mae": 0.33516573905944824,
+        "mse": 0.283616840839386
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm2/PAttn/pl96/seed2021_9d42fe6a9dcf",
+      "cell_id": "long_term/ETTm2/PAttn/96",
+      "dataset": "ETTm2",
+      "elapsed_seconds": 14.514663457870483,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 1.2269810509385175,
+        "mse": 2.9510931131861886
+      },
+      "minimum_metric_gain_percent": 1.2269810509385175,
+      "model": "PAttn",
+      "pred_len": 96,
+      "started_unix": 1785384756.4112473,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.26681870222091675,
+        "mse": 0.1800120621919632
+      },
+      "test_corrected": {
+        "mae": 0.26354488730430603,
+        "mse": 0.17469973862171173
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/weather/FreTS/pl96/seed2021_b476fd973a22",
+      "cell_id": "long_term/weather/FreTS/96",
+      "dataset": "weather",
+      "elapsed_seconds": 16.909988164901733,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 1.3035565825745274,
+        "mse": 2.4892239793923006
+      },
+      "minimum_metric_gain_percent": 1.3035565825745274,
+      "model": "FreTS",
+      "pred_len": 96,
+      "started_unix": 1785385034.680372,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.2386334240436554,
+        "mse": 0.1843351423740387
+      },
+      "test_corrected": {
+        "mae": 0.23552270233631134,
+        "mse": 0.1797466278076172
+      }
+    },
+    {
+      "all_test_metrics_improve": true,
+      "artifact_dir": "ts_rag_outputs/timefuse_matrix_full/long_term/ETTm1/TimeXer/pl96/seed2021_c2419c610eac",
+      "cell_id": "long_term/ETTm1/TimeXer/96",
+      "dataset": "ETTm1",
+      "elapsed_seconds": 34.5941264629364,
+      "method": "historical_residual",
+      "metric_gain_percent": {
+        "mae": 1.3770782425535217,
+        "mse": 3.359307041068626
+      },
+      "minimum_metric_gain_percent": 1.3770782425535217,
+      "model": "TimeXer",
+      "pred_len": 96,
+      "started_unix": 1785384482.9139369,
+      "state": "completed",
+      "task_family": "long_term",
+      "test_baseline": {
+        "mae": 0.3563241958618164,
+        "mse": 0.3178345859050751
+      },
+      "test_corrected": {
+        "mae": 0.35141733288764954,
+        "mse": 0.3071575462818146
+      }
+    }
+  ]
+}

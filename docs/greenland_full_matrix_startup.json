@@ -1,0 +1,82 @@
+{
+  "final_topology_acceptance": "pending uploaded PID and utilization sampler evidence",
+  "initiative_id": "feedml-sp-os",
+  "job_name": "timeraf-full-matrix-a1-b0a00f9b",
+  "job_uuid": "2f07bf09-2949-47c4-9e8c-84faae543c82",
+  "log_group": "/aws/eks/greenland-eks-us-east-1/greenland-feedml-sp-os",
+  "log_stream": "timeraf-full-matrix-a1-b0a00f9b-qnr77wsm6gvc5c-timeraf-0-0",
+  "observed_at": "2026-07-31T06:31:54.685130Z",
+  "progress": {
+    "completed_result_lines": 75,
+    "error_counts": {
+      "Greenland runtime failed": 0,
+      "Traceback": 0,
+      "cell failed": 0
+    },
+    "latest_schedule_at": "2026-07-31T06:30:36.080000Z",
+    "latest_schedule_message": "[83/585] long_term/ETTh2/TimesNet/336 worker_gpu=2",
+    "scheduled_cells": 83
+  },
+  "region": "us-east-1",
+  "schema_version": 1,
+  "startup_topology_gate_passed": true,
+  "submitted_at": "2026-07-31T06:05:27Z",
+  "worker_bindings": [
+    {
+      "cloudwatch_timestamp": "2026-07-31T06:08:27.352000Z",
+      "cuda_visible_devices": 0,
+      "local_gpu": 0,
+      "recorded_at": "2026-07-31T06:08:27Z",
+      "worker_gpu": 0
+    },
+    {
+      "cloudwatch_timestamp": "2026-07-31T06:08:27.353000Z",
+      "cuda_visible_devices": 1,
+      "local_gpu": 0,
+      "recorded_at": "2026-07-31T06:08:27Z",
+      "worker_gpu": 1
+    },
+    {
+      "cloudwatch_timestamp": "2026-07-31T06:08:27.352000Z",
+      "cuda_visible_devices": 2,
+      "local_gpu": 0,
+      "recorded_at": "2026-07-31T06:08:27Z",
+      "worker_gpu": 2
+    },
+    {
+      "cloudwatch_timestamp": "2026-07-31T06:08:27.353000Z",
+      "cuda_visible_devices": 3,
+      "local_gpu": 0,
+      "recorded_at": "2026-07-31T06:08:27Z",
+      "worker_gpu": 3
+    },
+    {
+      "cloudwatch_timestamp": "2026-07-31T06:08:27.355000Z",
+      "cuda_visible_devices": 4,
+      "local_gpu": 0,
+      "recorded_at": "2026-07-31T06:08:27Z",
+      "worker_gpu": 4
+    },
+    {
+      "cloudwatch_timestamp": "2026-07-31T06:08:27.356000Z",
+      "cuda_visible_devices": 5,
+      "local_gpu": 0,
+      "recorded_at": "2026-07-31T06:08:27Z",
+      "worker_gpu": 5
+    },
+    {
+      "cloudwatch_timestamp": "2026-07-31T06:08:27.356000Z",
+      "cuda_visible_devices": 6,
+      "local_gpu": 0,
+      "recorded_at": "2026-07-31T06:08:27Z",
+      "worker_gpu": 6
+    },
+    {
+      "cloudwatch_timestamp": "2026-07-31T06:08:27.356000Z",
+      "cuda_visible_devices": 7,
+      "local_gpu": 0,
+      "recorded_at": "2026-07-31T06:08:27Z",
+      "worker_gpu": 7
+    }
+  ]
+}

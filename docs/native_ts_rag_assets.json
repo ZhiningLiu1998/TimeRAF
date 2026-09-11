@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "recorded_date": "2026-08-29",
+  "source": {
+    "official_dataset_repository": "https://huggingface.co/datasets/nkh/TS-RAG-Data",
+    "official_google_drive_folder": "https://drive.google.com/drive/folders/12wesXfVwFhdrUY5Kv8yuAWWqN9M77irw",
+    "upstream_commit": "73ac807789d2e61b8a3dfc8514e3fc947fe185cc"
+  },
+  "checkpoint_root": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF/operations/native-retrieval-baselines-161c835/ts-rag-assets/checkpoints",
+  "checkpoint_files": [
+    {
+      "path": "base/autogluon_model.pth",
+      "size_bytes": 821295849,
+      "sha256": "878ded9bf59c96bb376dc73e4b4a2ee614e0576a7a89be9164d87320275b94a8"
+    },
+    {
+      "path": "base/config.json",
+      "size_bytes": 1100,
+      "sha256": "d2ff80f29f860f38032f9e37d399b02afa0cb611a46582400748aedb9561db7d"
+    },
+    {
+      "path": "base/model.safetensors",
+      "size_bytes": 792953632,
+      "sha256": "29c749893664538c9b9f81aa84c98b69f07d33333a3d6e09c984b6541470dfc6"
+    },
+    {
+      "path": "chronos-bolt/best.pth",
+      "size_bytes": 840404992,
+      "sha256": "765e858d4d812e9de3c2ff54c2c6b485a9f951ec28e9ca2d22b2150bd6a9efc6"
+    }
+  ],
+  "data_root": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF/operations/native-retrieval-baselines-161c835/ts-rag-assets/data",
+  "data_files": [
+    {
+      "path": "database_512/ETTh1_hour_512.pkl",
+      "size_bytes": 372285549,
+      "sha256": "7fa9cf3d513049e91f8d901ef12a8429690fc8703b7445db335de1c675b0025c"
+    },
+    {
+      "path": "database_512/ETTh2_hour_512.pkl",
+      "size_bytes": 373705905,
+      "sha256": "69e2fa37c8c4071a3413d40c1c65504f523a8b8d9d549944551db907df6bb12c"
+    },
+    {
+      "path": "database_512/ETTm1_minute_512.pkl",
+      "size_bytes": 1528600844,
+      "sha256": "8faf55f7d0829fc4baac17ee0dc9bbba3d41dac5006d1cf430c8cf97220e5d14"
+    },
+    {
+      "path": "database_512/ETTm2_minute_512.pkl",
+      "size_bytes": 1528600844,
+      "sha256": "9f86bcb3fc948ca550382a9aa27ad25a2bc51c3bf97bfacf6e8c2edde62e9236"
+    },
+    {
+      "path": "database_512/electricity_hour_512.pkl",
+      "size_bytes": 26140103187,
+      "sha256": "1a165f0198a256ce8a74066428b82baa47ff07b5f3e0ee87e43c5ccfd1152be8"
+    },
+    {
+      "path": "database_512/exchange_rate_hour_512.pkl",
+      "size_bytes": 177869338,
+      "sha256": "9c89a6676a6f9dc429da75d15d3d1c4de09acb147afab4da99a9ff5b487c530b"
+    },
+    {
+      "path": "database_512/weather_10minutes_512.pkl",
+      "size_bytes": 3459812839,
+      "sha256": "f0f408b6d5b5da657122b93388f642f8eef0855fd311439c8f7269c2e78266f5"
+    },
+    {
+      "path": "datasets_512/ETTh1_retrieve_ETTh1_512_only_self_train_None.csv",
+      "size_bytes": 186471050,
+      "sha256": "667f65c4cf621b3b5910fe845944d92f2e44f1e8e9e19155696779e7d3b08039"
+    },
+    {
+      "path": "datasets_512/ETTh2_retrieve_ETTh2_512_only_self_train_None.csv",
+      "size_bytes": 76467846,
+      "sha256": "f134eaea5c96805eeb5e22e215d11393dabdff3dc68d8e5e7630f97a1fc3afa0"
+    },
+    {
+      "path": "datasets_512/ETTm1_retrieve_ETTm1_512_only_self_train_None.csv",
+      "size_bytes": 322046343,
+      "sha256": "8d2205836abfd4d14468cbb658186cdd86253365e5d28c1859d708b9b89cd69d"
+    },
+    {
+      "path": "datasets_512/ETTm2_retrieve_ETTm2_512_only_self_train_None.csv",
+      "size_bytes": 317999133,
+      "sha256": "7058930aa93bc1e1ca4f4bfd22a0fb31140a6a792ccbfbedf009c3f558693890"
+    },
+    {
+      "path": "datasets_512/electricity_retrieve_electricity_512_only_self_train_None.csv",
+      "size_bytes": 3129641692,
+      "sha256": "8747a760f35198c13649c115af3618643d7b521dfa53cd31bed2c93c7f9cd39c"
+    },
+    {
+      "path": "datasets_512/exchange_rate_retrieve_exchange_rate_512_only_self_train_None.csv",
+      "size_bytes": 21832652,
+      "sha256": "8470518b5fe2beae74431357b6cf00db8581925451e888bf67e11c050f2ba2ab"
+    },
+    {
+      "path": "datasets_512/weather_retrieve_weather_512_only_self_train_None.csv",
+      "size_bytes": 405424457,
+      "sha256": "9449e8b977ef0360b99be7a0c805472f013eef4be2bd9d966274cb17b10a93f5"
+    }
+  ]
+}

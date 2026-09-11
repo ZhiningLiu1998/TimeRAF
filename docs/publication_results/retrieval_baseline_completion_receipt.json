@@ -1,0 +1,79 @@
+{
+  "artifacts": {
+    "../../../operations/full-horizon-retrieval-cc80cabd363ac136c5d2e9284529e912b601544e/materialization_receipt.json": {
+      "path": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF/operations/full-horizon-retrieval-cc80cabd363ac136c5d2e9284529e912b601544e/source/../materialization_receipt.json",
+      "sha256": "e255387e267154bf6f1cb14b5e5e749eb88febac831cd0b041e261201eb50f00",
+      "size_bytes": 1115
+    },
+    "../../../operations/full-horizon-retrieval-cc80cabd363ac136c5d2e9284529e912b601544e/source/docs/retrieval_baseline_horizon_compatibility_recovery.json": {
+      "path": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF/operations/full-horizon-retrieval-cc80cabd363ac136c5d2e9284529e912b601544e/source/docs/retrieval_baseline_horizon_compatibility_recovery.json",
+      "sha256": "241c55b825a4022d603ac697cef1e93fe5bb178b3118dc5e5f2043b4513d9d6b",
+      "size_bytes": 1672
+    },
+    "../../../operations/full-horizon-retrieval-cc80cabd363ac136c5d2e9284529e912b601544e/source/docs/retrieval_baseline_protocol.json": {
+      "path": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF/operations/full-horizon-retrieval-cc80cabd363ac136c5d2e9284529e912b601544e/source/docs/retrieval_baseline_protocol.json",
+      "sha256": "2d3a9a6c66ae80808c0d734d48996341cb2d1fcb123cf04e81ab8dc1713a0bc6",
+      "size_bytes": 9373
+    },
+    "../../../operations/full-horizon-retrieval-cc80cabd363ac136c5d2e9284529e912b601544e/source/docs/timefuse_experiment_manifest.jsonl": {
+      "path": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF/operations/full-horizon-retrieval-cc80cabd363ac136c5d2e9284529e912b601544e/source/docs/timefuse_experiment_manifest.jsonl",
+      "sha256": "45830d23f3b017c15d3680c88f837f84a9441eef9a6ceaaa5370c14872660c2a",
+      "size_bytes": 1228556
+    },
+    "../../../operations/full-horizon-retrieval-cc80cabd363ac136c5d2e9284529e912b601544e/source/docs/timefuse_full_horizon_checkpoint_catalog.json": {
+      "path": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF/operations/full-horizon-retrieval-cc80cabd363ac136c5d2e9284529e912b601544e/source/docs/timefuse_full_horizon_checkpoint_catalog.json",
+      "sha256": "6efef0f47ce0600745a36d1d91b4f0993a2f4bf3f69876b1ecbff8e7f5a890d5",
+      "size_bytes": 452426
+    },
+    "checkpoint_replay/matrix_summary.json": {
+      "path": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF/outputs/full_horizon_retrieval/e97746ed847f25d1f11f47242bc04db2b48b83ef/checkpoint_replay/matrix_summary.json",
+      "sha256": "4c26b24e1ad68d810aca4c981edf840a477edb02c281aaac6ea8faba60ca5988",
+      "size_bytes": 897737
+    },
+    "checkpoint_replay/run_metadata.json": {
+      "path": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF/outputs/full_horizon_retrieval/e97746ed847f25d1f11f47242bc04db2b48b83ef/checkpoint_replay/run_metadata.json",
+      "sha256": "dd2b66fc37dcfd9807b8d0d716d74dae9926bd9d081d81b2e7afa8d28f7ff3f5",
+      "size_bytes": 2706
+    },
+    "checkpoint_replay/startup_topology.json": {
+      "path": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF/outputs/full_horizon_retrieval/e97746ed847f25d1f11f47242bc04db2b48b83ef/checkpoint_replay/startup_topology.json",
+      "sha256": "fba77c1226174f23de6efc3292594bed9c9a8003500e56eaddbef04493a4b700",
+      "size_bytes": 1169
+    },
+    "prediction_bundle_catalog.json": {
+      "path": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF/outputs/full_horizon_retrieval/e97746ed847f25d1f11f47242bc04db2b48b83ef/prediction_bundle_catalog.json",
+      "sha256": "cd92b7e1a35341c3175a8e8c3468c41cc79cf0c9e508c5a39d0cdaa3255de1b8",
+      "size_bytes": 593245
+    },
+    "recovery/horizon_compatibility/initial_failure_receipt.json": {
+      "path": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF/outputs/full_horizon_retrieval/e97746ed847f25d1f11f47242bc04db2b48b83ef/recovery/horizon_compatibility/initial_failure_receipt.json",
+      "sha256": "29625895353f28e42a32797750a2312631ee93fa954bb4d5adb38032609b8889",
+      "size_bytes": 1026
+    },
+    "retrieval_matrix/matrix_summary.json": {
+      "path": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF/outputs/full_horizon_retrieval/e97746ed847f25d1f11f47242bc04db2b48b83ef/retrieval_matrix/matrix_summary.json",
+      "sha256": "a9cdf53dc50ad7b3200da49c8e9bc16db8dd48af41b3fed33513033449c44c2a",
+      "size_bytes": 40539911
+    },
+    "retrieval_matrix/run_metadata.json": {
+      "path": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF/outputs/full_horizon_retrieval/e97746ed847f25d1f11f47242bc04db2b48b83ef/retrieval_matrix/run_metadata.json",
+      "sha256": "7f706b740c169c87c09c4b99c6f6485489686be42c6c88316cbce3351f229a6d",
+      "size_bytes": 3058
+    },
+    "retrieval_matrix/startup_topology.json": {
+      "path": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF/outputs/full_horizon_retrieval/e97746ed847f25d1f11f47242bc04db2b48b83ef/retrieval_matrix/startup_topology.json",
+      "sha256": "52932fe155d7bde489d2f8d88832e8a2eb044b8960ad24cb8b59f5441249b932",
+      "size_bytes": 1184
+    }
+  },
+  "compatibility_recovery_cells": 153,
+  "expected_cells": 585,
+  "initial_launcher_revision": "e97746ed847f25d1f11f47242bc04db2b48b83ef",
+  "launcher_revision": "cc80cabd363ac136c5d2e9284529e912b601544e",
+  "recorded_unix": 1788229583.227353,
+  "retained_completed_cells": 432,
+  "schema_version": 2,
+  "selection_uses_metric_quality": false,
+  "source_revision": "e97746ed847f25d1f11f47242bc04db2b48b83ef",
+  "status": "completed"
+}

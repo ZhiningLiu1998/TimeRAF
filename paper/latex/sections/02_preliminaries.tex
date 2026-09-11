@@ -1,0 +1,35 @@
+\section{Preliminaries}
+\label{sec:prelim}
+
+\paragraph{Notation.}
+For multivariate forecasting with $d$ variables, the task at origin $t$ is to
+predict the next $H$ steps from the most recent $L$ observations. Let
+$\xctx_t\in\R^{L\times d}$ be the observed context, $\ytrue_t\in\R^{H\times d}$
+its realized future, and $f:\R^{L\times d}\to\R^{H\times d}$ a forecaster with
+prediction $\ybase_t=f(\xctx_t)$. We treat $f$ as \emph{frozen}: it has been
+trained and deployed, and we may query it but never update it. The quantity this
+work centres on is the \emph{model-relative residual}
+$\resid_t = \ytrue_t - \ybase_t$, which is defined jointly by the data and by
+the particular forecaster, and which becomes observable only after the whole
+target window has elapsed. A retrieval-augmented forecaster additionally has a memory $\mathcal{M}_t$ of
+past items and emits a revised forecast $\ycorr_t$; methods differ in whether
+those items hold prior contexts with the futures that followed, or, as we
+propose, the same forecaster's prior residuals. Throughout, \emph{causal} means
+free of lookahead: since $\resid_i$ needs the complete future at origin $i$, an
+item may enter $\mathcal{M}_t$ only if $i+H<t$.
+
+\begin{problem}[Retrieval-augmented revision of a frozen forecast]
+\label{prob:main}
+Given a frozen forecaster $f$, a query context $\xctx_t$ with base forecast
+$\ybase_t=f(\xctx_t)$, and a memory $\mathcal{M}_t$ restricted to items whose
+targets were fully observed before $t$, construct an additive correction $c_t$
+so that $\ycorr_t=\ybase_t+c_t$ is more accurate than $\ybase_t$ with respect to
+$\ytrue_t$, without updating $f$ and without observing any part of $\ytrue_t$.
+\end{problem}
+
+Problem~\ref{prob:main} isolates the question of
+Section~\ref{sec:introduction}: the base forecast, the data, and the information
+boundary are fixed, so any accuracy difference is attributable to what
+$\mathcal{M}_t$ stores and how it is used. Section~\ref{sec:method} presents
+\method{}, and Section~\ref{sec:experiments} instantiates several choices of
+$\mathcal{M}_t$ under one protocol.

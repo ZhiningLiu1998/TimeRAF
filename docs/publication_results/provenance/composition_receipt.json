@@ -1,0 +1,97 @@
+{
+  "affected_cell_ids": [
+    "epf/BE/Nonstationary_Transformer/24",
+    "epf/FR/Nonstationary_Transformer/24",
+    "epf/NP/Nonstationary_Transformer/24",
+    "long_term/electricity/Nonstationary_Transformer/192",
+    "long_term/electricity/Nonstationary_Transformer/336",
+    "long_term/electricity/Nonstationary_Transformer/720",
+    "long_term/electricity/Nonstationary_Transformer/96"
+  ],
+  "cohort_id": "nonstationary-transformer-numerical-recovery-v1",
+  "exact_selected_count": 5,
+  "fallback_selected_count": 2,
+  "inputs": {
+    "a100_exact": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/greenland_recovery_runs/numerical-recovery-exact-7269114-20260802/recomputed_matrix_summary.json",
+      "sha256": "330c4079abc5d8bbafabd674a91676cf30ab9db117d964f0a5b663b2b2acf223"
+    },
+    "a100_fallback": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/greenland_recovery_runs/numerical-recovery-fallback-7269114-20260802/recomputed_matrix_summary.json",
+      "sha256": "1eae6a737387aadaf970b1bd371801531363761fc2eadc3bf18e1c2e9f07197c"
+    },
+    "a100_primary": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/greenland_runs/full-matrix-a100-9974eac-20260731/recomputed_matrix_summary.json",
+      "sha256": "f1c3c289c841dbab620f21d8276d02661761aa377f909aa212be54ef28ea309a"
+    },
+    "a10g_exact": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/a10g/1f7055e7bcd942f1282d1f1a13daab5bfe08712e/exact/matrix_summary.json",
+      "sha256": "0fbe13de4fe5155e257984cf028c365a14b7030dcf43b9317d3eeba19b050633"
+    },
+    "a10g_fallback": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/a10g/1f7055e7bcd942f1282d1f1a13daab5bfe08712e/fallback-v1/matrix_summary.json",
+      "sha256": "8608b8c998d71644b88e57361463aa561f0ee6dddff8183348250dbc57fc3dfe"
+    },
+    "a10g_primary": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/a10g_primary_authoritative.json",
+      "sha256": "933e95aff6988440c743e9d225ec2c95c3b99714ae7c698ff2ce217bba1aa708"
+    }
+  },
+  "method_revision": "d9be338",
+  "outputs": {
+    "a100": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/a100_composed_summary.json",
+      "sha256": "924d5e851f7f940d6ef7b7d3503c5281f1d744a41320254b36950f40684952de"
+    },
+    "a10g": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/finalized/616c83f74c4a9f2f8fe38f0b625e927f415aaff5/a10g_composed_summary.json",
+      "sha256": "ab4f25cf8fb54fcec2091958db62852aae2df700d6919408dcc253cff69a2cdd"
+    }
+  },
+  "protocol_sha256": "1320f3eca815a93a6500caadbf7e526610379b2af5f6976f1db94f91ed259d14",
+  "provenance": {
+    "a100": {
+      "launcher_revision": "726911409c38f8868ee27de25ae36129cba39577",
+      "recovery_revision": "726911409c38f8868ee27de25ae36129cba39577",
+      "run_ids": {
+        "exact": "numerical-recovery-exact-7269114-20260802",
+        "fallback-v1": "numerical-recovery-fallback-7269114-20260802"
+      },
+      "source_revision": "726911409c38f8868ee27de25ae36129cba39577"
+    },
+    "a10g": {
+      "parent_run_id": "a10g-primary-d9be338",
+      "recovery_revision": "1f7055e7bcd942f1282d1f1a13daab5bfe08712e"
+    },
+    "cross_hardware_recovery_revision_match_required": false,
+    "inputs": {
+      "a100_exact_receipt": {
+        "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/greenland_recovery_runs/numerical-recovery-exact-7269114-20260802/fetch_receipt.json",
+        "sha256": "123a86e0290e8beacc0d761816b72626731fa86cbf5f5fc9d0029c5256f4e424"
+      },
+      "a100_fallback_receipt": {
+        "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/greenland_recovery_runs/numerical-recovery-fallback-7269114-20260802/fetch_receipt.json",
+        "sha256": "6e561a6002d093a206a95f08efbb6c25b2ff72c245b4500c9f4ebd32cf38deac"
+      },
+      "a10g_exact_metadata": {
+        "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/a10g/1f7055e7bcd942f1282d1f1a13daab5bfe08712e/exact/recovery_metadata.json",
+        "sha256": "640ef4511e012a32b70c290d1fc533fe45b68a203e3b54ee18877fda4eb89706"
+      },
+      "a10g_fallback_metadata": {
+        "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/numerical_recovery/a10g/1f7055e7bcd942f1282d1f1a13daab5bfe08712e/fallback-v1/recovery_metadata.json",
+        "sha256": "a9c5ddf44f8fd64ef2d5bf992bf6f216b40357afc2158ea899d8423eef8ab1c9"
+      }
+    }
+  },
+  "schema_version": 1,
+  "selected_profiles": {
+    "epf/BE/Nonstationary_Transformer/24": "exact",
+    "epf/FR/Nonstationary_Transformer/24": "exact",
+    "epf/NP/Nonstationary_Transformer/24": "exact",
+    "long_term/electricity/Nonstationary_Transformer/192": "fallback-v1",
+    "long_term/electricity/Nonstationary_Transformer/336": "fallback-v1",
+    "long_term/electricity/Nonstationary_Transformer/720": "exact",
+    "long_term/electricity/Nonstationary_Transformer/96": "exact"
+  },
+  "selection_uses_metric_quality": false
+}

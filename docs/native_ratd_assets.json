@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "recorded_date": "2026-08-29",
+  "asset_root": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF/operations/native-retrieval-baselines-161c835",
+  "upstream_commit": "719e4008f72e89544a621d97b5d1a69164fc14d3",
+  "tcn_dependency": {
+    "repository": "https://github.com/locuslab/TCN",
+    "commit": "2f8c2b817050206397458dfd1f5a25ce8a32fe65",
+    "reason": "The serialized encoder names TCN.word_cnn.model.TCN and TCN.tcn, but RATD omits those two source files."
+  },
+  "data_recovery": {
+    "source": "https://archive.ics.uci.edu/static/public/321/electricityloaddiagrams20112014.zip",
+    "preprocessing": "The official TS2Vec preprocess_electricity.py recipe: hourly right-closed sum, remove columns whose cumulative load is zero at row 8920, retain 2012 onward.",
+    "released_csv_complete_rows": 228,
+    "released_csv_final_partial_row": true,
+    "reconstructed_rows": 26304,
+    "columns": 321,
+    "complete_released_prefix_exact_match": true
+  },
+  "files": [
+    {
+      "path": "ratd-assets/raw/electricityloaddiagrams20112014.zip",
+      "size_bytes": 261335609,
+      "sha256": "f6c4d0e0df12ecdb9ea008dd6eef3518adb52c559d04a9bac2e1b81dcfc8d4e1"
+    },
+    {
+      "path": "ratd-assets/data/electricity.csv",
+      "size_bytes": 146637813,
+      "sha256": "ec7acb0cea28bc37123e3931cecf78f9c30c25ad2ad2cd828eb8090ec54f1187"
+    },
+    {
+      "path": "upstream/ratd/data/ts2vec/electricity.csv",
+      "size_bytes": 1277952,
+      "sha256": "3ad8e440fe058de0b58eb28dde395dfe68cc81022e234a26cb65ddc9723ad207"
+    },
+    {
+      "path": "upstream/ratd/TCN-master/training/electricity__test1_20240421_163624/model.pt",
+      "size_bytes": 18927411,
+      "sha256": "f4950e556b66735bb024f87007aab2ad6c613c4bb09ec50f154cfa5d003d8ee1"
+    },
+    {
+      "path": "upstream/ratd/config/base_forecasting.yaml",
+      "size_bytes": 399,
+      "sha256": "17035a3520adfd2492a057457a94ec70d1cbde5bfdedb7b64685c9c2ad460621"
+    }
+  ]
+}

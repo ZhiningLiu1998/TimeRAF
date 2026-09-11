@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "recorded_date": "2026-08-29",
+  "protocol_path": "docs/native_retrieval_baseline_protocol.json",
+  "protocol_sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+  "reason": "User-directed execution of every publication baseline result on P5 rather than the A10G debug space.",
+  "platform": {
+    "service": "SageMaker Studio",
+    "region": "us-east-1",
+    "domain_id": "<SAGEMAKER_DOMAIN_ID>",
+    "space_name": "<P5_SPACE>",
+    "instance_type": "ml.p5.48xlarge",
+    "accelerators": "8 x NVIDIA H100",
+    "reserved_gpus_per_host": 8,
+    "project_root": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF"
+  },
+  "runs": {
+    "raf": {
+      "processes_per_host": 6,
+      "worker_gpu_ids": [2, 3, 4, 5, 6, 7],
+      "co_located_gpu_ids": [0, 1],
+      "co_located_reason": "RATD and CSDI use GPU 0 and GPU 1 while the remaining RAF cells run on GPU 2 through GPU 7.",
+      "resume_completed_pairs": 24,
+      "expected_pairs": 44,
+      "output_root": "outputs/native_retrieval_baselines/bc61224/raf-composite-p5",
+      "method_source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+      "upstream_commit": "425e2af35797d0d32b63cfc554c7d97b3c54b390",
+      "summary_sha256": "64adfdd011afa535f7ba982d1c342d33246f60af4f08fe82b6610a14d1072a46",
+      "topology_sha256": "45fd972b3a9720b75383f2bd0b1d57ded4562fd67e2e60772141c024890e1791",
+      "composite_summary_sha256": "64adfdd011afa535f7ba982d1c342d33246f60af4f08fe82b6610a14d1072a46",
+      "composite_receipt_sha256": "72c9df7b3458e35cdfd6316356901a7c12424acd02077dab63f47f867cfde24b",
+      "attempts": [
+        {
+          "attempt_id": "raf-full-p5-attempt-a",
+          "status": "interrupted",
+          "output_root": "outputs/native_retrieval_baselines/161c835/raf-full-p5",
+          "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+          "accepted_pairs": 24,
+          "summary_sha256": "d69fdd4a4ab01edcf835528f5e1db067abbc08ff225d1c456decc692e7479f7e",
+          "topology_sha256": "3e2d42820343b759ab7c10a160c06deccb1d51ee1488e0714174fb5cad35e9e3",
+          "result_inventory_path": "outputs/native_retrieval_baselines/161c835/raf-full-p5/attempt-a-result-sha256.txt",
+          "result_inventory_sha256": "968f10bc9a29a528752e931f7c7f4daeb01d741fb17e9edbf28d31d465e2a777"
+        },
+        {
+          "attempt_id": "raf-full-p5-attempt-b",
+          "status": "completed",
+          "output_root": "outputs/native_retrieval_baselines/bc61224/raf-full-p5-attempt-b",
+          "launcher_revision": "bc612248ff7f031d34152602f0ebd9e664ee9de5",
+          "accepted_pairs": 20,
+          "summary_sha256": "83fdc3f6ec26b50c46e7093d885aee243ef957bf5f9371c5e8f908df7bb53dc0",
+          "topology_sha256": "45fd972b3a9720b75383f2bd0b1d57ded4562fd67e2e60772141c024890e1791",
+          "cell_manifest_path": "operations/native-retrieval-baselines-bc61224/raf-attempt-b-cell-ids.json",
+          "cell_manifest_sha256": "a13baf4221a5afaa384484ee8cd239f8245556d95d63e1b661aa95799a13ef49"
+        }
+      ]
+    },
+    "ts_rag": {
+      "processes_per_host": 7,
+      "worker_gpu_ids": [0, 1, 2, 3, 4, 5, 6],
+      "inactive_reserved_gpus": 1,
+      "inactive_reason": "The frozen TS-RAG matrix has seven independent dataset cells.",
+      "expected_pairs": 7,
+      "output_root": "outputs/native_retrieval_baselines/0326182/ts-rag-full-p5",
+      "method_source_revision": "032618246e2f774c80a1883715c14e81ee4b3ce0",
+      "upstream_commit": "73ac807789d2e61b8a3dfc8514e3fc947fe185cc",
+      "summary_sha256": "1ad4ba73200bf164a3b50f8e71c8cb4dda107c14cacf5250d79ef1c92026f5be",
+      "topology_sha256": "b4f5dd40b88793785c967fff0121032ce3b611b5c87ebc3b6699a176c7845def",
+      "asset_verification_sha256": "567058abfe1df014e0653694aa0f506dcbc0b8fc0e2d62ec1c975834d443f9e8"
+    },
+    "ratd": {
+      "processes_per_host": 2,
+      "worker_gpu_ids": [0, 1],
+      "inactive_reserved_gpus": 6,
+      "inactive_reason": "The paired experiment has exactly two independently trained systems: RATD and CSDI.",
+      "expected_pairs": 1,
+      "output_root": "outputs/native_retrieval_baselines/d614258/ratd-full-p5",
+      "sharded_output_root": "outputs/native_retrieval_baselines/813cbcc/ratd-sharded-eval-p5",
+      "method_source_revision": "d614258b6e5fd4ca71c4d814ab2fe10e2503399d",
+      "launcher_revision": "813cbcc0b4d962f5ddeeafe30a0f687eb82e1245",
+      "lifecycle_revision": "aa7c35d20b79e647e65ee2e4da0fb62296f47feb",
+      "upstream_commit": "719e4008f72e89544a621d97b5d1a69164fc14d3",
+      "summary_sha256": "82fd74eab75aa0535ad46d54f3324f2dac87667d3b31d4539760b74d14bbb133",
+      "topology_sha256": "6bc33f6e44e2c57737512a540fa6e0788adf2aba86fd402a4e0ebb7efa60abea",
+      "training_topology_sha256": "63952be968a740b651f381a0f401abcf9215b6d75a7fa2b66ae06736fcec8d3a",
+      "finalizer_receipt_sha256": "2dc39217ec155daf98c876648f42881ffbba0c25d1d45f13d1d302dbdd20deaa",
+      "equivalence_verifications": {
+        "ratd": {
+          "path": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF/operations/native-ratd-sharded-813cbcc/equivalence-final/ratd.json",
+          "sha256": "7f7068027241fa1f0e4e36c0d0b49cf9fa4f781eba1dab89b2d0720067bec938"
+        },
+        "csdi": {
+          "path": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF/operations/native-ratd-sharded-813cbcc/equivalence-final/csdi.json",
+          "sha256": "b1c562f0daf45d74d8048a15d987965cca9b0ded685469c6a9ea6f91e6b63057"
+        }
+      },
+      "artifacts": {
+        "ratd_result_sha256": "2739484ed0127b3942729d4ba9ca26734db1431b277f1ecd552ae605f805b4fc",
+        "ratd_receipt_sha256": "e212d00fcfb6ae9740ed7f860014ffaf665e0a3d80b8e0921214ce3b8f1476fe",
+        "ratd_topology_sha256": "9055347c847eade4355bb6f70ed013d9f12fa1bb380e51eed76839318025eb7a",
+        "csdi_result_sha256": "5b53c92d9d7482bc9db5d04dfd6adddb54b91c98caa33a35d8cdf6166308df70",
+        "csdi_receipt_sha256": "bd74595df3660547a59b97e085d7c570f15f489fdda5b97c674e4b301f728c0c",
+        "csdi_topology_sha256": "5ca2b79c7b021f5571cf4df60a3eb0c4d1fc4234a0d0ae3bb2a40d29f3962588",
+        "reference_metadata_sha256": "09f6a3da46161340e0f7f0c1935f2b3692b5c78ecd98208b9a3df004b690320d",
+        "reference_map_sha256": "598dc4d16077d0ac2d32a032b92aaf3c07360aa52345562774d8d5a9a33b322a"
+      }
+    }
+  },
+  "method_protocol_changes": [],
+  "ratd_released_split_evidence": {
+    "upstream_file": "dataset_forecasting.py",
+    "behavior": "Dataset_Electricity.__getitem__ uses the integer index directly and __len__ enumerates every valid window.",
+    "expected_origin_counts": {
+      "train": 17886,
+      "validation": 2463,
+      "test": 5093
+    }
+  },
+  "invalidated_runs": [
+    {
+      "method": "ratd",
+      "source_revision": "032618246e2f774c80a1883715c14e81ee4b3ce0",
+      "output_root": "outputs/native_retrieval_baselines/0326182/ratd-full-p5",
+      "reason": "The local runner used horizon-stride validation and test origins instead of the released stride-one Dataset_Electricity enumeration.",
+      "stopped_before_first_epoch": true
+    },
+    {
+      "method": "raf",
+      "source_revision": "161c8350103d9c9d269c056049dc41aa164722c9",
+      "launcher_revision": "6b76dcb4d874a4587bfc85eb9ec102c1a25c990c",
+      "output_root": "outputs/native_retrieval_baselines/161c835/raf-full",
+      "reason": "This path retained 12 A10G results while resuming the missing cells on P5. It is preserved for audit but is not an all-P5 publication run.",
+      "completed_pairs": 12,
+      "publication_eligible": false
+    }
+  ],
+  "migrations": [
+    {
+      "method": "raf",
+      "from": "<DEV_SPACE> / ml.g5.12xlarge / GPU 0-3",
+      "to": "<P5_SPACE> / ml.p5.48xlarge / GPU 2-7",
+      "reason": "The first 12 pairs were complete, while four monash_traffic cells made no further completion progress after more than 77 minutes on A10G. The P5 run resumes only missing pairs and leaves RATD/CSDI on GPU 0-1.",
+      "completed_pairs_reused": 12,
+      "publication_eligible": false
+    },
+    {
+      "method": "raf",
+      "from": "mixed A10G/P5 audit run",
+      "to": "<P5_SPACE> / ml.p5.48xlarge / GPU 2-7",
+      "reason": "A fresh output root started all 44 configurations so every accepted RAF result has P5 runtime provenance.",
+      "completed_pairs_reused": 0,
+      "publication_eligible": true
+    },
+    {
+      "method": "raf",
+      "from": "query-major P5 attempt",
+      "to": "candidate-major P5 completion attempt",
+      "reason": "The first attempt completed 24 cells but recomputed identical candidate embeddings for every query batch in four Weather cells. The completion attempt preserves candidate batches, embeddings, distances, top-1 selection, seeds, and prediction order while scanning each candidate batch once across all query batches. Unit tests and a completed Tourism cell produced identical paired metrics.",
+      "completed_pairs_reused": 24,
+      "publication_eligible": true
+    }
+  ],
+  "required_startup_checks": [
+    "nvidia-smi reports eight H100 GPUs",
+    "each worker sees exactly one GPU and uses local cuda:0",
+    "each active worker maps to a distinct physical GPU",
+    "source revision, protocol hash, assets, and output root are recorded"
+  ]
+}

@@ -1,0 +1,55 @@
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\caption{Absolute EPF errors for static ensembles at horizon 24. Each entry is base$\rightarrow$\method{}; bold marks a lower corrected error for that metric. OOT denotes an AutoGluon run that exceeded the fixed evaluation-time budget.}
+\label{tab:strong-epf-absolute-ensembles}
+\begin{tabular}{llrrr}
+\toprule
+Dataset & Metric & \shortstack{Forward\\Selection} & \shortstack{Portfolio\\Ensemble} & \shortstack{ZeroShot\\Ensemble}\\
+\midrule
+\multirow{2}{*}{NP} & MSE & 0.2212$\rightarrow$0.2230 & 0.2188$\rightarrow$0.2203 & 0.2251$\rightarrow$0.2274\\
+ & MAE & 0.2616$\rightarrow$\textbf{0.2610} & 0.2578$\rightarrow$\textbf{0.2572} & 0.2563$\rightarrow$0.2572\\
+\addlinespace[1pt]
+\multirow{2}{*}{PJM} & MSE & 0.0808$\rightarrow$\textbf{0.0803} & 0.0821$\rightarrow$\textbf{0.0815} & 0.0835$\rightarrow$\textbf{0.0829}\\
+ & MAE & 0.1780$\rightarrow$\textbf{0.1774} & 0.1799$\rightarrow$\textbf{0.1791} & 0.1809$\rightarrow$\textbf{0.1802}\\
+\addlinespace[1pt]
+\multirow{2}{*}{BE} & MSE & 0.3709$\rightarrow$\textbf{0.3669} & 0.3804$\rightarrow$\textbf{0.3713} & 0.3722$\rightarrow$\textbf{0.3682}\\
+ & MAE & 0.2369$\rightarrow$\textbf{0.2360} & 0.2446$\rightarrow$\textbf{0.2424} & 0.2412$\rightarrow$\textbf{0.2400}\\
+\addlinespace[1pt]
+\multirow{2}{*}{FR} & MSE & 0.3587$\rightarrow$\textbf{0.3585} & 0.3889$\rightarrow$\textbf{0.3881} & 0.3686$\rightarrow$\textbf{0.3674}\\
+ & MAE & 0.1979$\rightarrow$\textbf{0.1970} & 0.2153$\rightarrow$\textbf{0.2142} & 0.1951$\rightarrow$\textbf{0.1933}\\
+\addlinespace[1pt]
+\multirow{2}{*}{DE} & MSE & 0.4231$\rightarrow$\textbf{0.4227} & 0.4263$\rightarrow$\textbf{0.4240} & 0.4234$\rightarrow$\textbf{0.4225}\\
+ & MAE & 0.4067$\rightarrow$\textbf{0.4045} & 0.4069$\rightarrow$\textbf{0.4043} & 0.4052$\rightarrow$\textbf{0.4033}\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\caption{Absolute EPF errors for AutoML and foundation models at horizon 24. Each entry is base$\rightarrow$\method{}; bold marks a lower corrected error for that metric. OOT denotes an AutoGluon run that exceeded the fixed evaluation-time budget.}
+\label{tab:strong-epf-absolute-external}
+\begin{tabular}{llrrr}
+\toprule
+Dataset & Metric & \shortstack{AutoGluon\\HQ} & \shortstack{Chronos-Bolt\\FT} & \shortstack{Chronos-Bolt\\ZS}\\
+\midrule
+\multirow{2}{*}{NP} & MSE & 0.5273$\rightarrow$\textbf{0.4171} & 0.2442$\rightarrow$\textbf{0.2413} & 0.2463$\rightarrow$\textbf{0.2427}\\
+ & MAE & 0.4464$\rightarrow$\textbf{0.3686} & 0.2618$\rightarrow$\textbf{0.2596} & 0.2646$\rightarrow$\textbf{0.2633}\\
+\addlinespace[1pt]
+\multirow{2}{*}{PJM} & MSE & 0.1500$\rightarrow$\textbf{0.0996} & 0.0788$\rightarrow$\textbf{0.0764} & 0.0815$\rightarrow$\textbf{0.0798}\\
+ & MAE & 0.2606$\rightarrow$\textbf{0.2081} & 0.1727$\rightarrow$\textbf{0.1713} & 0.1776$\rightarrow$\textbf{0.1766}\\
+\addlinespace[1pt]
+\multirow{2}{*}{BE} & MSE & 0.4619$\rightarrow$0.4897 & 0.3503$\rightarrow$0.3511 & 0.3562$\rightarrow$\textbf{0.3550}\\
+ & MAE & 0.3311$\rightarrow$\textbf{0.3259} & 0.2361$\rightarrow$\textbf{0.2353} & 0.2394$\rightarrow$\textbf{0.2386}\\
+\addlinespace[1pt]
+\multirow{2}{*}{FR} & MSE & 0.4327$\rightarrow$\textbf{0.4123} & 0.3573$\rightarrow$\textbf{0.3572} & 0.3572$\rightarrow$\textbf{0.3548}\\
+ & MAE & 0.2565$\rightarrow$\textbf{0.2211} & 0.1866$\rightarrow$\textbf{0.1861} & 0.1911$\rightarrow$\textbf{0.1879}\\
+\addlinespace[1pt]
+\multirow{2}{*}{DE} & MSE & 0.6027$\rightarrow$\textbf{0.5363} & 0.4519$\rightarrow$0.4532 & 0.4943$\rightarrow$\textbf{0.4567}\\
+ & MAE & 0.5046$\rightarrow$\textbf{0.4586} & 0.4228$\rightarrow$0.4272 & 0.4416$\rightarrow$\textbf{0.4237}\\
+\bottomrule
+\end{tabular}
+\end{table*}

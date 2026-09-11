@@ -1,0 +1,339 @@
+{
+  "schema_version": 1,
+  "run_id": "appendix-v3-43fc362-20260804",
+  "generated_utc": "2026-08-04T18:06:53Z",
+  "artifact_root": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF",
+  "source_revision": "4e7c31bdbe9ed3c8cd5ac852b9048ffb5df7d366",
+  "method_revision": "052fcb407f155fe6bf29bc4d214f7ac5a56936ee",
+  "launcher_revision": "43fc3625b57ab9844b4b939636b8c0bace984fee",
+  "controller_materialization": {
+    "branch_created": false,
+    "git_refs": [],
+    "source_bundle": {
+      "path": "operations/appendix-v3-43fc362/source.bundle",
+      "size_bytes": 82905156,
+      "sha256": "6c7238e4505997df14afcb737b7943a9e04abde322f0c968ca863a6de4c0e806"
+    }
+  },
+  "artifacts": {
+    "bundle_catalog": {
+      "path": "outputs/timefuse_appendix_bundles/4e7c31bdbe9e/appendix_bundle_catalog.json",
+      "size_bytes": 69601,
+      "sha256": "46a668223d984750481614a705c42f298abeb3d8ca3fc72a2018286efb2d8838"
+    },
+    "appendix_summary": {
+      "path": "outputs/timefuse_appendix_rag/052fcb407f15/appendix_summary.json",
+      "size_bytes": 130097,
+      "sha256": "e070233b7719277674f2cfc6a890da9396207cc699b7234420fda7a8f3c78098"
+    },
+    "publication_audit": {
+      "path": "operations/appendix-v3-43fc362/publication_audit.json",
+      "size_bytes": 6563,
+      "sha256": "dcabf0b3bbabce114fcc9d48df5695ee45b352f1ccf87f148e7c2eed5cecc0e7"
+    },
+    "launch_command": {
+      "path": "operations/appendix-v3-43fc362/launch_command.txt",
+      "sha256": "98a3f31f17e3bfd923f94965129fe2c6467012927bd3101ce1ef1d06a4c5b4c9"
+    },
+    "audit_command": {
+      "path": "operations/appendix-v3-43fc362/audit_command.txt",
+      "sha256": "51c76d7168b7f3aeccf9f1bfb08509ba819635e9adaeccb213521fd8349b261c"
+    },
+    "runner_log": {
+      "path": "operations/appendix-v3-43fc362/runner.log",
+      "sha256": "ac78513bc8bd0a348692185ad86940aab1f5581225d2732119aec5d6db985d0f"
+    },
+    "audit_log": {
+      "path": "operations/appendix-v3-43fc362/audit.log",
+      "sha256": "7bb853ddf3c3a77f6e0a3ff10c5ebe17c51227b62a95de0aa39eb4d7b63d91e6"
+    }
+  },
+  "matrix": {
+    "counts": {
+      "completed": 94,
+      "evaluable": 94,
+      "failed": 0,
+      "improved": 81,
+      "incomplete": 0,
+      "not_improved": 13,
+      "paper_oot": 2,
+      "pending": 0,
+      "reported": 96,
+      "running": 0
+    },
+    "publication_gate": {
+      "baselines": {
+        "autogluon_high_quality": {
+          "completed": 14,
+          "evaluable": 14,
+          "failed": 0,
+          "improved": 13,
+          "improvement_rate": 0.9285714285714286,
+          "incomplete": 0,
+          "not_improved": 1,
+          "paper_oot": 2,
+          "pending": 0,
+          "reported": 16,
+          "running": 0
+        },
+        "chronos_bolt_finetuned": {
+          "completed": 16,
+          "evaluable": 16,
+          "failed": 0,
+          "improved": 14,
+          "improvement_rate": 0.875,
+          "incomplete": 0,
+          "not_improved": 2,
+          "paper_oot": 0,
+          "pending": 0,
+          "reported": 16,
+          "running": 0
+        },
+        "chronos_bolt_zeroshot": {
+          "completed": 16,
+          "evaluable": 16,
+          "failed": 0,
+          "improved": 16,
+          "improvement_rate": 1.0,
+          "incomplete": 0,
+          "not_improved": 0,
+          "paper_oot": 0,
+          "pending": 0,
+          "reported": 16,
+          "running": 0
+        },
+        "forward_selection": {
+          "completed": 16,
+          "evaluable": 16,
+          "failed": 0,
+          "improved": 13,
+          "improvement_rate": 0.8125,
+          "incomplete": 0,
+          "not_improved": 3,
+          "paper_oot": 0,
+          "pending": 0,
+          "reported": 16,
+          "running": 0
+        },
+        "portfolio_ensemble": {
+          "completed": 16,
+          "evaluable": 16,
+          "failed": 0,
+          "improved": 12,
+          "improvement_rate": 0.75,
+          "incomplete": 0,
+          "not_improved": 4,
+          "paper_oot": 0,
+          "pending": 0,
+          "reported": 16,
+          "running": 0
+        },
+        "zeroshot_ensemble": {
+          "completed": 16,
+          "evaluable": 16,
+          "failed": 0,
+          "improved": 13,
+          "improvement_rate": 0.8125,
+          "incomplete": 0,
+          "not_improved": 3,
+          "paper_oot": 0,
+          "pending": 0,
+          "reported": 16,
+          "running": 0
+        }
+      },
+      "confirmatory_evidence_required": true,
+      "criteria": {
+        "baseline_improvement_rates": true,
+        "complete_without_runtime_failures": true,
+        "full_appendix_scope": true,
+        "overall_improvement_rate": true,
+        "positive_overall_metric_means_and_medians": true,
+        "positive_task_family_metric_means": true,
+        "task_family_improvement_rates": true
+      },
+      "development_gate_passed": true,
+      "overall": {
+        "evaluable": 94,
+        "improved": 81,
+        "improvement_rate": 0.8617021276595744,
+        "metric_gain_percent": {
+          "mae": {
+            "count": 94,
+            "maximum": 29.257121838089954,
+            "mean": 6.261186181931364,
+            "median": 1.8939374390483947,
+            "minimum": -1.0352300016182407
+          },
+          "mape": {
+            "count": 24,
+            "maximum": 30.77775254120297,
+            "mean": 15.830804825803868,
+            "median": 14.113176437886263,
+            "minimum": 4.434616949808206
+          },
+          "mse": {
+            "count": 70,
+            "maximum": 33.59070305688309,
+            "mean": 5.818087545500539,
+            "median": 1.5078388217772163,
+            "minimum": -6.005935967092112
+          },
+          "rmse": {
+            "count": 24,
+            "maximum": 29.690339273689354,
+            "mean": 15.054898578380163,
+            "median": 15.250075860474315,
+            "minimum": 1.7885682763976558
+          }
+        }
+      },
+      "scope": {
+        "evaluable": 94,
+        "reported": 96,
+        "required_evaluable": 94,
+        "required_reported": 96
+      },
+      "task_families": {
+        "epf": {
+          "completed": 30,
+          "evaluable": 30,
+          "failed": 0,
+          "improved": 24,
+          "improvement_rate": 0.8,
+          "incomplete": 0,
+          "metric_gain_percent": {
+            "mae": {
+              "count": 30,
+              "maximum": 20.1275990373889,
+              "mean": 2.564843583805901,
+              "median": 0.48161389883639116,
+              "minimum": -1.0352300016182407
+            },
+            "mse": {
+              "count": 30,
+              "maximum": 33.59070305688309,
+              "mean": 2.847837568547342,
+              "median": 0.6372521251259483,
+              "minimum": -6.005935967092112
+            }
+          },
+          "not_improved": 6,
+          "paper_oot": 0,
+          "pending": 0,
+          "positive_metric_means": true,
+          "reported": 30,
+          "running": 0
+        },
+        "long_term": {
+          "completed": 40,
+          "evaluable": 40,
+          "failed": 0,
+          "improved": 33,
+          "improvement_rate": 0.825,
+          "incomplete": 0,
+          "metric_gain_percent": {
+            "mae": {
+              "count": 40,
+              "maximum": 13.864090984127394,
+              "mean": 3.4773987947985767,
+              "median": 1.777329820366477,
+              "minimum": -0.19892775613243022
+            },
+            "mse": {
+              "count": 40,
+              "maximum": 33.35843404130432,
+              "mean": 8.045775028215438,
+              "median": 3.8647710280292644,
+              "minimum": -0.35352075251335974
+            }
+          },
+          "not_improved": 7,
+          "paper_oot": 2,
+          "pending": 0,
+          "positive_metric_means": true,
+          "reported": 42,
+          "running": 0
+        },
+        "pems": {
+          "completed": 24,
+          "evaluable": 24,
+          "failed": 0,
+          "improved": 24,
+          "improvement_rate": 1.0,
+          "incomplete": 0,
+          "metric_gain_percent": {
+            "mae": {
+              "count": 24,
+              "maximum": 29.257121838089954,
+              "mean": 15.521260074809502,
+              "median": 15.235410799615723,
+              "minimum": 2.879924934811322
+            },
+            "mape": {
+              "count": 24,
+              "maximum": 30.77775254120297,
+              "mean": 15.830804825803868,
+              "median": 14.113176437886263,
+              "minimum": 4.434616949808206
+            },
+            "rmse": {
+              "count": 24,
+              "maximum": 29.690339273689354,
+              "mean": 15.054898578380163,
+              "median": 15.250075860474315,
+              "minimum": 1.7885682763976558
+            }
+          },
+          "not_improved": 0,
+          "paper_oot": 0,
+          "pending": 0,
+          "positive_metric_means": true,
+          "reported": 24,
+          "running": 0
+        }
+      },
+      "thresholds": {
+        "baseline_improvement_rate": 0.7,
+        "overall_improvement_rate": 0.8,
+        "task_family_improvement_rate": 0.7
+      }
+    },
+    "execution_topology": {
+      "active_gpu_workers": 0,
+      "cpu_workers": 4,
+      "gpu_inactivity_reason": "Appendix RAG replays numerical corrections over existing prediction bundles and performs no model inference.",
+      "inactive_reserved_gpus": 4,
+      "instance_count": 1,
+      "instance_type": "ml.g5.12xlarge",
+      "reserved_gpus_per_host": 4
+    },
+    "elapsed_seconds": 1072.4329764842987,
+    "sum_cell_elapsed_seconds": 3884.949324607849
+  },
+  "audit": {
+    "criteria": {
+      "appendix_94_gate_passed": true,
+      "frozen_confirmation_462_gate_passed": true,
+      "greenland_eight_a100_topology_passed": true,
+      "greenland_replay_208_complete": true,
+      "numerical_recovery_composition_verified": true,
+      "primary_585_gate_passed": true
+    },
+    "publication_ready": true
+  },
+  "immutable_predecessor": {
+    "appendix_summary_sha256": "df7652fdbb6883e9ee645bff422cf58637725ef149dda0b51b34e0b7b3a1e48d",
+    "publication_audit_sha256": "0c28ed0613fb28cbd3ea1199f4977e1aa12d0afe708e4284eeaef832dfae713c",
+    "pipeline_state_sha256": "2127ec1912724144595e08230952405d9b8a180ca1d4585dedad7dd0d911a182"
+  },
+  "projection_validation": {
+    "artifact": "outputs/appendix_research/method_leaders-d9be338-20260804/validation_argmin_v3_summary.json",
+    "sha256": "8010664f610c978d1b60f78655741c32ca1ccbbd5e685c6e2314784db8616709",
+    "cell_ids_compared": 96,
+    "evaluable_cells_compared": 94,
+    "outcome_field_mismatches": 0,
+    "selection_mismatches": 0,
+    "exact_match": true
+  }
+}

@@ -1,0 +1,3 @@
+# Versioned against the TimeFuse Appendix reproduction protocol.
+torch==2.7.1
+autogluon.timeseries==1.4.0

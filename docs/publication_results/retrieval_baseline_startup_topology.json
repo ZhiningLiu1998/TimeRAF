@@ -1,0 +1,58 @@
+{
+  "all_bindings_observed": true,
+  "distinct_positive_pids": true,
+  "expected_worker_count": 8,
+  "gpu_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "recorded_unix": 1788227641.636334,
+  "worker_bindings": [
+    {
+      "gpu_uuid": "GPU-7d96677a-2a7e-3cd5-77b8-f5aa8d0ac227",
+      "pid": 182647,
+      "worker_gpu": 0
+    },
+    {
+      "gpu_uuid": "GPU-422974e7-3e19-cea8-13ea-49e6dd14e7f1",
+      "pid": 182649,
+      "worker_gpu": 1
+    },
+    {
+      "gpu_uuid": "GPU-68f26932-b2fa-4e45-350d-67024a233d30",
+      "pid": 182651,
+      "worker_gpu": 2
+    },
+    {
+      "gpu_uuid": "GPU-b1cb02af-a814-5d7c-e99f-38180cedcc28",
+      "pid": 182652,
+      "worker_gpu": 3
+    },
+    {
+      "gpu_uuid": "GPU-109cc21c-fbab-6df6-83e6-da1a42fb28e3",
+      "pid": 182653,
+      "worker_gpu": 4
+    },
+    {
+      "gpu_uuid": "GPU-addffe94-f277-54d4-e069-87de9557bc11",
+      "pid": 182655,
+      "worker_gpu": 5
+    },
+    {
+      "gpu_uuid": "GPU-2b6ef3d6-6ed7-b724-0bd8-317895f65d68",
+      "pid": 182650,
+      "worker_gpu": 6
+    },
+    {
+      "gpu_uuid": "GPU-4a1fd585-2a7c-71c3-7ec0-4e8e7b8af333",
+      "pid": 182656,
+      "worker_gpu": 7
+    }
+  ]
+}

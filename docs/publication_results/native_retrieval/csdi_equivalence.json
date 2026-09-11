@@ -1,0 +1,1506 @@
+{
+  "comparison": {
+    "final_rng": {
+      "data": "AQAAAAAAAAAgx20AAAAAAA==",
+      "encoding": "base64-raw-uint8",
+      "sha256": "198a8faa06b9e6bf2c45d3b716cc74b4c3eb9094a6261f5c4fc593def84eec2d",
+      "size_bytes": 16
+    },
+    "observations": [
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          }
+        ],
+        "recorded_unix": 1788048888.4178061
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-19e6f95f-bb3c-42f6-2322-6dc479f58895",
+            "physical_gpu": 2,
+            "pid": 108053,
+            "used_memory_mib": 1408
+          }
+        ],
+        "recorded_unix": 1788048893.6297677
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-19e6f95f-bb3c-42f6-2322-6dc479f58895",
+            "physical_gpu": 2,
+            "pid": 108053,
+            "used_memory_mib": 1410
+          }
+        ],
+        "recorded_unix": 1788048898.8517911
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-19e6f95f-bb3c-42f6-2322-6dc479f58895",
+            "physical_gpu": 2,
+            "pid": 108053,
+            "used_memory_mib": 1410
+          }
+        ],
+        "recorded_unix": 1788048904.0712304
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-19e6f95f-bb3c-42f6-2322-6dc479f58895",
+            "physical_gpu": 2,
+            "pid": 108053,
+            "used_memory_mib": 1410
+          }
+        ],
+        "recorded_unix": 1788048909.2988124
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-19e6f95f-bb3c-42f6-2322-6dc479f58895",
+            "physical_gpu": 2,
+            "pid": 108053,
+            "used_memory_mib": 1410
+          }
+        ],
+        "recorded_unix": 1788048914.5266845
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-19e6f95f-bb3c-42f6-2322-6dc479f58895",
+            "physical_gpu": 2,
+            "pid": 108053,
+            "used_memory_mib": 1410
+          }
+        ],
+        "recorded_unix": 1788048919.755022
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-19e6f95f-bb3c-42f6-2322-6dc479f58895",
+            "physical_gpu": 2,
+            "pid": 108053,
+            "used_memory_mib": 1410
+          }
+        ],
+        "recorded_unix": 1788048924.9848351
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-19e6f95f-bb3c-42f6-2322-6dc479f58895",
+            "physical_gpu": 2,
+            "pid": 108053,
+            "used_memory_mib": 1410
+          }
+        ],
+        "recorded_unix": 1788048930.2135706
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-19e6f95f-bb3c-42f6-2322-6dc479f58895",
+            "physical_gpu": 2,
+            "pid": 108053,
+            "used_memory_mib": 1410
+          }
+        ],
+        "recorded_unix": 1788048935.4425824
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-19e6f95f-bb3c-42f6-2322-6dc479f58895",
+            "physical_gpu": 2,
+            "pid": 108053,
+            "used_memory_mib": 1410
+          }
+        ],
+        "recorded_unix": 1788048940.6714344
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-19e6f95f-bb3c-42f6-2322-6dc479f58895",
+            "physical_gpu": 2,
+            "pid": 108053,
+            "used_memory_mib": 1410
+          }
+        ],
+        "recorded_unix": 1788048945.8996854
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-19e6f95f-bb3c-42f6-2322-6dc479f58895",
+            "physical_gpu": 2,
+            "pid": 108053,
+            "used_memory_mib": 1496
+          }
+        ],
+        "recorded_unix": 1788048951.129236
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-19e6f95f-bb3c-42f6-2322-6dc479f58895",
+            "physical_gpu": 2,
+            "pid": 108053,
+            "used_memory_mib": 1496
+          }
+        ],
+        "recorded_unix": 1788048956.3479195
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-19e6f95f-bb3c-42f6-2322-6dc479f58895",
+            "physical_gpu": 2,
+            "pid": 108053,
+            "used_memory_mib": 1496
+          }
+        ],
+        "recorded_unix": 1788048961.5678
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-19e6f95f-bb3c-42f6-2322-6dc479f58895",
+            "physical_gpu": 2,
+            "pid": 108053,
+            "used_memory_mib": 1496
+          }
+        ],
+        "recorded_unix": 1788048966.7911098
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-19e6f95f-bb3c-42f6-2322-6dc479f58895",
+            "physical_gpu": 2,
+            "pid": 108053,
+            "used_memory_mib": 1496
+          }
+        ],
+        "recorded_unix": 1788048972.0186315
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-19e6f95f-bb3c-42f6-2322-6dc479f58895",
+            "physical_gpu": 2,
+            "pid": 108053,
+            "used_memory_mib": 1496
+          }
+        ],
+        "recorded_unix": 1788048977.245347
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-19e6f95f-bb3c-42f6-2322-6dc479f58895",
+            "physical_gpu": 2,
+            "pid": 108053,
+            "used_memory_mib": 1496
+          }
+        ],
+        "recorded_unix": 1788048982.473297
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-19e6f95f-bb3c-42f6-2322-6dc479f58895",
+            "physical_gpu": 2,
+            "pid": 108053,
+            "used_memory_mib": 1496
+          }
+        ],
+        "recorded_unix": 1788048987.7013035
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-19e6f95f-bb3c-42f6-2322-6dc479f58895",
+            "physical_gpu": 2,
+            "pid": 108053,
+            "used_memory_mib": 1496
+          }
+        ],
+        "recorded_unix": 1788048992.9292188
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-19e6f95f-bb3c-42f6-2322-6dc479f58895",
+            "physical_gpu": 2,
+            "pid": 108053,
+            "used_memory_mib": 1496
+          }
+        ],
+        "recorded_unix": 1788048998.157512
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-19e6f95f-bb3c-42f6-2322-6dc479f58895",
+            "physical_gpu": 2,
+            "pid": 108053,
+            "used_memory_mib": 1496
+          }
+        ],
+        "recorded_unix": 1788049003.3856518
+      }
+    ],
+    "observed_gpus": [
+      2
+    ],
+    "origin_records": [
+      {
+        "absolute": 10728.8857421875,
+        "end_rng": {
+          "data": "AQAAAAAAAAAAeW0AAAAAAA==",
+          "encoding": "base64-raw-uint8",
+          "sha256": "e43b10bcb2610b0470cf210f14871c3f16fae52bab4e4b96e124e31beb1c8dc5",
+          "size_bytes": 16
+        },
+        "index": 0,
+        "median_sha256": "6be628cda32d83fe7ae97b9dca135d4d4a19eafc7d1ccd517986efad17b9887b",
+        "points": 53928,
+        "sample_sha256": "9a7033eea920debe6453cdfed1e84af959dadc2aae5b9ce2511b6a24af01a3c1",
+        "squared": 5820.8076171875
+      },
+      {
+        "absolute": 10841.6376953125,
+        "end_rng": {
+          "data": "AQAAAAAAAAAgx20AAAAAAA==",
+          "encoding": "base64-raw-uint8",
+          "sha256": "198a8faa06b9e6bf2c45d3b716cc74b4c3eb9094a6261f5c4fc593def84eec2d",
+          "size_bytes": 16
+        },
+        "index": 1,
+        "median_sha256": "888e3bf3b642c34885f9e3d5e9a8b97d565566f0762266936ccaad49d338b971",
+        "points": 53928,
+        "sample_sha256": "f03f93754f9413b04b03dd48371bfd6cd4491ec38ce95db10c38a20ec5d30d46",
+        "squared": 5878.154296875
+      }
+    ],
+    "physical_gpu": 2,
+    "pid": 108053,
+    "result": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/native-ratd-sharded-813cbcc/equivalence-final/csdi_artifacts/comparison.json",
+      "sha256": "46f958ff67a20388ac70a4cbc696e563fd263f98f22aabd6d25fc62f1cdd3eba",
+      "size_bytes": 2178
+    },
+    "returncode": 0,
+    "role": "comparison",
+    "start_rng": {
+      "data": "AQAAAAAAAADgKm0AAAAAAA==",
+      "encoding": "base64-raw-uint8",
+      "sha256": "b7a3e5cf5718a0d7e29ebfa1b1903c2cd52252526e5f5fcd14dd6021e5fbd197",
+      "size_bytes": 16
+    }
+  },
+  "created_unix": 1788049008.6211278,
+  "diffusion_steps": 50,
+  "expected_final_rng": {
+    "data": "AQAAAAAAAAAgx20AAAAAAA==",
+    "encoding": "base64-raw-uint8",
+    "sha256": "198a8faa06b9e6bf2c45d3b716cc74b4c3eb9094a6261f5c4fc593def84eec2d",
+    "size_bytes": 16
+  },
+  "identity": {
+    "checkpoint": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/d614258/ratd-full-p5/csdi/training_checkpoint.pt",
+      "sha256": "2e0e3c96e1e05d98b4bc2e6749c5eaaefb4b84fecb9a6e55c96a91209c7016ff",
+      "size_bytes": 32789633
+    },
+    "data": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/native-retrieval-baselines-161c835/ratd-assets/data/electricity.csv",
+      "sha256": "ec7acb0cea28bc37123e3931cecf78f9c30c25ad2ad2cd828eb8090ec54f1187",
+      "size_bytes": 146637813
+    },
+    "launcher_revision": "813cbcc0b4d962f5ddeeafe30a0f687eb82e1245",
+    "protocol": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/native-retrieval-baselines-d614258/source/docs/native_retrieval_baseline_protocol.json",
+      "sha256": "75091654aaff7b060e54f0656de16de8b66f56c0a9fb6518e64fe6eca02ad300",
+      "size_bytes": 7507
+    },
+    "reference_map": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/outputs/native_retrieval_baselines/d614258/ratd-full-p5/reference_map.npz",
+      "sha256": "598dc4d16077d0ac2d32a032b92aaf3c07360aa52345562774d8d5a9a33b322a",
+      "size_bytes": 150330
+    },
+    "runner": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/native-retrieval-baselines-d614258/source/scripts/run_native_ratd_baseline.py",
+      "sha256": "3798b67b20bb009fe16a8d730f2b58a2210333f3b2e8cf4cdb24711810e5d588",
+      "size_bytes": 38639
+    },
+    "sharded_runner": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/native-ratd-sharded-813cbcc/source/scripts/run_native_ratd_sharded_eval.py",
+      "sha256": "0b1bef1aee6c464c629124b0f0eea56dc3201cab3a90b1ea8713517bbca34e32",
+      "size_bytes": 85355
+    },
+    "source_revision": "d614258b6e5fd4ca71c4d814ab2fe10e2503399d",
+    "upstream_commit": "719e4008f72e89544a621d97b5d1a69164fc14d3"
+  },
+  "job_kind": "native_ratd_exact_cross_gpu_verification",
+  "method": "CSDI",
+  "oracle": {
+    "final_rng": {
+      "data": "AQAAAAAAAAAgx20AAAAAAA==",
+      "encoding": "base64-raw-uint8",
+      "sha256": "198a8faa06b9e6bf2c45d3b716cc74b4c3eb9094a6261f5c4fc593def84eec2d",
+      "size_bytes": 16
+    },
+    "observations": [
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          }
+        ],
+        "recorded_unix": 1788048768.2356825
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107738,
+            "used_memory_mib": 776
+          }
+        ],
+        "recorded_unix": 1788048773.4495015
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107738,
+            "used_memory_mib": 1410
+          }
+        ],
+        "recorded_unix": 1788048778.6749592
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107738,
+            "used_memory_mib": 1410
+          }
+        ],
+        "recorded_unix": 1788048783.8951693
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107738,
+            "used_memory_mib": 1410
+          }
+        ],
+        "recorded_unix": 1788048789.1151998
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107738,
+            "used_memory_mib": 1410
+          }
+        ],
+        "recorded_unix": 1788048794.3353403
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107738,
+            "used_memory_mib": 1410
+          }
+        ],
+        "recorded_unix": 1788048799.5567842
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107738,
+            "used_memory_mib": 1410
+          }
+        ],
+        "recorded_unix": 1788048804.7826204
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107738,
+            "used_memory_mib": 1410
+          }
+        ],
+        "recorded_unix": 1788048810.0098584
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107738,
+            "used_memory_mib": 1410
+          }
+        ],
+        "recorded_unix": 1788048815.2382944
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107738,
+            "used_memory_mib": 1410
+          }
+        ],
+        "recorded_unix": 1788048820.4671035
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107738,
+            "used_memory_mib": 1410
+          }
+        ],
+        "recorded_unix": 1788048825.6958709
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107738,
+            "used_memory_mib": 1496
+          }
+        ],
+        "recorded_unix": 1788048830.925749
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107738,
+            "used_memory_mib": 1496
+          }
+        ],
+        "recorded_unix": 1788048836.1447377
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107738,
+            "used_memory_mib": 1496
+          }
+        ],
+        "recorded_unix": 1788048841.3645039
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107738,
+            "used_memory_mib": 1496
+          }
+        ],
+        "recorded_unix": 1788048846.5928655
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107738,
+            "used_memory_mib": 1496
+          }
+        ],
+        "recorded_unix": 1788048851.8221927
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107738,
+            "used_memory_mib": 1496
+          }
+        ],
+        "recorded_unix": 1788048857.0510976
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107738,
+            "used_memory_mib": 1496
+          }
+        ],
+        "recorded_unix": 1788048862.2723577
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107738,
+            "used_memory_mib": 1496
+          }
+        ],
+        "recorded_unix": 1788048867.5027242
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107738,
+            "used_memory_mib": 1496
+          }
+        ],
+        "recorded_unix": 1788048872.7232811
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107738,
+            "used_memory_mib": 1496
+          }
+        ],
+        "recorded_unix": 1788048877.9469614
+      },
+      {
+        "processes": [
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7062,
+            "used_memory_mib": 1020
+          },
+          {
+            "gpu_uuid": "GPU-20ceb93e-0acb-326b-e07f-9b5f8b0abf76",
+            "physical_gpu": 0,
+            "pid": 7070,
+            "used_memory_mib": 2134
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107632,
+            "used_memory_mib": 526
+          },
+          {
+            "gpu_uuid": "GPU-9ea53edc-7248-d489-74d9-8a9bdd48f1af",
+            "physical_gpu": 1,
+            "pid": 107738,
+            "used_memory_mib": 1496
+          }
+        ],
+        "recorded_unix": 1788048883.1734004
+      }
+    ],
+    "observed_gpus": [
+      1
+    ],
+    "origin_records": [
+      {
+        "absolute": 10728.8857421875,
+        "end_rng": {
+          "data": "AQAAAAAAAAAAeW0AAAAAAA==",
+          "encoding": "base64-raw-uint8",
+          "sha256": "e43b10bcb2610b0470cf210f14871c3f16fae52bab4e4b96e124e31beb1c8dc5",
+          "size_bytes": 16
+        },
+        "index": 0,
+        "median_sha256": "6be628cda32d83fe7ae97b9dca135d4d4a19eafc7d1ccd517986efad17b9887b",
+        "points": 53928,
+        "sample_sha256": "9a7033eea920debe6453cdfed1e84af959dadc2aae5b9ce2511b6a24af01a3c1",
+        "squared": 5820.8076171875
+      },
+      {
+        "absolute": 10841.6376953125,
+        "end_rng": {
+          "data": "AQAAAAAAAAAgx20AAAAAAA==",
+          "encoding": "base64-raw-uint8",
+          "sha256": "198a8faa06b9e6bf2c45d3b716cc74b4c3eb9094a6261f5c4fc593def84eec2d",
+          "size_bytes": 16
+        },
+        "index": 1,
+        "median_sha256": "888e3bf3b642c34885f9e3d5e9a8b97d565566f0762266936ccaad49d338b971",
+        "points": 53928,
+        "sample_sha256": "f03f93754f9413b04b03dd48371bfd6cd4491ec38ce95db10c38a20ec5d30d46",
+        "squared": 5878.154296875
+      }
+    ],
+    "physical_gpu": 1,
+    "pid": 107738,
+    "result": {
+      "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/native-ratd-sharded-813cbcc/equivalence-final/csdi_artifacts/oracle.json",
+      "sha256": "719ab12f98b81ff0ef58b85d18209c00eb1639174f933ff063cfba483628e10d",
+      "size_bytes": 2175
+    },
+    "returncode": 0,
+    "role": "oracle",
+    "start_rng": {
+      "data": "AQAAAAAAAADgKm0AAAAAAA==",
+      "encoding": "base64-raw-uint8",
+      "sha256": "b7a3e5cf5718a0d7e29ebfa1b1903c2cd52252526e5f5fcd14dd6021e5fbd197",
+      "size_bytes": 16
+    }
+  },
+  "plan": {
+    "path": "/mnt/custom-file-systems/efs/fs-0752ccd986be62d91_fsap-02dadf9bde0be6fa3/workspace/TimeRAF/operations/native-ratd-sharded-813cbcc/equivalence-final/csdi_artifacts/verification_plan.json",
+    "sha256": "c3e685ae04e6c5b091365d8d98b130add7a51d0b87e996a6ec697ee65de144a8",
+    "size_bytes": 6053
+  },
+  "samples": 100,
+  "schema_version": 1,
+  "start_rng": {
+    "data": "AQAAAAAAAADgKm0AAAAAAA==",
+    "encoding": "base64-raw-uint8",
+    "sha256": "b7a3e5cf5718a0d7e29ebfa1b1903c2cd52252526e5f5fcd14dd6021e5fbd197",
+    "size_bytes": 16
+  },
+  "status": "verified",
+  "strict_byte_equivalence": true,
+  "verification_range": {
+    "end_index": 2,
+    "origin_count": 2,
+    "start_index": 0
+  },
+  "verification_sha256": "c0262b174893a8a70ee468e1184f110cb174ef26efe4b1898ca6eeb776501fc2"
+}

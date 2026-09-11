@@ -1,0 +1,31 @@
+{
+  "artifacts": {
+    "failed_cell.log": {
+      "sha256": "668180e1aeff59a0e18bbb4708ebf83fe691ecd96fa20cd4dcd2dcb7c59c3a39",
+      "size_bytes": 3540
+    },
+    "failed_status.json": {
+      "sha256": "118b3b03dc24e08bc5aa865e6ca876eb1fe1b193b7e2b8c4edebb823be99ebd7",
+      "size_bytes": 2300
+    },
+    "initial_lifecycle.state": {
+      "sha256": "aaa6ed9f87b37ee5fb7bcd9718043f623e146f044740560052dd9f47b02b2234",
+      "size_bytes": 62
+    },
+    "initial_matrix_summary.json": {
+      "sha256": "2647859264a650dab6e0295672775dff335da3b9c61a9757da19635ef524fe03",
+      "size_bytes": 29760895
+    },
+    "initial_run_metadata.json": {
+      "sha256": "6c9031d740d973a59bde35c629549870eeafb6fb99b8bf74798ebfb82ed24812",
+      "size_bytes": 3059
+    },
+    "initial_startup_topology.json": {
+      "sha256": "de20598332212606561a337bdb423c2cf9c9daae769215d316b6af1914d55cde",
+      "size_bytes": 1185
+    }
+  },
+  "failure_cell": "pems/PEMS03/Autoformer/6",
+  "recorded_unix": 1788227624.655902,
+  "schema_version": 1
+}

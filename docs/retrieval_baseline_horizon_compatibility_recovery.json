@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "frozen_at": "2026-09-01T01:47:00Z",
+  "status": "frozen_before_recovery_execution",
+  "trigger": {
+    "cell_id": "pems/PEMS03/Autoformer/6",
+    "error_type": "ValueError",
+    "error": "Period 4 does not divide sequence length 6",
+    "metrics_observed": false
+  },
+  "method_identity": {
+    "source_revision": "e97746ed847f25d1f11f47242bc04db2b48b83ef",
+    "protocol_sha256": "2d3a9a6c66ae80808c0d734d48996341cb2d1fcb123cf04e81ab8dc1713a0bc6",
+    "catalog_sha256": "cd92b7e1a35341c3175a8e8c3468c41cc79cf0c9e508c5a39d0cdaa3255de1b8"
+  },
+  "affected_shape_cohort": {
+    "task_family": "pems",
+    "prediction_length": 6,
+    "expected_cells": 52,
+    "reason": "The configured RAFT period 4 divides the context length 96 but not prediction length 6."
+  },
+  "recovery_rule": {
+    "selection_uses_metric_quality": false,
+    "configured_period_sets_unchanged": [
+      [
+        1
+      ],
+      [
+        4,
+        2,
+        1
+      ]
+    ],
+    "operation": "Before RAFT search, retain each configured period, in order, only when it divides both context length and prediction length.",
+    "empty_set_is_error": true,
+    "effective_period_sets_for_pems_horizon_6": [
+      [
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ]
+  },
+  "resume_policy": {
+    "preserve_failed_attempt": true,
+    "resume_completed_cells": true,
+    "completed_cell_behavior_changes": false,
+    "justification": "Every completed cell before the failure has prediction length divisible by 4, so filtering retains every configured period and leaves its computation unchanged.",
+    "record_method_and_launcher_revisions_separately": true
+  }
+}

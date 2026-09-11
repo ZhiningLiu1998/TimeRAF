@@ -1,0 +1,23 @@
+\section{Full benchmark decompositions}
+\label{app:matrix-results}
+
+The main tables average matched cells by dataset while accounting for the
+fact that \method{} corrects each backbone independently.
+Table~\ref{tab:long-term-horizons} and
+Tables~\ref{tab:pems-horizons}--\ref{tab:pems-horizons-mape} expose every
+dataset--horizon aggregate; each row contains exactly 13 paired backbone
+cells. EPF has only horizon 24; its complete per-model view appears in the
+full cell tables below.
+Table~\ref{tab:backbone-results} instead aggregates by backbone and shows
+strict wins together with paired relative reductions. The remaining tables in
+this section report every one of the 585 primary cells. Each entry gives the
+absolute error of the named backbone followed by the error after applying
+\method{}; these tables do not average over backbones or horizons.
+
+\input{tables/longterm_horizons}
+\clearpage
+\input{tables/pems_horizons}
+\clearpage
+\input{tables/backbone_summary}
+\clearpage
+\input{tables/full_cell_results}

@@ -1,0 +1,166 @@
+{
+  "by_dataset": {
+    "BE": {
+      "historical_residual": 2,
+      "overlap_blend": 4,
+      "seasonal_blend": 7
+    },
+    "DE": {
+      "historical_residual": 1,
+      "overlap_blend": 6,
+      "seasonal_blend": 6
+    },
+    "ETTh1": {
+      "historical_residual": 1,
+      "overlap_blend": 23,
+      "seasonal_blend": 28
+    },
+    "ETTh2": {
+      "causal_bias": 9,
+      "overlap_blend": 19,
+      "seasonal_blend": 24
+    },
+    "ETTm1": {
+      "historical_residual": 22,
+      "overlap_blend": 14,
+      "seasonal_blend": 16
+    },
+    "ETTm2": {
+      "causal_bias": 15,
+      "overlap_blend": 22,
+      "seasonal_blend": 15
+    },
+    "FR": {
+      "historical_residual": 6,
+      "overlap_blend": 4,
+      "seasonal_blend": 3
+    },
+    "NP": {
+      "historical_residual": 3,
+      "seasonal_blend": 10
+    },
+    "PEMS03": {
+      "causal_bias": 4,
+      "historical_residual": 35
+    },
+    "PEMS04": {
+      "causal_bias": 6,
+      "historical_residual": 29,
+      "overlap_blend": 3,
+      "seasonal_blend": 1
+    },
+    "PEMS07": {
+      "causal_bias": 7,
+      "historical_residual": 30,
+      "overlap_blend": 2
+    },
+    "PEMS08": {
+      "causal_bias": 10,
+      "historical_residual": 29
+    },
+    "PJM": {
+      "historical_residual": 1,
+      "overlap_blend": 5,
+      "seasonal_blend": 7
+    },
+    "electricity": {
+      "causal_bias": 2,
+      "historical_residual": 28,
+      "overlap_blend": 14,
+      "seasonal_blend": 8
+    },
+    "traffic": {
+      "causal_bias": 1,
+      "historical_residual": 8,
+      "overlap_blend": 27,
+      "seasonal_blend": 16
+    },
+    "weather": {
+      "causal_bias": 2,
+      "historical_residual": 19,
+      "overlap_blend": 16,
+      "seasonal_blend": 15
+    }
+  },
+  "by_model": {
+    "Autoformer": {
+      "causal_bias": 2,
+      "historical_residual": 11,
+      "seasonal_blend": 32
+    },
+    "DLinear": {
+      "causal_bias": 9,
+      "historical_residual": 29,
+      "overlap_blend": 1,
+      "seasonal_blend": 6
+    },
+    "FEDformer": {
+      "causal_bias": 4,
+      "historical_residual": 15,
+      "overlap_blend": 1,
+      "seasonal_blend": 25
+    },
+    "FreTS": {
+      "causal_bias": 6,
+      "historical_residual": 21,
+      "overlap_blend": 15,
+      "seasonal_blend": 3
+    },
+    "Informer": {
+      "causal_bias": 20,
+      "historical_residual": 5,
+      "overlap_blend": 1,
+      "seasonal_blend": 19
+    },
+    "LightTS": {
+      "causal_bias": 5,
+      "historical_residual": 23,
+      "overlap_blend": 12,
+      "seasonal_blend": 5
+    },
+    "Nonstationary_Transformer": {
+      "causal_bias": 5,
+      "historical_residual": 15,
+      "seasonal_blend": 25
+    },
+    "PAttn": {
+      "historical_residual": 18,
+      "overlap_blend": 24,
+      "seasonal_blend": 3
+    },
+    "PatchTST": {
+      "historical_residual": 20,
+      "overlap_blend": 22,
+      "seasonal_blend": 3
+    },
+    "TimeMixer": {
+      "historical_residual": 9,
+      "overlap_blend": 31,
+      "seasonal_blend": 5
+    },
+    "TimeXer": {
+      "historical_residual": 19,
+      "overlap_blend": 21,
+      "seasonal_blend": 5
+    },
+    "TimesNet": {
+      "causal_bias": 5,
+      "historical_residual": 11,
+      "overlap_blend": 14,
+      "seasonal_blend": 15
+    },
+    "iTransformer": {
+      "historical_residual": 18,
+      "overlap_blend": 17,
+      "seasonal_blend": 10
+    }
+  },
+  "families": [
+    "historical_residual",
+    "seasonal_blend",
+    "overlap_blend",
+    "causal_bias"
+  ],
+  "schema_version": 1,
+  "source_sha256": "924d5e851f7f940d6ef7b7d3503c5281f1d744a41320254b36950f40684952de"
+}
