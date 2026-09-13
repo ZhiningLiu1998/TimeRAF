@@ -38,12 +38,12 @@ Family & Dataset & Variates & Input & Horizons & Cells & Frequency\\
 \end{tabular}
 \end{table*}
 
-The model list is TimeXer, TimeMixer, PAttn, iTransformer, TimesNet,
-PatchTST, DLinear, FreTS, FEDformer, Non-stationary Transformer, LightTS,
-Informer, and Autoformer. Baseline training follows each paper configuration
+The model list is \timexer{}, \timemixer{}, \pattn{}, \itransformer{}, \timesnet{},
+\patchtst{}, \dlinear{}, \frets{}, \fedformer{}, \nonstat{}, \lightts{},
+\informer{}, and \autoformer{}. Baseline training follows each paper configuration
 in TSLib. Shared defaults are Adam optimization, MSE training loss, at most 10
 epochs, and validation-loss early stopping unless the referenced configuration
-overrides them. Non-stationary Transformer uses a learning rate of $10^{-4}$
+overrides them. \nonstat{} uses a learning rate of $10^{-4}$
 on Electricity horizons 192 and 336; all other values follow the reference
 configuration.
 
@@ -55,5 +55,5 @@ use one GPU each. A secondary execution on an
 trains the remaining 530 cells on four NVIDIA A10G GPUs. It is retained only
 as a cross-hardware sensitivity check and is not averaged into the primary
 tables because the two executions are not numerically identical.
-The additional-system study uses AutoGluon-TimeSeries 1.4.0, Python 3.12,
-PyTorch 2.7.1, and a three-hour fit budget for each AutoGluon cell.
+The additional-system study uses \autogluon{}-TimeSeries 1.4.0, Python 3.12,
+PyTorch 2.7.1, and a three-hour fit budget for each \autogluon{} cell.

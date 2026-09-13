@@ -6,8 +6,8 @@
   \includegraphics[width=\textwidth]{figures/selection_adaptivity.pdf}
   \caption{\textbf{Validation selects different corrections for different
   forecasters and regimes.} Share of the 585 primary settings in which each
-  correction family was selected, grouped by frozen backbone (a) and by dataset
-  (b). Error retrieval is chosen for 29/45 DLinear settings but 5/45 Informer
+  correction family was selected, grouped by backbone (a) and by dataset
+  (b). Error retrieval is chosen for 29/45 \dlinear{} settings but 5/45 \informer{}
   settings, and for 35/39 PEMS03 settings but 0/52 ETTh2 settings. A fixed
   retrieval-always policy would be wrong in a large fraction of deployments.}
   \label{fig:selection}
@@ -124,7 +124,7 @@ Total       & 23 & 7 & 5 & 11 & 0 & 36.50\%\\
 \small
 \caption{A100--A10G discrepancy distribution over all 1,326 reported metric
 values. Relative difference is absolute difference divided by the larger
-absolute value. The frozen tolerance is
+absolute value. The pre-registered tolerance is
 $10^{-5}+10^{-4}\max(|a|,|b|)$.}
 \label{tab:hardware-consistency}
 \begin{tabular}{lrr}

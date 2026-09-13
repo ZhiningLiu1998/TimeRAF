@@ -34,7 +34,19 @@ MODELS = [
 ]
 
 MODEL_LABELS = {
-    "Nonstationary_Transformer": "Non-stat. Transformer",
+    "TimeXer": r"\timexer{}",
+    "TimeMixer": r"\timemixer{}",
+    "PAttn": r"\pattn{}",
+    "iTransformer": r"\itransformer{}",
+    "TimesNet": r"\timesnet{}",
+    "PatchTST": r"\patchtst{}",
+    "DLinear": r"\dlinear{}",
+    "FreTS": r"\frets{}",
+    "FEDformer": r"\fedformer{}",
+    "Nonstationary_Transformer": r"\nonstatshort{}",
+    "LightTS": r"\lightts{}",
+    "Informer": r"\informer{}",
+    "Autoformer": r"\autoformer{}",
 }
 
 SCOPE = {
@@ -250,7 +262,7 @@ def render_full_cell_tables(rows: list[dict[str, Any]]) -> str:
                 "\\begin{table*}[p]",
                 "\\centering",
                 "\\scriptsize",
-                "\\setlength{\\tabcolsep}{3pt}",
+                "\\setlength{\\tabcolsep}{2pt}",
                 (
                     f"\\caption{{Complete {task_label} results on "
                     f"{dataset_label(dataset)}. Base and +\\method{{}} are "

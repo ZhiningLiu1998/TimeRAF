@@ -11,6 +11,7 @@ class RetrievalFeatureConfig:
     include_forecast: bool = True
     include_calendar: bool = True
     max_channels: int = 16
+    include_level_features: bool = True
 
     def to_dict(self):
         return asdict(self)
@@ -36,22 +37,23 @@ def _pool_channels(values, max_channels):
     return np.stack([values[:, :, group].mean(axis=2) for group in groups], axis=2)
 
 
-def _series_features(values, pooled_steps, include_differences):
+def _series_features(values, pooled_steps, include_differences, include_level_features=True):
     normalized = _normalize_window(values)
     features = [_pool_steps(normalized, pooled_steps).reshape(values.shape[0], -1)]
 
-    time = np.linspace(-1.0, 1.0, values.shape[1], dtype=np.float32)
-    centered_time = time - time.mean()
-    slope = np.einsum("ntd,t->nd", values, centered_time)
-    slope /= np.square(centered_time).sum()
-    features.extend(
-        [
-            values[:, -1, :],
-            values.mean(axis=1),
-            values.std(axis=1),
-            slope,
-        ]
-    )
+    if include_level_features:
+        time = np.linspace(-1.0, 1.0, values.shape[1], dtype=np.float32)
+        centered_time = time - time.mean()
+        slope = np.einsum("ntd,t->nd", values, centered_time)
+        slope /= np.square(centered_time).sum()
+        features.extend(
+            [
+                values[:, -1, :],
+                values.mean(axis=1),
+                values.std(axis=1),
+                slope,
+            ]
+        )
 
     if include_differences:
         differences = np.diff(values, axis=1)
@@ -65,7 +67,12 @@ def extract_retrieval_features(bundle, config):
     tail_len = min(config.tail_len, bundle["x"].shape[1])
     tail = np.asarray(bundle["x"][:, -tail_len:, :], dtype=np.float32)
     tail = _pool_channels(tail, config.max_channels)
-    features = _series_features(tail, config.pooled_steps, config.include_differences)
+    features = _series_features(
+        tail,
+        config.pooled_steps,
+        config.include_differences,
+        include_level_features=config.include_level_features,
+    )
 
     if config.include_forecast:
         forecast = np.asarray(bundle["y_base"], dtype=np.float32)
@@ -76,6 +83,7 @@ def extract_retrieval_features(bundle, config):
                 forecast,
                 forecast_steps,
                 include_differences=False,
+                include_level_features=config.include_level_features,
             )
         )
 
@@ -109,6 +117,10 @@ class HistoricalResidualIndex:
         self.memory_residuals = np.asarray(
             bundle["y"][indices] - bundle["y_base"][indices], dtype=np.float32
         )
+        self.memory_offset_forecasts = np.asarray(
+            bundle["y_base"][indices] - bundle["x"][indices][:, -1:, :],
+            dtype=np.float32,
+        )
         self.memory_indices = indices
         return self
 
@@ -140,6 +152,47 @@ class HistoricalResidualIndex:
             neighbor_scores[start:end] = np.take_along_axis(selected_scores, order, axis=1)
         return neighbor_indices, neighbor_scores
 
+    @staticmethod
+    def neighbor_weights(neighbor_scores, k, temperature):
+        scores = neighbor_scores[:, :k].astype(np.float64)
+        if temperature <= 0:
+            return np.full_like(scores, 1.0 / k)
+        logits = (scores - scores.max(axis=1, keepdims=True)) / temperature
+        weights = np.exp(logits)
+        weights /= weights.sum(axis=1, keepdims=True)
+        return weights
+
+    def aggregate_offset_forecast(
+        self,
+        neighbor_indices,
+        neighbor_scores,
+        k,
+        temperature=0.1,
+    ):
+        """Weighted mean of each neighbour's own forecast, offset by its context endpoint.
+
+        Adding the query endpoint and subtracting the query forecast turns this
+        into the forecast drift term that carries the neighbour's predicted
+        trajectory instead of only its realized error.
+        """
+
+        k = min(k, neighbor_indices.shape[1])
+        selected = neighbor_indices[:, :k]
+        weights = self.neighbor_weights(neighbor_scores, k, temperature)
+        drift = np.empty(
+            (selected.shape[0],) + self.memory_offset_forecasts.shape[1:],
+            dtype=np.float32,
+        )
+        for start in range(0, selected.shape[0], self.chunk_size):
+            end = min(start + self.chunk_size, selected.shape[0])
+            drift[start:end] = np.einsum(
+                "nk,nkpd->npd",
+                weights[start:end],
+                self.memory_offset_forecasts[selected[start:end]],
+                optimize=True,
+            )
+        return drift
+
     def aggregate(
         self,
         neighbor_indices,
@@ -150,13 +203,7 @@ class HistoricalResidualIndex:
     ):
         k = min(k, neighbor_indices.shape[1])
         selected = neighbor_indices[:, :k]
-        scores = neighbor_scores[:, :k].astype(np.float64)
-        if temperature <= 0:
-            weights = np.full_like(scores, 1.0 / k)
-        else:
-            logits = (scores - scores.max(axis=1, keepdims=True)) / temperature
-            weights = np.exp(logits)
-            weights /= weights.sum(axis=1, keepdims=True)
+        weights = self.neighbor_weights(neighbor_scores, k, temperature)
 
         corrections = np.empty(
             (selected.shape[0],) + self.memory_residuals.shape[1:], dtype=np.float32
@@ -194,6 +241,9 @@ class CausalHistoricalResidualIndex(HistoricalResidualIndex):
         self.memory_features = self._l2_normalize(standardized)
         self.memory_residuals = np.asarray(
             bundle["y"] - bundle["y_base"], dtype=np.float32
+        )
+        self.memory_offset_forecasts = np.asarray(
+            bundle["y_base"] - bundle["x"][:, -1:, :], dtype=np.float32
         )
         self.memory_indices = np.arange(features.shape[0])
         return self

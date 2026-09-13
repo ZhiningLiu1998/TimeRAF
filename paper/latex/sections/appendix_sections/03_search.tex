@@ -5,7 +5,7 @@
   \centering
   \includegraphics[width=\textwidth]{figures/residual_retrieval_example.pdf}
   \caption{\textbf{Residuals isolate model-specific error on real data.} An
-  ETTh1 MULL example from a frozen TimeMixer. (a) Descriptor search returns
+  ETTh1 MULL example from a trained \timemixer{}. (a) Descriptor search returns
   historical windows with closely matching shapes. (b) Their raw futures sit at
   different levels and mix dynamics the base forecast already captures, whereas
   their residuals agree on a common error pattern. (c) Adding the shrunk
@@ -16,9 +16,9 @@
 
 \begin{figure*}[t]
 \hrule\vspace{2pt}
-\textbf{Algorithm 1:} \method{} calibration and forecast-time revision\\[1pt]
+\textbf{Algorithm 1:} \method{} calibration and forecast-time correcsion\\[1pt]
 \hrule\vspace{3pt}
-\textbf{Input:} frozen forecaster $f$; validation stream
+\textbf{Input:} trained forecaster $f$; validation stream
 $\{(\xctx_i,\ytrue_i)\}$; candidate families and grids; metric set
 $\mathcal{Q}$.\\
 \textbf{Calibration.}
@@ -84,7 +84,7 @@ origin $t$. A label is eligible only after its target timestamp has passed.}
 \toprule
 Candidate & Information used\\
 \midrule
-Identity & Current frozen-model prediction only; no labels\\
+Identity & Current model prediction only; no labels\\
 Seasonal blend & Observed context through $t$; no labels\\
 Overlap blend & Predictions issued at earlier origins for the same target
 timestamps; no labels\\

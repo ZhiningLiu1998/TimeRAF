@@ -37,20 +37,35 @@ def load_protocol(path: str | Path) -> dict:
     return protocol
 
 
-def load_replay_bundle(path: str | Path, task_family: str) -> tuple[dict, dict]:
+def load_replay_bundle(
+    path: str | Path,
+    task_family: str,
+    splits: tuple[str, ...] = ("validation", "test"),
+) -> tuple[dict, ...]:
+    """Load the frozen replay bundle.
+
+    ``splits`` exists so a validation-only pass does not materialize the test
+    arrays, which dominate resident memory for the widest long-horizon cells.
+    """
+
     with np.load(path, allow_pickle=False) as archive:
-        payload = {key: np.asarray(archive[key]) for key in archive.files}
-    required = {
-        f"{split}_{name}"
-        for split in ("validation", "test")
-        for name in ("x", "y", "y_base", "x_mark", "y_mark")
-    }
-    missing = required - payload.keys()
-    if missing:
-        raise ValueError(f"Replay bundle is missing arrays: {sorted(missing)}")
+        available = set(archive.files)
+        required = {
+            f"{split}_{name}"
+            for split in ("validation", "test")
+            for name in ("x", "y", "y_base", "x_mark", "y_mark")
+        }
+        missing = required - available
+        if missing:
+            raise ValueError(f"Replay bundle is missing arrays: {sorted(missing)}")
+        payload = {
+            f"{split}_{name}": np.asarray(archive[f"{split}_{name}"])
+            for split in splits
+            for name in ("x", "y", "y_base", "x_mark", "y_mark")
+        }
 
     bundles = []
-    for split in ("validation", "test"):
+    for split in splits:
         bundle = {
             name: np.asarray(payload[f"{split}_{name}"], dtype=np.float32)
             for name in ("x", "y", "y_base", "x_mark", "y_mark")

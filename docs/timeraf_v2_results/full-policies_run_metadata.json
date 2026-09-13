@@ -1,0 +1,110 @@
+{
+  "candidate_root": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF/operations/timeraf-v2-runs/full-candidates",
+  "candidate_run_metadata_sha256": "0bd297d2a54202f7402bb259bddd846392c588e7f0d1bda273cd71cddeb3a0a5",
+  "cells_requested": 585,
+  "cpu_workers": 10,
+  "development_cell_list_sha256": "39a49c2070943628514c5ae58056cdca932ff2f2a69cbddca5dbdeb7030068b1",
+  "host": "default",
+  "launcher_revision": "d608e8c",
+  "method_revision": "d608e8c",
+  "policies": [
+    {
+      "fold_selection": "none",
+      "id": "p_v1_reference",
+      "portfolio": {
+        "enable_drift": false
+      }
+    },
+    {
+      "fold_selection": "minimax2",
+      "id": "p_v1_folded",
+      "portfolio": {
+        "enable_drift": false
+      }
+    },
+    {
+      "fold_selection": "minimax2",
+      "id": "p_v2_folded",
+      "portfolio": {
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "enable_drift": true,
+        "shape_descriptors": true
+      }
+    },
+    {
+      "fold_selection": "minimax2",
+      "horizon_conditional_prior": {
+        "margin_above": 0.05,
+        "margin_at_or_below": 0.0,
+        "threshold": 24
+      },
+      "id": "p_v2_horizon_gated",
+      "portfolio": {
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "enable_drift": true,
+        "shape_descriptors": true
+      }
+    }
+  ],
+  "protocol": "docs/timeraf_v2_unified_retrieval_protocol.json",
+  "protocol_sha256": "1b7ca2b93125c9eb9a5ed57be56a1c91d925c16ac786f55a808e4a72458cf57b",
+  "started_unix": 1789176815.3394895
+}

@@ -34,8 +34,14 @@ def compute_pems_metrics(pred, true):
 def compute_protocol_metrics(pred, true, task_family):
     if task_family == "pems":
         return compute_pems_metrics(pred, true)
-    metrics = compute_metrics(pred, true)
-    return {"mse": metrics["mse"], "mae": metrics["mae"]}
+    # Only MSE and MAE are reported here, so the percentage-error reductions of
+    # compute_metrics are skipped. The remaining expressions are unchanged, so
+    # the returned values are bit identical to compute_metrics.
+    error = np.asarray(true) - np.asarray(pred)
+    return {
+        "mse": float(np.mean(error**2)),
+        "mae": float(np.mean(np.abs(error))),
+    }
 
 
 def subset_metrics(pred, true, mask):

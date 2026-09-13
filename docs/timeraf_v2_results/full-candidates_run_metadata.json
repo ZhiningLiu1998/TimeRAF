@@ -1,0 +1,123 @@
+{
+  "artifact_root": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF",
+  "catalog": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF/outputs/full_horizon_retrieval/e97746ed847f25d1f11f47242bc04db2b48b83ef/prediction_bundle_catalog.json",
+  "catalog_sha256": "cd92b7e1a35341c3175a8e8c3468c41cc79cf0c9e508c5a39d0cdaa3255de1b8",
+  "cell_scope": "all",
+  "cells_requested": 91,
+  "cpu_workers": 32,
+  "development_cell_list_sha256": "39a49c2070943628514c5ae58056cdca932ff2f2a69cbddca5dbdeb7030068b1",
+  "dump_candidates": true,
+  "host": "default",
+  "ladder": [
+    {
+      "id": "v1_reference",
+      "portfolio": {
+        "enable_drift": false
+      },
+      "purpose": "harness validation only; must reproduce the accepted 585-cell TimeRAF test metrics"
+    },
+    {
+      "id": "v2_folded",
+      "portfolio": {
+        "conservative_tolerance": 0.0,
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "enable_drift": true,
+        "fold_selection": "minimax2",
+        "shape_descriptors": true
+      },
+      "purpose": "select on the worse of two temporal validation folds instead of the whole validation window"
+    }
+  ],
+  "launcher_revision": "working-tree",
+  "max_bundle_bytes": 0,
+  "method_revision": "working-tree",
+  "min_bundle_bytes": 4000000000,
+  "numpy": "2.1.2",
+  "output_root": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF/operations/timeraf-v2-runs/full-candidates",
+  "protocol": "docs/timeraf_v2_unified_retrieval_protocol.json",
+  "protocol_sha256": "1b7ca2b93125c9eb9a5ed57be56a1c91d925c16ac786f55a808e4a72458cf57b",
+  "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]",
+  "search_only": true,
+  "search_portfolio": {
+    "conservative_tolerance": 0.0,
+    "drift_aggregations": [
+      [
+        8,
+        0.1,
+        0.0
+      ],
+      [
+        16,
+        0.3,
+        4.0
+      ]
+    ],
+    "drift_alphas": [
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "drift_betas": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "drift_ramps": [
+      "flat",
+      "linear"
+    ],
+    "enable_drift": true,
+    "fold_selection": "minimax2",
+    "shape_descriptors": true
+  },
+  "started_unix": 1789170047.9664028,
+  "topology": {
+    "gpu_workers": 0,
+    "inactive_reserved_gpus": 8,
+    "nvidia_smi_l": [
+      "GPU 0: NVIDIA H100 80GB HBM3 (UUID: GPU-7d96677a-2a7e-3cd5-77b8-f5aa8d0ac227)",
+      "GPU 1: NVIDIA H100 80GB HBM3 (UUID: GPU-422974e7-3e19-cea8-13ea-49e6dd14e7f1)",
+      "GPU 2: NVIDIA H100 80GB HBM3 (UUID: GPU-68f26932-b2fa-4e45-350d-67024a233d30)",
+      "GPU 3: NVIDIA H100 80GB HBM3 (UUID: GPU-b1cb02af-a814-5d7c-e99f-38180cedcc28)",
+      "GPU 4: NVIDIA H100 80GB HBM3 (UUID: GPU-109cc21c-fbab-6df6-83e6-da1a42fb28e3)",
+      "GPU 5: NVIDIA H100 80GB HBM3 (UUID: GPU-addffe94-f277-54d4-e069-87de9557bc11)",
+      "GPU 6: NVIDIA H100 80GB HBM3 (UUID: GPU-2b6ef3d6-6ed7-b724-0bd8-317895f65d68)",
+      "GPU 7: NVIDIA H100 80GB HBM3 (UUID: GPU-4a1fd585-2a7c-71c3-7ec0-4e8e7b8af333)"
+    ],
+    "reason": "Fixed-forecast portfolio search is a numpy numerical replay over existing prediction bundles; no model inference occurs.",
+    "reserved_gpus": 8
+  }
+}

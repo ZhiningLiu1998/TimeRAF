@@ -2,28 +2,22 @@
 \label{sec:conclusion}
 
 We asked what a retrieval-augmented time-series forecaster should retrieve, and
-answered that it should retrieve its own errors rather than its inputs' futures.
-\method{} realizes that answer as a post-hoc revision layer: it keeps the frozen
-forecast as the query-specific prior, indexes a chronological memory of that
-forecaster's validation residuals by a descriptor built from context and intended
-forecast, shrinks corrections whose neighbours disagree, and applies one only
-when held-out validation prefers it to a simpler correction or to doing nothing.
-With all 585 base forecasts fixed, error retrieval is the most reliable single
-object at 490 strict wins, beating the published RAFT and SARAF operators by 115
-and 106 settings, and the complete policy reaches 533; the margin widens as the
-frozen forecaster becomes more accurate. Applied broadly, \method{} improves
-every reported metric in 562/585 settings across 13 architectures and in 81/94
-settings across static ensembles, AutoML, and a forecasting foundation model.
+answered that it should retrieve its own errors---and that the futures its
+predecessors retrieve are the same correction with one term forced on. \method{}
+realizes that answer as a post-hoc layer over a chronological memory of a
+forecaster's validation residuals, with shrinkage, a dial over the retrieval object,
+and a gate that can leave the forecast untouched. With all 585 base forecasts fixed
+it reaches 541 strict wins against 490 for pure error retrieval and 478 for the
+analogue control, and takes the best average in every task family.
 
 \paragraph{Scope and limitations.}
-Error memory pays off when a forecaster's mistakes recur in retrievably similar
-states. Figure~\ref{fig:object-strength} locates the crossover: when the frozen
-forecast is poor, copying an endpoint-aligned analogue is the better object, so we
-recommend error retrieval for reasonably accurate forecasters; that post-hoc
-dependence is much weaker on EPF. The primary matrix uses one seed, its held-out
-split follows execution order inside one benchmark suite, and the prequential
-study covers one backbone at one horizon. We do not ablate the descriptor, channel
-pooling, or shrinkage, and a retriever that detects event prefixes explicitly is
-the next step.
-
-\label{sec:main-text-end}
+Error memory pays off when a forecaster's mistakes recur and borrowing a
+neighbour's trajectory pays off when they do not; Figure~\ref{fig:object-strength}
+locates that crossover by base accuracy and Section~\ref{sec:exp-analysis} by
+horizon. Leaving the dial free costs 11 strict wins against pinning it shut, and a
+horizon-dependent prior on it recovers those wins while giving back most of the
+long-term magnitude, so which of the two to deploy is a choice we report rather
+than settle. The end-to-end and additional-system results use the error-only
+configuration, so what the dial adds is measured only with base forecasts fixed. The
+primary matrix uses one seed and the prequential study one backbone; descriptor,
+pooling, and shrinkage ablations remain open.\label{sec:main-text-end}

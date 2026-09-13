@@ -660,7 +660,7 @@ def stadium_traffic_case() -> dict[str, tuple[float, ...]]:
     )
 
     # An earlier event night has a different traffic level but the same
-    # post-event underprediction by the frozen model.
+    # post-event underprediction by the trained model.
     failure_context = (
         72, 74, 73, 70, 66, 63, 61, 60, 59,
         57, 55, 53, 51, 49, 48, 49, 52, 57,
@@ -1082,7 +1082,7 @@ def _motivation_figure(
         canvas.text(43, legend_y[0] - 4, "actual", size=9.0, color=INK)
         canvas.line(28, legend_y[1], 39, legend_y[1],
                     color=BLUE, width=1.6, dash=(4, 2))
-        canvas.text(43, legend_y[1] - 4, "frozen forecast",
+        canvas.text(43, legend_y[1] - 4, "model forecast",
                     size=9.0, color=BLUE)
         canvas.text(108, miss_y, labels["miss"], size=9.4,
                     color=RED, bold=True, align="center")
@@ -1289,7 +1289,7 @@ def intro_motivation(path: Path) -> None:
 
 
 def method_overview(path: Path) -> None:
-    """Draw validation-time memory construction and forecast-time revision."""
+    """Draw validation-time memory construction and forecast-time correction."""
     case = stadium_traffic_case()
     query_context = case["query_context"]
     query_base = case["query_base"]
@@ -1596,7 +1596,7 @@ def method_overview(path: Path) -> None:
                 align="center")
     arrow(canvas, 599, 99, 611, 99, color=TEAL, width=1.2, head=4)
 
-    canvas.text(651, 137, "Revised matches actual", size=7.8, color=GREEN,
+    canvas.text(651, 137, "Corrected matches actual", size=7.8, color=GREEN,
                 bold=True, align="center")
     canvas.rounded_rect(613, 70, 74, 54, 5, fill=PALE_GREEN,
                         stroke=GREEN, line_width=1.0)
@@ -1614,12 +1614,12 @@ def method_overview(path: Path) -> None:
 
     canvas.line(135, 62, 559, 62, color=MID_GRAY, width=0.8, dash=(4, 2))
     arrow(canvas, 559, 62, 610, 79, color=MID_GRAY, width=0.8, head=3.5)
-    canvas.text(347, 53, "If identity wins: keep the frozen forecast",
+    canvas.text(347, 53, "If identity wins: keep the model forecast",
                 size=7.4, color=GRAY, align="center")
 
     pill(
         canvas, 156, 14, 408, 24,
-        "FROZEN BACKBONE; THE LOCKED POLICY ADDS ONLY A CORRECTION",
+        "THE BACKBONE IS NEVER UPDATED; THE LOCKED POLICY ONLY ADDS A CORRECTION",
         fill=PALE_GREEN, stroke=GREEN, color=INK, size=8.0,
     )
     canvas.save(path)
@@ -1729,7 +1729,7 @@ def residual_retrieval_example(path: Path) -> None:
     )
 
     # Panel B: raw analog futures retain level variation, while residuals
-    # isolate a shared underprediction pattern of the frozen forecaster.
+    # isolate a shared underprediction pattern of the trained forecaster.
     x = panel_xs[1]
     raw_x = x + 17
     raw_y = 105

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Render how the better retrieval object depends on base-forecaster accuracy.
 
-For every frozen backbone and task family we compute the median worst-metric
+For every backbone and task family we compute the median worst-metric
 paired gain of Residual-kNN and of Analog-kNN over the identical base forecast,
 and plot their difference. Positive means retrieving the model's own error beats
 retrieving an analogous historical future.
@@ -26,9 +26,8 @@ EXPECTED_SOURCE_SHA256 = (
 )
 
 FAMILIES = [
-    ("long_term", "Long-term", (0 / 255, 143 / 255, 157 / 255), "o"),
-    ("pems", "PEMS", (194 / 255, 133 / 255, 50 / 255), "s"),
-    ("epf", "EPF", (119 / 255, 87 / 255, 174 / 255), "^"),
+    ("long-term", {"long_term"}, (0 / 255, 143 / 255, 157 / 255), "o"),
+    ("short-term", {"pems", "epf"}, (194 / 255, 133 / 255, 50 / 255), "s"),
 ]
 
 MODEL_LABELS = {
@@ -126,14 +125,26 @@ def main() -> None:
     figure, axis = plt.subplots(figsize=(7.2, 2.15))
     positions = list(range(len(order)))
     receipt_series = {}
-    for family, label, color, marker in FAMILIES:
+    for label, families, color, marker in FAMILIES:
         values = [
-            median(worst[(family, model, "residual_retrieval")])
-            - median(worst[(family, model, "analog_future")])
+            median(
+                [
+                    value
+                    for family in families
+                    for value in worst[(family, model, "residual_retrieval")]
+                ]
+            )
+            - median(
+                [
+                    value
+                    for family in families
+                    for value in worst[(family, model, "analog_future")]
+                ]
+            )
             for model in order
         ]
         rho = spearman([strength[model] for model in order], values)
-        receipt_series[family] = {
+        receipt_series[label] = {
             "advantage_percentage_points": dict(zip(order, values)),
             "spearman_rho_vs_base_mse": rho,
         }
@@ -164,7 +175,7 @@ def main() -> None:
         "residual $-$ analog\nmedian gain (pp)", fontsize=7.8, color=INK
     )
     axis.set_xlabel(
-        "frozen backbone, ordered from most to least accurate "
+        "backbone, ordered from most to least accurate "
         "(long-term base MSE)",
         fontsize=7.8,
         color=INK,

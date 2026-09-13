@@ -4,41 +4,34 @@
 \paragraph{Time-series forecasting.}
 Classical models encode trend and seasonality
 explicitly~\citep{anderson1976arima}, while neural forecasters attack the same
-structure with frequency decomposition, temporal reshaping, patching,
-cross-variable attention, multiscale mixing, exogenous conditioning,
-deliberately linear baselines, or large-corpus pretraining
-\citep{zhou2022fedformer,wu2023timesnet,patchtst,tan2024pattn,
+structure with frequency decomposition, patching, cross-variable attention,
+multiscale mixing, exogenous conditioning, linear baselines, or large-corpus
+pretraining \citep{zhou2022fedformer,wu2023timesnet,patchtst,tan2024pattn,
 liu2024itransformer,wang2024timemixer,wang2024timexer,dlinear,lightts,
-yi2024frets,ansari2024chronos}. All of them improve the forecast by changing the
-forecaster. Our results show that even the strongest of these models leaves a
-recurring, retrievable error behind, and that repairing it requires no change to
-the model.
+yi2024frets,ansari2024chronos}. All improve the forecast by changing the
+forecaster; we show that even the strongest of them leaves a recurring,
+retrievable error behind.
 
 \paragraph{Retrieval-augmented forecasting.}
 Retrieval has supplied cross-entity context~\citep{yang2022mqretnn}, guided a
-diffusion sampler~\citep{liu2024ratd}, populated LLM
-prompts~\citep{yang2024timerag}, and conditioned foundation models on retrieved
-chunks~\citep{tire2024raf}. \citet{zhang2024timeraf} train a retriever with
-channel prompting under the same acronym as our method; TS-RAG adds an encoder
-and adaptive mixer~\citep{ning2025tsrag}; RAFT targets recurring patterns that
-model weights miss~\citep{han2025raft}; and Cross-RAG, CRAFT, and SARAF sharpen
+diffusion sampler~\citep{liu2024ratd}, populated LLM prompts~\citep{yang2024timerag},
+and conditioned foundation models~\citep{tire2024raf}. \citet{zhang2024timeraf} train a retriever with
+channel prompting under the same acronym as our method; \tsrag{} adds an encoder
+and adaptive mixer~\citep{ning2025tsrag}; \raft{} targets recurring patterns model
+weights miss~\citep{han2025raft}; and \crossrag{}, \craftm{}, and \saraf{} sharpen
 relevance through cross-attention, spectral ranking, and stationarity-aware
-diversity~\citep{lee2026crossrag,kang2026craft,zhou2026saraf}. All retrieve on
-the input and inject retrieved trajectories or latents into a learned prediction
-path. We change the retrieval object instead, and
-Section~\ref{sec:exp-object} turns that change into a controlled comparison by
-holding every base forecast fixed.
+diversity~\citep{lee2026crossrag,kang2026craft,zhou2026saraf}. All retrieve on the
+input and inject trajectories or latents into a learned prediction path. We change
+the retrieval object instead, and show it is one end of a dial their formulation
+fixes.
 
 \paragraph{Forecast combination and post-hoc correction.}
-Mean, bagged, greedy, and portfolio ensembles improve robustness by combining
-predictors
+Ensembles improve robustness by combining predictors
 \citep{kourentzes2014operator,oliveira2015ensemblebagging,mienye2022ensemble,
-caruana2004ensemble,autosklearn_portfolio_zeroshot}; AutoGluon automates model
-selection, stacking, and weighted ensembling~\citep{shchur2023autogluon}; and
-TimeFuse learns sample-dependent fusion weights over 13 heterogeneous
-models~\citep{liu2025timefuse}. These methods recombine forecasts. \method{}
-composes with them: it takes whatever forecast a system produces and asks whether
-that system has a recurring retrievable error---which, in 70 of 94 such settings,
-it does. Bias correction and residual boosting are the classical special cases of
-our candidate set, and their presence as alternatives is what makes the retrieval
-claim falsifiable.
+caruana2004ensemble,autosklearn_portfolio_zeroshot}, \autogluon{} automates
+selection, stacking, and weighting~\citep{shchur2023autogluon}, and \timefuse{}
+learns sample-dependent fusion weights~\citep{liu2025timefuse}. These recombine
+forecasts; \method{} composes with them, asking whether the forecast a system
+produces has a recurring retrievable error---which, in 70 of 94 such settings, it
+does. Bias correction and residual boosting are classical special cases of our
+candidate set, and their presence makes the retrieval claim falsifiable.

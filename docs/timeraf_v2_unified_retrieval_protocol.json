@@ -1,0 +1,1438 @@
+{
+  "schema_version": 1,
+  "frozen_date": "2026-09-11",
+  "status": "frozen_pre_execution",
+  "amendments": [
+    {
+      "date": "2026-09-11",
+      "scope": "adds the two fold-selection rungs v2_folded and v2_folded_conservative",
+      "reason": "A four-cell EPF pipeline smoke test inside the development split showed that whole-window argmin over the enlarged candidate pool selects aggressive analogue-heavy candidates whose validation advantage does not transfer. Temporal two-fold minimax selection is the standard variance control for that failure and is added before any confirmatory cell is inspected. All four smoke cells are development cells.",
+      "outcome_independence": "The rule scores every family identically, uses no test data, and is fixed before the development ladder runs."
+    }
+  ],
+  "objective": "Extend the TimeRAF revision portfolio so one dial moves the retrieved correction continuously between the memory residual and the endpoint-aligned analogue future, and measure whether validation selection of that dial dominates both fixed objects.",
+  "motivation": "In the accepted 585-cell fixed-forecast comparison the analogue-future control beat the residual object on PEMS (median worst-metric gain 11.70% against 9.16%) and on weak backbones, while the residual object was more reliable overall. Both are special cases of one additive correction, so the object should be selected per setting rather than fixed by design.",
+  "unified_family": {
+    "method_id": "residual_drift",
+    "prediction": "base_q + alpha * (residual_correction_q + beta * ramp_h * drift_q)",
+    "residual_correction": "existing shrinkage-weighted mean of memory residuals y_i - base_i over the retrieved neighbourhood",
+    "drift": "sum_i w_i (base_i - x_i_last) + x_q_last - base_q",
+    "identity_claims": [
+      "beta = 0 reproduces the frozen historical_residual family exactly",
+      "beta = 1, alpha = 1, ramp = flat, shrinkage = 0 reproduces the endpoint-aligned analogue mean over the same neighbourhood and weights",
+      "the drift term reads only memory labels, memory forecasts and the query forecast, so the frozen no-lookahead check still applies unchanged"
+    ],
+    "ramps": {
+      "flat": "w_h = 1",
+      "linear": "w_h = (h + 1) / pred_len"
+    }
+  },
+  "rungs": [
+    {
+      "id": "v1_reference",
+      "purpose": "harness validation only; must reproduce the accepted 585-cell TimeRAF test metrics",
+      "portfolio": {
+        "enable_drift": false
+      }
+    },
+    {
+      "id": "v2_drift",
+      "purpose": "unified family with a flat ramp",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": false,
+        "conservative_tolerance": 0.0
+      }
+    },
+    {
+      "id": "v2_drift_ramp",
+      "purpose": "add the per-horizon drift ramp",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": false,
+        "conservative_tolerance": 0.0
+      }
+    },
+    {
+      "id": "v2_drift_ramp_shape",
+      "purpose": "add level-free shape descriptors to the drift family only",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true,
+        "conservative_tolerance": 0.0
+      }
+    },
+    {
+      "id": "v2_full",
+      "purpose": "add the conservative selection rule that trades at most 5% of the achieved validation improvement for the least aggressive correction",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true,
+        "conservative_tolerance": 0.05
+      }
+    },
+    {
+      "id": "v2_folded",
+      "purpose": "select on the worse of two temporal validation folds instead of the whole validation window",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true,
+        "conservative_tolerance": 0.0,
+        "fold_selection": "minimax2"
+      }
+    },
+    {
+      "id": "v2_folded_conservative",
+      "purpose": "two-fold minimax selection plus the conservative magnitude rule",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true,
+        "conservative_tolerance": 0.05,
+        "fold_selection": "minimax2"
+      }
+    },
+    {
+      "id": "v1_folded",
+      "purpose": "isolate the fold-selection effect from the unified family by applying two-fold minimax selection to the frozen v1 candidate pool",
+      "portfolio": {
+        "enable_drift": false,
+        "conservative_tolerance": 0.0,
+        "fold_selection": "minimax2"
+      }
+    }
+  ],
+  "fold_selection": {
+    "minimax2": "Split the validation query window into an early and a late contiguous half. Score a candidate by the maximum of its two worst-metric ratios, so a candidate must improve every reported metric in both halves to score below one. Ranking and tie breaking are otherwise unchanged."
+  },
+  "selection_policy_rules": {
+    "analogue_gate": "Admit drift candidates for a retrieval descriptor only when that descriptor's pure analogue candidate (alpha 1, beta 1, flat ramp, no shrinkage) already scores below one, that is when the retrieved analogue is itself a better validation forecast than the base trajectory. This is the validation-only form of the mechanism the object comparison established: overwriting the base trajectory can only help when that trajectory is worse than the analogue.",
+    "family_prior_margin": "Admit a drift candidate only when its selection score beats the best non-drift candidate by at least the given absolute margin. A prior in favour of pure error retrieval, which is the object the method claims.",
+    "conservative_tolerance": "Give up at most this fraction of the achieved validation improvement in exchange for the smallest correction magnitude alpha * (1 + beta).",
+    "family_prior_relative_margin": "Admit a drift candidate only when its selection score is at most (1 - margin) times the best non-drift candidate score. The relative form of the family prior, so the required evidence scales with how much improvement is available in the cell.",
+    "minimax2_and_window": "Score a candidate by the worst of three views: the whole validation window and each of its two halves.",
+    "rank_stability_fraction": "Retain only candidates that rank inside the same top fraction of the admitted pool in both validation halves, so a candidate that is strong in one half and mediocre in the other cannot be selected.",
+    "horizon_conditional_prior": "Apply margin_at_or_below to cells whose forecast horizon is at most the threshold and margin_above otherwise. The retrieved analogue trajectory is only trustworthy while the neighbour's future stays close to the query's; a margin of 1.0 disables the drift family entirely above the threshold. The horizon is known before any test data is read."
+  },
+  "selection_policies": [
+    {
+      "id": "p_v1_reference",
+      "portfolio": {
+        "enable_drift": false
+      },
+      "fold_selection": "none"
+    },
+    {
+      "id": "p_v1_folded",
+      "portfolio": {
+        "enable_drift": false
+      },
+      "fold_selection": "minimax2"
+    },
+    {
+      "id": "p_v2_folded",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true
+      },
+      "fold_selection": "minimax2"
+    },
+    {
+      "id": "p_v2_folded_gated",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true
+      },
+      "fold_selection": "minimax2",
+      "analogue_gate": true
+    },
+    {
+      "id": "p_v2_folded_gated_conservative",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true
+      },
+      "fold_selection": "minimax2",
+      "analogue_gate": true,
+      "conservative_tolerance": 0.05
+    },
+    {
+      "id": "p_v2_folded_prior",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true
+      },
+      "fold_selection": "minimax2",
+      "family_prior_margin": 0.02
+    },
+    {
+      "id": "p_v2_folded_gated_prior",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true
+      },
+      "fold_selection": "minimax2",
+      "analogue_gate": true,
+      "family_prior_margin": 0.02
+    },
+    {
+      "id": "p_v2_folded_noshape_gated",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": false
+      },
+      "fold_selection": "minimax2",
+      "analogue_gate": true
+    },
+    {
+      "id": "p_v2_folded_prior_0p01",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true
+      },
+      "fold_selection": "minimax2",
+      "family_prior_margin": 0.01
+    },
+    {
+      "id": "p_v2_folded_prior_0p05",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true
+      },
+      "fold_selection": "minimax2",
+      "family_prior_margin": 0.05
+    },
+    {
+      "id": "p_v2_folded_prior_0p1",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true
+      },
+      "fold_selection": "minimax2",
+      "family_prior_margin": 0.1
+    },
+    {
+      "id": "p_v2_folded_prior_0p2",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true
+      },
+      "fold_selection": "minimax2",
+      "family_prior_margin": 0.2
+    },
+    {
+      "id": "p_v2_folded_relprior_0p02",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true
+      },
+      "fold_selection": "minimax2",
+      "family_prior_relative_margin": 0.02
+    },
+    {
+      "id": "p_v2_folded_relprior_0p05",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true
+      },
+      "fold_selection": "minimax2",
+      "family_prior_relative_margin": 0.05
+    },
+    {
+      "id": "p_v2_folded_relprior_0p1",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true
+      },
+      "fold_selection": "minimax2",
+      "family_prior_relative_margin": 0.1
+    },
+    {
+      "id": "p_v1_window_folds",
+      "portfolio": {
+        "enable_drift": false
+      },
+      "fold_selection": "minimax2_and_window"
+    },
+    {
+      "id": "p_v2_window_folds",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true
+      },
+      "fold_selection": "minimax2_and_window"
+    },
+    {
+      "id": "p_v2_window_folds_prior_0p05",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true
+      },
+      "fold_selection": "minimax2_and_window",
+      "family_prior_margin": 0.05
+    },
+    {
+      "id": "p_v2_window_folds_prior_0p02",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true
+      },
+      "fold_selection": "minimax2_and_window",
+      "family_prior_margin": 0.02
+    },
+    {
+      "id": "p_v1_rank5",
+      "portfolio": {
+        "enable_drift": false
+      },
+      "fold_selection": "minimax2",
+      "rank_stability_fraction": 0.05
+    },
+    {
+      "id": "p_v2_rank5",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true
+      },
+      "fold_selection": "minimax2",
+      "rank_stability_fraction": 0.05
+    },
+    {
+      "id": "p_v2_rank5_prior_0p02",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true
+      },
+      "fold_selection": "minimax2",
+      "rank_stability_fraction": 0.05,
+      "family_prior_margin": 0.02
+    },
+    {
+      "id": "p_v2_window_folds_rank5",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true
+      },
+      "fold_selection": "minimax2_and_window",
+      "rank_stability_fraction": 0.05
+    },
+    {
+      "id": "p_v2_horizon_gated",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true
+      },
+      "fold_selection": "minimax2",
+      "horizon_conditional_prior": {
+        "threshold": 24,
+        "margin_at_or_below": 0.0,
+        "margin_above": 0.05
+      }
+    },
+    {
+      "id": "p_v2_horizon_gated_window",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true
+      },
+      "fold_selection": "none",
+      "horizon_conditional_prior": {
+        "threshold": 24,
+        "margin_at_or_below": 0.0,
+        "margin_above": 0.05
+      }
+    },
+    {
+      "id": "p_v2_horizon_only",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true
+      },
+      "fold_selection": "minimax2",
+      "horizon_conditional_prior": {
+        "threshold": 24,
+        "margin_at_or_below": 0.0,
+        "margin_above": 1.0
+      }
+    },
+    {
+      "id": "p_v2_horizon_only_window",
+      "portfolio": {
+        "enable_drift": true,
+        "drift_betas": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "drift_alphas": [
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "drift_ramps": [
+          "flat",
+          "linear"
+        ],
+        "drift_aggregations": [
+          [
+            8,
+            0.1,
+            0.0
+          ],
+          [
+            16,
+            0.3,
+            4.0
+          ]
+        ],
+        "shape_descriptors": true
+      },
+      "fold_selection": "none",
+      "horizon_conditional_prior": {
+        "threshold": 24,
+        "margin_at_or_below": 0.0,
+        "margin_above": 1.0
+      }
+    }
+  ],
+  "fixed_forecast_scope": {
+    "catalog": "prediction_bundle_catalog.json of the accepted full-horizon retrieval replay",
+    "catalog_sha256": "cd92b7e1a35341c3175a8e8c3468c41cc79cf0c9e508c5a39d0cdaa3255de1b8",
+    "cells": 585,
+    "base_forecasts": "byte-identical frozen replay predictions; every rung revises the same tensors",
+    "comparison_systems": [
+      "base",
+      "analog_future",
+      "raft_adapted",
+      "saraf_adapted",
+      "residual_retrieval",
+      "timeraf"
+    ],
+    "comparison_source": "outputs/full_horizon_retrieval/e97746ed847f25d1f11f47242bc04db2b48b83ef/retrieval_matrix/matrix_summary.json",
+    "comparison_source_sha256_recorded_in_run_metadata": true
+  },
+  "development_split": {
+    "rule": "frozen 123-cell primary development set, extended by the lexicographically first dataset of each short-term family so every task family is represented before any v2 outcome is observed",
+    "frozen_primary_development_sha256": "d7f9de51cbe7489d74c9c254797c78bc2342f4475630b3ea04e5a19440b73328",
+    "extension": [
+      "pems/PEMS03/*",
+      "epf/BE/*"
+    ],
+    "cells": 175,
+    "cell_list": "docs/timeraf_v2_development_cells.txt",
+    "cell_list_sha256": "39a49c2070943628514c5ae58056cdca932ff2f2a69cbddca5dbdeb7030068b1",
+    "confirmatory_cells": 410,
+    "rung_selection": "Run every rung on the 175 development cells only. Select the rung with the most development strict wins; break ties by higher median worst-metric gain, then by the smaller candidate count. Do not inspect confirmatory cells before the rung is fixed.",
+    "confirmatory_reporting": "After the rung is fixed, run it once on all 585 cells and report the 410 confirmatory cells separately from the development cells.",
+    "policy_selection": "Selection policies are compared on the 175 development cells only. Pick the policy with the most development strict wins; break ties by higher median worst-metric gain, then by fewer admitted candidates. Confirmatory cells are not inspected before the policy is fixed."
+  },
+  "acceptance_targets": {
+    "primary": [
+      "strict wins at least equal to the accepted TimeRAF result overall and within every task family",
+      "median worst-metric paired gain at least equal to the best of every compared system within every task family",
+      "no reported metric whose family median gain falls below the accepted TimeRAF value"
+    ],
+    "stretch_goal_statement": "Beating every baseline in every one of the 585 settings is not a target this protocol can promise: the frozen publication gate deliberately measures broad improvement rather than per-cell universality, and a fixed base forecast can already be optimal in individual settings. Per-setting dominance counts against each baseline are reported as observed, not as a pass criterion.",
+    "below_threshold_outcome": "A rung that fails a target is recorded as a valid experimental outcome. Targets must not be weakened after observing results."
+  },
+  "integrity": {
+    "no_lookahead_required_per_cell": true,
+    "no_lookahead_mode": "all test labels perturbed, prediction must be unchanged",
+    "base_metric_recomputation_recorded": true,
+    "fresh_output_root_required": true,
+    "accepted_artifacts_immutable": true,
+    "non_finite_predictions_or_metrics_are_failures": true,
+    "method_revision_recorded_separately_from_launcher_revision": true
+  },
+  "execution": {
+    "hardware": "canonical Studio space <P5_SPACE>, ml.p5.48xlarge",
+    "gpu_workers": 0,
+    "reason_for_zero_gpu_workers": "The fixed-forecast portfolio search is a numpy numerical replay over existing prediction bundles; no model inference occurs. Reserved GPUs are recorded as inactive with this reason, following the accepted Appendix RAG precedent.",
+    "cpu_workers": 24,
+    "artifact_root": "/home/sagemaker-user/user-default-efs/workspace/TimeRAF"
+  },
+  "development_decision": {
+    "decided_date": "2026-09-11",
+    "decided_on": "the 175 development cells only; no confirmatory cell was inspected",
+    "rule_applied": "most development strict wins, then higher median worst-metric gain, then fewer admitted candidates",
+    "selected_policy": "p_v2_horizon_gated",
+    "development_table": {
+      "timeraf_accepted": {
+        "strict_wins": 154,
+        "median_worst_metric_gain_percent": 3.45,
+        "long_term": [
+          106,
+          2.11
+        ],
+        "pems": [
+          39,
+          10.13
+        ],
+        "epf": [
+          9,
+          1.84
+        ]
+      },
+      "p_v1_reference": {
+        "strict_wins": 154,
+        "note": "byte identical to the accepted TimeRAF result on every development cell"
+      },
+      "p_v1_folded": {
+        "strict_wins": 162,
+        "long_term": [
+          113,
+          2.08
+        ],
+        "pems": [
+          39,
+          10.07
+        ],
+        "epf": [
+          10,
+          1.84
+        ]
+      },
+      "p_v2_folded": {
+        "strict_wins": 157,
+        "long_term": [
+          105,
+          1.84
+        ],
+        "pems": [
+          39,
+          14.88
+        ],
+        "epf": [
+          13,
+          4.99
+        ]
+      },
+      "p_v2_folded_gated": {
+        "strict_wins": 162,
+        "note": "the analogue gate never admitted drift, so this collapsed onto p_v1_folded"
+      },
+      "p_v2_folded_prior_0p01": {
+        "strict_wins": 159
+      },
+      "p_v2_folded_prior_0p02": {
+        "strict_wins": 159
+      },
+      "p_v2_folded_prior_0p05": {
+        "strict_wins": 162,
+        "pems": [
+          39,
+          11.58
+        ]
+      },
+      "p_v2_folded_prior_0p1": {
+        "strict_wins": 162
+      },
+      "p_v2_folded_prior_0p2": {
+        "strict_wins": 162
+      },
+      "p_v2_folded_relprior_0p02": {
+        "strict_wins": 159
+      },
+      "p_v2_folded_relprior_0p05": {
+        "strict_wins": 162
+      },
+      "p_v2_folded_relprior_0p1": {
+        "strict_wins": 162
+      },
+      "p_v1_rank5": {
+        "strict_wins": 120
+      },
+      "p_v2_rank5": {
+        "strict_wins": 146
+      },
+      "p_v2_rank5_prior_0p02": {
+        "strict_wins": 123
+      },
+      "p_v1_window_folds": {
+        "strict_wins": 162
+      },
+      "p_v2_window_folds": {
+        "strict_wins": 157
+      },
+      "p_v2_window_folds_prior_0p02": {
+        "strict_wins": 159
+      },
+      "p_v2_window_folds_prior_0p05": {
+        "strict_wins": 162
+      },
+      "p_v2_window_folds_rank5": {
+        "strict_wins": 146
+      },
+      "p_v2_horizon_gated": {
+        "strict_wins": 165,
+        "median_worst_metric_gain_percent": 3.62,
+        "long_term": [
+          113,
+          2.08
+        ],
+        "pems": [
+          39,
+          14.88
+        ],
+        "epf": [
+          13,
+          4.99
+        ]
+      },
+      "p_v2_horizon_gated_window": {
+        "strict_wins": 152
+      },
+      "p_v2_horizon_only": {
+        "strict_wins": 165,
+        "note": "identical to p_v2_horizon_gated on development because the 0.05 margin already blocked every long-horizon drift candidate"
+      },
+      "p_v2_horizon_only_window": {
+        "strict_wins": 152
+      }
+    },
+    "disclosure": "The horizon threshold of 24 and the 0.05 long-horizon margin were chosen on the development split after observing that every development PEMS and EPF cell improved with the drift family and that all strict-win losses were long-horizon cells. This is development-set model selection: the 410 confirmatory cells were not read before the decision and are reported separately.",
+    "known_target_miss": "p_v2_horizon_gated trades 0.03 percentage points of development long-term median worst-metric gain (2.08 against 2.11) for seven additional long-term strict wins, so the literal 'median at least the best recorded system' target fails for that family."
+  }
+}

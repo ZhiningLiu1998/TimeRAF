@@ -10,7 +10,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 720 324] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 4 0 R >>
 endobj
 4 0 obj
-<< /Length 16505 >>
+<< /Length 16520 >>
 stream
 1 J
 1 j
@@ -886,7 +886,7 @@ BT /F2 15 Tf 582.1 95 Td (+) Tj ET
 h
 f
 0.259 0.569 0.482 rg
-BT /F2 7.8 Tf 606.384 137 Td (Revised matches actual) Tj ET
+BT /F2 7.8 Tf 602.328 137 Td (Corrected matches actual) Tj ET
 0.871 0.945 0.922 rg
 0.259 0.569 0.482 RG
 1 w
@@ -992,7 +992,7 @@ B
 h
 f
 0.357 0.412 0.455 rg
-BT /F1 7.4 Tf 266.192 53 Td (If identity wins: keep the frozen forecast) Tj ET
+BT /F1 7.4 Tf 268.116 53 Td (If identity wins: keep the model forecast) Tj ET
 0.871 0.945 0.922 rg
 0.259 0.569 0.482 RG
 0.8 w
@@ -1008,7 +1008,7 @@ BT /F1 7.4 Tf 266.192 53 Td (If identity wins: keep the frozen forecast) Tj ET
 h
 B
 0.149 0.184 0.224 rg
-BT /F2 8 Tf 241.44 23.28 Td (FROZEN BACKBONE; THE LOCKED POLICY ADDS ONLY A CORRECTION) Tj ET
+BT /F2 8 Tf 212.32 23.28 Td (THE BACKBONE IS NEVER UPDATED; THE LOCKED POLICY ONLY ADDS A CORRECTION) Tj ET
 endstream
 endobj
 5 0 obj
@@ -1024,10 +1024,10 @@ xref
 0000000064 00000 n 
 0000000121 00000 n 
 0000000257 00000 n 
-0000016814 00000 n 
-0000016884 00000 n 
+0000016829 00000 n 
+0000016899 00000 n 
 trailer
 << /Size 7 /Root 1 0 R >>
 startxref
-16959
+16974
 %%EOF

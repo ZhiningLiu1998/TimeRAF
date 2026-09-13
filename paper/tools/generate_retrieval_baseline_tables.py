@@ -6,29 +6,10 @@ import argparse
 import hashlib
 import json
 import math
-from collections import defaultdict
 from pathlib import Path
 from statistics import fmean, median
 
-try:
-    from scripts.generate_native_retrieval_baseline_manifest import (
-        build_manifest,
-    )
-except ModuleNotFoundError:
-    import sys
-
-    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-    from scripts.generate_native_retrieval_baseline_manifest import (
-        build_manifest,
-    )
-
-
 EXPECTED_CELLS = 585
-NATIVE_PROTOCOL_PATH = (
-    Path(__file__).resolve().parents[2]
-    / "docs"
-    / "native_retrieval_baseline_protocol.json"
-)
 EXPECTED_SYSTEMS = (
     "base",
     "analog_future",
@@ -43,42 +24,6 @@ MAIN_SYSTEMS = (
     "saraf_adapted",
     "timeraf",
 )
-ABLATION_SYSTEMS = (
-    "base",
-    "analog_future",
-    "residual_retrieval",
-    "timeraf",
-)
-NATIVE_METHODS = {
-    "RAF": {
-        "pairs": 44,
-        "metrics": ("wql", "mase"),
-        "citation": "tire2024raf",
-    },
-    "TS-RAG": {
-        "pairs": 7,
-        "metrics": ("mse", "mae"),
-        "citation": "ning2025tsrag",
-    },
-    "RATD": {
-        "pairs": 1,
-        "metrics": ("rmse", "mae"),
-        "citation": "liu2024ratd",
-    },
-}
-NATIVE_SOURCE_PAIRS = {
-    "raf": 44,
-    "ts_rag": 7,
-    "ratd": 1,
-}
-SYSTEM_LABELS = {
-    "base": "Base",
-    "analog_future": "Analog-kNN",
-    "raft_adapted": "RAFT",
-    "saraf_adapted": "SARAF",
-    "residual_retrieval": "Residual-kNN",
-    "timeraf": r"\method{}",
-}
 MODELS = (
     "TimeXer",
     "TimeMixer",
@@ -94,31 +39,28 @@ MODELS = (
     "Informer",
     "Autoformer",
 )
-MODEL_LABELS = {
-    "Nonstationary_Transformer": "Non-stat. Transformer",
-}
 SUMMARY_LABELS = {
     "base": "Base",
-    "analog_future": "Analog-kNN",
-    "raft_adapted": "RAFT",
-    "saraf_adapted": "SARAF",
-    "residual_retrieval": "Residual-kNN",
+    "analog_future": r"\analogknn{}",
+    "raft_adapted": r"\raft{}",
+    "saraf_adapted": r"\saraf{}",
+    "residual_retrieval": r"\residualknn{}",
     "timeraf": r"\method{}",
 }
 MODEL_COLUMN_LABELS = {
-    "TimeXer": "TXer",
-    "TimeMixer": "TMix",
-    "PAttn": "PAttn",
-    "iTransformer": "iTrans.",
-    "TimesNet": "TNet",
-    "PatchTST": "PTST",
-    "DLinear": "DLin",
-    "FreTS": "FreTS",
-    "FEDformer": "FEDf.",
-    "Nonstationary_Transformer": "NonStat",
-    "LightTS": "LTS",
-    "Informer": "Inf.",
-    "Autoformer": "AutoF",
+    "TimeXer": r"\textsc{TXer}",
+    "TimeMixer": r"\textsc{TMix}",
+    "PAttn": r"\textsc{PAttn}",
+    "iTransformer": r"\textsc{iTrans.}",
+    "TimesNet": r"\textsc{TNet}",
+    "PatchTST": r"\textsc{PTST}",
+    "DLinear": r"\textsc{DLin}",
+    "FreTS": r"\textsc{FreTS}",
+    "FEDformer": r"\textsc{FEDf.}",
+    "Nonstationary_Transformer": r"\textsc{NonStat}",
+    "LightTS": r"\textsc{LTS}",
+    "Informer": r"\textsc{Inf.}",
+    "Autoformer": r"\textsc{AutoF}",
 }
 SCOPE = {
     "long_term": {
@@ -153,7 +95,6 @@ SCOPE = {
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", required=True, type=Path)
-    parser.add_argument("--native-input", required=True, type=Path)
     parser.add_argument(
         "--paper-root",
         type=Path,
@@ -163,6 +104,15 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--expected-launcher-revision")
     parser.add_argument("--expected-protocol-sha256")
     parser.add_argument("--expected-catalog-sha256")
+    parser.add_argument(
+        "--unified-summary",
+        type=Path,
+        help=(
+            "Composed unified-portfolio summary whose timeraf row replaces the "
+            "accepted one. Every other system stays with the accepted run."
+        ),
+    )
+    parser.add_argument("--unified-sha256")
     parser.add_argument("--run-metadata", required=True, type=Path)
     parser.add_argument("--startup-topology", required=True, type=Path)
     parser.add_argument("--completion-receipt", required=True, type=Path)
@@ -307,135 +257,6 @@ def validate(document: dict, args: argparse.Namespace) -> list[dict]:
     return rows
 
 
-def validate_native(document: dict) -> list[dict]:
-    def require_path(value: object, label: str) -> None:
-        if not isinstance(value, str) or not value.strip():
-            raise ValueError(f"Native {label} path is missing")
-
-    def require_sha256(value: object, label: str) -> None:
-        if (
-            not isinstance(value, str)
-            or len(value) != 64
-            or any(character not in "0123456789abcdef" for character in value)
-        ):
-            raise ValueError(f"Native {label} hash is invalid")
-
-    if document.get("schema_version") != 2:
-        raise ValueError("Native retrieval baseline schema must be 2")
-    require_sha256(document.get("protocol_sha256"), "protocol")
-    protocol = json.loads(NATIVE_PROTOCOL_PATH.read_text(encoding="utf-8"))
-    canonical_manifest = build_manifest(protocol)
-    canonical_by_id = {row["id"]: row for row in canonical_manifest}
-
-    execution_record = document.get("execution_record")
-    if not isinstance(execution_record, dict):
-        raise ValueError("Native execution record is missing")
-    require_path(execution_record.get("path"), "execution record")
-    require_sha256(execution_record.get("sha256"), "execution record")
-
-    source_summaries = document.get("source_summaries")
-    if (
-        not isinstance(source_summaries, dict)
-        or set(source_summaries) != set(NATIVE_SOURCE_PAIRS)
-    ):
-        raise ValueError("Native source summaries are missing or invalid")
-    for source_key, expected_pairs in NATIVE_SOURCE_PAIRS.items():
-        source = source_summaries[source_key]
-        if not isinstance(source, dict):
-            raise ValueError(f"Native {source_key} source is invalid")
-        require_path(source.get("path"), f"{source_key} source")
-        require_sha256(source.get("sha256"), f"{source_key} source")
-        source_revision = source.get("source_revision")
-        if not isinstance(source_revision, str) or not source_revision.strip():
-            raise ValueError(
-                f"Native {source_key} source revision is missing"
-            )
-        require_path(source.get("topology_path"), f"{source_key} topology")
-        require_sha256(
-            source.get("topology_sha256"),
-            f"{source_key} topology",
-        )
-        if source.get("pairs") != expected_pairs:
-            raise ValueError(f"Native {source_key} source pair count drifted")
-
-    if (
-        document.get("expected_pairs") != 52
-        or document.get("completed_pairs") != 52
-        or document.get("all_completed") is not True
-    ):
-        raise ValueError("Native retrieval baseline matrix is incomplete")
-    pairs = document.get("pairs")
-    if not isinstance(pairs, list) or len(pairs) != 52:
-        raise ValueError("Native retrieval baseline matrix must have 52 pairs")
-    counts = defaultdict(int)
-    seen = set()
-    for pair in pairs:
-        cell_id = pair.get("cell_id")
-        method = pair.get("method")
-        if not isinstance(cell_id, str) or not cell_id or cell_id in seen:
-            raise ValueError("Native baseline cell IDs are invalid")
-        seen.add(cell_id)
-        canonical = canonical_by_id.get(cell_id)
-        if canonical is None:
-            raise ValueError(
-                f"{cell_id}: native baseline cell ID is not canonical"
-            )
-        system = protocol["systems"][canonical["method"]]
-        canonical_fields = {
-            "method": system["retrieval_system"],
-            "base_method": system["base_system"],
-            "dataset": canonical["dataset"],
-            "backbone": canonical["backbone"],
-            "context_length": canonical["context_length"],
-            "prediction_length": canonical["prediction_length"],
-            "metrics": canonical["metrics"],
-        }
-        for field, expected_value in canonical_fields.items():
-            if pair.get(field) != expected_value:
-                raise ValueError(
-                    f"{cell_id}: native canonical {field} mismatch"
-                )
-        if method not in NATIVE_METHODS:
-            raise ValueError(f"Unknown native baseline method: {method}")
-        counts[method] += 1
-        expected_metrics = set(NATIVE_METHODS[method]["metrics"])
-        if set(pair.get("metrics", ())) != expected_metrics:
-            raise ValueError(f"{cell_id}: native metric coverage drifted")
-        base = pair.get("base", {})
-        retrieval = pair.get("retrieval", {})
-        delta = pair.get("delta", {})
-        if (
-            set(base) != expected_metrics
-            or set(retrieval) != expected_metrics
-            or set(delta) != expected_metrics
-        ):
-            raise ValueError(f"{cell_id}: native paired metrics are missing")
-        for metric in expected_metrics:
-            values = (
-                float(base[metric]),
-                float(retrieval[metric]),
-                float(delta[metric]),
-            )
-            if not all(math.isfinite(value) for value in values):
-                raise ValueError(f"{cell_id}: non-finite native metric")
-            if not math.isclose(
-                values[2],
-                values[1] - values[0],
-                rel_tol=1e-12,
-                abs_tol=1e-12,
-            ):
-                raise ValueError(f"{cell_id}: native delta mismatch")
-    expected_counts = {
-        method: specification["pairs"]
-        for method, specification in NATIVE_METHODS.items()
-    }
-    if dict(counts) != expected_counts:
-        raise ValueError("Native method pair counts drifted")
-    if seen != set(canonical_by_id):
-        raise ValueError("Native baseline canonical cell coverage drifted")
-    return pairs
-
-
 def validate_provenance(
     document: dict,
     run_metadata: dict,
@@ -555,19 +376,6 @@ def _sha256(path: Path) -> str:
         for block in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(block)
     return digest.hexdigest()
-
-
-def _escape(value: str) -> str:
-    return value.replace("_", r"\_")
-
-
-def _model_label(model: str) -> str:
-    return MODEL_LABELS.get(model, model)
-
-
-def _fmt_metric(family: str, metric: str, value: float) -> str:
-    decimals = 3 if family == "pems" and metric != "mape" else 4
-    return f"{value:.{decimals}f}"
 
 
 def aggregate_model_metric(
@@ -741,532 +549,6 @@ def render_short_value_table(rows: list[dict]) -> str:
     )
 
 
-def render_summary(rows: list[dict]) -> str:
-    lines = [
-        "% Generated by paper/tools/generate_retrieval_baseline_tables.py.",
-        r"\begin{center}",
-        r"\refstepcounter{table}",
-        r"\label{tab:retrieval-baseline-summary}",
-        r"\begin{minipage}[t]{\linewidth}",
-        r"\scriptsize",
-        r"\setlength{\tabcolsep}{2.5pt}",
-        (
-            r"\textbf{Table~\thetable: Base and retrieval-method results in "
-            r"the 585-cell checkpoint replay. LT, PEMS, EPF, and All are "
-            r"strict wins over Base. Metric columns are median paired error "
-            r"reductions (\%); higher is better.}\par"
-        ),
-        r"\centering",
-        r"\begin{tabular}{lrrrrrrrr}",
-        r"\toprule",
-        (
-            r"System & LT & PEMS & EPF & All & "
-            r"$\Delta$MSE & $\Delta$MAE & $\Delta$RMSE & $\Delta$MAPE \\"
-        ),
-        r"\midrule",
-    ]
-    for system_id in EXPECTED_SYSTEMS:
-        counts = []
-        for family, scope in SCOPE.items():
-            members = [row for row in rows if row["task_family"] == family]
-            wins = sum(
-                bool(row["systems"][system_id]["strict_win"])
-                for row in members
-            )
-            counts.append(f"{wins}/{len(members)}")
-        overall = sum(
-            bool(row["systems"][system_id]["strict_win"]) for row in rows
-        )
-        metric_medians = []
-        for metric in ("mse", "mae", "rmse", "mape"):
-            gains = [
-                float(row["systems"][system_id]["metric_gain_percent"][metric])
-                for row in rows
-                if metric
-                in row["systems"][system_id]["metric_gain_percent"]
-            ]
-            metric_medians.append(f"{median(gains):.1f}")
-        lines.append(
-            f"{SUMMARY_LABELS[system_id]} & "
-            + " & ".join(counts)
-            + f" & {overall}/{len(rows)} & "
-            + " & ".join(metric_medians)
-            + r" \\"
-        )
-    lines.extend(
-        [
-            r"\bottomrule",
-            r"\end{tabular}",
-            r"\end{minipage}%",
-            r"\end{center}",
-            "",
-        ]
-    )
-    return "\n".join(lines)
-
-
-def aggregate_native_metric(
-    pairs: list[dict],
-    method: str,
-    metric: str,
-) -> tuple[float, float, float]:
-    members = [pair for pair in pairs if pair["method"] == method]
-    expected = NATIVE_METHODS[method]["pairs"]
-    if len(members) != expected:
-        raise ValueError(
-            f"Expected {expected} native {method} pairs, found {len(members)}"
-        )
-    base = fmean(float(pair["base"][metric]) for pair in members)
-    retrieval = fmean(
-        float(pair["retrieval"][metric]) for pair in members
-    )
-    return base, retrieval, retrieval - base
-
-
-def _fmt_native(value: float) -> str:
-    return f"{value:.4f}"
-
-
-def render_native_values(pairs: list[dict]) -> str:
-    lines = [
-        "% Generated by paper/tools/generate_retrieval_baseline_tables.py.",
-        r"\begin{table}[t]",
-        r"\centering",
-        (
-            r"\caption{\textbf{Published end-to-end retrieval systems in "
-            r"their native protocols.} Base and retrieval are evaluated on "
-            r"the same examples; $\Delta=\mathrm{retrieval}-\mathrm{base}$. "
-            r"Negative is better. Values are averaged only within one "
-            r"method/metric, and methods are not ranked across protocols. "
-            r"Bold marks the lower paired error and its delta.}"
-        ),
-        r"\label{tab:native-retrieval-values}",
-        r"\small",
-        r"\setlength{\tabcolsep}{3.5pt}",
-        r"\begin{tabular}{@{}llrrr@{}}",
-        r"\toprule",
-        r"Method & Metric & Base & Retrieval & $\Delta$ \\",
-        r"\midrule",
-    ]
-    for method, specification in NATIVE_METHODS.items():
-        citation = specification["citation"]
-        for metric_index, metric in enumerate(specification["metrics"]):
-            base, retrieval, delta = aggregate_native_metric(
-                pairs, method, metric
-            )
-            base_text = _fmt_native(base)
-            retrieval_text = _fmt_native(retrieval)
-            delta_text = f"{delta:+.4f}" if delta else "0.0000"
-            if retrieval < base:
-                retrieval_text = rf"\textbf{{{retrieval_text}}}"
-                delta_text = rf"\textbf{{{delta_text}}}"
-            elif base < retrieval:
-                base_text = rf"\textbf{{{base_text}}}"
-            else:
-                base_text = rf"\textbf{{{base_text}}}"
-                retrieval_text = rf"\textbf{{{retrieval_text}}}"
-            method_text = (
-                rf"{method}~\citep{{{citation}}}"
-                if metric_index == 0
-                else ""
-            )
-            lines.append(
-                f"{method_text} & {metric.upper()} & {base_text} & "
-                f"{retrieval_text} & {delta_text} \\\\"
-            )
-        if method != tuple(NATIVE_METHODS)[-1]:
-            lines.append(r"\addlinespace")
-    lines.extend(
-        [
-            r"\bottomrule",
-            r"\end{tabular}",
-            r"\end{table}",
-            "",
-        ]
-    )
-    return "\n".join(lines)
-
-
-def render_native_full(pairs: list[dict]) -> str:
-    lines = [
-        "% Generated by paper/tools/generate_retrieval_baseline_tables.py.",
-        r"\begingroup",
-        r"\scriptsize",
-        r"\setlength{\tabcolsep}{2.5pt}",
-        r"\begin{longtable}{@{}lllrrrr@{}}",
-        (
-            r"\caption{All native end-to-end retrieval pairs. "
-            r"$\Delta=\mathrm{retrieval}-\mathrm{base}$; negative is better. "
-            r"Bold marks the lower paired error and its delta. Methods use "
-            r"different protocols and are not ranked against one another.}"
-            r"\label{tab:native-retrieval-full}\\"
-        ),
-        r"\toprule",
-        r"Method & Dataset & Metric & C/H & Base & Retrieval & $\Delta$ \\",
-        r"\midrule",
-        r"\endfirsthead",
-        r"\multicolumn{7}{c}{\tablename\ \thetable\ continued} \\",
-        r"\toprule",
-        r"Method & Dataset & Metric & C/H & Base & Retrieval & $\Delta$ \\",
-        r"\midrule",
-        r"\endhead",
-        r"\midrule",
-        r"\multicolumn{7}{r}{Continued on next page} \\",
-        r"\endfoot",
-        r"\bottomrule",
-        r"\endlastfoot",
-    ]
-    ordered_pairs = sorted(
-        pairs,
-        key=lambda pair: (
-            tuple(NATIVE_METHODS).index(pair["method"]),
-            pair["cell_id"],
-        ),
-    )
-    previous_method = None
-    for pair in ordered_pairs:
-        method = pair["method"]
-        if previous_method is not None and method != previous_method:
-            lines.append(r"\midrule")
-        for metric_index, metric in enumerate(pair["metrics"]):
-            base = float(pair["base"][metric])
-            retrieval = float(pair["retrieval"][metric])
-            delta = retrieval - base
-            base_text = _fmt_native(base)
-            retrieval_text = _fmt_native(retrieval)
-            delta_text = f"{delta:+.4f}" if delta else "0.0000"
-            if retrieval < base:
-                retrieval_text = rf"\textbf{{{retrieval_text}}}"
-                delta_text = rf"\textbf{{{delta_text}}}"
-            elif base < retrieval:
-                base_text = rf"\textbf{{{base_text}}}"
-            else:
-                base_text = rf"\textbf{{{base_text}}}"
-                retrieval_text = rf"\textbf{{{retrieval_text}}}"
-            method_text = method if metric_index == 0 else ""
-            dataset_text = (
-                _escape(str(pair["dataset"])) if metric_index == 0 else ""
-            )
-            context_horizon_text = (
-                f"{pair['context_length']}/{pair['prediction_length']}"
-                if metric_index == 0
-                else ""
-            )
-            lines.append(
-                f"{method_text} & {dataset_text} & {metric.upper()} & "
-                f"{context_horizon_text} & {base_text} & "
-                f"{retrieval_text} & {delta_text} \\\\"
-            )
-        previous_method = method
-    lines.extend([r"\end{longtable}", r"\endgroup", ""])
-    return "\n".join(lines)
-
-
-def _format_win_count(value: int, denominator: int, *, best: bool) -> str:
-    text = f"{value}/{denominator}"
-    return rf"\textbf{{{text}}}" if best else text
-
-
-def render_model_columns(
-    rows: list[dict], native_pairs: list[dict] | None = None
-) -> str:
-    native_pairs = native_pairs or []
-    main_win_systems = ("raft_adapted", "saraf_adapted", "timeraf")
-    ablation_win_systems = ("analog_future", "residual_retrieval")
-    family_counts = {
-        (system_id, family): sum(
-            bool(row["systems"][system_id]["strict_win"])
-            for row in rows
-            if row["task_family"] == family
-        )
-        for system_id in EXPECTED_SYSTEMS
-        for family in SCOPE
-    }
-    family_denominators = {
-        family: (
-            len(scope["datasets"])
-            * len(scope["horizons"])
-            * len(MODELS)
-        )
-        for family, scope in SCOPE.items()
-    }
-    overall_counts = {
-        system_id: sum(
-            bool(row["systems"][system_id]["strict_win"]) for row in rows
-        )
-        for system_id in EXPECTED_SYSTEMS
-    }
-    lines = [
-        "% Generated by paper/tools/generate_retrieval_baseline_tables.py.",
-        r"\begin{table*}[t]",
-        r"\centering",
-        (
-            r"\caption{\textbf{Unified strict-win counts.} In the fixed-"
-            r"forecast panels, a win lowers every metric; LT, PEMS, EPF, "
-            r"and All contain 364, 156, 65, and 585 cells, respectively. "
-            r"Native end-to-end rows use their own paired protocols and are "
-            r"not ranked across methods. Bold marks the largest count within "
-            r"each comparable fixed-forecast panel.}"
-        ),
-        r"\label{tab:retrieval-win-summary}",
-        r"\setlength{\tabcolsep}{5pt}",
-        r"\begin{tabular}{@{}lrrrr@{}}",
-        r"\toprule",
-        r"System & LT & PEMS & EPF & All \\",
-        r"\midrule",
-        r"\multicolumn{5}{@{}l}{Published retrieval operators and proposed method} \\",
-    ]
-    for system_id in main_win_systems:
-        counts = []
-        for family in SCOPE:
-            value = family_counts[(system_id, family)]
-            best = value == max(
-                family_counts[(candidate, family)]
-                for candidate in main_win_systems
-            )
-            counts.append(
-                _format_win_count(
-                    value,
-                    family_denominators[family],
-                    best=best,
-                )
-            )
-        overall = overall_counts[system_id]
-        overall_best = overall == max(
-            overall_counts[candidate] for candidate in main_win_systems
-        )
-        lines.append(
-            f"{SUMMARY_LABELS[system_id]} & "
-            + " & ".join(counts)
-            + " & "
-            + _format_win_count(overall, len(rows), best=overall_best)
-            + r" \\"
-        )
-    lines.extend(
-        [
-            r"\midrule",
-            r"\multicolumn{5}{@{}l}{Controls and ablations} \\",
-        ]
-    )
-    for system_id in ablation_win_systems:
-        counts = []
-        for family in SCOPE:
-            value = family_counts[(system_id, family)]
-            best = value == max(
-                family_counts[(candidate, family)]
-                for candidate in ablation_win_systems
-            )
-            counts.append(
-                _format_win_count(
-                    value,
-                    family_denominators[family],
-                    best=best,
-                )
-            )
-        overall = overall_counts[system_id]
-        overall_best = overall == max(
-            overall_counts[candidate] for candidate in ablation_win_systems
-        )
-        lines.append(
-            f"{SUMMARY_LABELS[system_id]} & "
-            + " & ".join(counts)
-            + " & "
-            + _format_win_count(overall, len(rows), best=overall_best)
-            + r" \\"
-        )
-    lines.extend(
-        [
-            r"\bottomrule",
-            r"\end{tabular}",
-        ]
-    )
-    if native_pairs:
-        lines.extend(
-            [
-                r"\par\vspace{3pt}",
-                r"\small",
-                r"\begin{tabular}{@{}lrrr@{}}",
-                r"\toprule",
-                r"Native method & Paired configurations & Strict wins & Non-strict \\",
-                r"\midrule",
-            ]
-        )
-        for method, specification in NATIVE_METHODS.items():
-            members = [
-                pair for pair in native_pairs if pair["method"] == method
-            ]
-            wins = sum(
-                all(float(value) < 0.0 for value in pair["delta"].values())
-                for pair in members
-            )
-            total = specification["pairs"]
-            lines.append(
-                rf"{method}~\citep{{{specification['citation']}}} & "
-                f"{total} & {wins} & {total - wins} \\\\"
-            )
-        lines.extend([r"\bottomrule", r"\end{tabular}"])
-    lines.extend([r"\end{table*}", ""])
-    return "\n".join(lines)
-
-
-def render_backbones(rows: list[dict]) -> str:
-    systems = MAIN_SYSTEMS[1:]
-    cells_per_model = sum(
-        len(scope["datasets"]) * len(scope["horizons"])
-        for scope in SCOPE.values()
-    )
-    lines = [
-        "% Generated by paper/tools/generate_retrieval_baseline_tables.py.",
-        r"\begin{table*}[t]",
-        r"\centering",
-        r"\scriptsize",
-        r"\setlength{\tabcolsep}{3pt}",
-        (
-            r"\caption{Strict wins by frozen backbone in the full "
-            f"{EXPECTED_CELLS}-cell checkpoint-replay comparison. Every "
-            f"entry is a count out of {cells_per_model}; "
-            r"Appendix~\ref{app:retrieval-baselines} reports all absolute "
-            r"metrics.}"
-        ),
-        r"\label{tab:retrieval-baseline-backbones}",
-        r"\begin{tabular}{lrrrrr}",
-        r"\toprule",
-        (
-            "Backbone & "
-            + " & ".join(SUMMARY_LABELS[system] for system in systems)
-            + r" \\"
-        ),
-        r"\midrule",
-    ]
-    for model in MODELS:
-        members = [row for row in rows if row["model"] == model]
-        values = [
-            sum(
-                bool(row["systems"][system_id]["strict_win"])
-                for row in members
-            )
-            for system_id in systems
-        ]
-        lines.append(
-            f"{_model_label(model)} & "
-            + " & ".join(f"{value}/{cells_per_model}" for value in values)
-            + r" \\"
-        )
-    lines.extend(
-        [
-            r"\bottomrule",
-            r"\end{tabular}",
-            r"\end{table*}",
-            "",
-        ]
-    )
-    return "\n".join(lines)
-
-
-def render_full(
-    rows: list[dict],
-    systems: tuple[str, ...] = MAIN_SYSTEMS,
-    *,
-    table_role: str = "Published-operator comparison",
-    label_prefix: str = "retrieval-full",
-) -> str:
-    indexed = {row["cell_id"]: row for row in rows}
-    lines = [
-        "% Generated by paper/tools/generate_retrieval_baseline_tables.py.",
-        "% Every checkpoint-replay system/cell result appears exactly once.",
-    ]
-    for family, scope in SCOPE.items():
-        for dataset in scope["datasets"]:
-            for horizon in scope["horizons"]:
-                metrics = scope["metrics"]
-                columns = "ll" + "r" * len(systems)
-                header = (
-                    "Metric & Backbone & "
-                    + " & ".join(
-                        SUMMARY_LABELS[system] for system in systems
-                    )
-                    + r" \\"
-                )
-                lines.extend(
-                    [
-                        r"\begingroup",
-                        r"\footnotesize",
-                        r"\setlength{\tabcolsep}{1.5pt}",
-                        r"\renewcommand{\arraystretch}{0.90}",
-                        f"\\begin{{longtable}}{{{columns}}}",
-                        (
-                            f"\\caption{{{table_role} on {_escape(dataset)} "
-                            f"at horizon {horizon}. Each row reports "
-                            "absolute errors for one backbone and metric; "
-                            "bold marks the best result within each "
-                            "backbone/metric row.}"
-                            f"\\label{{tab:{label_prefix}-{family}-"
-                            f"{dataset.lower()}-h{horizon}}}\\\\"
-                        ),
-                        r"\toprule",
-                        header,
-                        r"\midrule",
-                        r"\endfirsthead",
-                        r"\multicolumn{"
-                        + str(2 + len(systems))
-                        + r"}{c}{\tablename\ \thetable\ continued} \\",
-                        r"\toprule",
-                        header,
-                        r"\midrule",
-                        r"\endhead",
-                        r"\midrule",
-                        r"\multicolumn{"
-                        + str(2 + len(systems))
-                        + r"}{r}{Continued on next page} \\",
-                        r"\endfoot",
-                        r"\bottomrule",
-                        r"\endlastfoot",
-                    ]
-                )
-                for metric_index, metric in enumerate(metrics):
-                    if metric_index:
-                        lines.append(r"\midrule")
-                    for model in MODELS:
-                        cell_id = (
-                            f"{family}/{dataset}/{model}/{horizon}"
-                        )
-                        row = indexed[cell_id]
-                        if metric_index == 0:
-                            lines.append(f"% cell {cell_id}")
-                        best = min(
-                            float(
-                                row["systems"][system_id]["test_metrics"][
-                                    metric
-                                ]
-                            )
-                            for system_id in systems
-                        )
-                        system_values = []
-                        for system_id in systems:
-                            value = float(
-                                row["systems"][system_id]["test_metrics"][
-                                    metric
-                                ]
-                            )
-                            formatted = _fmt_metric(family, metric, value)
-                            if value == best:
-                                formatted = rf"\textbf{{{formatted}}}"
-                            system_values.append(formatted)
-                        lines.append(
-                            f"{metric.upper()} & {_model_label(model)} & "
-                            + " & ".join(system_values)
-                            + r" \\"
-                        )
-                lines.extend(
-                    [
-                        r"\end{longtable}",
-                        r"\endgroup",
-                        "",
-                    ]
-                )
-    return "\n".join(lines)
-
-
 def build_data(
     document: dict,
     rows: list[dict],
@@ -1324,14 +606,44 @@ def build_data(
     }
 
 
+def apply_unified_method(document: dict, args: argparse.Namespace) -> dict:
+    """Replace the method row with the composed unified-portfolio result.
+
+    The accepted run remains the source for the base forecast and for every
+    comparison system, so the appendix tables stay paired cell by cell.
+    """
+
+    payload = args.unified_summary.read_bytes()
+    digest = hashlib.sha256(payload).hexdigest()
+    if args.unified_sha256 and digest != args.unified_sha256:
+        raise ValueError(f"unified summary SHA-256 mismatch: {digest}")
+    unified = json.loads(payload)
+    provenance = unified["provenance"]
+    if provenance["accepted_summary_sha256"] != _sha256(args.input):
+        raise ValueError("unified summary was composed from a different run")
+    if not provenance["base_forecasts_identical"]:
+        raise ValueError("unified summary does not share the base forecasts")
+    replacement = {
+        row["cell_id"]: row["systems"]["timeraf"] for row in unified["cell_states"]
+    }
+    for row in document["cell_states"]:
+        row["systems"]["timeraf"] = replacement[row["cell_id"]]
+    return {
+        "unified_summary_sha256": digest,
+        "unified_selected_policy": provenance["selected_policy"],
+        "unified_method_revision": provenance["v2_method_revision"],
+        "unified_protocol_sha256": provenance["v2_protocol_sha256"],
+        "accepted_method_reproduction": provenance["accepted_method_reproduction"],
+    }
+
+
 def main() -> None:
     args = parse_args()
     document = json.loads(args.input.read_text(encoding="utf-8"))
-    rows = validate(document, args)
-    native_document = json.loads(
-        args.native_input.read_text(encoding="utf-8")
+    unified_provenance = (
+        apply_unified_method(document, args) if args.unified_summary else {}
     )
-    native_pairs = validate_native(native_document)
+    rows = validate(document, args)
     run_metadata = json.loads(args.run_metadata.read_text(encoding="utf-8"))
     startup_topology = json.loads(
         args.startup_topology.read_text(encoding="utf-8")
@@ -1359,10 +671,6 @@ def main() -> None:
     data_root = args.paper_root / "data"
     table_root.mkdir(parents=True, exist_ok=True)
     data_root.mkdir(parents=True, exist_ok=True)
-    (table_root / "retrieval_baseline_model_columns.tex").write_text(
-        render_model_columns(rows, native_pairs),
-        encoding="utf-8",
-    )
     (table_root / "retrieval_long_term_model_values.tex").write_text(
         render_value_table(rows, "long_term"),
         encoding="utf-8",
@@ -1371,33 +679,13 @@ def main() -> None:
         render_short_value_table(rows),
         encoding="utf-8",
     )
-    (table_root / "native_retrieval_baseline_values.tex").write_text(
-        render_native_values(native_pairs),
-        encoding="utf-8",
-    )
-    (table_root / "native_retrieval_baseline_full.tex").write_text(
-        render_native_full(native_pairs),
-        encoding="utf-8",
-    )
-    (table_root / "retrieval_baseline_full.tex").write_text(
-        render_full(rows),
-        encoding="utf-8",
-    )
-    (table_root / "retrieval_ablation_full.tex").write_text(
-        render_full(
-            rows,
-            ABLATION_SYSTEMS,
-            table_role="Control and ablation comparison",
-            label_prefix="retrieval-ablation-full",
-        ),
-        encoding="utf-8",
-    )
     (data_root / "retrieval_baseline_results.json").write_text(
         json.dumps(
             build_data(
                 document,
                 rows,
                 provenance={
+                    **unified_provenance,
                     "run_metadata_sha256": _sha256(args.run_metadata),
                     "startup_topology_sha256": _sha256(
                         args.startup_topology
@@ -1408,10 +696,6 @@ def main() -> None:
             sort_keys=True,
         )
         + "\n",
-        encoding="utf-8",
-    )
-    (data_root / "native_retrieval_baseline_results.json").write_text(
-        json.dumps(native_document, indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
     )
 

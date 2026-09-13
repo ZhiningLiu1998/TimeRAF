@@ -9,7 +9,7 @@
   Retrieving on the input matches a past window's \emph{routine} structure,
   which carries almost all of the window's energy; copying the future that
   followed then injects the old level and phase on top of a forecast that
-  already had them right. (c) Subtracting the frozen forecaster's own prediction
+  already had them right. (c) Subtracting the forecaster's own prediction
   from that past outcome leaves only what it missed, turning the retrieved
   quantity into a correction that can be added to today's forecast.}
   \label{fig:motivation}
@@ -50,45 +50,40 @@ central question:
 {\em When we augment a time-series forecaster with retrieval, what should we
 retrieve?}
 
-Our answer is \method{}, a post-hoc revision layer that retrieves a frozen
-forecaster's \textbf{own past errors}. \method{} builds on the model-relative
-decomposition $\ytrue = \ybase + \resid$, which splits a realized future into
-what a specific forecaster predicted and what it missed. Rather than replacing
-$\ybase$, \method{} keeps it as the query-specific prior and retrieves $\resid$
-from a chronological memory of validation residuals whose targets were already
-observable. Two choices make the retrieval model-adaptive: the query descriptor
-is built from the observed context \emph{and} the forecaster's intended future,
-so one window is described differently depending on what the model predicts for
-it; and the memory stores that model's errors, so a different backbone retrieves
-a different correction from the same data. Since retrieved errors help only when
-errors recur, \method{} shrinks a correction whose neighbours disagree and
-applies it only when held-out validation prefers it to simpler temporal and bias
-corrections or to leaving the forecast untouched.
-
-The design bears four advantages.
-\textbf{(i) Model adaptivity:} index, stored targets, and correction are all
-defined relative to one frozen forecaster, so \method{} adapts to its error
-pattern instead of returning model-independent analogues.
-\textbf{(ii) Post-hoc and model-agnostic:} \method{} consumes only predictions
-and observed targets, never gradients or weights, so one interface covers neural
-architectures, static ensembles, AutoML systems, and foundation models.
-\textbf{(iii) Reliability awareness:} per-horizon, per-channel shrinkage and a
-gate that can retain the untouched forecast make the recurring-error assumption
-testable per deployment.
-\textbf{(iv) Performance:} with every system revising identical frozen forecasts,
-error retrieval improves all reported metrics in 490/585 settings and \method{}
-in 533/585, against 375 and 384 for the published RAFT and SARAF operators.
+Our answer is \method{}, a post-hoc correction layer that retrieves a trained
+forecaster's \textbf{own past errors}. It builds on the model-relative
+decomposition $\ytrue = \ybase + \resid$, which splits a realized future into what
+a specific forecaster predicted and what it missed: rather than replacing $\ybase$,
+\method{} keeps it as the query-specific prior and retrieves $\resid$ from a
+chronological memory of validation residuals whose targets were already observable.
+Two choices make the retrieval model-adaptive. The query descriptor is built from
+the observed context \emph{and} the forecaster's intended future, so one window is
+described differently depending on what the model predicts for it, and the memory
+stores that model's errors, so a different backbone retrieves a different
+correction from the same data. Since retrieved errors help only when errors recur,
+\method{} shrinks a correction whose neighbours disagree and applies it only when
+validation prefers it to simpler corrections or to leaving the forecast untouched.
+The two objects then turn out not to be rivals: anchoring a retrieved future to the
+query and subtracting the base forecast splits it exactly into the retrieved error
+plus the drift between the two forecast trajectories, so input retrieval is error
+retrieval with that drift forced on. \method{} exposes the drift weight instead, so
+the residual stays in every correction while validation decides how much of a
+neighbour's trajectory to borrow on top of it.
 
 Our contributions are threefold.
-\textbf{(i) A shift of retrieval object:} we identify the retrieval object,
-rather than the retrieval architecture, as the decision that determines whether
-retrieval augmentation helps a trained forecaster, and argue for model-relative
-errors over input windows and their futures.
+\textbf{(i) A shift of retrieval object:} we identify the retrieval object, rather
+than the retrieval architecture, as what decides whether retrieval augmentation
+helps a trained forecaster, and show that retrieving a future and retrieving an
+error are two ends of one additive correction whose error end is the right default.
 \textbf{(ii) A practical algorithm:} \method{} turns that argument into a
-reliability-aware, chronologically causal, validation-gated revision layer that
-needs no retraining and no learned retriever.
-\textbf{(iii) A systematic study:} we compare retrieval objects under a frozen
-protocol with identical base forecasts, and measure the resulting layer across
-13 architectures, six additional forecasting systems including AutoML and
-foundation models, three published end-to-end retrieval systems, and a
-forward-in-time prequential study.
+chronologically causal, validation-gated correction layer that selects its own
+retrieval object and needs neither retraining nor a learned retriever. Because it
+consumes only predictions and observed targets, never gradients or weights, one
+interface covers neural architectures, static ensembles, AutoML systems, and
+foundation models.
+\textbf{(iii) A systematic study:} we compare retrieval objects under a
+pre-registered protocol that gives every system identical base forecasts, including
+the operators of two published retrieval-augmented forecasters, and measure the
+layer across 13 architectures, six further systems, and a prequential study. It
+improves every reported metric in 541 of 585 settings with the base forecast held
+fixed, and in 96.1\% of them when each backbone is corrected end to end.

@@ -31,25 +31,7 @@
   },
   "schema_version": 1,
   "series": {
-    "epf": {
-      "advantage_percentage_points": {
-        "Autoformer": -7.709807491916273,
-        "DLinear": 5.407873467986274,
-        "FEDformer": -3.8431939061525533,
-        "FreTS": -0.6192060312594686,
-        "Informer": -1.0287347347961726,
-        "LightTS": -0.41611440353163054,
-        "Nonstationary_Transformer": 4.684569652290229,
-        "PAttn": -0.7129532784926665,
-        "PatchTST": 1.2788682046715556,
-        "TimeMixer": -0.1350144474797661,
-        "TimeXer": 0.8353997277209179,
-        "TimesNet": -0.5653568058682152,
-        "iTransformer": -0.7675448487285114
-      },
-      "spearman_rho_vs_base_mse": -0.27472527472527475
-    },
-    "long_term": {
+    "long-term": {
       "advantage_percentage_points": {
         "Autoformer": -2.499382894740181,
         "DLinear": -1.4457490693489197,
@@ -67,23 +49,23 @@
       },
       "spearman_rho_vs_base_mse": -0.9395604395604396
     },
-    "pems": {
+    "short-term": {
       "advantage_percentage_points": {
-        "Autoformer": -23.51406759718919,
-        "DLinear": -1.658954703094338,
-        "FEDformer": -14.290198427054866,
-        "FreTS": 3.027632431361112,
-        "Informer": -13.071363861171093,
-        "LightTS": -4.83792998558887,
-        "Nonstationary_Transformer": -6.139822956375603,
-        "PAttn": 1.8637981711902434,
-        "PatchTST": 2.72401376185263,
-        "TimeMixer": 1.0566244547970718,
-        "TimeXer": 2.8825123864958577,
-        "TimesNet": -7.329605940831214,
-        "iTransformer": 3.202869039619954
+        "Autoformer": -20.84175305825447,
+        "DLinear": -0.3497493589295253,
+        "FEDformer": -11.635057446581108,
+        "FreTS": 1.9057335771622936,
+        "Informer": -7.565118531592391,
+        "LightTS": -5.259337221303445,
+        "Nonstationary_Transformer": -4.733793075511701,
+        "PAttn": 3.324449459497945,
+        "PatchTST": 2.4534205781998164,
+        "TimeMixer": 0.9858884482325225,
+        "TimeXer": 3.95958738986591,
+        "TimesNet": -5.525222426698909,
+        "iTransformer": 3.4167484695655026
       },
-      "spearman_rho_vs_base_mse": -0.7032967032967034
+      "spearman_rho_vs_base_mse": -0.7692307692307693
     }
   },
   "source_sha256": "a9cdf53dc50ad7b3200da49c8e9bc16db8dd48af41b3fed33513033449c44c2a",

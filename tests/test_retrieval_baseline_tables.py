@@ -4,31 +4,21 @@ from argparse import Namespace
 from pathlib import Path
 
 from paper.tools.generate_retrieval_baseline_tables import (
-    ABLATION_SYSTEMS,
     EXPECTED_CELLS,
     EXPECTED_SYSTEMS,
-    NATIVE_METHODS,
     MODEL_COLUMN_LABELS,
     MODELS,
     SCOPE,
     _fmt_delta,
     aggregate_model_metric,
-    aggregate_native_metric,
     build_data,
     expected_ids,
-    render_full,
-    render_model_columns,
-    render_native_full,
-    render_native_values,
     render_short_value_table,
-    render_summary,
     render_value_table,
     validate,
     validate_completion_receipt,
-    validate_native,
     validate_provenance,
 )
-from scripts.generate_native_retrieval_baseline_manifest import build_manifest
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -92,149 +82,6 @@ def _document():
         "all_completed": True,
         "cell_states": rows,
     }
-
-
-def _native_document():
-    protocol = json.loads(
-        (
-            PROJECT_ROOT / "docs/native_retrieval_baseline_protocol.json"
-        ).read_text(encoding="utf-8")
-    )
-    manifest = build_manifest(protocol)
-    pairs = []
-    method_indices = {method: 0 for method in protocol["systems"]}
-    for row in manifest:
-        system = protocol["systems"][row["method"]]
-        metrics = row["metrics"]
-        index = method_indices[row["method"]]
-        method_indices[row["method"]] += 1
-        base = {metric: 2.0 + index for metric in metrics}
-        retrieval = {metric: 1.5 + index for metric in metrics}
-        pairs.append(
-            {
-                "cell_id": row["id"],
-                "method": system["retrieval_system"],
-                "base_method": system["base_system"],
-                "backbone": row["backbone"],
-                "dataset": row["dataset"],
-                "context_length": row["context_length"],
-                "prediction_length": row["prediction_length"],
-                "metrics": list(metrics),
-                "base": base,
-                "retrieval": retrieval,
-                "delta": {
-                    metric: retrieval[metric] - base[metric]
-                    for metric in metrics
-                },
-            }
-        )
-    return {
-        "schema_version": 2,
-        "protocol_sha256": "a" * 64,
-        "execution_record": {
-            "path": "docs/native_retrieval_baseline_p5_execution.json",
-            "sha256": "b" * 64,
-        },
-        "source_summaries": {
-            "raf": {
-                "path": "outputs/raf/summary.json",
-                "sha256": "c" * 64,
-                "source_revision": "raf-source",
-                "launcher_revision": "raf-launcher",
-                "topology_path": "outputs/raf/topology.json",
-                "topology_sha256": "d" * 64,
-                "pairs": 44,
-            },
-            "ts_rag": {
-                "path": "outputs/ts-rag/summary.json",
-                "sha256": "e" * 64,
-                "source_revision": "ts-rag-source",
-                "topology_path": "outputs/ts-rag/topology.json",
-                "topology_sha256": "f" * 64,
-                "pairs": 7,
-            },
-            "ratd": {
-                "path": "outputs/ratd/summary.json",
-                "sha256": "0" * 64,
-                "source_revision": "ratd-source",
-                "topology_path": "outputs/ratd/topology.json",
-                "topology_sha256": "1" * 64,
-                "pairs": 1,
-            },
-        },
-        "expected_pairs": 52,
-        "completed_pairs": 52,
-        "all_completed": True,
-        "pairs": pairs,
-    }
-
-
-def test_complete_retrieval_matrix_renders_all_dataset_tables():
-    document = _document()
-    args = Namespace(
-        expected_source_revision="source",
-        expected_launcher_revision="launcher",
-        expected_protocol_sha256="protocol",
-        expected_catalog_sha256="catalog",
-    )
-
-    rows = validate(document, args)
-    latex = render_full(rows)
-
-    assert len(rows) == 585
-    assert len(expected_ids()) == 585
-    assert latex.count(r"\begin{longtable}") == 45
-    assert latex.count("% cell ") == 585
-    assert "fixed forecasts.}}\\label" not in latex
-
-
-def test_summary_reports_base_and_all_retrieval_systems():
-    document = _document()
-    rows = validate(
-        document,
-        Namespace(
-            expected_source_revision="source",
-            expected_launcher_revision="launcher",
-            expected_protocol_sha256="protocol",
-            expected_catalog_sha256="catalog",
-        ),
-    )
-
-    latex = render_summary(rows)
-
-    assert "Base & 0/364 & 0/156 & 0/65 & 0/585" in latex
-    assert (
-        r"\method{} & 364/364 & 156/156 & 65/65 & 585/585"
-        in latex
-    )
-    assert r"$\Delta$MSE" in latex
-
-
-def test_unified_win_table_uses_family_denominators():
-    document = _document()
-    rows = validate(
-        document,
-        Namespace(
-            expected_source_revision="source",
-            expected_launcher_revision="launcher",
-            expected_protocol_sha256="protocol",
-            expected_catalog_sha256="catalog",
-        ),
-    )
-
-    native_pairs = validate_native(_native_document())
-    latex = render_model_columns(rows, native_pairs)
-
-    assert r"\begin{tabular}{@{}lrrrr@{}}" in latex
-    assert "System & LT & PEMS & EPF & All" in latex
-    assert (
-        r"RAFT & \textbf{364/364} & \textbf{156/156} & "
-        r"\textbf{65/65} & \textbf{585/585}"
-    ) in latex
-    assert latex.count(r"\method{} &") == 1
-    assert "Native method & Paired configurations" in latex
-    assert r"RAF~\citep{tire2024raf} & 44 & 44 & 0" in latex
-    assert "adapted" not in latex.lower()
 
 
 def test_value_tables_report_absolute_error_and_delta_by_model():
@@ -371,152 +218,6 @@ def test_value_table_bolds_only_the_raw_best_before_rounding():
     cells = [line.split(" & ")[model_column] for line in value_rows]
 
     assert cells == ["$1.00$", "$1.00$", "$1.00$", r"$\mathbf{1.00}$"]
-
-
-def test_full_and_ablation_tables_use_distinct_labels():
-    rows = validate(
-        _document(),
-        Namespace(
-            expected_source_revision="source",
-            expected_launcher_revision="launcher",
-            expected_protocol_sha256="protocol",
-            expected_catalog_sha256="catalog",
-        ),
-    )
-
-    published = render_full(rows)
-    ablation = render_full(
-        rows,
-        ABLATION_SYSTEMS,
-        table_role="Control and ablation comparison",
-        label_prefix="retrieval-ablation-full",
-    )
-
-    assert r"\label{tab:retrieval-full-long_term-etth1-h96}" in published
-    assert r"\label{tab:retrieval-full-long_term-etth1-h720}" in published
-    assert (
-        r"\label{tab:retrieval-ablation-full-long_term-etth1-h96}"
-        in ablation
-    )
-    published_labels = {
-        line for line in published.splitlines() if r"\label{" in line
-    }
-    ablation_labels = {
-        line for line in ablation.splitlines() if r"\label{" in line
-    }
-    assert published_labels.isdisjoint(ablation_labels)
-
-
-def test_native_table_reports_base_retrieval_and_absolute_delta():
-    pairs = validate_native(_native_document())
-
-    base, retrieval, delta = aggregate_native_metric(
-        pairs, "RATD", "rmse"
-    )
-    latex = render_native_values(pairs)
-
-    assert base == 2.0
-    assert retrieval == 1.5
-    assert delta == -0.5
-    assert r"RATD~\citep{liu2024ratd}" in latex
-    assert r"\textbf{1.5000}" in latex
-    assert r"\textbf{-0.5000}" in latex
-    assert "win" not in latex.lower()
-
-    full_latex = render_native_full(pairs)
-    assert r"\label{tab:native-retrieval-full}" in full_latex
-    assert r"\begin{longtable}{@{}lllrrrr@{}}" in full_latex
-    assert "Method & Dataset & Metric & C/H & Base & Retrieval" in full_latex
-    assert "RATD & electricity & RMSE & 96/168" in full_latex
-    assert full_latex.count(r"\textbf{-0.5000}") == 104
-
-
-def test_native_table_bolds_both_values_when_they_tie():
-    document = _native_document()
-    for pair in document["pairs"]:
-        if pair["method"] == "RAF":
-            for metric in pair["metrics"]:
-                pair["retrieval"][metric] = pair["base"][metric]
-                pair["delta"][metric] = 0.0
-
-    latex = render_native_values(validate_native(document))
-
-    assert (
-        r"RAF~\citep{tire2024raf} & WQL & "
-        r"\textbf{23.5000} & \textbf{23.5000} & 0.0000"
-    ) in latex
-
-
-def test_native_validation_rejects_missing_provenance():
-    document = _native_document()
-    del document["execution_record"]
-
-    try:
-        validate_native(document)
-    except ValueError as error:
-        assert str(error) == "Native execution record is missing"
-    else:
-        raise AssertionError("Missing native provenance was accepted")
-
-
-def test_native_validation_rejects_invalid_provenance_hash():
-    document = _native_document()
-    document["source_summaries"]["ts_rag"]["topology_sha256"] = "A" * 64
-
-    try:
-        validate_native(document)
-    except ValueError as error:
-        assert str(error) == "Native ts_rag topology hash is invalid"
-    else:
-        raise AssertionError("Invalid native provenance hash was accepted")
-
-
-def test_native_validation_rejects_source_pair_count_drift():
-    document = _native_document()
-    document["source_summaries"]["raf"]["pairs"] = 43
-
-    try:
-        validate_native(document)
-    except ValueError as error:
-        assert str(error) == "Native raf source pair count drifted"
-    else:
-        raise AssertionError("Native source pair count drift was accepted")
-
-
-def test_native_validation_rejects_noncanonical_cell_id():
-    document = _native_document()
-    document["pairs"][0]["cell_id"] = "raf/not-a-canonical-cell"
-
-    try:
-        validate_native(document)
-    except ValueError as error:
-        assert "native baseline cell ID is not canonical" in str(error)
-    else:
-        raise AssertionError("Noncanonical native cell ID was accepted")
-
-
-def test_native_validation_rejects_canonical_dataset_drift():
-    document = _native_document()
-    document["pairs"][0]["dataset"] = "wrong-dataset"
-
-    try:
-        validate_native(document)
-    except ValueError as error:
-        assert "native canonical dataset mismatch" in str(error)
-    else:
-        raise AssertionError("Native canonical dataset drift was accepted")
-
-
-def test_native_validation_rejects_canonical_backbone_drift():
-    document = _native_document()
-    document["pairs"][0]["backbone"] = "wrong-backbone"
-
-    try:
-        validate_native(document)
-    except ValueError as error:
-        assert "native canonical backbone mismatch" in str(error)
-    else:
-        raise AssertionError("Native canonical backbone drift was accepted")
 
 
 def test_compact_data_includes_base_statistics():
@@ -708,9 +409,6 @@ def test_committed_full_horizon_publication_artifacts_are_fresh():
     catalog_path = (
         publication_root / "retrieval_baseline_bundle_catalog.json"
     )
-    native_path = (
-        publication_root / "native_retrieval/native-52-schema-v2.json"
-    )
     document = json.loads(summary_path.read_text(encoding="utf-8"))
     args = Namespace(
         expected_source_revision=(
@@ -730,9 +428,6 @@ def test_committed_full_horizon_publication_artifacts_are_fresh():
     metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
     topology = json.loads(topology_path.read_text(encoding="utf-8"))
     receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
-    native_pairs = validate_native(
-        json.loads(native_path.read_text(encoding="utf-8"))
-    )
     validate_provenance(document, metadata, topology)
     validate_completion_receipt(
         receipt,
@@ -748,20 +443,10 @@ def test_committed_full_horizon_publication_artifacts_are_fresh():
     )
 
     expected_tables = {
-        "retrieval_baseline_model_columns.tex": render_model_columns(
-            rows, native_pairs
-        ),
         "retrieval_long_term_model_values.tex": render_value_table(
             rows, "long_term"
         ),
         "retrieval_short_model_values.tex": render_short_value_table(rows),
-        "retrieval_baseline_full.tex": render_full(rows),
-        "retrieval_ablation_full.tex": render_full(
-            rows,
-            ABLATION_SYSTEMS,
-            table_role="Control and ablation comparison",
-            label_prefix="retrieval-ablation-full",
-        ),
     }
     for filename, expected in expected_tables.items():
         assert (

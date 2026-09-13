@@ -1,188 +1,175 @@
 \section{Experiments}
 \label{sec:experiments}
 
-Section~\ref{sec:exp-object} isolates the retrieval \emph{object}: every
-compared system revises byte-identical frozen forecasts, so any accuracy
-difference comes from what is retrieved. Section~\ref{sec:exp-breadth} measures
-the resulting revision layer across heterogeneous forecasters, and
-Section~\ref{sec:exp-analysis} analyses which correction each deployment picks.
+We evaluate \method{} on long-term and short-term forecasting over 16 real-world
+benchmarks and 13 base forecasting models. Section~\ref{sec:exp-main} reports the
+main results and Section~\ref{sec:exp-analysis} analyses which correction each
+deployment ends up using; full configurations are in Appendix~\ref{app:search}.
 
-\paragraph{Datasets and backbones.}
-Following \citet{liu2025timefuse} and \citet{wang2024lib} we use 16 benchmarks:
-ETTh1, ETTh2, ETTm1, ETTm2, Weather, Electricity, and Traffic at horizons
-$\{96,192,336,720\}$; PEMS03/04/07/08~\citep{Chen2001FreewayPM} at
-$\{6,12,24\}$; and the EPF markets NP, PJM, BE, FR, and
-DE~\citep{lago2021epf} at horizon 24. We correct 13 forecasters implemented in
-\texttt{TSLib}~\citep{wang2024lib} with their official configurations, L2 loss,
-and seed 2021: TimeXer, TimeMixer, PAttn, iTransformer, TimesNet, PatchTST,
-DLinear, FreTS, FEDformer, Non-stationary Transformer, LightTS, Informer, and
-Autoformer
+\paragraph{Datasets.}
+For long-term forecasting we use seven standard benchmarks at horizons
+$\{96,192,336,720\}$: the four ETT subsets, Weather, Electricity, and
+Traffic~\citep{wang2024lib}. For short-term forecasting we use the PEMS traffic
+networks PEMS03/04/07/08~\citep{Chen2001FreewayPM} at $\{6,12,24\}$ and the EPF
+electricity markets NP, PJM, BE, FR, and DE~\citep{lago2021epf} at horizon 24.
+One dataset--backbone--horizon combination is one \emph{setting}, giving 585 in
+total: 364 long-term, 156 PEMS, and 65 EPF (Appendix
+Table~\ref{tab:dataset-scope}).
+
+\paragraph{Base models and setup.}
+We correct 13 forecasters implemented in \texttt{TSLib}~\citep{wang2024lib} with
+their official configurations, L2 loss, and seed 2021: \timexer{}, \timemixer{},
+\pattn{}, \itransformer{}, \timesnet{}, \patchtst{}, \dlinear{}, \frets{},
+\fedformer{}, \nonstat{}, \lightts{}, \informer{}, and \autoformer{}
 \citep{wang2024timexer,wang2024timemixer,tan2024pattn,liu2024itransformer,
 wu2023timesnet,patchtst,dlinear,yi2024frets,zhou2022fedformer,
-Liu2022NonstationaryTR,lightts,zhou2021informer,wu2021autoformer}. Each backbone
-is corrected independently, so one dataset--backbone--horizon combination is one
-\emph{setting}: 585 in total, comprising 364 long-term, 156 PEMS, and 65 EPF.
-Appendix Table~\ref{tab:dataset-scope} gives input lengths and preprocessing.
+Liu2022NonstationaryTR,lightts,zhou2021informer,wu2021autoformer}. A backbone is
+trained once and never modified;
+validation predictions build memory, validation labels lock one correction per
+setting, and that correction is applied once to test, so test labels never enter
+selection (Appendix~\ref{app:causality}). Every compared system additionally
+receives byte-identical base forecasts under one validation split, memory boundary,
+and scoring rule, with all grids fixed in advance
+(Appendix~\ref{app:retrieval-baselines}), so accuracy differences can only come
+from what is retrieved. Long-term and EPF settings report MSE and MAE in normalized
+space and PEMS reports inverse-scaled MAE, RMSE, and MAPE; a \emph{strict win} is a
+setting in which every metric it reports decreases. Because base errors span an
+order of magnitude, we report medians of paired gains alongside means.
 
-\paragraph{Protocol.}
-A backbone is trained once and never modified. Frozen validation forecasts build
-memory, validation labels lock one policy per setting, and that policy is applied
-once to test; test labels never enter selection
-(Appendix~\ref{app:causality}). Section~\ref{sec:exp-object} additionally
-freezes the base predictions, so all six systems revise the same 585 forecast
-tensors under one validation split, memory boundary, and scoring rule, with every
-search grid frozen before that comparison ran
-(Appendix~\ref{app:retrieval-baselines}). Long-term and EPF settings report MSE
-and MAE in normalized space, PEMS reports inverse-scaled MAE, RMSE, and MAPE, and
-a \emph{strict win} requires every metric a setting reports to decrease. Because
-backbone errors span an order of magnitude, we report medians of paired relative
-gains alongside means.
+\paragraph{Compared systems.}
+Equation~\ref{eq:dial} lets us compare retrieval objects rather than
+implementations. \analogknn{} pins it at $\beta=1$, injecting from the same
+neighbourhood and descriptor the endpoint-aligned futures that input-retrieval
+systems emit, and \residualknn{} pins it at $\beta=0$.
+\raft{}~\citep{han2025raft} and \saraf{}~\citep{zhou2026saraf} contribute two
+published operators on the same fixed forecasts, while \method{} chooses $\alpha$,
+$\beta$, and the horizon profile per setting on validation.
 
-\paragraph{Compared retrieval objects.}
-\textbf{Analog-kNN} is the input-retrieval control: identical
-nearest-neighbour machinery, but it retrieves endpoint-aligned historical
-\emph{futures}. \textbf{RAFT}~\citep{han2025raft} and
-\textbf{SARAF}~\citep{zhou2026saraf} contribute two published retrieval
-operators---RAFT's multiscale endpoint-offset matching and SARAF's
-stationarity-controlled relevance--diversity selection---applied to the fixed
-forecasts. \textbf{Residual-kNN} is \method{} restricted to its error-retrieval
-family, isolating the object change from the gate, and \textbf{\method{}} is the
-complete method. Section~\ref{sec:exp-analysis} runs three published systems end
-to end in their own protocols.
+\subsection{Main Results}
+\label{sec:exp-main}
 
-\subsection{What should a forecaster retrieve?}
-\label{sec:exp-object}
+\input{tables/main_long_term}
+\input{tables/main_short_term}
 
-\input{tables/main_results}
-\input{tables/main_win_summary}
+\paragraph{Long-term forecasting.}
+In Table~\ref{tab:main-long-term}, \method{} attains the lowest average MSE and
+MAE, 0.380/0.376 against 0.450/0.413 uncorrected, and is best on both metrics for
+six of the seven datasets; only on Traffic is \residualknn{} lower on MSE. The two
+pinned objects disagree rather than one dominating: retrieving futures averages
+0.392/0.383 against 0.418/0.398 for retrieving errors, and neither leads a dataset
+once the object is chosen per setting. That choice is what recovers both, with median
+paired reductions of 4.17\% MSE and 2.62\% MAE against 2.27\%/0.90\% for \analogknn{}
+and 2.41\%/1.20\% for \residualknn{}.
+
+\paragraph{Short-term forecasting.}
+Table~\ref{tab:main-short-term} shows a wider margin on shorter horizons, where
+\method{} is best on both reported metrics for all nine datasets. On PEMS it
+averages 19.407 MAE and 0.126 MAPE against 25.234/0.171 uncorrected and
+20.479/0.134 for the strongest pinned object, with median paired reductions of
+17.77\% MAE, 15.95\% RMSE, and 20.14\% MAPE. On EPF it averages 0.349/0.290
+against 0.376/0.315 and 0.362/0.303, reducing the median MSE by 4.57\% and MAE by
+5.44\%. The published operators are close to inactive in this regime, with median
+PEMS reductions of 0.00\% RMSE and 0.36\%/0.31\% MAPE, because multiscale input
+matching returns neighbourhoods dominated by the traffic profile the backbone
+already predicts.
+
+\paragraph{Improvement is broad, not only on average.}
+An average can hide a correction that helps some settings and hurts others, so we
+also count settings in which \emph{every} reported metric decreases, which \method{}
+achieves in 541 of 585: 326/364 long-term, 156/156 PEMS, and 59/65 EPF, against 490
+and 478 for the two pinned objects and 384 and 375 for \saraf{} and \raft{}, which
+lose mostly by having nothing to contribute, returning a forecast identical to the
+base in 121 and 131 settings against 50 for \residualknn{} and 3 for \method{}.
+Compared setting by setting, \method{} improves every metric relative to
+\analogknn{} in 453 settings against 54 the other way, and relative to
+\residualknn{} in 457 against 63. On the five most accurate backbones the counts are
+190/225 against 170, 157, 80, and 77.
+
+\paragraph{Correcting 13 end-to-end trained forecasters.}
+The comparison above holds base forecasts fixed to isolate the retrieval object. On
+the separate primary matrix, where each backbone is trained and corrected end to
+end, the error-only form of \method{}---Equation~\ref{eq:dial} at $\beta\equiv0$
+with single-window selection---improves every reported metric in 562/585 settings
+(96.1\%): 355/364 long-term, 151/156 PEMS, and 56/65 EPF, with mean paired
+reductions of 8.5\% MSE, 7.5\% MAE, 10.6\% RMSE, and 12.0\% MAPE. Gains scale with
+how much error there is to remove, from 1.1\% long-term MSE for \timexer{} to 41.3\%
+for \informer{}, as an additive layer should, and no backbone is left behind
+(Appendix Table~\ref{tab:backbone-results}). The selection rule was fixed on a
+predetermined 123-setting development subset, and on the 462 held-out settings the
+strict-win rate is 437/462 (Appendix~\ref{app:aggregate-results}). A locked
+correction also survives the passage of time: replaying \timemixer{} at horizon 96
+on a timeline beginning after the standard test split, with labels released only as
+their targets elapse, improves both metrics on all four ETT datasets and three seeds
+(Appendix~\ref{app:ett}).
+
+\paragraph{Ensembles, AutoML, and foundation models.}
+Because \method{} consumes only predictions and targets, the same interface corrects
+systems that are not single models. Appendix Table~\ref{tab:strong-systems} reports
+81/94 strict wins over greedy forward selection, a portfolio and a zero-shot
+ensemble, \autogluon{}'s \texttt{high\_quality} predictor, and \chronosbolt{} in
+fine-tuned and zero-shot form
+\citep{caruana2004ensemble,autosklearn_portfolio_zeroshot,shchur2023autogluon,
+ansari2024chronos}, from 12/16 to 16/16 per system, with the retrieval family
+selected in 70 settings and 65 of those strict wins: multi-component systems and an
+off-distribution foundation model still leave error structure their own machinery
+does not remove.
+
+\subsection{Further Analysis}
+\label{sec:exp-analysis}
 
 \begin{figure}[t]
   \centering
-  \includegraphics[width=\textwidth]{figures/retrieval_object_vs_strength.pdf}
-  \caption{\textbf{The better retrieval object depends on how good the frozen
-  forecaster already is.} Each point is the median, over one backbone's settings
-  in one family, of the smallest paired relative gain across that setting's
-  metrics; the curve plots Residual-kNN minus Analog-kNN in percentage points on a
-  symmetric-log axis, with backbones ordered from most to least accurate by mean
-  long-term base MSE. For the five most accurate backbones, retrieving the
-  forecaster's own error wins on long-term and PEMS settings.}
+  \includegraphics[width=0.62\textwidth]{figures/retrieval_object_vs_strength.pdf}
+  \caption{\textbf{The better retrieval object depends on how good the underlying
+  forecaster already is.} \residualknn{} minus \analogknn{} median worst-metric gain
+  (percentage points, symmetric-log axis) per backbone, ordered from most to least
+  accurate by long-term base MSE.}
   \label{fig:object-strength}
 \end{figure}
 
-\paragraph{Absolute accuracy.}
-In Table~\ref{tab:main-results}, \method{} takes the lowest long-term average,
-0.382/0.376 against 0.450/0.413 for the frozen base, winning both metrics on four
-of seven datasets and coming within 0.007 of the best on the other three; it also
-takes the best EPF average, 0.352/0.300 against 0.376/0.315. Two aggregates
-favour the future object, long-term (0.392/0.383 against 0.418/0.398) and PEMS
-MAE (20.479 against 21.942), and both are set by the weakest backbones: Informer
-alone has a base MSE of 1.053, three times the best backbone's, and copying an
-aligned analogue repairs a badly wrong trajectory. Excluding Informer, the
-median long-term paired reduction favours the error object on both metrics,
-2.09\%/0.99\% against 1.97\%/0.66\%. PEMS is the one family where an
-endpoint-aligned analogue is already a good forecast, since its traffic flow is
-strongly and stably periodic with matched levels across weeks; even there,
-Residual-kNN beats Analog-kNN for all five of the most accurate forecasters
-(Figure~\ref{fig:object-strength}).
+\paragraph{Which object is better depends on how strong the forecaster is.}
+Ordering the 13 backbones by long-term base MSE, the advantage of retrieving errors
+over retrieving futures falls as base error rises in both task families, with
+Spearman $\rho$ of $-0.94$ and $-0.77$ and a sign change at \timesnet{}
+(Figure~\ref{fig:object-strength}). The mechanism is the drift term of
+Equation~\ref{eq:objects}: a weak forecaster's prediction holds little level,
+phase, or rhythm worth keeping, so replacing it with an analogous future is an
+improvement, whereas an accurate forecaster's prediction already holds all of that
+and only its residual is worth transferring. \informer{}, whose long-term base MSE
+is three times the best backbone's, is what pulls the ETTh2 and ETTm2 averages
+towards \analogknn{}.
 
-\paragraph{Reliability separates the objects more sharply than accuracy.}
-Table~\ref{tab:retrieval-win-summary} counts settings in which \emph{all}
-reported metrics improve. Retrieving errors is the most reliable single object,
-with 490/585 strict wins against 478 for Analog-kNN and 375 and 384 for RAFT and
-SARAF; the full \method{} policy reaches 533/585. The margin over published
-operators is largest where it matters: their median paired PEMS reductions are
-0.00\% RMSE and 0.36\%/0.31\% MAPE, against 10.24\% RMSE and 12.48\% MAPE for
-\method{}, because multiscale input matching returns neighbourhoods dominated by
-the traffic profile the backbone already predicts. The retrieval object, not the
-retrieval machinery, is the binding design decision.
+\paragraph{The selected object follows the forecast horizon.}
+Validation puts non-zero weight on the drift term in 435 of 585 settings, and where
+it does declines with the horizon: 50/52, 50/52, and 112/117 settings at horizons 6,
+12, and 24, then 69/91, 65/91, 64/91, and 25/91 at 96 through 720. A neighbour's
+trajectory stays usable for a few hours of traffic flow and is least usable a month
+ahead, where the weight survives in barely a quarter of settings. It is also rarely
+extreme, as 299 of those 435 settings use $\beta\in\{0.25,0.5\}$ rather than the full
+overwrite input retrieval performs, so the selected operating point is one neither
+published object can express. Retrieval of either kind is selected in 449 of the 585
+settings, taking all 156 PEMS and 63 of 65 EPF settings and 230 of 364 long-term
+ones, where a seasonal blend takes 75 and an overlap blend 46 (Appendix
+Figure~\ref{fig:selection}).
 
-\paragraph{The right object depends on how strong the forecaster is.}
-Figure~\ref{fig:object-strength} explains why the two views disagree. Ordering
-the 13 backbones by long-term base MSE, the advantage of retrieving errors over
-retrieving futures falls monotonically as base error rises: Spearman $\rho$
-between base MSE and that advantage is $-0.94$ on long-term settings, $-0.70$ on
-PEMS, and $-0.27$ on EPF. The mechanism is direct. A weak forecaster's prediction
-holds little level, phase, or rhythm worth protecting, so overwriting it with an
-analogous future is an improvement; an accurate forecaster's prediction already
-holds all of that, so overwriting it destroys correct structure and only the
-residual is worth transferring. Restricted to the five most accurate
-backbones---the regime a practitioner deploys---the error object also wins on
-strict counts: 170/225 for Residual-kNN and 185/225 for \method{}, against
-157/225 for Analog-kNN and 77/225 and 80/225 for RAFT and SARAF.
+\paragraph{What the two-fold score and the free dial each contribute.}
+Scoring candidates on the worse of the two chronological validation halves instead of
+the whole window raises strict wins from 533 to 552 with the dial pinned shut.
+Opening the dial then trades 11 of those wins for magnitude everywhere: the median
+worst-metric gain rises from 9.73\% to 15.69\% on PEMS, from 1.77\% to 3.56\% on EPF,
+and from 3.64\% to 4.17\% in long-term MSE. Restricting $\beta>0$ to horizons of at
+most 24 steps unless it clears the best $\beta=0$ candidate by $0.05$ recovers those
+11 wins, reaching 555/585, but gives back the long-term magnitude (median MSE 3.64\%
+again). We report the free dial, because the choice between per-setting accuracy and
+per-setting win rate is a deployment preference rather than a property of the
+method.
 
-\subsection{Correcting 13 heterogeneous frozen forecasters}
-\label{sec:exp-breadth}
-
-On the separate primary matrix, where each backbone is trained and corrected end
-to end rather than replayed from fixed tensors, \method{} improves every reported
-metric in 562/585 settings (96.1\%): 355/364 long-term, 151/156 PEMS, and 56/65
-EPF. Mean paired reductions are 8.5\% MSE, 7.5\% MAE, 10.6\% RMSE, and 12.0\% MAPE.
-Appendix Table~\ref{tab:backbone-results} shows no backbone left behind: all 13
-improve on at least 25 of their 28 long-term settings, and on 12 of 12 PEMS
-settings for every backbone but TimeMixer. Gains scale with how much error there
-is to remove, from 1.1\% long-term MSE for TimeXer to 41.3\% for Informer, as an
-additive layer that leaves a good forecast alone should. The selection rule and margin were designed on a predetermined 123-setting
-development subset and then frozen; on the 462 held-out settings the strict-win
-rate is 437/462 (94.6\%) and every pre-registered criterion still passes
-(Appendix~\ref{app:aggregate-results}). An independent replication on different
-hardware reproduces 581/585 strict-win decisions.
-
-\paragraph{Error retrieval transfers to ensembles, AutoML, and foundation
-models.}
-Because \method{} consumes only predictions and targets, one interface covers
-systems that are not single neural networks: greedy forward
-selection~\citep{caruana2004ensemble}, a portfolio and a zero-shot
-ensemble~\citep{autosklearn_portfolio_zeroshot}, AutoGluon's
-\texttt{high\_quality} predictor~\citep{shchur2023autogluon}, and Chronos-Bolt in
-fine-tuned and zero-shot form~\citep{ansari2024chronos}.
-Appendix Table~\ref{tab:strong-systems} reports 81/94 strict wins (86.2\%): 33/40
-long-term, 24/24 PEMS, and 24/30 EPF, with per-system rates from 12/16 for the
-portfolio ensemble to 16/16 for zero-shot Chronos-Bolt. This is also the
-strongest direct evidence for error retrieval, since validation selects the
-residual family in 70 of the 94 settings and 65 of those are strict wins.
-Systems assembled from many components, and a foundation model applied off its
-pretraining distribution, leave error structure their own machinery does not
-remove.
-
-\subsection{Analysis}
-\label{sec:exp-analysis}
-
-\paragraph{Which correction wins is a property of the deployment.}
-Across the primary matrix, validation selects error retrieval in 214/585
-settings, seasonal blending in 156, overlap blending in 159, and causal bias in
-56. The composition swings with the backbone, from 29/45 settings for DLinear to
-5/45 for Informer, and with the dataset, from 35/39 for PEMS03 to 0/52 for ETTh2
-(Appendix Figure~\ref{fig:selection}). The retrieval family delivers 207 of the
-562 strict wins and the simpler corrections the remaining 355. Error retrieval is
-therefore the largest single contributor and the object a retrieval layer should
-default to, while the gate keeps that default from firing where a temporal
-correction is the honest answer.
-
-\paragraph{Published retrieval systems on their own bases.}
-We also run three published retrieval-augmented forecasters end to end, each
-paired with its released no-retrieval base under its own protocol.
-RAF~\citep{tire2024raf} improves both reported metrics in 33/44 paired
-configurations and TS-RAG~\citep{ning2025tsrag} in 7/7, whereas
-RATD~\citep{liu2024ratd} degrades its CSDI base on its single Electricity pair,
-RMSE $0.3891\!\rightarrow\!0.6374$. Retrieval augmentation is useful but not
-automatically safe even natively---hence the gate of
-Section~\ref{sec:selection}.
-
-\paragraph{Corrections keep working on later observations.}
-A frozen correction is useful only if it survives the passage of time. We replay
-TimeMixer checkpoints at horizon 96 on the four ETT datasets for seeds 2021--2023
-over a timeline beginning after the standard test split, with checkpoints,
-scalers, and correction parameters held fixed and labels released only as their
-target intervals elapse. Every dataset and seed improves both metrics, with pooled
-MSE reductions of 2.10\% to 4.51\% and every paired bootstrap interval below zero
-(Appendix~\ref{app:ett}).
-
-\paragraph{Where the revision layer fails.}
-Of the 23 settings that are not strict wins, 11 selected overlap blending, seven
-error retrieval, and five seasonal blending, and 14 degrade every metric.
-Failures concentrate: Weather and EPF-DE account for 14 of them and TimeMixer for
-seven, including all five PEMS failures, and the largest single regression is
-36.5\% MAPE on a PEMS04 overlap selection. Effect sizes vary too: among the 562
-strict wins, at least one metric improves by no more than one percentage point in
-120 settings, which is why we report absolute values and continuous gains
-alongside counts.
+\paragraph{Where the correction layer fails.}
+Of the 585 settings, 44 are not strict wins: 38 long-term and 6 EPF, none on PEMS,
+concentrated on ETTm1 (17), ETTh1 (8), ETTh2 (7), and EPF-FR (6), and on the most
+accurate backbones, where the base trajectory is the thing worth protecting. Only 7
+degrade every metric and 3 leave the forecast untouched; the other 34 trade one
+metric for another, the largest single loss being 6.9\% MSE on an EPF-FR setting that
+gains 16.4\% MAE. Gains can also be thin, with the worst metric improving by at most
+one point in 68 of the 541 strict wins, and selecting on a single validation window
+fails harder: 15 of its 52 non-strict settings degrade every metric.

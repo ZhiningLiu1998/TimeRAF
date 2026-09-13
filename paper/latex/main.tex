@@ -5,28 +5,72 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{multirow}
-\usepackage{longtable}
-\usepackage{array}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{mathtools}
-\usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage{url}
 
-\definecolor{timerafblue}{HTML}{1F5A7A}
-\definecolor{timerafgreen}{HTML}{287A57}
-\definecolor{timerafgold}{HTML}{A56617}
+% times.sty selects family ptm, for which this XeTeX build has no TU font
+% definitions, so bold and italic silently degrade to the regular weight.
+% Route every ptm shape to Latin Modern, which has real bold and italic here.
+\DeclareFontFamily{TU}{ptm}{}
+\DeclareFontShape{TU}{ptm}{m}{n}{<->ssub*lmr/m/n}{}
+\DeclareFontShape{TU}{ptm}{m}{it}{<->ssub*lmr/m/it}{}
+\DeclareFontShape{TU}{ptm}{m}{sl}{<->ssub*lmr/m/it}{}
+\DeclareFontShape{TU}{ptm}{m}{sc}{<->ssub*lmr/m/sc}{}
+\DeclareFontShape{TU}{ptm}{b}{n}{<->ssub*lmr/bx/n}{}
+\DeclareFontShape{TU}{ptm}{b}{it}{<->ssub*lmr/bx/it}{}
+\DeclareFontShape{TU}{ptm}{b}{sc}{<->ssub*lmr/bx/n}{}
+\DeclareFontShape{TU}{ptm}{bx}{n}{<->ssub*lmr/bx/n}{}
+\DeclareFontShape{TU}{ptm}{bx}{it}{<->ssub*lmr/bx/it}{}
+\DeclareFontFamily{TU}{pcr}{}
+\DeclareFontShape{TU}{pcr}{m}{n}{<->ssub*lmtt/m/n}{}
+\DeclareFontShape{TU}{pcr}{b}{n}{<->ssub*lmtt/bx/n}{}
+\DeclareFontShape{TU}{pcr}{bx}{n}{<->ssub*lmtt/bx/n}{}
+\DeclareFontShape{TU}{pcr}{m}{it}{<->ssub*lmtt/m/it}{}
+\DeclareFontShape{TU}{pcr}{m}{sl}{<->ssub*lmtt/m/it}{}
+\DeclareFontShape{TU}{pcr}{m}{sc}{<->ssub*lmtt/m/n}{}
 
 \newcommand{\method}{\textsc{TimeRaf}}
+
+% Method names. Every forecasting method is set in small caps through a macro so
+% that naming stays consistent across text, captions, and generated tables.
+\newcommand{\analogknn}{\textsc{Analog-kNN}}
+\newcommand{\residualknn}{\textsc{Residual-kNN}}
+\newcommand{\raft}{\textsc{RAFT}}
+\newcommand{\saraf}{\textsc{SARAF}}
+\newcommand{\tsrag}{\textsc{TS-RAG}}
+\newcommand{\crossrag}{\textsc{Cross-RAG}}
+\newcommand{\craftm}{\textsc{CRAFT}}
+\newcommand{\timexer}{\textsc{TimeXer}}
+\newcommand{\timemixer}{\textsc{TimeMixer}}
+\newcommand{\pattn}{\textsc{PAttn}}
+\newcommand{\itransformer}{\textsc{iTransformer}}
+\newcommand{\timesnet}{\textsc{TimesNet}}
+\newcommand{\patchtst}{\textsc{PatchTST}}
+\newcommand{\dlinear}{\textsc{DLinear}}
+\newcommand{\frets}{\textsc{FreTS}}
+\newcommand{\fedformer}{\textsc{FEDformer}}
+\newcommand{\nonstat}{\textsc{Non-stationary Transformer}}
+\newcommand{\nonstatshort}{\textsc{Non-stat. Transformer}}
+\newcommand{\lightts}{\textsc{LightTS}}
+\newcommand{\informer}{\textsc{Informer}}
+\newcommand{\autoformer}{\textsc{Autoformer}}
+\newcommand{\autogluon}{\textsc{AutoGluon}}
+\newcommand{\chronosbolt}{\textsc{Chronos-Bolt}}
+\newcommand{\forwardsel}{\textsc{Forward Selection}}
+\newcommand{\portfolioens}{\textsc{Portfolio Ensemble}}
+\newcommand{\zeroshotens}{\textsc{ZeroShot Ensemble}}
+\newcommand{\timefuse}{\textsc{TimeFuse}}
 \newcommand{\xctx}{\mathbf{x}}
 \newcommand{\ytrue}{\mathbf{y}}
 \newcommand{\ybase}{\widehat{\mathbf{y}}}
 \newcommand{\ycorr}{\widetilde{\mathbf{y}}}
 \newcommand{\resid}{\mathbf{r}}
+\newcommand{\shift}{\boldsymbol{\delta}}
+\newcommand{\drift}{\mathbf{g}}
 \newcommand{\feat}{\boldsymbol{\phi}}
 \newcommand{\R}{\mathbb{R}}
-\newcommand{\argmin}{\mathop{\mathrm{arg\,min}}}
 
 % Table emphasis: first best is bold, second best is underlined.
 \newcommand{\bs}[1]{\textbf{#1}}
@@ -34,8 +78,11 @@
 
 \newtheorem{problem}{Problem}
 
-\title{Retrieve the Error, Not the Input: Model-Adaptive\\
-Residual Retrieval for Time-Series Forecasting}
+% Set the title ragged and unhyphenated so it breaks at a word boundary without
+% stretching the first line.
+\title{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000\relax
+Error Memory: Retrieval-Augmented Correction of
+Time-Series Forecasts\par}
 
 \author{Anonymous authors\\Paper under double-blind review}
 
@@ -55,21 +102,25 @@ this is the wrong retrieval object. A modern forecaster already predicts the
 routine level, phase, and rhythm of a series; what it repeatedly misses is a
 small, recurring, and \emph{model-specific} residual, which whole-window
 similarity does not isolate and a borrowed historical future does not preserve.
-We introduce \method{}, which retrieves a frozen forecaster's own past errors.
+We introduce \method{}, which retrieves a trained forecaster's own past errors.
 It stores chronologically observed validation residuals, queries them with a
 descriptor built from both the observed context and the forecaster's intended
 future, shrinks the retrieved correction where neighbouring errors disagree, and
 applies it only when validation prefers it to a simpler correction or to leaving
-the forecast untouched. In a 585-setting comparison where every system revises
-identical frozen forecasts, error retrieval improves all reported metrics in 490
-settings and \method{} in 533, against 375 and 384 for the published RAFT and
-SARAF retrieval operators and 478 for a strong endpoint-aligned analog-future
-control; the error object's margin grows with how accurate the frozen forecaster
-is, and reverses only where that forecaster is poor. \method{} improves every reported metric in 562/585 settings
-spanning 13 architectures, 16 datasets, and horizons from 6 to 720 steps,
-and in 81/94 settings
-spanning static ensembles, AutoML, and a forecasting foundation model, where
-error retrieval is the selected correction in 70 settings.
+the forecast untouched. Retrieving a future is not a separate mechanism: anchored
+to the query, it decomposes exactly into the retrieved error plus the drift
+between the two forecast trajectories, so \method{} exposes that drift as one
+weight and lets validation choose the retrieval object per deployment. In a
+585-setting comparison where every system corrects identical base forecasts,
+\method{} improves all reported metrics in 541 settings, against 490 for pure
+error retrieval, 478 for a strong endpoint-aligned analog-future control, and 384
+and 375 for the published SARAF and RAFT retrieval operators, and takes the best
+average error in every task family; the selected weight is non-zero in 435
+settings and partial rather than a full overwrite in 299 of them. \method{} improves every
+reported metric in 562/585 settings spanning 13 architectures, 16 datasets, and
+horizons from 6 to 720 steps, and in 81/94 settings spanning static ensembles,
+AutoML, and a forecasting foundation model, where error retrieval is the selected
+correction in 70 settings.
 \end{abstract}
 
 \input{sections/01_introduction}
@@ -79,7 +130,7 @@ error retrieval is the selected correction in 70 settings.
 \input{sections/05_related_work}
 \input{sections/06_limitations_conclusion}
 
-\subsection*{AI use statement}
+\section*{AI use statement}
 Generative AI tools assisted with literature discovery, code, plotting, and
 manuscript editing. The authors verified all citations, analyses,
 experimental measurements, and final text.

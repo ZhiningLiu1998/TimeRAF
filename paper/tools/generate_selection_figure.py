@@ -2,7 +2,7 @@
 """Render the validation-selected correction family composition figure.
 
 The figure shows that the family validation selects is not a global constant:
-it changes with the frozen backbone and with the dataset regime.
+it changes with the backbone and with the dataset regime.
 """
 
 from __future__ import annotations
@@ -200,7 +200,7 @@ def main() -> None:
         MODEL_ORDER,
         MODEL_LABELS,
         by_model,
-        "(a) By frozen backbone (45 cells each)",
+        "(a) By backbone (45 cells each)",
     )
     draw_panel(
         axes[1],

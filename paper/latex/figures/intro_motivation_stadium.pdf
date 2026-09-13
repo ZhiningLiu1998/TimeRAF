@@ -10,7 +10,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 720 220] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 4 0 R >>
 endobj
 4 0 obj
-<< /Length 9125 >>
+<< /Length 9124 >>
 stream
 1 J
 1 j
@@ -130,7 +130,7 @@ BT /F1 9 Tf 43 157 Td (actual) Tj ET
 28 149 m 39 149 l S
 [] 0 d
 0.282 0.561 0.718 rg
-BT /F1 9 Tf 43 145 Td (frozen forecast) Tj ET
+BT /F1 9 Tf 43 145 Td (model forecast) Tj ET
 0.761 0.357 0.275 rg
 BT /F2 9.4 Tf 32.236 21 Td (Forecast misses departure surge) Tj ET
 0.592 0.635 0.667 RG
@@ -613,10 +613,10 @@ xref
 0000000064 00000 n 
 0000000121 00000 n 
 0000000257 00000 n 
-0000009433 00000 n 
-0000009503 00000 n 
+0000009432 00000 n 
+0000009502 00000 n 
 trailer
 << /Size 7 /Root 1 0 R >>
 startxref
-9578
+9577
 %%EOF

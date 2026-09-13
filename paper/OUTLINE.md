@@ -47,8 +47,9 @@ already had right.
 3. The endpoint-aligned Analog-kNN control is strong. It wins the long-term and
    PEMS \emph{absolute} aggregates, driven by weak backbones.
 4. Spearman rho between backbone base MSE and the residual-minus-analog
-   advantage is -0.94 (long-term), -0.70 (PEMS), -0.27 (EPF): the error object
-   wins for accurate forecasters and loses for poor ones. Post-hoc analysis.
+   advantage is -0.94 (long-term) and -0.77 (short-term): the error object wins
+   for accurate forecasters and loses for poor ones, and both task families change
+   sign at the same backbone. Post-hoc analysis.
 5. Restricted to the five most accurate backbones (225 settings): Residual-kNN
    170, TimeRaf 185, Analog-kNN 157, RAFT 77, SARAF 80.
 6. Primary matrix breadth: 562/585 strict wins across 13 architectures;
@@ -72,8 +73,8 @@ already had right.
    retrieval and reliability shrinkage, validation gate and selection rule.
 4. **Experiments:** setup; what should we retrieve (Table 1 absolute, Table 2
    strict wins, Figure 3 strength dependence); breadth over 13 backbones and
-   six additional systems (Table 3); analysis of selection, native systems,
-   forward transfer, and failures.
+   six additional systems; analysis of selection, operator abstention, forward
+   transfer, and failures.
 5. **Related work:** forecasting architectures, retrieval-augmented
    forecasting, forecast combination and post-hoc correction.
 6. **Conclusion** with one consolidated scope-and-limitations paragraph.
@@ -85,7 +86,7 @@ already had right.
 2. **Figure 2 (method):** validation-time calibration versus forecast-time
    revision, with the frozen backbone and the identity fallback.
 3. **Figure 3 (finding):** residual-minus-analog advantage per backbone,
-   ordered by base accuracy, with Spearman rho per task family.
+   ordered by base accuracy, one curve for long-term and one for short-term.
 4. **Appendix:** measured ETTh1 residual-retrieval example, Algorithm 1, and
    the selected-family composition by backbone and dataset.
 

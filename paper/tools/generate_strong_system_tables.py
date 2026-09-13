@@ -24,21 +24,21 @@ SYSTEMS = (
 )
 
 SYSTEM_LABELS = {
-    "forward_selection": "Forward Selection",
-    "portfolio_ensemble": "Portfolio Ensemble",
-    "zeroshot_ensemble": "ZeroShot Ensemble",
-    "autogluon_high_quality": "AutoGluon HQ",
-    "chronos_bolt_finetuned": "Chronos-Bolt FT",
-    "chronos_bolt_zeroshot": "Chronos-Bolt ZS",
+    "forward_selection": r"\forwardsel{}",
+    "portfolio_ensemble": r"\portfolioens{}",
+    "zeroshot_ensemble": r"\zeroshotens{}",
+    "autogluon_high_quality": r"\autogluon{} HQ",
+    "chronos_bolt_finetuned": r"\chronosbolt{} FT",
+    "chronos_bolt_zeroshot": r"\chronosbolt{} ZS",
 }
 
 SYSTEM_HEADERS = {
-    "forward_selection": r"\shortstack{Forward\\Selection}",
-    "portfolio_ensemble": r"\shortstack{Portfolio\\Ensemble}",
-    "zeroshot_ensemble": r"\shortstack{ZeroShot\\Ensemble}",
-    "autogluon_high_quality": r"\shortstack{AutoGluon\\HQ}",
-    "chronos_bolt_finetuned": r"\shortstack{Chronos-Bolt\\FT}",
-    "chronos_bolt_zeroshot": r"\shortstack{Chronos-Bolt\\ZS}",
+    "forward_selection": r"\shortstack{\textsc{Forward}\\\textsc{Selection}}",
+    "portfolio_ensemble": r"\shortstack{\textsc{Portfolio}\\\textsc{Ensemble}}",
+    "zeroshot_ensemble": r"\shortstack{\textsc{ZeroShot}\\\textsc{Ensemble}}",
+    "autogluon_high_quality": r"\shortstack{\autogluon{}\\HQ}",
+    "chronos_bolt_finetuned": r"\shortstack{\chronosbolt{}\\FT}",
+    "chronos_bolt_zeroshot": r"\shortstack{\chronosbolt{}\\ZS}",
 }
 
 TASKS = {
@@ -227,88 +227,6 @@ def generate_summary_table(rows: list[dict[str, Any]]) -> str:
     return "\n".join(lines)
 
 
-def format_value(value: float, decimals: int) -> str:
-    return f"{value:.{decimals}f}"
-
-
-def absolute_cell(row: dict[str, Any], metric: str, decimals: int) -> str:
-    if not row.get("paper_evaluable"):
-        return "OOT"
-    baseline = row["test_baseline"][metric]
-    corrected = row["test_corrected"][metric]
-    corrected_text = format_value(corrected, decimals)
-    if corrected < baseline:
-        corrected_text = rf"\textbf{{{corrected_text}}}"
-    return rf"{format_value(baseline, decimals)}$\rightarrow${corrected_text}"
-
-
-def generate_absolute_table(
-    task: str,
-    rows_by_key: dict[tuple[str, str, str], dict[str, Any]],
-) -> str:
-    spec = TASKS[task]
-    label = task.replace("_", "-")
-    lines = []
-    groups = (
-        ("static ensembles", "ensembles", SYSTEMS[:3]),
-        ("AutoML and foundation models", "external", SYSTEMS[3:]),
-    )
-    for group_name, suffix, systems in groups:
-        lines.extend(
-            [
-                r"\begin{table*}[t]",
-                r"\centering",
-                r"\small",
-                r"\setlength{\tabcolsep}{5pt}",
-                rf"\caption{{Absolute {spec['label']} errors for {group_name} "
-                rf"at horizon {spec['horizon']}. Each entry is "
-                r"base$\rightarrow$\method{}; bold marks a lower corrected "
-                r"error for that metric. OOT denotes an AutoGluon run that "
-                r"exceeded the fixed evaluation-time budget.}",
-                rf"\label{{tab:strong-{label}-absolute-{suffix}}}",
-                r"\begin{tabular}{ll" + "r" * len(systems) + "}",
-                r"\toprule",
-                r"Dataset & Metric & "
-                + " & ".join(SYSTEM_HEADERS[s] for s in systems)
-                + r"\\",
-                r"\midrule",
-            ]
-        )
-        datasets = spec["datasets"]
-        metrics = spec["metrics"]
-        for dataset_index, dataset in enumerate(datasets):
-            for metric_index, metric in enumerate(metrics):
-                dataset_text = (
-                    rf"\multirow{{{len(metrics)}}}{{*}}{{{dataset}}}"
-                    if metric_index == 0
-                    else ""
-                )
-                cells = [
-                    absolute_cell(
-                        rows_by_key[(task, dataset, system)],
-                        metric,
-                        decimals=4,
-                    )
-                    for system in systems
-                ]
-                lines.append(
-                    f"{dataset_text} & {metric.upper()} & "
-                    + " & ".join(cells)
-                    + r"\\"
-                )
-            if dataset_index != len(datasets) - 1:
-                lines.append(r"\addlinespace[1pt]")
-        lines.extend(
-            [
-                r"\bottomrule",
-                r"\end{tabular}",
-                r"\end{table*}",
-                "",
-            ]
-        )
-    return "\n".join(lines)
-
-
 def generate_worst_metric_table(
     rows_by_key: dict[tuple[str, str, str], dict[str, Any]]
 ) -> str:
@@ -368,9 +286,6 @@ def main() -> None:
     outputs = {
         "strong_system_summary.tex": generate_summary_table(rows),
         "strong_system_worst_gain.tex": generate_worst_metric_table(rows_by_key),
-        "strong_long-term_absolute.tex": generate_absolute_table("long_term", rows_by_key),
-        "strong_pems_absolute.tex": generate_absolute_table("pems", rows_by_key),
-        "strong_epf_absolute.tex": generate_absolute_table("epf", rows_by_key),
     }
     for name, text in outputs.items():
         (args.output_dir / name).write_text(text, encoding="ascii")
