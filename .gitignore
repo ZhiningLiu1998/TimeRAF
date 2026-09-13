@@ -178,7 +178,6 @@ ts_rag_outputs/
 /paper/reference/
 /paper/tools/tectonic
 /paper/tools/tectonic-*.tar.gz
-/paper/latex/main.pdf
 /paper/latex/figures/*.png
 
 # ---------------------------------------------------------------------------
